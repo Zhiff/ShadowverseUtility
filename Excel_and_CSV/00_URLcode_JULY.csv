@@ -1,0 +1,677 @@
+﻿Expansion,Class,Rarity,PP,Name,Code
+FH,Neutral,Silver,2,Cloud Gigas,6-PbI
+FH,Neutral,Bronze,2,Sudden Showers,6-Ntw
+FH,Neutral,Bronze,4,Winged Courier,6-N9C
+FH,Neutral,Legendary,4,"Fieran, Havensent Wind God",6-UTy
+FH,Neutral,Gold,4,Resolve of the Fallen,6-SmQ
+FH,Neutral,Gold,5,Starbright Deity,6-S1Y
+FH,Neutral,Legendary,5,"XXI. Zelgenea, The World",6-UTo
+FH,Neutral,Silver,6,Titanic Showdown,6-Q4Y
+FH,Neutral,Bronze,8,Pureshot Angel,6-N92
+FH,Forest,Silver,1,Lumbering Carapace,6-n_y
+FH,Forest,Bronze,2,Blossoming Archer,6-lZi
+FH,Forest,Silver,2,Soothing Spell,6-okg
+FH,Forest,Legendary,3,"XII. Wolfraud, Hanged Man",6-suI
+FH,Forest,Bronze,4,Reclusive Ponderer,6-lZY
+FH,Forest,Gold,4,Chipper Skipper,6-qS2
+FH,Forest,Bronze,4,Fairy Assault,6-mIQ
+FH,Forest,Silver,5,Optimistic Beastmaster,6-n_o
+FH,Forest,Legendary,6,Terrorformer,6-suS
+FH,Forest,Bronze,7,Deepwood Wolf,6-lZs
+FH,Forest,Gold,7,"Lionel, Woodland Shadow",6-qSC
+FH,Sword,Silver,1,"Ernesta, Weapons Hawker",6_AQS
+FH,Sword,Bronze,1,Pompous Summons,6_8iw
+FH,Sword,Gold,1,Decisive Strike,6_DbQ
+FH,Sword,Bronze,2,Honorable Thief,6_7-M
+FH,Sword,Silver,2,Shield Phalanx,6_B9A
+FH,Sword,Silver,3,Empress of Serenity,6_AQI
+FH,Sword,Legendary,3,"VII. Oluon, The Chariot",6_FIo
+FH,Sword,Gold,4,Prudent General,6_CsY
+FH,Sword,Bronze,5,Strikelance Knight,6_7-C
+FH,Sword,Legendary,6,Diamond Paladin,6_FIy
+FH,Sword,Bronze,9,Selfless Noble,6_7-2
+FH,Rune,Silver,1,Juggling Moggy,6_Yqo
+FH,Rune,Bronze,1,Magical Augmentation,6_X7Q
+FH,Rune,Bronze,2,Creative Conjurer,6_WOY
+FH,Rune,Legendary,2,"0. Lhynkal, The Fool",6_djI
+FH,Rune,Silver,2,Authoring Tomorrow,6_ZZg
+FH,Rune,Gold,2,Madcap Conjuration,6_b_w
+FH,Rune,Bronze,3,Arcane Auteur,6_WOi
+FH,Rune,Bronze,4,Piquant Potioneer,6_WOs
+FH,Rune,Gold,4,Imperator of Magic,6_bH2
+FH,Rune,Silver,5,Sweetspell Sorcerer,6_Yqy
+FH,Rune,Legendary,6,Adamantine Golem,6_djS
+FH,Dragon,Bronze,1,Dragonclad Lancer,6_upC
+FH,Dragon,Bronze,2,Springwell Dragon Keeper,6_up2
+FH,Dragon,Bronze,2,Tropical Grouper,6_upM
+FH,Dragon,Silver,2,Wavecrest Angler,6_xFS
+FH,Dragon,Gold,2,Draconic Call,6_-QQ
+FH,Dragon,Silver,3,Heliodragon,6_xFI
+FH,Dragon,Gold,3,Slaughtering Dragonewt,6_zhY
+FH,Dragon,Legendary,3,Turncoat Dragon Summoner,7007y
+FH,Dragon,Bronze,3,Dragon Spawning,6_vXw
+FH,Dragon,Silver,4,Dragon Impact,6_x-A
+FH,Dragon,Legendary,10,"XI. Erntz, Justice",7007o
+FH,Shadow,Silver,2,Ghostly Maid,70Jfy
+FH,Shadow,Gold,2,Bonenanza Necromancer,70M6C
+FH,Shadow,Bronze,2,Savoring Slash,70HyQ
+FH,Shadow,Silver,2,Coffin of the Unknown Soul,70K92
+FH,Shadow,Bronze,3,Spirit Curator,70HDi
+FH,Shadow,Bronze,4,Death Fowl,70HDY
+FH,Shadow,Bronze,5,Soul Box,70HDs
+FH,Shadow,Legendary,5,"VI. Milteo, The Lovers",70OYI
+FH,Shadow,Silver,6,Cloistered Sacristan,70Jfo
+FH,Shadow,Legendary,8,Conquering Dreadlord,70OYS
+FH,Shadow,Gold,9,Deathbringer,70M62
+FH,Blood,Bronze,1,Silverbolt Hunter,70feC
+FH,Blood,Bronze,2,Moonrise Werewolf,70fe2
+FH,Blood,Silver,2,Whiplash Imp,70i4S
+FH,Blood,Gold,2,Contemptous Demon,70kWi
+FH,Blood,Bronze,2,Dark Summons,70gMw
+FH,Blood,Silver,3,Tyrant of Mayhem,70i4I
+FH,Blood,Bronze,4,Curmudgeon Ogre,70feM
+FH,Blood,Legendary,4,"Darhold, Abyssal Contract",70myy
+FH,Blood,Silver,5,Burning Constriction,70ipA
+FH,Blood,Gold,7,Vampire of Calamity,70kWY
+FH,Blood,Legendary,9,"XIV. Luzen, Temperance",70myo
+FH,Haven,Silver,1,Jeweled Brilliance,715Dg
+FH,Haven,Bronze,2,Stalwart Featherfolk,7122i
+FH,Haven,Bronze,2,Prismaplume Bird,7122s
+FH,Haven,Silver,3,Four-Pillar Tortoise,714Uo
+FH,Haven,Gold,3,"Lorena, Iron-Willed Priest",716xC
+FH,Haven,Legendary,3,"Sarissa, Luxflash Spear",719NS
+FH,Haven,Bronze,4,Priestess of Foresight,7122Y
+FH,Haven,Bronze,4,Holybright Altar,712Xo
+FH,Haven,Gold,5,Reverend Adjudicator,716x2
+FH,Haven,Legendary,5,"VIII. Sofina, Strength",719NI
+FH,Haven,Silver,6,Puresong Priest,714Uy
+FH,Portal,Silver,0,Artifact Scan,71TeA
+FH,Portal,Bronze,1,Robotic Engineer,71QTC
+FH,Portal,Bronze,2,Marionette Expert,71QT2
+FH,Portal,Silver,2,Cat Tuner,71SvI
+FH,Portal,Bronze,3,Steelslash Tiger,71QTM
+FH,Portal,Legendary,3,"X. Slaus, Wheel of Fortune",71Xno
+FH,Portal,Gold,3,Inverted Manipulation,71W4Q
+FH,Portal,Silver,4,Powerlifting Puppeteer,71SvS
+FH,Portal,Legendary,4,Dimension Dominator,71Xny
+FH,Portal,Gold,5,Mind Splitter,71VLY
+FH,Portal,Bronze,5,Pop Goes the Poppet,71RBw
+WU,Neutral,Bronze,2,Wayfaring Illustrator,6wZ0C
+WU,Neutral,Gold,2,Changewing Cherub,6wduY
+WU,Neutral,Bronze,3,Plucky Treasure Hunter,6wZ02
+WU,Neutral,Silver,3,Romantic Chanteuse,6wbSI
+WU,Neutral,Legendary,3,"Gabriel, Heavenly Voice",6wgKo
+WU,Neutral,Silver,3,Goblin Warpack,6wcBA
+WU,Neutral,Bronze,6,We've Got a Case!,6wZkw
+WU,Neutral,Gold,6,Mythcleaver,6weNo
+WU,Neutral,Gold,7,Boom Devil,6wdui
+WU,Neutral,Legendary,7,Natur Al'machinus,6wgKy
+WU,Forest,Bronze,1,Ironback Beetle,6wxQs
+WU,Forest,Bronze,2,Springleaf Sprite,6wxQi
+WU,Forest,Silver,2,Mechaboomerang Elf,6wzso
+WU,Forest,Bronze,2,Take to the Canopies,6wy9Q
+WU,Forest,Gold,2,Intertwined Resolve,6x11w
+WU,Forest,Legendary,3,Elf Queen of Abundant Life,6x2lc
+WU,Forest,Gold,4,Ironglider Elf,6x0JC
+WU,Forest,Silver,4,Fairy Menhir,6w-M2
+WU,Forest,Bronze,5,Fairy Officer,6wxQY
+WU,Forest,Gold,5,Windfall Fay,6x0J2
+WU,Forest,Silver,6,Forest Hatcheteer,6wzsy
+WU,Forest,Legendary,7,"Damian, Drillarm Brawler",6x2lS
+WU,Forest,Legendary,12,Awakened Gaia,6x2lI
+WU,Sword,Bronze,2,Gizmo Courier,6xJr2
+WU,Sword,Silver,2,Panther Scout,6xMHS
+WU,Sword,Silver,2,Levin Beastmaster,6xMHc
+WU,Sword,Gold,2,Pompous Prince,6xOji
+WU,Sword,Bronze,3,Nightclad Assassin,6xJrC
+WU,Sword,Silver,3,"Gelt, Resolute Knight",6xMHI
+WU,Sword,Gold,3,Lady of the Lance,6xOjY
+WU,Sword,Bronze,3,Wee Merchant's Appraisal,6xKZw
+WU,Sword,Gold,3,Stroke of Conviction,6xPSQ
+WU,Sword,Legendary,5,"Grayson, Rocket Blader",6xR9y
+WU,Sword,Legendary,5,"Amelia, the Silverflash",6xRA6
+WU,Sword,Legendary,7,"Patrick, Rhiceros Knight",6xR9o
+WU,Sword,Bronze,8,Impact Soldier,6xJrM
+WU,Rune,Silver,0,Spellbinder's Preparation,6xkxQ
+WU,Rune,Bronze,2,Device Diviner,6xiFY
+WU,Rune,Silver,2,Earth Sorceress,6xkho
+WU,Rune,Silver,2,Vergewalker Magician,6xkhy
+WU,Rune,Legendary,2,"Uhlein, Grand Magus",6xpac
+WU,Rune,Gold,2,Sorcery in Solidarity,6xnsw
+WU,Rune,Gold,3,Stormelementalist,6xn82
+WU,Rune,Gold,3,Formbender,6xn8C
+WU,Rune,Bronze,3,Mystic Absorption,6xi-Q
+WU,Rune,Bronze,5,Frostrune Knight,6xiFi
+WU,Rune,Legendary,8,"Daria, Infinity Witch",6xpaI
+WU,Rune,Bronze,9,Aethereal Golem,6xiFs
+WU,Rune,Legendary,18,"Regalore, Steel Chimera",6xpaS
+WU,Dragon,Silver,1,Scalebound Plight,6y7rA
+WU,Dragon,Bronze,2,Rockback Ankylosaurus,6y4gM
+WU,Dragon,Gold,2,Steelcap Pachycephalosaurus,6y9Yi
+WU,Dragon,Legendary,2,"Rola, Inferno Dragoon",6yB-o
+WU,Dragon,Gold,3,Steelstorm Dragonewt,6y9YY
+WU,Dragon,Bronze,3,Dragonfolk's Wail,6y5Ow
+WU,Dragon,Gold,3,Cursed Furor,6yAHQ
+WU,Dragon,Bronze,4,Dragoon Medic,6y4g2
+WU,Dragon,Silver,4,Draconitron,6y76I
+WU,Dragon,Silver,5,Petalspine Stegosaurus,6y76S
+WU,Dragon,Bronze,6,Tonfa Dragonewt,6y4gC
+WU,Dragon,Legendary,6,Shipsbane Plesiosaurus,6yB-y
+WU,Dragon,Legendary,6,"Jerva, Wyrm Transcendent",6yB_6
+WU,Shadow,Silver,2,Triscythe Reaper,6yVWy
+WU,Shadow,Gold,2,Jackshovel Gravedigger,6yXz2
+WU,Shadow,Legendary,2,"Gremory, Death Teller",6yaPI
+WU,Shadow,Bronze,2,Ghastly Assault,6yTpQ
+WU,Shadow,Bronze,3,Spectral Servant,6yT4i
+WU,Shadow,Silver,3,Beastly Medium,6yVWo
+WU,Shadow,Gold,3,Sarcophagus Wraith,6yXzC
+WU,Shadow,Bronze,4,Dancing Ghost,6yT4Y
+WU,Shadow,Silver,4,Fatal Order,6yWFg
+WU,Shadow,Bronze,5,Whole-Spirited Necromancer,6yT4s
+WU,Shadow,Legendary,5,Nightmare Devourer,6yaPc
+WU,Shadow,Gold,5,Friends Forever,6yYhw
+WU,Shadow,Legendary,10,He Who Once Rocked,6yaPS
+WU,Blood,Bronze,2,Vampiric Bloodbinder,6yrV2
+WU,Blood,Silver,2,Hellspear Warrior,6ytxS
+WU,Blood,Silver,2,Wicked Pact,6yugA
+WU,Blood,Gold,2,Garnet Waltz,6yx6Q
+WU,Blood,Gold,3,Mechashot Devil,6ywNY
+WU,Blood,Gold,3,Ravening Corruption,6ywNi
+WU,Blood,Bronze,3,Cursebrand Strike,6ysDw
+WU,Blood,Bronze,4,Bloodstained Berserker,6yrVC
+WU,Blood,Legendary,4,"Neun, Daybreak Vampire",6yypy
+WU,Blood,Bronze,5,Aloof Archfiend,6yrVM
+WU,Blood,Silver,5,Moonlight Vampire,6ytxI
+WU,Blood,Legendary,6,"Nerea, Beast Empress",6yypo
+WU,Blood,Legendary,10,Ruinweb Spider,6yyq6
+WU,Haven,Bronze,2,Sol Sister,6zDvY
+WU,Haven,Gold,2,Sweetwing Seraph,6zIo2
+WU,Haven,Gold,2,Robowhip Reverend,6zIoC
+WU,Haven,Bronze,2,Blind Justice,6zEeQ
+WU,Haven,Silver,2,Pilgrims' Path,6zGr2
+WU,Haven,Bronze,3,Fortune Fowl,6zDvs
+WU,Haven,Silver,3,Radiant Meus,6zGLy
+WU,Haven,Gold,3,Major Prayers,6zJWw
+WU,Haven,Bronze,4,Graywing Featherfolk,6zDvi
+WU,Haven,Silver,4,Holylight Convert,6zGLo
+WU,Haven,Legendary,5,"Justine, Holy Al-mi'raj",6zLEI
+WU,Haven,Legendary,5,"Garuda, Wings of Paradise",6zLEc
+WU,Haven,Legendary,6,"Vice, Death Grip",6zLES
+WU,Portal,Silver,1,Technomancer,6zemS
+WU,Portal,Bronze,1,Syntonization,6zd2w
+WU,Portal,Bronze,2,Android Artisan,6zcK2
+WU,Portal,Legendary,2,"Ralmia, Sonic Racer",6zjeo
+WU,Portal,Bronze,3,Magic Gunsmith,6zcKC
+WU,Portal,Bronze,3,Ironclad Armadillo,6zcKM
+WU,Portal,Gold,4,Ironsting Archaeologist,6zhCY
+WU,Portal,Silver,4,Puppet Bomb,6zfVA
+WU,Portal,Gold,4,Rebel Against Fate,6zhxQ
+WU,Portal,Gold,5,Lasershell Tortoise,6zhCi
+WU,Portal,Legendary,6,Bearminator,6zjf6
+WU,Portal,Silver,8,Vibrochakram Thrower,6zemI
+WU,Portal,Legendary,8,"Belphomet, Worldreaver",6zjey
+UC,Neutral,Silver,1,Clash of Heroes,6so2A
+UC,Neutral,Bronze,1,Sentry Gate,6slMI
+UC,Neutral,Bronze,2,Bazooka Goblins,6sktC
+UC,Neutral,Gold,3,Princess Knight,6spli
+UC,Neutral,Gold,3,Colosseum on High,6sp_A
+UC,Neutral,Bronze,4,Sheep Rider,6skt2
+UC,Neutral,Silver,5,"Chaht, Ringside Announcer",6snJI
+UC,Neutral,Gold,6,"Mithra, Daybreak Deity",6splY
+UC,Neutral,Legendary,7,"Athena, Divine Shield",6ssBo
+UC,Neutral,Legendary,9,Mammoth God's Colosseum,6ssBy
+UC,Forest,Bronze,1,Crossbow Sniper,6t7Hi
+UC,Forest,Legendary,1,Phantasmal Fairy Dragon,6tEcc
+UC,Forest,Bronze,1,Synchronized Slash,6t80Q
+UC,Forest,Silver,1,Spiritshine,6tASg
+UC,Forest,Bronze,2,Greenwood Guardian,6t7HY
+UC,Forest,Silver,2,Woodland Cleaver,6t9jo
+UC,Forest,Gold,2,"Rino, Cleansweep Archer",6tCAC
+UC,Forest,Gold,2,Greenbrier Elf,6tCAM
+UC,Forest,Legendary,2,"Kokkoro, Faithful Guide",6tEcS
+UC,Forest,Bronze,3,Mallet Monkey,6t7Hs
+UC,Forest,Silver,3,Assault Jaguar,6t9jy
+UC,Forest,Gold,4,Wildwood Matriarch,6tCA2
+UC,Forest,Legendary,8,"Lymaga, Forest Champion",6tEcI
+UC,Sword,Legendary,1,"Kagemitsu, Matchless Blade",6td0o
+UC,Sword,Silver,1,Grand Acquisition,6tYtA
+UC,Sword,Bronze,2,Samurai Outlaw,6tViC
+UC,Sword,Silver,2,Twinsword Master,6tY8S
+UC,Sword,Gold,2,Steadfast Samurai,6taaY
+UC,Sword,Bronze,3,Fox Lancer,6tViM
+UC,Sword,Legendary,3,"Pecorine, Peckish Princess",6td0y
+UC,Sword,Gold,3,Courtly Dance,6tbJQ
+UC,Sword,Gold,4,"Shizuru, Sisterly Sabreur",6taai
+UC,Sword,Bronze,4,Breakneck Draw,6tWQw
+UC,Sword,Silver,5,Quickdraw Maven,6tY8I
+UC,Sword,Legendary,5,Luxblade Arriet,6td16
+UC,Sword,Bronze,6,Petalwink Paladin,6tVi2
+UC,Rune,Bronze,1,Talisman Disciple,6tu6Y
+UC,Rune,Bronze,2,Aeroelementalist,6tu6i
+UC,Rune,Bronze,2,Charming Gentlemouse,6tu6s
+UC,Rune,Bronze,2,Shikigami Summons,6turQ
+UC,Rune,Gold,2,Mirror of Truth,6tzEg
+UC,Rune,Gold,3,"Kyoka, Prize Pupil",6ty_2
+UC,Rune,Gold,5,Curse Crafter,6ty_C
+UC,Rune,Legendary,6,"Karyl, Catty Sorceress",6t_RS
+UC,Rune,Silver,6,Crimson Meteor Storm,6txHg
+UC,Rune,Silver,7,Traditional Sorcerer,6twYo
+UC,Rune,Silver,8,Demoncaller,6twYy
+UC,Rune,Legendary,8,Forbidden Darkmage,6t_Rc
+UC,Rune,Legendary,15,"Kuon, Founder of Onmyodo",6t_RI
+UC,Dragon,Bronze,1,Flamewinged Might,6uHFw
+UC,Dragon,Bronze,2,Swordwhip Dragoon,6uGX2
+UC,Dragon,Silver,2,Ice Dancing Dragonewt,6uIzc
+UC,Dragon,Gold,2,"Inori, Timid Dragonmaiden",6uLPi
+UC,Dragon,Legendary,2,"Garyu, Supreme Dragonkin",6uNro
+UC,Dragon,Silver,3,Aquascale Stalwart,6uIzS
+UC,Dragon,Legendary,3,Darkprison Dragon,6uNs6
+UC,Dragon,Gold,4,Raremetal Dragon,6uLPs
+UC,Dragon,Bronze,5,Poisonous Dilophosaurus,6uGXM
+UC,Dragon,Gold,5,Phoenix Empress,6uLPY
+UC,Dragon,Silver,6,Jadelong Tactician,6uIzI
+UC,Dragon,Bronze,7,Trident Merman,6uGXC
+UC,Dragon,Legendary,7,"Kaya, Draconine Brawler",6uNry
+UC,Shadow,Gold,1,"Miyako, Pudding Poltergeist",6ujq2
+UC,Shadow,Bronze,1,Demonic Procession,6ufgQ
+UC,Shadow,Bronze,2,Bone Crane,6uexi
+UC,Shadow,Silver,2,Yuki-Onna,6uhNo
+UC,Shadow,Gold,2,Grudge Knight,6ujqM
+UC,Shadow,Bronze,3,Zashiki-Warashi,6uexY
+UC,Shadow,Bronze,3,Mummy Chef,6uexs
+UC,Shadow,Silver,3,Kasha,6uhNy
+UC,Shadow,Gold,4,Shuten-Doji,6ujqC
+UC,Shadow,Legendary,4,"Shinobu, Mausoleum Medium",6umGS
+UC,Shadow,Legendary,7,"Arcus, Soulful Manager",6umGc
+UC,Shadow,Silver,7,Path to Perdition,6uht2
+UC,Shadow,Legendary,9,"Ginsetsu, Great Fox",6umGI
+UC,Blood,Silver,1,"Lucius, Vampire Slayer",6v3oc
+UC,Blood,Gold,1,Creeping Madness,6v6zQ
+UC,Blood,Bronze,2,Rookie Succubus,6v1M2
+UC,Blood,Bronze,2,Antelope Pelt Warrior,6v1MC
+UC,Blood,Silver,2,Boar Pelt Warrior,6v3oS
+UC,Blood,Gold,2,"Io, Enchanting Educator",6v6Ei
+UC,Blood,Bronze,2,Berserker's Pelt,6v1rI
+UC,Blood,Silver,3,Cougar Pelt Warrior,6v3oI
+UC,Blood,Gold,3,Bear Pelt Warrior,6v6EY
+UC,Blood,Legendary,3,"Illya, Queen of Night",6v8gy
+UC,Blood,Legendary,4,Aragavy the Berserker,6v8go
+UC,Blood,Bronze,6,Giant Cobra,6v1MM
+UC,Blood,Legendary,9,Permafrost Behemoth,6v8h6
+UC,Haven,Bronze,2,Winged Staff Priestess,6vPmY
+UC,Haven,Bronze,2,Holy Counterattack,6vQVQ
+UC,Haven,Bronze,3,Saintly Griffon,6vPms
+UC,Haven,Gold,3,Saintly Leader,6vUf2
+UC,Haven,Gold,3,"Yukari, Holy Guardian",6vUfC
+UC,Haven,Silver,3,Feather Sanctuary,6vSi2
+UC,Haven,Silver,4,Golden Eagle,6vSCy
+UC,Haven,Bronze,5,Calm Featherfolk,6vPmi
+UC,Haven,Silver,5,Holy Lancer,6vSCo
+UC,Haven,Legendary,5,"Saren, Orphanage Matron",6vX5S
+UC,Haven,Gold,5,Manifest Devotion,6vVNw
+UC,Haven,Legendary,6,"Wilbert, Grand Knight",6vX5I
+UC,Haven,Legendary,6,Goddess of the West Wind,6vX5c
+UC,Portal,Bronze,0,Focus,6vovw
+UC,Portal,Bronze,1,Sure-Sighted Lancer,6voB2
+UC,Portal,Silver,1,Barrage Brawler,6vqdI
+UC,Portal,Bronze,2,Begoggled Mole,6voBM
+UC,Portal,Gold,2,Phantom Blade Wielder,6vt3Y
+UC,Portal,Gold,2,"Ameth, Dream Emissary",6vt3s
+UC,Portal,Bronze,3,Gravity Grappler,6voBC
+UC,Portal,Silver,3,Boost Kicker,6vqdS
+UC,Portal,Legendary,3,"Karula, Arts Master",6vvVo
+UC,Portal,Silver,3,Box of Puppets,6vr6Y
+UC,Portal,Gold,4,Fearsome Fortress,6vt3i
+UC,Portal,Legendary,9,Vertex Colony,6vvW6
+UC,Portal,Legendary,10,Omniscient Kaiser,6vvVy
+VC,Neutral,Bronze,2,Sweet-Tooth Sleuth,6owkC
+VC,Neutral,Silver,2,Extreme Carrot,6ozAI
+VC,Neutral,Gold,2,Desert Pathfinder,6o_cY
+VC,Neutral,Gold,2,Dawn's Splendor,6o_ci
+VC,Neutral,Bronze,2,Travelers' Respite,6oxSw
+VC,Neutral,Bronze,3,Alchemical Confectioner,6owk2
+VC,Neutral,Gold,3,Gourmet Emperor's Kitchen,6p0LQ
+VC,Neutral,Silver,5,Giving Gourmet,6ozAS
+VC,Neutral,Legendary,6,Viridia Magna,6p22o
+VC,Neutral,Legendary,6,Shiva,6p22y
+VC,Forest,Bronze,1,Airbound Barrage,6pJtQ
+VC,Forest,Silver,1,Fertile Aether,6pMJg
+VC,Forest,Gold,1,Divine Smithing,6pOlw
+VC,Forest,Bronze,2,Ghastly Treant,6pJ8s
+VC,Forest,Silver,2,Blossom Spirit,6pLay
+VC,Forest,Gold,2,Avatar of Fruition,6pO1C
+VC,Forest,Gold,3,"Irene, Harvest Defender",6pO12
+VC,Forest,Legendary,3,"Amataz, Fairy Blader",6pQTI
+VC,Forest,Bronze,4,Wily Puck,6pJ8Y
+VC,Forest,Silver,4,Elven Pikeman,6pLao
+VC,Forest,Legendary,5,"Ladica, the Stoneclaw",6pQTS
+VC,Forest,Bronze,6,Elven Sentry,6pJ8i
+VC,Forest,Legendary,9,Primal Giant,6pQTc
+VC,Sword,Silver,1,Tempered Aether,6pkkA
+VC,Sword,Gold,1,Levin Justice,6pnAa
+VC,Sword,Bronze,2,Lupine Axeman,6phZM
+VC,Sword,Silver,2,"Valse, Champion Deadeye",6pj_S
+VC,Sword,Bronze,2,Mirror Image,6piHw
+VC,Sword,Gold,2,Elegance in Action,6pnAQ
+VC,Sword,Bronze,3,Adept Thief,6phZ2
+VC,Sword,Legendary,3,Tsubaki of the Demon Blade,6pou6
+VC,Sword,Legendary,4,"Bayleon, Sovereign Light",6poty
+VC,Sword,Bronze,5,Levin Scholar,6phZC
+VC,Sword,Silver,5,Swift Tigress,6pj_I
+VC,Sword,Gold,6,"Mistolina, Forest Princess",6pmRY
+VC,Sword,Legendary,7,Regal Wildcat,6poto
+VC,Rune,Silver,1,Arcane Aether,6q78g
+VC,Rune,Bronze,2,Geoelementist,6q3zY
+VC,Rune,Bronze,2,Gigahand Golem,6q3zs
+VC,Rune,Bronze,2,Mysterian Wisdom,6q4iQ
+VC,Rune,Silver,2,Silent Laboratory,6q6fQ
+VC,Rune,Bronze,3,Passionate Potioneer,6q3zi
+VC,Rune,Silver,3,Pyromancer,6q6Po
+VC,Rune,Legendary,3,Wish Wielder,6qBIS
+VC,Rune,Gold,5,Chaos Wielder,6q8sC
+VC,Rune,Legendary,5,"Medea, Ritual Sorceress",6qBIc
+VC,Rune,Legendary,7,Apex Elemental,6qBII
+VC,Rune,Gold,7,Arcane Item Shop,6q95g
+VC,Rune,Gold,9,"Riley, Hydroshaman",6q8s2
+VC,Dragon,Gold,1,"Marion, Elegant Dragonewt",6qXGi
+VC,Dragon,Silver,1,Feral Aether,6qVZA
+VC,Dragon,Bronze,2,Lightning Velociraptor,6qSOM
+VC,Dragon,Silver,2,Bubbleborne Mermaid,6qUqI
+VC,Dragon,Bronze,3,Dragon Chef,6qSOC
+VC,Dragon,Silver,3,Whirlwind Pteranodon,6qUqS
+VC,Dragon,Legendary,4,"Valdain, Cursed Shadow",6qZiy
+VC,Dragon,Bronze,5,Dragonewt Needler,6qSOW
+VC,Dragon,Gold,5,Phoenix Howl,6qX_Q
+VC,Dragon,Gold,6,Hoarfrost Triceratops,6qXGY
+VC,Dragon,Bronze,8,Dragonblader,6qSO2
+VC,Dragon,Legendary,8,"Neptune, Tidemistress",6qZio
+VC,Dragon,Legendary,9,Wildfire Tyrannosaur,6qZj6
+VC,Shadow,Silver,1,Night of the Living Dog,6qtEy
+VC,Shadow,Silver,1,Necromantic Aether,6qtzg
+VC,Shadow,Bronze,2,Revenant Ram,6qqos
+VC,Shadow,Legendary,2,Thoth,6qy7S
+VC,Shadow,Legendary,2,Legendary Skeleton,6qy7c
+VC,Shadow,Bronze,3,Vengeful Possession,6qqoi
+VC,Shadow,Gold,3,"Helio, Sacrosanct Spirit",6qvh2
+VC,Shadow,Gold,3,Fighting Jiangshi,6qvhM
+VC,Shadow,Bronze,4,Soul Snatcher,6qqoY
+VC,Shadow,Bronze,5,Lonesome Specter,6qqp0
+VC,Shadow,Gold,5,Immortal Elephant,6qvhC
+VC,Shadow,Legendary,5,"Lubelle, Necrofamily",6qy7I
+VC,Shadow,Silver,8,"Guilt, Existential Blader",6qtEo
+VC,Blood,Silver,1,Lunatic Aether,6rGOA
+VC,Blood,Bronze,2,Leraje,6rDD2
+VC,Blood,Bronze,2,Corrupted Bat,6rDDM
+VC,Blood,Bronze,2,Deal with the Devil,6rDxw
+VC,Blood,Bronze,3,Ogre Champion,6rDDC
+VC,Blood,Silver,3,Frenzied Werewolf,6rFfS
+VC,Blood,Legendary,3,Kudlak,6rKY6
+VC,Blood,Silver,4,"Yuna, Vampire Seeker",6rFfI
+VC,Blood,Gold,5,"Sharanzaya, Masked Mayhem",6rI5Y
+VC,Blood,Gold,5,"Balto, Malice Deflector",6rI5s
+VC,Blood,Gold,6,Nightprowl Vampire,6rI5i
+VC,Blood,Legendary,6,"Yuzuki, Righteous Demon",6rKXo
+VC,Blood,Legendary,7,Cradle of Dark Divinity,6rKXy
+VC,Haven,Silver,1,"Pyne, Holy Police",6re3o
+VC,Haven,Silver,1,Virtuous Aether,6reog
+VC,Haven,Bronze,1,Snnneak Attack!,6rc6o
+VC,Haven,Bronze,2,Saintly Squeaks,6rbds
+VC,Haven,Silver,2,Featherfolk Punisher,6re3y
+VC,Haven,Gold,3,Hallowed Cave Shrine,6rg_I
+VC,Haven,Legendary,4,"Daffodil, Meus Princess",6riyI
+VC,Haven,Bronze,5,Greatsword Sister,6rbdY
+VC,Haven,Gold,5,Master Adjudicator,6rgW2
+VC,Haven,Bronze,6,Priest of Excess,6rbdi
+VC,Haven,Legendary,7,"Charaton, Iceflame Priest",6riyc
+VC,Haven,Gold,8,"Agnes, Hollow Feather",6rgWC
+VC,Haven,Legendary,8,Iridescent Sphinx,6riyS
+VC,Portal,Bronze,1,Doll Operation,6r-mw
+VC,Portal,Silver,1,Enigmatic Aether,6s1DA
+VC,Portal,Bronze,2,Doll Meister,6r-2C
+VC,Portal,Bronze,2,Drill Hedgehog,6r-2M
+VC,Portal,Gold,2,"Mugnier, Purifying Light",6s2wi
+VC,Portal,Gold,2,Artifact Call,6s3fQ
+VC,Portal,Legendary,2,Awakened Ragna,6s65g
+VC,Portal,Silver,3,"Ines, Maiden of Clouds",6s0US
+VC,Portal,Silver,4,Enhanced Tiger,6s0UI
+VC,Portal,Legendary,4,Absolute Modesty,6s5My
+VC,Portal,Gold,6,Cannon Hermit Crab,6s2wY
+VC,Portal,Bronze,7,Dazzling Archer,6r-22
+VC,Portal,Legendary,8,Dreadnought Gorilla,6s5Mo
+RoG,Neutral,Bronze,2,Hoverboard Mercenary,6l6b2
+RoG,Neutral,Silver,2,"Unica, Unicorn Maiden",6l91I
+RoG,Neutral,Silver,2,Apollo,6l91S
+RoG,Neutral,Bronze,2,Strategic Assembly,6l74I
+RoG,Neutral,Gold,3,"Hamsa, Hallowed Fowl",6lBTi
+RoG,Neutral,Bronze,4,Great Goliath,6l6bC
+RoG,Neutral,Gold,4,Angelic Smite,6lCCQ
+RoG,Neutral,Gold,6,"Urd, Goddess of Restoration",6lBTY
+RoG,Neutral,Legendary,8,"Olivia, Blackened Wing",6lDvo
+RoG,Neutral,Legendary,10,"Zeus, the Supreme",6lDvy
+RoG,Forest,Gold,1,Whirlwind Rhinoceroach,6lZu2
+RoG,Forest,Gold,1,"May, Eager Elf",6lZuM
+RoG,Forest,Silver,2,Wellspring Elf Princess,6lXRo
+RoG,Forest,Gold,2,Guard of the Machinatree,6lZuC
+RoG,Forest,Bronze,3,Mechaclaw Elf,6lU_s
+RoG,Forest,Silver,3,"Meliai, Wing Shredder",6lXRy
+RoG,Forest,Legendary,3,"Tista, Wings of Mercy",6lcKS
+RoG,Forest,Bronze,3,Harvest Season,6lVkQ
+RoG,Forest,Legendary,3,Miracle of Love,6ld3A
+RoG,Forest,Bronze,4,Heroic Fairy Champion,6lU_Y
+RoG,Forest,Silver,4,Nature Corroded,6lYAg
+RoG,Forest,Bronze,5,Dryad of the Grove,6lU_i
+RoG,Forest,Legendary,7,"Omnis, Prime Okami",6lcKI
+RoG,Sword,Legendary,0,Everlasting Castle,6l--Q
+RoG,Sword,Bronze,1,"Lounes, Levin Apprentice",6ltQ2
+RoG,Sword,Silver,1,King's Welcome,6lwbA
+RoG,Sword,Gold,1,Meet the Levin Sisters!,6lz1Q
+RoG,Sword,Bronze,2,Levin Archer,6ltQC
+RoG,Sword,Silver,2,Splendid Fencer,6lvsI
+RoG,Sword,Silver,2,"Jeno, Levin Stalwart",6lvsS
+RoG,Sword,Bronze,3,Veteran Vagabond Frog,6ltQM
+RoG,Sword,Gold,3,Autoblade Patroller,6lyIY
+RoG,Sword,Bronze,4,Brave Intervention,6lu8w
+RoG,Sword,Legendary,5,"Albert, Levin Champion",6l-ky
+RoG,Sword,Gold,7,Honored Frontguard General,6lyIi
+RoG,Sword,Legendary,7,"Alwida, Pirate Queen",6l-ko
+RoG,Rune,Gold,1,"Melvie, Princess Witch",6mKj2
+RoG,Rune,Bronze,1,Witch's Cauldron,6mG4A
+RoG,Rune,Bronze,2,Jetbroom Witch,6mFqY
+RoG,Rune,Bronze,2,Electrokitty,6mFqs
+RoG,Rune,Gold,2,The Mysterian Project,6mLRw
+RoG,Rune,Silver,3,"Emmylou, Smilemancer",6mIGo
+RoG,Rune,Legendary,3,Golem Squad,6mNuA
+RoG,Rune,Gold,4,"Levi, Accomplished Mage",6mKjC
+RoG,Rune,Silver,5,Mechabook Sorcerer,6mIGy
+RoG,Rune,Silver,5,Disintegration,6mI_g
+RoG,Rune,Legendary,6,"Erasmus, Master Summoner",6mN9S
+RoG,Rune,Bronze,8,Twinblade Mage,6mFqi
+RoG,Rune,Legendary,9,"Ginger, Accursed Word",6mN9I
+RoG,Dragon,Gold,1,Dragon's Hoard,6mjco
+RoG,Dragon,Bronze,2,Gadget Mermaid,6meF2
+RoG,Dragon,Bronze,2,Orca Run,6mezw
+RoG,Dragon,Bronze,3,Splendorous Roc,6meFM
+RoG,Dragon,Silver,3,Steelclaw Wyrm Bruiser,6mghS
+RoG,Dragon,Gold,3,Wise Dragonewt Scholar,6mj7Y
+RoG,Dragon,Silver,4,"Eyfa, Windrider",6mghI
+RoG,Dragon,Gold,4,"Ian, Dragon Buster",6mj7i
+RoG,Dragon,Bronze,5,"Zell, Wind Whisperer",6meFC
+RoG,Dragon,Legendary,6,"Aiela, Devoted Knight",6mla6
+RoG,Dragon,Silver,7,Helix Mushussu,6mghc
+RoG,Dragon,Legendary,8,Hulking Dragonewt,6mlZy
+RoG,Dragon,Legendary,10,Genesis Dragon of Disaster,6mlZo
+RoG,Shadow,Bronze,1,"Mino, Crafty Reaper",6n0fY
+RoG,Shadow,Bronze,2,Greater Lesser Mummy,6n0fs
+RoG,Shadow,Silver,2,Irongear Corpsman,6n35y
+RoG,Shadow,Gold,2,"Sora, Arcane Fist",6n5YC
+RoG,Shadow,Bronze,3,Mechasaw Deathbringer,6n0fi
+RoG,Shadow,Gold,3,"Khawy, Underworld Heir",6n5Y2
+RoG,Shadow,Legendary,4,"Aisha, Underworld Sovereign",6n7-S
+RoG,Shadow,Legendary,4,"Lara, Soul Taker",6n7-c
+RoG,Shadow,Silver,4,Fatal Fields,6n3b2
+RoG,Shadow,Bronze,5,Bone Blast,6n1OQ
+RoG,Shadow,Silver,7,"Tithi, Underworld Shaman",6n35o
+RoG,Shadow,Gold,7,Spectral Cascade,6n6Gw
+RoG,Shadow,Legendary,12,"Hades, Father of Purgatory",6n7-I
+RoG,Blood,Bronze,2,Gearsnake Tamer,6nP42
+RoG,Blood,Bronze,2,Swarming Wraith,6nP4M
+RoG,Blood,Silver,2,"Nightmare, Dreameater",6nRWI
+RoG,Blood,Bronze,2,Entrancing Blow,6nPow
+RoG,Blood,Bronze,3,"Nefilio, Dour Demon",6nP4C
+RoG,Blood,Legendary,3,"Yurius, Traitorous Duke",6nWOy
+RoG,Blood,Silver,3,Prison of Pain,6nR_Y
+RoG,Blood,Silver,4,Mechaforge Devil,6nRWS
+RoG,Blood,Gold,4,"Azazel, the Depraved",6nTyY
+RoG,Blood,Gold,6,Heartsick Demon,6nTyi
+RoG,Blood,Gold,6,"Moriana, Shadow Devil",6nTys
+RoG,Blood,Legendary,8,Seductress Vampire,6nWOo
+RoG,Blood,Legendary,8,Spawn of Exile,6nWP6
+RoG,Haven,Bronze,1,Tender Rabbit Healer,6nnUY
+RoG,Haven,Legendary,1,Destiny Wing Knight,6nupc
+RoG,Haven,Silver,1,Passing of Lore,6nqfg
+RoG,Haven,Gold,1,Golden Bell,6nssI
+RoG,Haven,Bronze,2,Fervid Heavenly Hound,6nnUs
+RoG,Haven,Silver,2,Robowing Precant,6npwo
+RoG,Haven,Gold,2,"Laelia, Saint of Peace",6nsNC
+RoG,Haven,Bronze,2,Pinion Lake,6nnzo
+RoG,Haven,Gold,4,"Kel, Holy Marksman",6nsN2
+RoG,Haven,Legendary,4,"Imina, Mad Eidolon",6nupI
+RoG,Haven,Legendary,4,"Elana, Purest Prayer",6nupS
+RoG,Haven,Bronze,5,Steelwing,6nnUi
+RoG,Haven,Silver,6,Heretic Priest,6npwy
+RoG,Portal,Silver,1,Metadivision,6oD4A
+RoG,Portal,Bronze,2,Cat Gunner,6o9v2
+RoG,Portal,Silver,2,"Licht, the Gearturner",6oCLI
+RoG,Portal,Gold,2,"Vier, Doll Slayer",6oEns
+RoG,Portal,Bronze,3,Puppet Shock,6oAdw
+RoG,Portal,Bronze,4,"Hamelin, Fey Flautist",6o9vC
+RoG,Portal,Silver,4,"Icarus, Sunbound Wing",6oCLS
+RoG,Portal,Gold,4,Aerial Craft,6oEni
+RoG,Portal,Legendary,5,"Zwei, Resonant Heart",6oHDy
+RoG,Portal,Bronze,6,Mechanical Mammoth,6o9vM
+RoG,Portal,Gold,7,Artifact Duplicator,6oEnY
+RoG,Portal,Legendary,7,Magna Giant,6oHDo
+RoG,Portal,Legendary,7,"Orchis, Linked Heart",6oHE6
+Basic,Neutral,Bronze,1,Goblin,5zWm2
+Basic,Neutral,Bronze,2,Fighter,5zWmC
+Basic,Neutral,Bronze,2,Well of Destiny,5zW_g
+Basic,Neutral,Bronze,3,Mercenary Drifter,5zWmM
+Basic,Neutral,Gold,3,Harnessed Flame,5zbeY
+Basic,Neutral,Gold,3,Harnessed Glass,5zbei
+Basic,Neutral,Bronze,4,Goliath,5zWmW
+Basic,Neutral,Bronze,5,Angelic Sword Maiden,5zWmg
+Basic,Forest,Bronze,1,Water Fairy,5zvAY
+Basic,Forest,Bronze,2,Fairy Whisperer,5zvAi
+Basic,Forest,Bronze,2,Elf Guard,5zvB0
+Basic,Forest,Silver,2,Elf Metallurgist,5zxcy
+Basic,Forest,Bronze,2,Sylvan Justice,5zvvQ
+Basic,Forest,Bronze,3,Dark Elf Faure,5zvBK
+Basic,Forest,Bronze,4,Okami,5zvAs
+Basic,Forest,Silver,4,Rose Gardener,5zxd6
+Basic,Forest,Bronze,5,Treant,5zvBA
+Basic,Forest,Bronze,6,Elf Tracker,5zvBU
+Basic,Forest,Silver,6,Magna Botanist,5zxco
+Basic,Sword,Bronze,1,Quickblader,5-Hb2
+Basic,Sword,Bronze,2,Oathless Knight,5-HbC
+Basic,Sword,Bronze,2,Kunoichi Trainee,5-Hbq
+Basic,Sword,Bronze,2,Unbridled Fury,5-IJw
+Basic,Sword,Bronze,3,Ascetic Knight,5-HbM
+Basic,Sword,Bronze,3,Forge Weaponry,5-IK4
+Basic,Sword,Bronze,4,White General,5-HbW
+Basic,Sword,Silver,4,Floral Fencer,5-K1I
+Basic,Sword,Silver,4,Royal Banner,5-KGw
+Basic,Sword,Bronze,5,Ninja Master,5-Hbg
+Basic,Sword,Silver,6,Sage Commander,5-K1S
+Basic,Blood,Bronze,2,Nightmare,5_pF2
+Basic,Blood,Bronze,2,Sweetfang Vampire,5_pFC
+Basic,Blood,Bronze,2,Blood Pact,5_pzw
+Basic,Blood,Bronze,2,Razory Claw,5_p-4
+Basic,Blood,Bronze,3,Crazed Executioner,5_pFM
+Basic,Blood,Bronze,4,Dark General,5_pFg
+Basic,Blood,Silver,4,Wardrobe Raider,5_rhS
+Basic,Blood,Bronze,4,Crimson Purge,5_p-E
+Basic,Blood,Bronze,6,Imp Lancer,5_pFW
+Basic,Blood,Silver,6,Demonic Storm,5_sQA
+Basic,Blood,Silver,7,Abyss Beast,5_rhI
+Basic,Rune,Bronze,1,Insight,5-gkQ
+Basic,Rune,Bronze,2,"Sammy, Wizard's Apprentice",5-f_Y
+Basic,Rune,Bronze,2,Magic Missile,5-gka
+Basic,Rune,Bronze,2,Conjure Golem,5-gkk
+Basic,Rune,Bronze,2,Wind Blast,5-gku
+Basic,Rune,Bronze,3,Summon Snow,5-gl2
+Basic,Rune,Silver,4,Demonflame Mage,5-iRy
+Basic,Rune,Bronze,4,Conjure Twosome,5-glC
+Basic,Rune,Silver,5,Lightning Shooter,5-iS6
+Basic,Rune,Bronze,8,Fiery Embrace,5-glM
+Basic,Rune,Silver,10,Flame Destroyer,5-iRo
+Basic,Dragon,Bronze,1,Blazing Breath,5_394
+Basic,Dragon,Bronze,2,Dragonrider,5_2Q2
+Basic,Dragon,Bronze,2,Dragon Oracle,5_38w
+Basic,Dragon,Bronze,3,Firstborn Dragon,5_2Qg
+Basic,Dragon,Bronze,4,Death Dragon,5_2QM
+Basic,Dragon,Silver,4,Dragon Warrior,5_4sI
+Basic,Dragon,Bronze,4,Serpent Wrath,5_39E
+Basic,Dragon,Bronze,5,Disaster Dragon,5_2QC
+Basic,Dragon,Bronze,6,Dragonguard,5_2QW
+Basic,Dragon,Silver,7,Dread Dragon,5_4sS
+Basic,Dragon,Silver,7,Conflagration,5_5bA
+Basic,Shadow,Bronze,2,Spartoi Sergeant,5_QqY
+Basic,Shadow,Bronze,2,Spectre,5_Qqi
+Basic,Shadow,Bronze,2,Undying Resentment,5_RZQ
+Basic,Shadow,Bronze,3,Apprentice Necromancer,5_Qqs
+Basic,Shadow,Bronze,4,Elder Spartoi Soldier,5_Qr0
+Basic,Shadow,Silver,4,Playful Necromancer,5_TGo
+Basic,Shadow,Silver,4,Hell's Unleasher,5_TGy
+Basic,Shadow,Bronze,5,Gravewaker,5_QrA
+Basic,Shadow,Bronze,5,Call of the Void,5_RZa
+Basic,Shadow,Bronze,6,Ghostly Rider,5_QrK
+Basic,Shadow,Silver,7,Undead King,5_TH6
+Basic,Haven,Bronze,1,Summon Pegasus,60C8y
+Basic,Haven,Bronze,2,Snake Priestess,60BfY
+Basic,Haven,Bronze,2,Hallowed Dogma,60COQ
+Basic,Haven,Bronze,2,Blackened Scripture,60COa
+Basic,Haven,Bronze,2,Beastly Vow,60C8o
+Basic,Haven,Bronze,3,Featherwyrm's Descent,60C96
+Basic,Haven,Silver,4,Priest of the Cudgel,60E5y
+Basic,Haven,Silver,5,Greater Priestess,60E5o
+Basic,Haven,Bronze,5,Acolyte's Light,60COk
+Basic,Haven,Silver,5,Dual Flames,60Eb2
+Basic,Haven,Bronze,7,Curate,60Bfi
+Basic,Portal,Bronze,2,Puppeteer,60a4C
+Basic,Portal,Bronze,2,Mechanized Servant,60a4q
+Basic,Portal,Bronze,2,Magisteel Lion,60a4-
+Basic,Portal,Silver,2,Magisteel Puppet,60cWI
+Basic,Portal,Bronze,2,Dimension Cut,60aow
+Basic,Portal,Bronze,3,Toy Soldier,60a42
+Basic,Portal,Bronze,3,Automaton Knight,60a4M
+Basic,Portal,Bronze,4,Ironforged Fighter,60a4W
+Basic,Portal,Silver,4,Roan Winged Nexx,60cWS
+Basic,Portal,Silver,4,Puppeteer's Strings,60dFA
+Basic,Portal,Bronze,6,Black Iron Soldier,60a4g
+Promo,Neutral,Bronze,2,Travelers' Respite,gS7Yw
+Promo,Neutral,Gold,4,Angelic Smite,gKa9Q
+Promo,Neutral,Gold,8,Mechawing Angel,gKZQY
+Promo,Forest,Silver,1,Spiritshine,gWMYg
+Promo,Forest,Bronze,1,Airbound Barrage,fsMZQ
+Promo,Forest,Bronze,3,Harvest Season,gH3Ya
+Promo,Sword,Silver,1,King's Welcome,gHUPK
+Promo,Sword,Bronze,1,Quickblader,fskF2
+Prebuilt,Sword,Bronze,2,Unbridled Fury,g2BOw
+Promo,Sword,Gold,2,Elegance in Action,gHWrQ
+Promo,Sword,Bronze,4,Breakneck Draw,gWiWw
+Prebuilt,Rune,Bronze,1,Insight,g2ZpQ
+Promo,Rune,Bronze,2,Magic Missile,gHqNk
+Promo,Rune,Bronze,2,Wind Blast,gHqNa
+Promo,Dragon,Bronze,2,Dragon Oracle,g2yDw
+Ldr,Shadow,Gold,1,"Miyako, Pudding Poltergeist",gQHe2
+Prebuilt,Shadow,Bronze,2,Undying Resentment,g3KeQ
+Ldr,Shadow,Legendary,4,"Aisha, Underworld Sovereign",g7FNI
+Promo,Blood,Bronze,2,Entrancing Blow,gIzcw
+Prebuilt,Blood,Bronze,2,Razory Claw,g3j34
+Ldr,Blood,Bronze,4,Dark General,f_uB2
+Promo,Haven,Gold,1,Golden Bell,gYhEI
+Prebuilt,Haven,Bronze,2,Hallowed Dogma,g45TQ
+Promo,Portal,Bronze,0,Focus,gY-_w
+Promo,Portal,Silver,1,Metadivision,gZ1SA
+Promo,Portal,Gold,2,Artifact Call,gJpKa
+Prebuilt,Portal,Bronze,2,Dimension Cut,g4Ttw
