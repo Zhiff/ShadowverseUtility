@@ -8,8 +8,8 @@ This is the main file
 import pandas as pd
 import numpy as np
 import openpyxl as oxl
+import stat_helper as sh
 from deckmodule import Deck
-import xlsxwriter
 
  
 # This function will quickly convert all raw svportal links that found in excel document into deck archetype link. regardless of format
@@ -35,63 +35,52 @@ def excel_convert_quick(excelfile):
 
 
 # This function 
-def excel_convert_dataset_3decks(svo_raw):
+def excel_convert_dataset(svo_raw, maxdeck):
     df = pd.read_excel(svo_raw)
-    df['arc 1'] = df['deck 1'].apply(lambda x: Deck(x).archetype_checker())
-    df['arc 2'] = df['deck 2'].apply(lambda x: Deck(x).archetype_checker())
-    df['arc 3'] = df['deck 3'].apply(lambda x: Deck(x).archetype_checker())
-    df = add_lineup_column_3decks(df)
-    writer = pd.ExcelWriter("Excel_and_CSV/SVOFilteredDecks_Data.xlsx")
+    for i in range(1, maxdeck+1):
+        df[f'arc {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).archetype_checker())    
+    if maxdeck == 3:
+        df = sh.add_lineup_column_3decks(df)
+        writer = pd.ExcelWriter("Excel_and_CSV/SVOFilteredDecks_Data.xlsx")
+    elif maxdeck == 2:
+        df = sh.add_lineup_column_2decks(df)
+        writer = pd.ExcelWriter("Excel_and_CSV/JCGFilteredDecks_Data.xlsx")
+    
     df.to_excel(writer, 'MainData')
     writer.save()
-    
-    
-def add_lineup_column_3decks(df):
-    # add new column which contains all 3 decks, then make them as Set to take care the uniformity
-    df_added_lineup = df.assign(Lineup = list(zip(df['arc 1'],df['arc 2'],df['arc 3'],)) )
-    df_added_lineup['Lineup'] = df_added_lineup['Lineup'].apply(set)
-    return df_added_lineup
-    
-
-def get_lineup_df(df):
-    lineup = df["Lineup"].value_counts(normalize = False, ascending = False)
-    lineup = lineup.rename_axis("Lineup").reset_index(name = 'Count')
-    lineup['Player %'] = (round((lineup['Count']/(int(df.shape[0])))*100, 2))
-    return lineup
 
 
-def get_decks_df(df):
-    decks = df.loc[:,'arc 1':'arc 3'].stack().value_counts(normalize = False, ascending = False)
-    decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
-    decks['Player %'] = (round((decks['Count']/(int(df.shape[0])))*100, 2))
-    return decks
-
-def excel_statistics_3decks(svo_archetype):
+def excel_statistics(svo_data, maxdeck):
     
     #Adding a new column in df called lineup. Lineup is basically a list of 3 decks that has been sorted ex : {sword, dragon, blood}
-    df = pd.read_excel(svo_archetype)
-    df = add_lineup_column_3decks(df)
+    df = pd.read_excel(svo_data)
+    writer = pd.ExcelWriter("Excel_and_CSV/Statistics and Breakdown.xlsx")
+    if maxdeck == 3:
+        df = sh.add_lineup_column_3decks(df)        
+    elif maxdeck == 2:
+        df = sh.add_lineup_column_2decks(df) 
+    
     # Create a new dataframe that consists only lineup and their amount of occurrence
-    lineup = get_lineup_df(df)
+    lineup = sh.get_lineup_df(df)
+    lineup.to_excel(writer, "Lineups")
+    
     #Create a new dataframe that consists only deck and their amount of occurrence
-    decks = get_decks_df(df)
+    decks = sh.get_decks_df(df, maxdeck)
+    decks.to_excel(writer, "Decks")
+    
+    # Breakdown each archetype
+    tournament_breakdown(df, writer, maxdeck)  
 
-    writer = pd.ExcelWriter("Excel_and_CSV/Statistics.xlsx")
-    lineup.to_excel(writer, "lineup")
-    decks.to_excel(writer, "decks")
     writer.save()
+
 
 #This function will create an excel document which consists of Deck Archetype Breakdowns
 #The sheet will list all players decklist grouped by archetype and compare it side by side in order to get bigger picture of the archetype
-def tournament_breakdown_3decks(svo_data):
-    # read csv
-    df = pd.read_excel(svo_data)
-    # prepare excel output
-    writer = pd.ExcelWriter("Excel_and_CSV/DeckBreakdown.xlsx")
-    # check the number of occurence (refer to statistics)
-    decks =  get_decks_df(df)
-    decks = decks.loc[decks['Count'] >= 10]    
-    popular_archetype = decks['Deck Archetype'].tolist()
+def tournament_breakdown(df, excelwriter, maxdeck):
+    
+    #Popular archetype filter. Will return the list of popular archetype with specified minimum occurrence
+    occurrence = 7
+    popular_archetype = sh.get_popular_archetype(df, occurrence, maxdeck)
     
     #Iterate each popular archetype
     for archetype in popular_archetype:
@@ -113,35 +102,27 @@ def tournament_breakdown_3decks(svo_data):
                     else:
                         #Append dataframe with new dataframe
                         added_df = details.rename(columns={'Qty':player_name})
-                        arc_df = pd.merge(arc_df, added_df, on='Name', how='outer')
+                        arc_df = pd.merge(arc_df, added_df, on='CardName', how='outer')
         
         # cleanup dataframe by filling NaN into 0
         arc_df = arc_df.fillna(0)
-        arc_df = arc_df.set_index('Name')
+        arc_df = arc_df.set_index('CardName')
         
         #Add Mean, Median,and Standard Deviation into Dataframe
-        mean = round(arc_df.mean(axis=1),2)
-        median = arc_df.median(axis=1)
-        std = round(arc_df.std(axis=1),2)
-        arc_df['Median'] = median
-        arc_df['Std Deviation'] = std
-        arc_df['Mean'] = mean
+        arc_df = sh.add_statistics_tool(arc_df)
         
         #Reordering Columns, Mean column appears in front
         cols = list(arc_df.columns.values)
         arc_df = arc_df[[cols[-1]] + cols[0:-1]]
-        arc_df.to_excel(writer, archetype)
-    
-    writer.save()
-    
+        arc_df.to_excel(excelwriter, archetype)
     
 
+    
+    
 #actual input. Just put the excel files that you want to convert here
 excel_convert_quick('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx')
-excel_convert_dataset_3decks('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx')
-excel_statistics_3decks('Excel_and_CSV/SVOFilteredDecks_Data.xlsx')
-tournament_breakdown_3decks('Excel_and_CSV/SVOFilteredDecks_Data.xlsx')
-
+excel_convert_dataset('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx', 3)
+excel_statistics('Excel_and_CSV/SVOFilteredDecks_Data.xlsx', 3)
 
 
 

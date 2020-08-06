@@ -1,21 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Aug  4 09:30:53 2020
+This is Deck Module. This module contains Deck Class which store all info about the deck based on svportal url
+@author: zhiff
+"""
 
-@author: zhafi
-"""
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug  4 09:01:04 2020
-
-@author: zhafi
-"""
 import pandas as pd
-
-def somefunction():
-    print("ayaya")
-    
-    
 
 class Deck:
     
@@ -76,13 +66,13 @@ class Deck:
         if ('https://shadowverse-portal.com' in url):
             # Svportal syntax processing
             # 1. Remove the first URL part (http:shadowverse-portal~~) using split manipulation
-            # 2. Remove the last URL part (~&lang=eng) 
+            # 2. Remove the last URL part (~?lang=eng for deckbuilder ~&lang=eng for saved svportal) 
             # 3. Arrange all hash into list and put it into dataframe
             removestart = url.split('.',3)[3]
             if '?' in removestart:
                 cleanhash = removestart.split('?',1)[0]
             else :
-                cleanhash = removestart.split('?',1)[0]
+                cleanhash = removestart.split('&',1)[0]
             decklist = cleanhash.split('.')
             df = pd.DataFrame(decklist)
             
@@ -90,8 +80,8 @@ class Deck:
             df = df[0].value_counts().reset_index().rename(columns={'index':'Code', 0:'Qty'})
             
             # Match with the URLcode Reference document, then group it to resolve promotion card issue
-            deck_df = pd.merge(df, cardhash)[['Name','Qty']]
-            deck_df = deck_df.groupby('Name', as_index = False).agg('sum')
+            deck_df = pd.merge(df, cardhash)[['CardName','Qty']]
+            deck_df = deck_df.groupby('CardName', as_index = False).agg('sum')
             
             return deck_df
         else:

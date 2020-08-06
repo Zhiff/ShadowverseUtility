@@ -1,4 +1,4 @@
-﻿Expansion,Class,Rarity,PP,Name,Code
+﻿Expansion,Class,Rarity,PP,CardName,Code
 FH,Neutral,Silver,2,Cloud Gigas,6-PbI
 FH,Neutral,Bronze,2,Sudden Showers,6-Ntw
 FH,Neutral,Bronze,4,Winged Courier,6-N9C
@@ -9,7 +9,7 @@ FH,Neutral,Legendary,5,"XXI. Zelgenea, The World",6-UTo
 FH,Neutral,Silver,6,Titanic Showdown,6-Q4Y
 FH,Neutral,Bronze,8,Pureshot Angel,6-N92
 FH,Forest,Silver,1,Lumbering Carapace,6-n_y
-FH,Forest,Bronze,2,Blossoming Archer,6-lZi
+FH,Forest,Bronze,2,Blossoming Archer,6-lZiF
 FH,Forest,Silver,2,Soothing Spell,6-okg
 FH,Forest,Legendary,3,"XII. Wolfraud, Hanged Man",6-suI
 FH,Forest,Bronze,4,Reclusive Ponderer,6-lZY
