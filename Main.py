@@ -70,7 +70,7 @@ def excel_statistics(svo_data, maxdeck):
     decks.to_excel(writer, "Decks")
     
     # Breakdown each archetype
-    # tournament_breakdown(df, writer, maxdeck)  
+    tournament_breakdown(df, writer, maxdeck)  
 
     writer.save()
 
@@ -80,7 +80,7 @@ def excel_statistics(svo_data, maxdeck):
 def tournament_breakdown(df, excelwriter, maxdeck):
     
     #Popular archetype filter. Will return the list of popular archetype with specified minimum occurrence
-    occurrence = 7
+    occurrence = 1
     popular_archetype = sh.get_popular_archetype(df, occurrence, maxdeck)
     
     #Iterate each popular archetype
@@ -122,7 +122,7 @@ def tournament_breakdown(df, excelwriter, maxdeck):
 #actual input. Just put the excel files that you want to convert here
 # excel_convert_quick('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx')
 # excel_convert_dataset('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx', 3)
-# excel_statistics('Excel_and_CSV/SVOFilteredDecks_Data.xlsx', 3)
+# excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
 
 #Scrap data from MS Gaming in Battlefy
 #requirements : Json link : //tournaments/..../teams . Can be found in response at Participants tab
@@ -156,4 +156,44 @@ def manasurge_bfy_scraper(jsonlink):
     excel_statistics('Excel_and_CSV/SVOFilteredDecks_Data.xlsx', 3)
 
 
+# # Read quick stats from top performers
+# jsonlink = 'https://dtmwra1jsgyb0.cloudfront.net/stages/5f1266601047db149e9edf9e/latest-round-standings'
+# response = requests.get(jsonlink)        
+# data = response.json()
+# df1 = pd.DataFrame(data)
+# df2 = pd.DataFrame(list(df1['team'])).rename(columns={'_id':'teamID'})
+# df = df1.merge(df2, on='teamID')
+# df = df[['name', 'wins','losses','disqualified']]
+# df = df.loc[(df['wins']>2) & (df['losses']<3) & (df['disqualified']== False)]
 
+# alldata = pd.read_excel("Excel_and_CSV/FilteredDecks_Data.xlsx")
+# dfdata = df.merge(alldata, on='name')
+# dfview = dfdata[['name', 'wins','losses','arc 1','arc 2','arc 3']]
+
+
+# writer = pd.ExcelWriter('Excel_and_CSV/TopCut_Data.xlsx')
+# dfdata.to_excel(writer, 'Data')
+# dfview.to_excel(writer, 'View')
+# writer.save()
+
+# excel_statistics('Excel_and_CSV/TopCut_Data.xlsx', 3)
+# Blink = 'https://dtmwra1jsgyb0.cloudfront.net/stages/5f1266601047db149e9edf9e/stats'
+# res1 = requests.get(Blink)
+# data2 = res1.json()
+
+
+# afalink = 'https://dtmwra1jsgyb0.cloudfront.net/stages/5f1266601047db149e9edf9e/matches'
+# res = requests.get(afalink)
+# data1 = res.json()
+# dff = pd.DataFrame(data1)
+# df1 = pd.DataFrame(list(dff['top']))
+# df2 = pd.DataFrame(list(dff['bottom']))
+# df3 = pd.DataFrame(data2)
+
+
+jcglink = 'https://sv.j-cg.com/compe/view/entrylist/2314/json'
+red = requests.get(jcglink)
+data1 = red.json()
+data2 = pd.DataFrame(list(data1['participants']))
+data3 = data2.loc[data2['chk'] == 1]
+data4 = pd.DataFrame(list(data3['dk'])).rename(columns={0:'deck 1',1:'deck 2'})
