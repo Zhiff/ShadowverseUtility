@@ -10,7 +10,8 @@ import numpy as np
 import openpyxl as oxl
 import stat_helper as sh
 from deckmodule import Deck
-
+import requests
+import json
  
 # This function will quickly convert all raw svportal links that found in excel document into deck archetype link. regardless of format
 # Input : excel file
@@ -31,7 +32,7 @@ def excel_convert_quick(excelfile):
                     cell.hyperlink = cell.value
                     cell.value = archetype
     
-    excel.save('Excel_and_CSV/SVOFilteredDecks_View.xlsx')
+    excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')
 
 
 # This function 
@@ -41,15 +42,15 @@ def excel_convert_dataset(svo_raw, maxdeck):
         df[f'arc {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).archetype_checker())    
     if maxdeck == 3:
         df = sh.add_lineup_column_3decks(df)
-        writer = pd.ExcelWriter("Excel_and_CSV/SVOFilteredDecks_Data.xlsx")
+        writer = pd.ExcelWriter("Excel_and_CSV/FilteredDecks_Data.xlsx")
     elif maxdeck == 2:
         df = sh.add_lineup_column_2decks(df)
-        writer = pd.ExcelWriter("Excel_and_CSV/JCGFilteredDecks_Data.xlsx")
+        writer = pd.ExcelWriter("Excel_and_CSV/FilteredDecks_Data.xlsx")
     
     df.to_excel(writer, 'MainData')
     writer.save()
 
-
+# requirements : name (lowercase) , deck 1 , deck 2 
 def excel_statistics(svo_data, maxdeck):
     
     #Adding a new column in df called lineup. Lineup is basically a list of 3 decks that has been sorted ex : {sword, dragon, blood}
@@ -69,7 +70,7 @@ def excel_statistics(svo_data, maxdeck):
     decks.to_excel(writer, "Decks")
     
     # Breakdown each archetype
-    tournament_breakdown(df, writer, maxdeck)  
+    # tournament_breakdown(df, writer, maxdeck)  
 
     writer.save()
 
@@ -118,11 +119,41 @@ def tournament_breakdown(df, excelwriter, maxdeck):
     
 
     
-    
 #actual input. Just put the excel files that you want to convert here
-excel_convert_quick('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx')
-excel_convert_dataset('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx', 3)
-excel_statistics('Excel_and_CSV/SVOFilteredDecks_Data.xlsx', 3)
+# excel_convert_quick('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx')
+# excel_convert_dataset('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx', 3)
+# excel_statistics('Excel_and_CSV/SVOFilteredDecks_Data.xlsx', 3)
+
+#Scrap data from MS Gaming in Battlefy
+#requirements : Json link : //tournaments/..../teams . Can be found in response at Participants tab
+def manasurge_bfy_scraper(jsonlink):
+    response = requests.get(jsonlink)        
+    data = response.json()
+    
+    # Grab Dataframe, decklist were located in another dictionary inside customFields
+    # expand Customfields by temp df, then merge them to orginal df
+    df1 = pd.DataFrame(data)
+    df2 = pd.DataFrame(list(df1['customFields']))
+    df2['name'] = df1['name']
+    df = df1.merge(df2)
+    
+    # Decklist were in column 2 , 3 , and 4 (Different tournament may use different fields)
+    # Decklist were inside another dictionary. Use nested for loop to obtain actual decklist and update our df
+    df = df[['name',2,3,4]]
+    total_participants = df.shape[0] 
+    for i in range(2,5):
+        for j in range(0,total_participants):
+            df[i][j] = df[i][j]['value']
+    
+    df = df.rename(columns={2:'deck 1', 3:'deck 2', 4:'deck 3'})
+    
+    writer = pd.ExcelWriter('Excel_and_CSV/BFYImport.xlsx')
+    df.to_excel(writer)
+    writer.save()
+        
+    excel_convert_quick('Excel_and_CSV/BFYHacks.xlsx')
+    excel_convert_dataset('Excel_and_CSV/BFYHacks.xlsx', 3)
+    excel_statistics('Excel_and_CSV/SVOFilteredDecks_Data.xlsx', 3)
 
 
 
