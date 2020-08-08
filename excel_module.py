@@ -31,6 +31,26 @@ def excel_convert_quick(excelfile):
     
     excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')
 
+#This function will freeze first 2 column in statistics and highlight the important cards
+def statistics_freeze_highlight(excelfile):
+    excel = oxl.load_workbook(excelfile)
+    breakdown = excel.sheetnames
+    breakdown = breakdown[2:len(breakdown)]
+    
+    # Conditional Formatting, Highlight entire row if mean >= 2
+    colorfill = oxl.styles.PatternFill(bgColor="A9A9A9")
+    diffstyle = oxl.styles.differential.DifferentialStyle(fill=colorfill)
+    rule = oxl.formatting.Rule(type='expression', dxf=diffstyle)
+    rule.formula = ["$B2>=2"]
+
+    for archetype in breakdown:
+        sheet = excel[archetype]
+        sheet.freeze_panes = 'C1'
+        sheet.conditional_formatting.add("A2:HA80", rule)
+    
+    excel.save(excelfile)
+
+
 # This function 
 def excel_convert_dataset(svo_raw, maxdeck):
     df = pd.read_excel(svo_raw)
@@ -46,11 +66,12 @@ def excel_convert_dataset(svo_raw, maxdeck):
     writer.save()
     
 # requirements : name (lowercase) , deck 1 , deck 2 
-def excel_statistics(svo_data, maxdeck):
+def excel_statistics(filtered_data, maxdeck):
     
     #Adding a new column in df called lineup. Lineup is basically a list of 3 decks that has been sorted ex : {sword, dragon, blood}
-    df = pd.read_excel(svo_data)
-    writer = pd.ExcelWriter("Excel_and_CSV/Statistics and Breakdown.xlsx")
+    df = pd.read_excel(filtered_data)        
+    outputfile = "Excel_and_CSV/Statistics and Breakdown.xlsx"
+    writer = pd.ExcelWriter(outputfile)
     if maxdeck == 3:
         df = sh.add_lineup_column_3decks(df)        
     elif maxdeck == 2:
@@ -68,6 +89,7 @@ def excel_statistics(svo_data, maxdeck):
     tournament_breakdown(df, writer, maxdeck)  
 
     writer.save()
+    statistics_freeze_highlight(outputfile)
 
 
 #This function will create an excel document which consists of Deck Archetype Breakdowns
@@ -81,33 +103,35 @@ def tournament_breakdown(df, excelwriter, maxdeck):
     #Iterate each popular archetype
     for archetype in popular_archetype:
         flag_first = True   #Needed for first instance, resolve merge DF issue
-        #Iterate the whole dataframe using i and x pointer
-        for i in range(df.shape[0]): 
-            for x in range(1,maxdeck+1):
-                # accessing arc x column data ( x = 1,2,3 )
-                decktype = df.loc[i,f'arc {x}']
-                if (decktype == archetype):
-                    # accessing name column and svlink portal column, then extract the details using function
-                    player_name = df.loc[i,'name'] 
-                    decklist = df.loc[i,f'deck {x}']
-                    details = Deck(decklist).deck_details()
-                    if flag_first == True:
-                        #For the first instance, we simply initialize the data frame
-                        arc_df = details.rename(columns={'Qty':player_name})
-                        flag_first = False
-                    else:
-                        #Append dataframe with new dataframe
-                        added_df = details.rename(columns={'Qty':player_name})
-                        arc_df = pd.merge(arc_df, added_df, on='CardName', how='outer')
-        
-        # cleanup dataframe by filling NaN into 0
-        arc_df = arc_df.fillna(0)
-        arc_df = arc_df.set_index('CardName')
-        
-        #Add Mean, Median,and Standard Deviation into Dataframe
-        arc_df = sh.add_statistics_tool(arc_df)
-        
-        #Reordering Columns, Mean column appears in front
-        cols = list(arc_df.columns.values)
-        arc_df = arc_df[[cols[-1]] + cols[0:-1]]
-        arc_df.to_excel(excelwriter, archetype)
+        if archetype != 'Unknown Unknown': #Only proceed with valid data
+            #Iterate the whole dataframe using i and x pointer
+            for i in range(df.shape[0]): 
+                for x in range(1,maxdeck+1):
+                    # accessing arc x column data ( x = 1,2,3 )
+                    decktype = df.loc[i,f'arc {x}']
+                    if (decktype == archetype):
+                        # accessing name column and svlink portal column, then extract the details using function
+                        player_name = df.loc[i,'name'] 
+                        decklist = df.loc[i,f'deck {x}']
+                        details = Deck(decklist).deck_details()
+                        if details is not None: #Validity Check
+                            if flag_first == True:
+                                #For the first instance, we simply initialize the data frame
+                                arc_df = details.rename(columns={'Qty':player_name})
+                                flag_first = False
+                            else:
+                                #Append dataframe with new dataframe
+                                added_df = details.rename(columns={'Qty':player_name})
+                                arc_df = pd.merge(arc_df, added_df, on='CardName', how='outer')
+            
+            # cleanup dataframe by filling NaN into 0
+            arc_df = arc_df.fillna(0)
+            arc_df = arc_df.set_index('CardName')
+            
+            #Add Mean, Median,and Standard Deviation into Dataframe
+            arc_df = sh.add_statistics_tool(arc_df)
+            
+            #Reordering Columns, Mean column appears in front
+            cols = list(arc_df.columns.values)
+            arc_df = arc_df[[cols[-1]] + cols[0:-1]]
+            arc_df.to_excel(excelwriter, archetype)

@@ -31,10 +31,10 @@ def JCG_scraper(jsonlink):
     sv = 'https://shadowverse-portal.com/deck/'
     lang_eng = '?lang=en'
     data6 = data6.rename(columns={'nm':'name'})
-    data6['deck 1'] = data6['deck 1'].apply(lambda x: x['hs'])
-    data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng)
-    data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'])
-    data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng)
+    data6['deck 1'] = data6['deck 1'].apply(lambda x: x['hs'] if x else None)
+    data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+    data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
+    data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     
     writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
     data6.to_excel(writer)
