@@ -22,7 +22,7 @@ def JCG_scraper(jsonlink):
     response = requests.get(jcglink)
     data1 = response.json()
     data2 = pd.DataFrame(list(data1['participants']))
-    data3 = data2.loc[data2['chk'] == 1] # Only filter those who checked in
+    data3 = data2.loc[data2['te'] == 1] # Only filter those who checked in
     data4 = pd.DataFrame(list(data3['dk'])).rename(columns={0:'deck 1',1:'deck 2'}) #Grab df from column dk, then rename it properly
     data5 = data3['nm'].reset_index().drop(['index'], axis=1) #create a series with name only
     data6 = pd.concat([data5, data4], axis=1) #combine name and deck1,deck2
