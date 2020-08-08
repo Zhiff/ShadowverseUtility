@@ -45,8 +45,9 @@ def statistics_freeze_highlight(excelfile):
 
     for archetype in breakdown:
         sheet = excel[archetype]
+        last_column = oxl.utils.cell.get_column_letter(sheet.max_column)
         sheet.freeze_panes = 'C1'
-        sheet.conditional_formatting.add("A2:HA80", rule)
+        sheet.conditional_formatting.add(f"A2:{last_column}80", rule)
     
     excel.save(excelfile)
 
