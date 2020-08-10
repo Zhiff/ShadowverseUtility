@@ -12,6 +12,7 @@ import stat_helper as sh
 from deckmodule import Deck
 import openpyxl as oxl
 import requests
+import numpy as np
 
 # Excel Scraping : SVO
 
@@ -48,6 +49,7 @@ data = response.json()
 
 dfb = pd.DataFrame(data)
 dfb = dfb.fillna(0)
+dff = dfb.copy()
 dfb = dfb.loc[dfb['stats']!=0].reset_index()
 
 # Obtain teamID and name from json. Then, create a python dictionary based on that.
@@ -85,6 +87,7 @@ alldf_view = alldf[['name', 'wins','deck 1', 'deck 2', 'deck 3', 'deck 1 W/L/B',
 alldf_view = alldf_view.reset_index().drop(['index'], axis=1).set_index(['name'])
 #Calculate Win-Ban Archetype Ratio
 winbanstats = sh.get_win_ban_archetype(alldf)
+
 
 writer = pd.ExcelWriter('Excel_and_CSV/Post_SVO_Data.xlsx')
 alldf_view.to_excel(writer, 'Sheet1')

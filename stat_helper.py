@@ -157,3 +157,65 @@ def get_win_ban_archetype(alldf):
     winbanstats = pd.concat([wr,db], axis=1)
     winbanstats = winbanstats.fillna(0)
     return winbanstats
+
+
+# incomplete code for Archetype Matchup. will follow later
+    
+# dfb['top teamID'] = dfb.loc[:,'top'].apply(lambda x: x['teamID'])
+# dfb['bot teamID'] = dfb.loc[:,'bottom'].apply(lambda x: x['teamID'])
+# dfb['player 1'] = dfb.loc[:,'top teamID'].apply(lambda x: playerdict['name'][x])
+# dfb['player 2'] = dfb.loc[:,'bot teamID'].apply(lambda x: playerdict['name'][x])
+    
+# # Keep traversing inside the json until we arrived to our desired contents. these specific operations are required due to complexity of BFY JSON
+# dfb1 = pd.DataFrame(list(dfb['stats'])) 
+# dfb2 = dfb1.loc[:,0:2].stack().reset_index()
+# dfb3 = pd.DataFrame(list(dfb2[0]))
+# dfb = dfb.rename(columns={'_id':'matchID'})
+# cfb = pd.merge(dfb3, dfb, on='matchID')
+# cfb['class for 1'] = cfb.loc[:,'stats_x'].apply(lambda x: x['top']['class'])
+# cfb['win for 1'] = cfb.loc[:,'stats_x'].apply(lambda x: x['top']['winner'])
+# cfb['class for 2'] = cfb.loc[:,'stats_x'].apply(lambda x: x['bottom']['class'])
+# cfb['win for 2'] = cfb.loc[:,'stats_x'].apply(lambda x: x['bottom']['winner'])
+
+# cfb = cfb[['player 1','player 2','class for 1','class for 2','win for 1','win for 2']]
+
+# dictionary = alldf[['name','class 1','class 2','class 3','arc 1','arc 2','arc 3']].copy()
+# for i in range (1,4):
+#     dictionary[f'nameclass{i}'] = dictionary['name'] + dictionary[f'class {i}']
+    
+    
+# nameclass = dictionary.loc[:,'nameclass1':'nameclass3'].stack().reset_index().rename(columns={0:'nameclass'})
+# arche = dictionary.loc[:,'arc 1':'arc 3'].stack().reset_index().rename(columns={0:'archetype'})
+# diction = pd.concat([nameclass, arche], axis=1)
+# diction = diction[['nameclass','archetype']].set_index('nameclass')
+# pa_dict = diction.to_dict()
+ 
+# cfb['playerarc1'] = cfb['player 1']+ cfb['class for 1']
+# cfb['playerarc2'] = cfb['player 2']+ cfb['class for 2']
+# cfb['archetype 1'] = cfb.loc[:,'playerarc1'].apply(lambda x: pa_dict.get('archetype').get(x, 'Unknown Unknown'))
+# cfb['archetype 2'] = cfb.loc[:,'playerarc2'].apply(lambda x: pa_dict.get('archetype').get(x, 'Unknown Unknown'))
+
+# match = cfb[['archetype 1','archetype 2','win for 1','win for 2']]
+# matchf1 = match[match['archetype 1'].str.contains('Unknown')==False]
+# matchf2 = matchf1[matchf1['archetype 2'].str.contains('Unknown')==False]
+# match1 = matchf2.loc[match['win for 1'] == True]
+# match2 = matchf2.loc[match['win for 2'] == True]
+# match1re = match1.reindex(columns=['archetype 1','archetype 2'])
+# match2re = match2.reindex(columns=['archetype 2','archetype 1']).rename(columns={'archetype 2':'archetype 1', 'archetype 1':'archetype 2'})
+
+# match1re['count'] = 1
+# match111 = match1re.groupby(['archetype 1','archetype 2']).sum()
+
+# allgame = pd.concat([match1re, match2re], ignore_index=True)
+# allgame['count'] = 1
+# allgamea = allgame.groupby(['archetype 1','archetype 2']).sum()
+
+# allgameb =allgamea.reset_index()
+# allgamec = allgameb['archetype 1'].append(allgameb['archetype 2']).value_counts().reset_index()
+
+# allarc = allgamec['index'].tolist()
+# allgamebmatrix = allgameb[['archetype 1', 'archetype 2', 'count']].values
+
+# writer = pd.ExcelWriter('Excel_and_CSV/Win Count.xlsx')
+# allgamea.to_excel(writer, 'Sheet1')
+# writer.save()
