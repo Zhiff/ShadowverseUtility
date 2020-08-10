@@ -56,7 +56,9 @@ def statistics_freeze_highlight(excelfile):
 def excel_convert_dataset(svo_raw, maxdeck):
     df = pd.read_excel(svo_raw)
     for i in range(1, maxdeck+1):
-        df[f'arc {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).archetype_checker())    
+        df[f'arc {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).archetype_checker())
+    for i in range(1, maxdeck+1):
+        df[f'class {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).class_checker_svo())
     if maxdeck == 3:
         df = sh.add_lineup_column_3decks(df)       
     elif maxdeck == 2:

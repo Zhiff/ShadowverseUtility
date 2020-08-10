@@ -80,7 +80,7 @@ def manasurge_bfy_scraper(jsonlink):
 # Read quick stats from top performers
 # Prerequisite : SVO_initial_scraper must be run first. FilteredDecks_Data should contain all participants
 # Input : latest-round-standings json ex: 'https://dtmwra1jsgyb0.cloudfront.net/stages/5f1266601047db149e9edf9e/latest-round-standings'
-def SVO_tops_scraper(jsonlink):
+def SVO_tops_scraper_v1(jsonlink):
     svolink = jsonlink
     response = requests.get(svolink)        
     data = response.json()

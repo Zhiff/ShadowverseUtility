@@ -25,7 +25,14 @@ class Deck:
         
         return craft_name                
     
-    
+    def class_checker_svo(self):
+        leader = { 'Forestcraft':'arisa' , 'Swordcraft':'erika' , 'Runecraft':'isabelle' , 'Dragoncraft':'rowen' , 'Shadowcraft':'luna' , 'Bloodcraft':'urias' , 'Havencraft':'eris' , 'Portalcraft':'yuwan' }
+        craft_me = self.class_checker()
+        svo_class = leader.get(craft_me)
+        
+        return svo_class
+        
+        
     ## Function to Identify the archetype by combination of cards
     ## input  : string. Sv portal links.
     ## output : string. Archetype name 
