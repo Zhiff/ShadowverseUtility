@@ -2,7 +2,7 @@
 """
 Created on Thu Aug  6 11:19:41 2020
 This is statistics helper module. Functions in this module will help to take care all the stuffs that needed 
-to create clean excel/df based statistics
+to create clean excel/df based statistics. mostly being called by excel_module
 @author: zhiff
 """
 
@@ -142,24 +142,32 @@ def get_win_loss_data(dfa, dfb, dfc, playerdict):
     return dfd3f
 
 def get_win_ban_archetype(alldf):
+    # Make a df that only consists of archetypes, and their ban percentage for every single player
     decks = alldf.loc[:,'arc 1':'arc 3'].stack().reset_index().rename(columns={0:'archetype'})
     bans = alldf.loc[:,'ban 1 rate':'ban 3 rate'].stack().reset_index().rename(columns={0:'ban percentage'})
     db = pd.concat([decks, bans], axis=1)[['archetype', 'ban percentage']]
+    
+    # Archetype ban percentage = average of all ban percentage received by each player
     db = db.groupby('archetype').mean()
     db['ban percentage'] = round(db['ban percentage'], 4)
     
+    # Make a df that consists archetype, win total, and match total
     wins = alldf.loc[:,'win 1':'win 3'].stack().reset_index().rename(columns={0:'win total'})
     matches =  alldf.loc[:,['total match 1','total match 2','total match 3']].stack().reset_index().rename(columns={0:'match total'})
     wr = pd.concat([decks, wins, matches], axis=1)[['archetype','win total','match total']]
-    wr = wr.groupby('archetype').sum()
+    
+    # Archetype win percentage = total win / total match
+    wr = wr.groupby('archetype').sum
     wr['win percentage']= round(wr['win total']/wr['match total'], 4)
     
+    # concat both winrate and banrate
     winbanstats = pd.concat([wr,db], axis=1)
     winbanstats = winbanstats.fillna(0)
+    
     return winbanstats
 
 
-# incomplete code for Archetype Matchup. will follow later
+# # incomplete code for Archetype Matchup. will follow later
     
 # dfb['top teamID'] = dfb.loc[:,'top'].apply(lambda x: x['teamID'])
 # dfb['bot teamID'] = dfb.loc[:,'bottom'].apply(lambda x: x['teamID'])

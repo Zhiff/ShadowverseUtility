@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Aug  7 21:42:37 2020
-
+This in excel module. This module will handle all data manipulation using in excel
 @author: zhafi
 """
 import pandas as pd

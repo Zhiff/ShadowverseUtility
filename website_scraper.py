@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Aug  7 21:29:08 2020
+This is website scraper module. Call this from main to extract info from online tournaments
 
 @author: zhafi
 """
 import pandas as pd
 import requests
 import excel_module as em
+import stat_helper as sh
+from deckmodule import Deck
 
 def SVO_initial_scraper(svoexcel):
     em.excel_convert_quick(svoexcel)
@@ -100,3 +103,76 @@ def SVO_tops_scraper_v1(jsonlink):
     writer.save()
     
     em.excel_statistics('Excel_and_CSV/SVOTopCut_Data.xlsx', 3)
+    
+
+def SVO_posttourney_scraper(tourneyhash , stagehash):
+    # # We are dealing with 3 data frame
+    # # dfa = overall dataframe from filtered data
+    # # dfb = dataframe that acquired from matches.json. Contains all information about matches and results
+    # # dfc = dataframe that acquired from teams.json. Contains all information about players, especially teamID and name
+    
+
+    dfa = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx') 
+    # Add shadowverse class for main data frame
+    for i in range(1,4):
+        dfa[f'class {i}'] = dfa[f'deck {i}'].apply(lambda x: Deck(x).class_checker_svo())
+    
+    # Obtain matches and removes 'byes' or any invalid matched that doesnt contain statistics data
+    matchjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/'+ stagehash + '/matches'
+    response = requests.get(matchjson)        
+    data = response.json()
+    
+    dfb = pd.DataFrame(data)
+    dfb = dfb.fillna(0)
+    dfb = dfb.loc[dfb['stats']!=0].reset_index()
+    
+    # Obtain teamID and name from json. Then, create a python dictionary based on that.
+    playerjson = 'https://dtmwra1jsgyb0.cloudfront.net/tournaments/' + tourneyhash + '/teams'
+    response2 = requests.get(playerjson)        
+    data2 = response2.json()
+    
+    dfc = pd.DataFrame(data2)
+    dfc = dfc[['_id', 'name']].rename(columns={'_id':'teamID'})
+    dfc = dfc.set_index('teamID')
+    playerdict = dfc.to_dict() 
+    
+    #Obtain win-loss swiss record from standings
+    standingsjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/' + stagehash + '/latest-round-standings'
+    response3 = requests.get(standingsjson)        
+    data3 = response3.json()
+    
+    # add swiss-win-loss into alldf
+    df1 = pd.DataFrame(data3)
+    df2 = pd.DataFrame(list(df1['team'])).rename(columns={'_id':'teamID'})
+    df = df1.merge(df2, on='teamID')
+    # df = df.loc[(df['wins']>2) & (df['losses']<3) & (df['disqualified']== False)]
+    df = df[['name', 'wins','losses']]
+    alldf = dfa.merge(df, on='name')
+    
+    # Scrap info about Wins, Loss, Bans
+    alldf = sh.get_ban_data(alldf, dfb, dfc)
+    alldf = sh.get_win_loss_data(alldf, dfb, dfc, playerdict)
+    
+    # Create string for that contains W / L / B
+    for i in range(1,4):
+        alldf[f'deck {i} W/L/B'] = alldf[f'win {i}'].apply(int).apply(str) + '/' + alldf[f'loss {i}'].apply(int).apply(str) + '/' + alldf[f'ban {i}'].apply(int).apply(str)
+    
+    #export cleaned data for View
+    alldf_view = alldf[['name', 'wins','deck 1', 'deck 2', 'deck 3', 'deck 1 W/L/B', 'deck 2 W/L/B', 'deck 3 W/L/B']].sort_values(by='wins', ascending=False)
+    alldf_view = alldf_view.reset_index().drop(['index'], axis=1).set_index(['name'])
+    
+    #Calculate Win-Ban Archetype Ratio
+    winbanstats = sh.get_win_ban_archetype(alldf)
+    
+    
+    writer = pd.ExcelWriter('Excel_and_CSV/Post_SVO_Data.xlsx')
+    alldf_view.to_excel(writer, 'Sheet1')
+    winbanstats.to_excel(writer, 'Archetype Stats')
+    writer.save()
+    
+    # convert svoportal link to archetype name
+    em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx')
+        
+    
+    
+    
