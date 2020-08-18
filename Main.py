@@ -22,7 +22,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-ws.SVO_initial_scraper('Excel_and_CSV/SVO SEAO AUG Cup 2020 ez viewing copy.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SVO SEAO AUG Cup 2020 ez viewing copy.xlsx')
 
 
 

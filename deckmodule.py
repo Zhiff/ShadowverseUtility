@@ -6,6 +6,8 @@ This is Deck Module. This module contains Deck Class which store all info about 
 """
 
 import pandas as pd
+from bs4 import BeautifulSoup as bs
+import requests
 
 class Deck:
     
@@ -94,5 +96,63 @@ class Deck:
         else:
             return None
 
-    
-
+    def generate_svportalhash(self):
+        filename = 'Excel_and_CSV/svportal.csv'
+        url = self.svlink
+        if ('deckbuilder' not in url):
+            source = requests.get(url).text
+            soup = bs(source, 'lxml')
+            
+            # Get Hash
+            chash = soup.find('a', class_="deck-button l-block").get('href')
+            cardlist = chash.split('.',2)[2]
+            hashdf = pd.DataFrame(cardlist.split('.'))
+            hashdf = hashdf.drop_duplicates().reset_index().drop(columns='index').rename(columns={0:'Code'})
+            
+            #Get Cost
+            cost = soup.find_all('p', class_='el-card-list-cost')
+            costlist = []
+            for card in cost:
+                cardcost = card.text
+                costlist.append(int(cardcost))
+            costdf = pd.DataFrame(costlist).rename(columns={0:'PP'})
+            
+            
+            #Get Name
+            name = soup.find_all('span', class_='el-card-list-info-name-text')
+            namelist = []
+            for card in name:
+                cardname = card.text
+                namelist.append(cardname)
+            namedf = pd.DataFrame(namelist).rename(columns={0:'CardName'})
+            
+            #Get Rarity
+            raritymap = { 'is-rarity-1':'Bronze', 'is-rarity-2':'Silver', 'is-rarity-3':'Gold', 'is-rarity-4':'Legendary'}
+            rarity = soup.find_all('p', class_='el-card-list-rarity')
+            rarelist = []
+            for card in rarity:
+                rarities = card.i.get('class')[1]
+                maprare = raritymap[rarities]
+                rarelist.append(maprare)
+            raredf = pd.DataFrame(rarelist).rename(columns={0:'Rarity'})
+            
+            #Get Class
+            craftmap = { '0':'Neutral', '1' : 'Forest' , '2' : 'Sword' , '3' : 'Rune' , '4' : 'Dragon' , '5' : 'Shadow' , '6' : 'Blood' , '7' : 'Haven' , '8' : 'Portal' }
+            craft = soup.find_all('a', class_="el-icon-search is-small tooltipify")
+            craftlist =[]
+            for card in craft:
+                # Craft code is the 4th digit of href, and 10th character in overall link
+                craftcode = card.get('href')[9]
+                mapcraft = craftmap[craftcode]
+                craftlist.append(mapcraft)
+            craftdf = pd.DataFrame(craftlist).rename(columns={0:'Class'})
+            
+            listdf = [craftdf, raredf, costdf, namedf, hashdf]
+            alldf = pd.concat(listdf, axis=1)
+            
+            #Addition
+            alldf['Expansion'] = 'FH'
+            cols = list(alldf.columns.values)
+            alldf = alldf[[cols[-1]] + cols[0:-1]]
+            
+            alldf.to_csv(filename, index=False)
