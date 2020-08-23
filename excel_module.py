@@ -138,3 +138,22 @@ def tournament_breakdown(df, excelwriter, maxdeck):
             cols = list(arc_df.columns.values)
             arc_df = arc_df[[cols[-1]] + cols[0:-1]]
             arc_df.to_excel(excelwriter, archetype)
+
+#This function will combine view into stats.xlsx for easier spreadsheets export
+def combine_view_and_stats():
+    file1 = 'Excel_and_CSV/FilteredDecks_View.xlsx'
+    file2 = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
+    excel1 = oxl.load_workbook(file1)
+    excel2 = oxl.load_workbook(file2)
+    
+    src = excel1.worksheets[0]
+    dst = excel2.create_sheet(title="Names and Links", index=0)
+    
+    for row in src:
+        for cell in row:
+            dst[cell.coordinate].hyperlink = cell.hyperlink
+            dst[cell.coordinate].value = cell.value
+            
+    excel2.save(file2)
+
+

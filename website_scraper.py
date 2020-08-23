@@ -10,11 +10,14 @@ import requests
 import excel_module as em
 import stat_helper as sh
 from deckmodule import Deck
+from bs4 import BeautifulSoup as bs
+
 
 def SVO_initial_scraper(svoexcel):
     em.excel_convert_quick(svoexcel)
     em.excel_convert_dataset(svoexcel, 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
+    em.combine_view_and_stats()
 
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
@@ -46,6 +49,7 @@ def JCG_scraper(jsonlink):
     em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx')
     em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+    em.combine_view_and_stats()
 
 #Scrap data from MS Gaming in Battlefy
 #requirements : Json link : //tournaments/..../teams . Can be found in response at Participants tab
@@ -78,6 +82,7 @@ def manasurge_bfy_scraper(jsonlink):
     em.excel_convert_quick('Excel_and_CSV/MS_Raw.xlsx')
     em.excel_convert_dataset('Excel_and_CSV/MS_Raw.xlsx', 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
+    em.combine_view_and_stats()
     
     
 # Read quick stats from top performers
@@ -174,5 +179,19 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx')
         
     
-    
+# url = 'https://sv.j-cg.com/compe/2329'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+
+# winners = soup.find_all('p', class_="rank rank-1")
+# winnerlist = []
+# for win in winners:
+#     name = win.findNext().text
+#     winnerlist.append(name)
+# namedf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
+
+# df = pd.read_excel('Excel_and_CSV/FilteredDecks_View.xlsx')
+# fdf = df.merge(namedf)
+# decks = fdf.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
+# decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
     
