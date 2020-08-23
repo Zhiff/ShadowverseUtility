@@ -22,7 +22,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/SVO SEAO JULY Cup 2020 ez viewing copy.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SVO SEAO AUG Cup 2020 ez viewing copy.xlsx')
 
 
 
@@ -44,6 +44,14 @@ from bs4 import BeautifulSoup as bs
 
 
 
-ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2329/json')
-# ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f1e79e18e9cb60a9895e22d/teams')
+# ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2329/json')
+ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f1e79e18e9cb60a9895e22d/teams')
 
+# Ban Analyzer
+# Input : JSON Hashes, player name
+
+# bfy_tourneyhash = '5f02c761bf38ff0aa1f90bcf'
+# bfy_stagehash = '5f37504d6ce6de28d63dd645'
+# player = 'DB Crisome'
+
+# stats = ws.SVO_ban_peek(player, bfy_tourneyhash, bfy_stagehash)

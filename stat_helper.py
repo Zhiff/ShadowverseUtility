@@ -157,7 +157,7 @@ def get_win_ban_archetype(alldf):
     wr = pd.concat([decks, wins, matches], axis=1)[['archetype','win total','match total']]
     
     # Archetype win percentage = total win / total match
-    wr = wr.groupby('archetype').sum
+    wr = wr.groupby('archetype').sum()
     wr['win percentage']= round(wr['win total']/wr['match total'], 4)
     
     # concat both winrate and banrate

@@ -118,9 +118,6 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     
 
     dfa = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx') 
-    # Add shadowverse class for main data frame
-    for i in range(1,4):
-        dfa[f'class {i}'] = dfa[f'deck {i}'].apply(lambda x: Deck(x).class_checker_svo())
     
     # Obtain matches and removes 'byes' or any invalid matched that doesnt contain statistics data
     matchjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/'+ stagehash + '/matches'
@@ -195,3 +192,62 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
 # decks = fdf.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
 # decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
     
+# player = 'TK Zy'
+# tourneyhash = '5f02c761bf38ff0aa1f90bcf'
+# stagehash = '5f37504d6ce6de28d63dd645'
+
+def SVO_ban_peek(player, tourneyhash, stagehash):
+    
+    dfa = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx') 
+        
+    # Obtain matches and removes 'byes' or any invalid matched that doesnt contain statistics data
+    matchjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/'+ stagehash + '/matches'
+    response = requests.get(matchjson)        
+    data = response.json()
+    
+    dfb = pd.DataFrame(data)
+    dfb = dfb.fillna(0)
+    dfb = dfb.loc[dfb['stats']!=0].reset_index()
+    
+    # Obtain teamID and name from json. Then, create a python dictionary based on that.
+    playerjson = 'https://dtmwra1jsgyb0.cloudfront.net/tournaments/' + tourneyhash + '/teams'
+    response2 = requests.get(playerjson)        
+    data2 = response2.json()
+    
+    dfc = pd.DataFrame(data2)
+    dfc = dfc[['_id', 'name']].rename(columns={'_id':'teamID'})
+    dfc = dfc.set_index('teamID')
+    playerdict = dfc.to_dict() 
+    
+    dfb['top teamID'] = dfb.loc[:,'top'].apply(lambda x: x['teamID'])
+    dfb['bot teamID'] = dfb.loc[:,'bottom'].apply(lambda x: x['teamID'])
+    dfb['player 1'] = dfb.loc[:,'top teamID'].apply(lambda x: playerdict['name'][x])
+    dfb['player 2'] = dfb.loc[:,'bot teamID'].apply(lambda x: playerdict['name'][x])
+    dfb['player 1 banned'] = dfb.loc[:,'top'].apply(lambda x: x['bannedClass'])
+    dfb['player 2 banned'] = dfb.loc[:,'bottom'].apply(lambda x: x['bannedClass'])
+    
+    # Quick Class View
+    dfview = dfb.copy()
+    dfview = dfview[['player 1', 'player 1 banned', 'player 2 banned', 'player 2']]
+    
+    dictionary = dfa[['name','class 1','class 2','class 3','arc 1','arc 2','arc 3']].copy()
+    for i in range (1,4):
+        dictionary[f'nameclass{i}'] = dictionary['name'] + dictionary[f'class {i}']
+        
+    nameclass = dictionary.loc[:,'nameclass1':'nameclass3'].stack().reset_index().rename(columns={0:'nameclass'})
+    arche = dictionary.loc[:,'arc 1':'arc 3'].stack().reset_index().rename(columns={0:'archetype'})
+    diction = pd.concat([nameclass, arche], axis=1)
+    diction = diction[['nameclass','archetype']].set_index('nameclass')
+    pa_dict = diction.to_dict()
+    
+    dffinal = dfview.copy()
+    dffinal['playerarc1'] = dffinal['player 1']+ dffinal['player 1 banned']
+    dffinal['playerarc2'] = dffinal['player 2']+ dffinal['player 2 banned']
+    dffinal['Banned 1'] = dffinal.loc[:,'playerarc1'].apply(lambda x: pa_dict.get('archetype').get(x, 'Unknown Unknown'))
+    dffinal['Banned 2'] = dffinal.loc[:,'playerarc2'].apply(lambda x: pa_dict.get('archetype').get(x, 'Unknown Unknown'))
+    
+    dffinal = dffinal[['player 1', 'Banned 1', 'Banned 2', 'player 2']]
+    
+    search = dffinal[(dffinal['player 1']==f'{player}') | (dffinal['player 2']==f'{player}')]
+    
+    return search
