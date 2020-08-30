@@ -176,7 +176,7 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx')
         
     
-# url = 'https://sv.j-cg.com/compe/2329'
+# url = 'https://sv.j-cg.com/compe/2334'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 
@@ -251,3 +251,51 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
     search = dffinal[(dffinal['player 1']==f'{player}') | (dffinal['player 2']==f'{player}')]
     
     return search
+
+
+# df = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx')
+# df = df[['name','arc 1', 'arc 2']]
+
+# url = 'https://sv.j-cg.com/compe/view/tour/2334'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+
+# winnerlist = []
+# winleft = soup.find_all('li', class_="tour_match left winner")
+
+# for win in winleft:
+#     name = win.findNext().findNext().text
+#     winnerlist.append(name)
+
+# winright = soup.find_all('li', class_="tour_match right winner")
+# for win in winright:
+#     name = win.findNext().findNext().text
+#     winnerlist.append(name)
+
+# windf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
+
+# loserlist = []
+# loseleft = soup.find_all('li', class_="tour_match left")
+# for lose in loseleft:
+#     name = lose.findNext().findNext().text
+#     loserlist.append(name)
+    
+# loseright = soup.find_all('li', class_="tour_match right")
+# for lose in loseright:
+#     name = lose.findNext().findNext().text
+#     loserlist.append(name)
+
+# lossdf = pd.DataFrame(loserlist).rename(columns={0:'name'})
+
+# win = df.merge(windf, how='inner', on='name')
+# wintotal = win.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
+# wintotal = wintotal.rename_axis("Deck Archetype").reset_index(name = 'WinTotal')
+
+
+# loss = df.merge(lossdf, how='inner', on='name')
+# losstotal = loss.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
+# losstotal = losstotal.rename_axis("Deck Archetype").reset_index(name = 'LossTotal')
+
+# summary = wintotal[['Deck Archetype','WinTotal']]
+# summary['LossTotal'] = losstotal['LossTotal']
+# summary['Winrate'] = summary['WinTotal']/(summary['WinTotal'] + summary['LossTotal'])
