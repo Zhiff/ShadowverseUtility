@@ -15,6 +15,7 @@ import requests
 import numpy as np
 from bs4 import BeautifulSoup as bs
 
+
 # Excel Scraping, It will produce 3 excel files. FilteredDecks_View, FilteredDecks_Data, and Statistics and Breakdown
 # Input : Excel sheet from SVO
 # Requirements :    - all names and decklist must be inside 'Sheet1'
@@ -22,7 +23,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/SVO SEAO AUG Cup 2020 ez viewing copy.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SEAOCL.xlsx')
 
 
 
@@ -32,9 +33,9 @@ from bs4 import BeautifulSoup as bs
 #                   - JSON hash must be valid
 #                   - People changing name after tournament ended will skew the results
 
-# bfy_tourneyhash = '5f02c761bf38ff0aa1f90bcf'
-# bfy_stagehash = '5f37504d6ce6de28d63dd645'
-# ws.SVO_posttourney_scraper(bfy_tourneyhash, bfy_stagehash)
+bfy_tourneyhash = '5f02c8825522b86652930ae3'
+bfy_stagehash = '5f6574dd1104cd7a261297b9'
+ws.SVO_posttourney_scraper(bfy_tourneyhash, bfy_stagehash)
 
 
 
@@ -44,14 +45,14 @@ from bs4 import BeautifulSoup as bs
 
 
 
-# ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2329/json')
-ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f1e79e18e9cb60a9895e22d/teams')
+# ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2376/json')
+# ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f4e2b55a3eaa925df8594a2/teams')
 
 # Ban Analyzer
 # Input : JSON Hashes, player name
 
-# bfy_tourneyhash = '5f02c761bf38ff0aa1f90bcf'
-# bfy_stagehash = '5f37504d6ce6de28d63dd645'
-# player = 'DB Crisome'
+# bfy_tourneyhash = '5f02c8825522b86652930ae3'
+# bfy_stagehash = '5f6574dd1104cd7a261297b9'
+# player = 'Arkal'
 
 # stats = ws.SVO_ban_peek(player, bfy_tourneyhash, bfy_stagehash)

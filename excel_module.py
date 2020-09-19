@@ -13,9 +13,9 @@ from deckmodule import Deck
 # This function will quickly convert all raw svportal links that found in excel document into deck archetype link. regardless of format
 # Input : excel file
 # Output : new excel file
-def excel_convert_quick(excelfile):
+def excel_convert_quick(excelfile, sheetname, custom=False):
     excel = oxl.load_workbook(excelfile)
-    sheet = excel['Sheet1']
+    sheet = excel[sheetname]
     # Iterate all cells in excel sheet
     for column in range(1, sheet.max_column + 1):
         for row in range(1, sheet.max_row + 1):
@@ -28,8 +28,10 @@ def excel_convert_quick(excelfile):
                     archetype = deck.archetype_checker()
                     cell.hyperlink = cell.value
                     cell.value = archetype
-    
-    excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')
+    if (custom):
+        excel.save(excelfile)
+    else:
+        excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')
 
 #This function will freeze first 2 column in statistics and highlight the important cards
 def statistics_freeze_highlight(excelfile):

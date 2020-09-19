@@ -13,8 +13,9 @@ from deckmodule import Deck
 from bs4 import BeautifulSoup as bs
 
 
+
 def SVO_initial_scraper(svoexcel):
-    em.excel_convert_quick(svoexcel)
+    em.excel_convert_quick(svoexcel, 'Sheet1')
     em.excel_convert_dataset(svoexcel, 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats()
@@ -46,7 +47,7 @@ def JCG_scraper(jsonlink):
     data6.to_excel(writer)
     writer.save()
     
-    em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx')
+    em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats()
@@ -79,7 +80,7 @@ def manasurge_bfy_scraper(jsonlink):
     df.to_excel(writer)
     writer.save()
         
-    em.excel_convert_quick('Excel_and_CSV/MS_Raw.xlsx')
+    em.excel_convert_quick('Excel_and_CSV/MS_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/MS_Raw.xlsx', 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats()
@@ -173,10 +174,10 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     writer.save()
     
     # convert svoportal link to archetype name
-    em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx')
+    em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx', 'Sheet1', True)
         
     
-# url = 'https://sv.j-cg.com/compe/2334'
+# url = 'https://sv.j-cg.com/compe/2373'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 
@@ -223,14 +224,15 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
     dfb['bot teamID'] = dfb.loc[:,'bottom'].apply(lambda x: x['teamID'])
     dfb['player 1'] = dfb.loc[:,'top teamID'].apply(lambda x: playerdict['name'][x])
     dfb['player 2'] = dfb.loc[:,'bot teamID'].apply(lambda x: playerdict['name'][x])
-    dfb['player 1 banned'] = dfb.loc[:,'top'].apply(lambda x: x['bannedClass'])
-    dfb['player 2 banned'] = dfb.loc[:,'bottom'].apply(lambda x: x['bannedClass'])
+    dfb['player 1 banned'] = dfb.loc[:,'top'].apply(lambda x: x.get('bannedClass', 'none') )
+    dfb['player 2 banned'] = dfb.loc[:,'bottom'].apply(lambda x: x.get('bannedClass', 'none'))
     
     # Quick Class View
     dfview = dfb.copy()
     dfview = dfview[['player 1', 'player 1 banned', 'player 2 banned', 'player 2']]
     
     dictionary = dfa[['name','class 1','class 2','class 3','arc 1','arc 2','arc 3']].copy()
+    dictionary.astype({'name':'str'})
     for i in range (1,4):
         dictionary[f'nameclass{i}'] = dictionary['name'] + dictionary[f'class {i}']
         
@@ -299,3 +301,9 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
 # summary = wintotal[['Deck Archetype','WinTotal']]
 # summary['LossTotal'] = losstotal['LossTotal']
 # summary['Winrate'] = summary['WinTotal']/(summary['WinTotal'] + summary['LossTotal'])
+
+
+
+
+
+
