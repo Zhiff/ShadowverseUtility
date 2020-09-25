@@ -33,9 +33,9 @@ from bs4 import BeautifulSoup as bs
 #                   - JSON hash must be valid
 #                   - People changing name after tournament ended will skew the results
 
-bfy_tourneyhash = '5f02c8825522b86652930ae3'
-bfy_stagehash = '5f6574dd1104cd7a261297b9'
-ws.SVO_posttourney_scraper(bfy_tourneyhash, bfy_stagehash)
+# bfy_tourneyhash = '5f02c8825522b86652930ae3'
+# bfy_stagehash = '5f6574dd1104cd7a261297b9'
+# ws.SVO_posttourney_scraper(bfy_tourneyhash, bfy_stagehash)
 
 
 
@@ -45,7 +45,7 @@ ws.SVO_posttourney_scraper(bfy_tourneyhash, bfy_stagehash)
 
 
 
-# ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2376/json')
+ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2381/json')
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f4e2b55a3eaa925df8594a2/teams')
 
 # Ban Analyzer
@@ -53,6 +53,7 @@ ws.SVO_posttourney_scraper(bfy_tourneyhash, bfy_stagehash)
 
 # bfy_tourneyhash = '5f02c8825522b86652930ae3'
 # bfy_stagehash = '5f6574dd1104cd7a261297b9'
-# player = 'Arkal'
+# player = 'TK 雪見小梅'
 
 # stats = ws.SVO_ban_peek(player, bfy_tourneyhash, bfy_stagehash)
+

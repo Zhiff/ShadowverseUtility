@@ -703,3 +703,102 @@ FH,Haven,Gold,1,Temple of Heresy,717QI
 FH,Haven,Legendary,5,"Ra, Radiance Incarnate",719Nc
 FH,Portal,Gold,2,"Lazuli, Gateway Homunculus",71VLi
 FH,Portal,Legendary,5,"Lucille, Keeper of Relics",71Xo6
+SOR,Neutral,Bronze,1,Rivaylian Bandit,72BI2
+SOR,Neutral,Bronze,2,Quixotic Adventurer,72BIC
+SOR,Neutral,Gold,2,Wandering Chef,72GAY
+SOR,Neutral,Legendary,2,Ramiel,72Icy
+SOR,Neutral,Silver,3,Vagabond Lizard,72DkI
+SOR,Neutral,Bronze,3,Spice Shower,72C0w
+SOR,Neutral,Gold,4,Embodiment of Cocytus,72GvQ
+SOR,Neutral,Silver,5,Supercharged Guitarist,72DkS
+SOR,Neutral,Legendary,10,"Lucifer, Fallen Angel",72Ico
+SOR,Shadow,Bronze,1,Bone Fanatic,745Mi
+SOR,Shadow,Bronze,1,Cursed Coin,745ro
+SOR,Shadow,Bronze,2,Skeleton Dreamer,745Ms
+SOR,Shadow,Legendary,2,Gold Rush Ghost,74ChI
+SOR,Shadow,Gold,2,Death of the Party,74AkI
+SOR,Shadow,Bronze,3,Grudge Teller,745MY
+SOR,Shadow,Silver,4,Abysmal Wraith,747oy
+SOR,Shadow,Gold,4,Greatpick Corpse,74AF2
+SOR,Shadow,Silver,4,Necroimpulse,748Xg
+SOR,Shadow,Silver,6,Gold Mine Necromancer,747oo
+SOR,Shadow,Legendary,7,Invincible Monster Trio,74ChS
+SOR,Forest,Bronze,1,Cactus Cowboy,72Zis
+SOR,Forest,Legendary,1,"Shamu & Shama, Posh Felines",72h1I
+SOR,Forest,Bronze,2,Forest Patroller,72Zii
+SOR,Forest,Gold,2,"Sukuna, Mighty Malleteer",72ebC
+SOR,Forest,Silver,2,Corrosive Thorns,72ctg
+SOR,Forest,Bronze,3,Lookout Elf,72ZiY
+SOR,Forest,Bronze,3,Hornet Strike,72aRQ
+SOR,Forest,Silver,4,Varmint Hunter,72c8y
+SOR,Forest,Silver,5,"Carmine, Breaker of Smiles",72c8o
+SOR,Forest,Legendary,5,"Loxis, Homestead Pioneer",72h1S
+SOR,Forest,Legendary,5,"Ladica, the Stoneclaw",gaErI
+SOR,Forest,Gold,6,Giant Pastures,72eb2
+SOR,Sword,Bronze,1,Shinobi Tanuki,72y7M
+SOR,Sword,Silver,1,Dramatic Retreat,72_IA
+SOR,Sword,Bronze,2,Naht's Henchman,72y7C
+SOR,Sword,Bronze,3,Frontline Instructor,72y72
+SOR,Sword,Silver,3,Outlaw Gunner,72-ZI
+SOR,Sword,Bronze,3,Bandit Raid,72yrw
+SOR,Sword,Gold,3,Graceful Maneuver,731kQ
+SOR,Sword,Legendary,4,"Nahtnaught, Cursed Queen",733Ry
+SOR,Sword,Silver,5,Stalwart Slinger,72-ZS
+SOR,Sword,Gold,5,"Reinhardt, the Deathless",730_Y
+SOR,Sword,Legendary,5,"Bunny & Baron, Specter Duo",733Ro
+SOR,Rune,Legendary,1,"Maiser, Neighborhood Hero",73RsI
+SOR,Rune,Bronze,2,Rivaylian Deputy,73KXY
+SOR,Rune,Silver,2,Scorching Blast,73Nig
+SOR,Rune,Bronze,3,Crystal Fencer,73KXs
+SOR,Rune,Gold,3,Magical Gunslinger,73PQ2
+SOR,Rune,Bronze,4,Mirror Witch,73KXi
+SOR,Rune,Gold,4,"Faust, Overzealous Observer",73PQC
+SOR,Rune,Legendary,4,"Vincent, the Peacekeeper",73RsS
+SOR,Rune,Bronze,4,Terra Nova,73LGQ
+SOR,Rune,Silver,5,Artistic Arcanist,73Mzo
+SOR,Rune,Silver,7,Golem Marshal,73Mzy
+SOR,Dragon,Bronze,1,Wyrmfire Engineer,73iyC
+SOR,Dragon,Silver,2,Dragonfolk Artificer,73lOS
+SOR,Dragon,Gold,2,Resplendent Phoenix,73nqY
+SOR,Dragon,Bronze,2,Thunderous Roar,73jgw
+SOR,Dragon,Silver,2,Draconic Counsel,73m7A
+SOR,Dragon,Bronze,3,Mermaid Guide,73iy2
+SOR,Dragon,Gold,3,Balefire Wrenchsmith,73nqi
+SOR,Dragon,Legendary,3,"Reggie, Peerless Artisan",73qGy
+SOR,Dragon,Silver,7,Azureflame Dragonewt,73lOI
+SOR,Dragon,Bronze,8,Pumpkin Dragon,73iyM
+SOR,Dragon,Legendary,10,Dragon-Devouring Dread,73qGo
+SOR,Dragon,Legendary,4,"Valdain, Cursed Shadow",gbO4o
+SOR,Portal,Silver,0,Capsule Homunculus,75H2I
+SOR,Portal,Gold,0,Elemental Brink,75KDQ
+SOR,Portal,Bronze,1,Stringmaster,75EcC
+SOR,Portal,Legendary,1,"Illganeau, Horror Astray",75Lwo
+SOR,Portal,Bronze,1,Mechanical Designs,75FKw
+SOR,Portal,Silver,2,Railmender Coyote,75H2S
+SOR,Portal,Silver,2,Scavenge,75HnA
+SOR,Portal,Bronze,3,Yo-Yo Beam Girl,75Ec2
+SOR,Portal,Bronze,4,Wretch,75EcM
+SOR,Portal,Gold,4,"Carnelia, Servant of Darkness",75JUY
+SOR,Portal,Legendary,7,"Iceschillendrig, Gilded Autocrat",75Lwy
+SOR,Haven,Bronze,1,Sacred Stone Apostle,74sBY
+SOR,Haven,Bronze,2,Enchanted Knight,74sBi
+SOR,Haven,Gold,2,Vengeful Sniper,74x42
+SOR,Haven,Silver,2,Pure Metamorphosis,74vMg
+SOR,Haven,Legendary,4,"Selena, Sugarkiss Assassin",74zWI
+SOR,Haven,Gold,4,Holy Sanctuary,74xJg
+SOR,Haven,Silver,5,Shady Priest,74udo
+SOR,Haven,Bronze,5,Benevolent Blight,74swQ
+SOR,Haven,Silver,7,Set,74udy
+SOR,Haven,Legendary,7,"Anvelt, Judgment's Cannon",74zWS
+SOR,Haven,Bronze,9,Revolver Eagle,74sBs
+SOR,Blood,Silver,1,Bloodfall,74WyA
+SOR,Blood,Bronze,2,Scrappy Werewolf,74Tn2
+SOR,Blood,Silver,2,Craps Devil,74WDI
+SOR,Blood,Gold,2,Showdown Demon,74YfY
+SOR,Blood,Silver,3,Redcap,74WDS
+SOR,Blood,Legendary,3,"Vuella, Unblemished Wings",74b5y
+SOR,Blood,Bronze,3,Spiderweb Array,74UVw
+SOR,Blood,Gold,4,"Hazhan, Demonblade Knight",74Yfi
+SOR,Blood,Bronze,6,Roulette Vampire,74TnM
+SOR,Blood,Legendary,7,"Volteo, Hedonistic Dealer",74b5o
+SOR,Blood,Bronze,9,Fulminating Berserker,74TnC

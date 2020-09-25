@@ -42,15 +42,25 @@ def JCG_scraper(jsonlink):
     data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
     data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+    df = data6
     
+    if isTop16JCG(data6, jsonlink):
+        namedf = retrieveTop16(jsonlink)
+        data7 = namedf.merge(data6)
+        rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
+        df = pd.concat([rankings, data7],axis=1)
+        df = df[['Rank', 'name', 'deck 1', 'deck 2']]
+        
+        
     writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
-    data6.to_excel(writer)
+    df.to_excel(writer, index=False)
     writer.save()
     
     em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats()
+    em.add_class_color()
 
 #Scrap data from MS Gaming in Battlefy
 #requirements : Json link : //tournaments/..../teams . Can be found in response at Participants tab
@@ -303,7 +313,41 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
 # summary['Winrate'] = summary['WinTotal']/(summary['WinTotal'] + summary['LossTotal'])
 
 
+def isTop16JCG(df, jsonlink):
+    top16JCG = False
+    if (len(df.index) <= 16):
+        compeID = jsonlink.split('/')[6]
+        homepage = 'https://sv.j-cg.com/compe/' + compeID
+        source = requests.get(homepage).text
+        soup = bs(source, 'lxml')
+        placement = soup.find('p', class_="rank rank-1")
+        if (placement != None):
+            top16JCG = True
+            
+    return top16JCG
 
-
-
-
+def retrieveTop16(jsonlink):
+    compeID = jsonlink.split('/')[6]
+    tourpage = 'https://sv.j-cg.com/compe/view/tour/' + compeID
+    source = requests.get(tourpage).text
+    soup = bs(source, 'lxml')
+    
+    namelist = []
+    legend = soup.find_all('div', class_='name_abbr')
+    for entry in legend:
+        namelist.append(entry.text)
+    
+    namedf = pd.DataFrame(namelist).rename(columns={0:'name'})
+    namedf = namedf['name'].value_counts().rename_axis("name").reset_index(name = 'Count')
+    
+    mainpage = 'https://sv.j-cg.com/compe/' + compeID
+    source2 = requests.get(mainpage).text
+    soup2 = bs(source2, 'lxml')
+    
+    firstplace = soup2.find('p', class_='rank rank-1').findNext().text
+    secondplace = soup2.find('p', class_='rank rank-2').findNext().text
+    
+    namedf.at[0,'name'] = firstplace
+    namedf.at[1,'name'] = secondplace
+    
+    return namedf

@@ -151,7 +151,7 @@ class Deck:
             alldf = pd.concat(listdf, axis=1)
             
             #Addition
-            alldf['Expansion'] = 'FH'
+            alldf['Expansion'] = 'SOR'
             cols = list(alldf.columns.values)
             alldf = alldf[[cols[-1]] + cols[0:-1]]
             

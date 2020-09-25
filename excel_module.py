@@ -158,4 +158,25 @@ def combine_view_and_stats():
             
     excel2.save(file2)
 
+def conditionalFormat(sheet):
+    classmap = ['Forest', 'Sword', 'Rune', 'Dragon', 'Shadow', 'Blood', 'Haven', 'Portal']
+    colormap = ['E2EFDA', 'FFF2CC', 'CCCCFF', 'FCE4D6', 'FFCCFF', 'FFA39E', 'D0CECE', 'DDEBF7']
+    for i in range(0,8):
+    
+        colorfill = oxl.styles.PatternFill(bgColor=colormap[i])
+        diffstyle = oxl.styles.differential.DifferentialStyle(fill=colorfill)
+        clmap = classmap[i]
+        rule = oxl.formatting.Rule(type="containsText", operator="containsText", text=clmap, dxf=diffstyle)
+        rule.formula = [f'NOT(ISERROR(SEARCH("{clmap}", A1)))']
+        sheet.conditional_formatting.add("A1:F400", rule)
+
+def add_class_color():
+    
+    file = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
+    excel = oxl.load_workbook(file)
+    sheet = excel['Names and Links']
+    conditionalFormat(sheet)
+    sheet = excel['Decks']
+    conditionalFormat(sheet)
+    excel.save(file)
 
