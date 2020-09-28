@@ -25,7 +25,7 @@ def SVO_initial_scraper(svoexcel):
     em.excel_convert_dataset(svoexcel, 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats()
-    em.add_class_color()
+    em.add_class_color(1)
 
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
@@ -68,7 +68,7 @@ def JCG_scraper(jsonlink):
     em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats()
-    em.add_class_color()
+    em.add_class_color(1)
 
 #Scrap data from MS Gaming in Battlefy
 #requirements : Json link : //tournaments/..../teams . Can be found in response at Participants tab
@@ -103,6 +103,7 @@ def manasurge_bfy_scraper(jsonlink):
     em.excel_convert_dataset('Excel_and_CSV/MS_Raw.xlsx', 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats()
+    em.add_class_color(1)
     
 # Scrap info from battlefy to see W/L/B stats and Archetype stats in Post_SVO file.
 # Prerequisite : SVO_initial_scraper must be run first. FilteredDecks_Data should contain all participants
@@ -166,12 +167,13 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     winbanstats = sh.get_win_ban_archetype(alldf)
     
     writer = pd.ExcelWriter('Excel_and_CSV/Post_SVO_Data.xlsx')
-    alldf_view.to_excel(writer, 'Sheet1')
+    alldf_view.to_excel(writer, 'Names and Links')
     winbanstats.to_excel(writer, 'Archetype Stats')
     writer.save()
     
     # convert svoportal link to archetype name
-    em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx', 'Sheet1', True)
+    em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx', 'Names and Links', True)
+    em.add_class_color(2)
 
     
 # This function will retrieve matches and bans for queried player. It will return a dataframe that can be observed in Main file.

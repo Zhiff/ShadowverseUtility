@@ -15,7 +15,7 @@ from deckmodule import Deck
 # Output : new excel file
 def excel_convert_quick(excelfile, sheetname, custom=False):
     excel = oxl.load_workbook(excelfile)
-    sheet = excel[sheetname]
+    sheet = excel.worksheets[0]
     # Iterate all cells in excel sheet
     for column in range(1, sheet.max_column + 1):
         for row in range(1, sheet.max_row + 1):
@@ -177,13 +177,18 @@ def conditionalFormat(sheet):
         sheet.conditional_formatting.add("A1:F400", rule)
 
 #This function will add color to View sheet and Decks sheet in Stats and Breakdown files
-def add_class_color():
-    
+def add_class_color(mode):
+# mode 1 : For Statistics and Breakdown sheet
+# mode 2 : For Post SVO
     file = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
     excel = oxl.load_workbook(file)
-    sheet = excel['Names and Links']
+    sheet = excel.worksheets[0]
     conditionalFormat(sheet)
-    sheet = excel['Decks']
-    conditionalFormat(sheet)
+    if (mode == 1):
+        sheet = excel['Decks']
+        conditionalFormat(sheet)
+    elif (mode == 2):
+        sheet = excel.worksheets[1]
+    
     excel.save(file)
 
