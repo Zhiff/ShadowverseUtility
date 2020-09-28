@@ -28,6 +28,7 @@ class Deck:
         return craft_name                
     
     def class_checker_svo(self):
+        #This function is added to match battlefy class classification
         leader = { 'Forestcraft':'arisa' , 'Swordcraft':'erika' , 'Runecraft':'isabelle' , 'Dragoncraft':'rowen' , 'Shadowcraft':'luna' , 'Bloodcraft':'urias' , 'Havencraft':'eris' , 'Portalcraft':'yuwan' }
         craft_me = self.class_checker()
         svo_class = leader.get(craft_me)
@@ -96,6 +97,7 @@ class Deck:
         else:
             return None
 
+    #function to add new cards into database by generating a csv file to be copied into main db
     def generate_svportalhash(self):
         filename = 'Excel_and_CSV/svportal.csv'
         url = self.svlink
@@ -150,9 +152,10 @@ class Deck:
             listdf = [craftdf, raredf, costdf, namedf, hashdf]
             alldf = pd.concat(listdf, axis=1)
             
-            #Addition
+            #Add all of them together in 1 dataframe
             alldf['Expansion'] = 'SOR'
             cols = list(alldf.columns.values)
+            #Sorting so expansion name is in front
             alldf = alldf[[cols[-1]] + cols[0:-1]]
             
             alldf.to_csv(filename, index=False)

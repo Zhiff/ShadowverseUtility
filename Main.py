@@ -26,12 +26,13 @@ from bs4 import BeautifulSoup as bs
 # ws.SVO_initial_scraper('Excel_and_CSV/SEAOCL.xlsx')
 
 
-
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
-# Input : JSON hash from battlefy
+# Input : JSON hashes from battlefy
 # Requirements :    - SVO_Initial_Scraper must be ran, FilteredDecks_View contains all participants lineups
 #                   - JSON hash must be valid
 #                   - People changing name after tournament ended will skew the results
+# Example : https://battlefy.com/shadowverse-open/svo-seao-monthly-cup-september/5f02c8825522b86652930ae3/stage/5f6574dd1104cd7a261297b9/bracket/7
+# 5f02c8825522b86652930ae3 is tourneyhash and 5f6574dd1104cd7a261297b9 is stagehash
 
 # bfy_tourneyhash = '5f02c8825522b86652930ae3'
 # bfy_stagehash = '5f6574dd1104cd7a261297b9'
@@ -43,10 +44,15 @@ from bs4 import BeautifulSoup as bs
 # Input : Json page from respective website
 # Requirements :    - JSON link must be valid
 
-
-
-ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2381/json')
+ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2388/json')
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f4e2b55a3eaa925df8594a2/teams')
+
+# Quick Groupstage check for JCG
+# Input : JCG page for specified tourney (not top 16)
+# Requirements : JCG_Scraper for specified tourney needs to be ran first
+name = ws.JCG_group_winner_check('https://sv.j-cg.com/compe/2388')  
+count = sh.deck_quick_count(name)
+
 
 # Ban Analyzer
 # Input : JSON Hashes, player name

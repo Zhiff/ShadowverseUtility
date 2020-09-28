@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Aug  7 21:42:37 2020
-This in excel module. This module will handle all data manipulation using in excel
+This in excel module. This module will handle almost all data manipulation in excel
 @author: zhafi
 """
 import pandas as pd
@@ -33,28 +33,7 @@ def excel_convert_quick(excelfile, sheetname, custom=False):
     else:
         excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')
 
-#This function will freeze first 2 column in statistics and highlight the important cards
-def statistics_freeze_highlight(excelfile):
-    excel = oxl.load_workbook(excelfile)
-    breakdown = excel.sheetnames
-    breakdown = breakdown[2:len(breakdown)]
-    
-    # Conditional Formatting, Highlight entire row if mean >= 2
-    colorfill = oxl.styles.PatternFill(bgColor="A9A9A9")
-    diffstyle = oxl.styles.differential.DifferentialStyle(fill=colorfill)
-    rule = oxl.formatting.Rule(type='expression', dxf=diffstyle)
-    rule.formula = ["$B2>=2"]
-
-    for archetype in breakdown:
-        sheet = excel[archetype]
-        last_column = oxl.utils.cell.get_column_letter(sheet.max_column)
-        sheet.freeze_panes = 'C1'
-        sheet.conditional_formatting.add(f"A2:{last_column}80", rule)
-    
-    excel.save(excelfile)
-
-
-# This function 
+# This function will create FilteredDecks_Data xlsx which serves as main data processing. This file will be the basis for all statistics calculation
 def excel_convert_dataset(svo_raw, maxdeck):
     df = pd.read_excel(svo_raw)
     for i in range(1, maxdeck+1):
@@ -69,7 +48,8 @@ def excel_convert_dataset(svo_raw, maxdeck):
     writer = pd.ExcelWriter("Excel_and_CSV/FilteredDecks_Data.xlsx")
     df.to_excel(writer, 'MainData')
     writer.save()
-    
+
+# This function is responsible to create Statistics and Breakdown file which is the one of the main output for this project.       
 # requirements : name (lowercase) , deck 1 , deck 2 
 def excel_statistics(filtered_data, maxdeck):
     
@@ -94,10 +74,12 @@ def excel_statistics(filtered_data, maxdeck):
     tournament_breakdown(df, writer, maxdeck)  
 
     writer.save()
+    
+    # Freeze cardname and mean for deck breakdown
     statistics_freeze_highlight(outputfile)
 
 
-#This function will create an excel document which consists of Deck Archetype Breakdowns
+#This function will handle Deck Archetype Breakdowns
 #The sheet will list all players decklist grouped by archetype and compare it side by side in order to get bigger picture of the archetype
 def tournament_breakdown(df, excelwriter, maxdeck):
     
@@ -141,16 +123,18 @@ def tournament_breakdown(df, excelwriter, maxdeck):
             arc_df = arc_df[[cols[-1]] + cols[0:-1]]
             arc_df.to_excel(excelwriter, archetype)
 
-#This function will combine view into stats.xlsx for easier spreadsheets export
+#This function will combine filtereddecks_view into stats and breakdown.xlsx for easier spreadsheets export
 def combine_view_and_stats():
     file1 = 'Excel_and_CSV/FilteredDecks_View.xlsx'
     file2 = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
     excel1 = oxl.load_workbook(file1)
     excel2 = oxl.load_workbook(file2)
     
+    # assign source sheet and destination sheet
     src = excel1.worksheets[0]
     dst = excel2.create_sheet(title="Names and Links", index=0)
     
+    # copy all the decklist content in source to destination
     for row in src:
         for cell in row:
             dst[cell.coordinate].hyperlink = cell.hyperlink
@@ -158,9 +142,31 @@ def combine_view_and_stats():
             
     excel2.save(file2)
 
+#This function will freeze first 2 column in statistics and highlight the important cards
+def statistics_freeze_highlight(excelfile):
+    excel = oxl.load_workbook(excelfile)
+    breakdown = excel.sheetnames
+    breakdown = breakdown[2:len(breakdown)]
+    
+    # Conditional Formatting, Highlight entire row if mean >= 2
+    colorfill = oxl.styles.PatternFill(bgColor="A9A9A9")
+    diffstyle = oxl.styles.differential.DifferentialStyle(fill=colorfill)
+    rule = oxl.formatting.Rule(type='expression', dxf=diffstyle)
+    rule.formula = ["$B2>=2"]
+
+    for archetype in breakdown:
+        sheet = excel[archetype]
+        last_column = oxl.utils.cell.get_column_letter(sheet.max_column)
+        sheet.freeze_panes = 'C1'
+        sheet.conditional_formatting.add(f"A2:{last_column}80", rule)
+    
+    excel.save(excelfile)
+
+#This function will handle conditional formatting for class coloring
 def conditionalFormat(sheet):
     classmap = ['Forest', 'Sword', 'Rune', 'Dragon', 'Shadow', 'Blood', 'Haven', 'Portal']
     colormap = ['E2EFDA', 'FFF2CC', 'CCCCFF', 'FCE4D6', 'FFCCFF', 'FFA39E', 'D0CECE', 'DDEBF7']
+    # Repeat the conditional formatting assignment for each class
     for i in range(0,8):
     
         colorfill = oxl.styles.PatternFill(bgColor=colormap[i])
@@ -170,6 +176,7 @@ def conditionalFormat(sheet):
         rule.formula = [f'NOT(ISERROR(SEARCH("{clmap}", A1)))']
         sheet.conditional_formatting.add("A1:F400", rule)
 
+#This function will add color to View sheet and Decks sheet in Stats and Breakdown files
 def add_class_color():
     
     file = 'Excel_and_CSV/Statistics and Breakdown.xlsx'

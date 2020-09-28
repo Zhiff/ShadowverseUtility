@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Aug  7 21:29:08 2020
-This is website scraper module. Call this from main to extract info from online tournaments
+This is website scraper module. Call this from main to extract info from online tournaments, Most json and html handling was done here. more complex thing are moved into stat helper module.
 
 @author: zhafi
 """
@@ -13,12 +13,19 @@ from deckmodule import Deck
 from bs4 import BeautifulSoup as bs
 
 
-
+#SVO scraper
+# This function will create FilteredDecks_View, FilteredDecks_Data, and Statistics for SVO
+# Some manual preprocessing is required
+# - Decklist sheet name needs to be 'Sheet1' (as specified in convert_quick)
+# - Invalid links need to be resolved, otherwise it will return as UNKNOWN UNKNOWN
+# - improper svportal links ( most common example is no #lang at the end ) needs to be manually resolved. deckbuilder links is auto-resolved.
 def SVO_initial_scraper(svoexcel):
+    # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
     em.excel_convert_dataset(svoexcel, 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats()
+    em.add_class_color()
 
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
@@ -44,18 +51,19 @@ def JCG_scraper(jsonlink):
     data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     df = data6
     
-    if isTop16JCG(data6, jsonlink):
-        namedf = retrieveTop16(jsonlink)
+    # Additional handling for top16 JCG Data, it will retrieve the ranking and sort it accordingly instead of registration based.
+    if sh.isTop16JCG(data6, jsonlink):
+        namedf = sh.retrieveTop16JCG(jsonlink)
         data7 = namedf.merge(data6)
         rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
         df = pd.concat([rankings, data7],axis=1)
         df = df[['Rank', 'name', 'deck 1', 'deck 2']]
         
-        
     writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
     df.to_excel(writer, index=False)
     writer.save()
     
+    # Calls functions from excel module to process raw sheets
     em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
@@ -89,38 +97,18 @@ def manasurge_bfy_scraper(jsonlink):
     writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx')
     df.to_excel(writer)
     writer.save()
-        
+    
+    # Calls functions from excel module to process raw sheets
     em.excel_convert_quick('Excel_and_CSV/MS_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/MS_Raw.xlsx', 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats()
     
-    
-# Read quick stats from top performers
+# Scrap info from battlefy to see W/L/B stats and Archetype stats in Post_SVO file.
 # Prerequisite : SVO_initial_scraper must be run first. FilteredDecks_Data should contain all participants
-# Input : latest-round-standings json ex: 'https://dtmwra1jsgyb0.cloudfront.net/stages/5f1266601047db149e9edf9e/latest-round-standings'
-def SVO_tops_scraper_v1(jsonlink):
-    svolink = jsonlink
-    response = requests.get(svolink)        
-    data = response.json()
-    df1 = pd.DataFrame(data)
-    df2 = pd.DataFrame(list(df1['team'])).rename(columns={'_id':'teamID'})
-    df = df1.merge(df2, on='teamID')
-    df = df[['name', 'wins','losses','disqualified']]
-    df = df.loc[(df['wins']>2) & (df['losses']<3) & (df['disqualified']== False)]
-    
-    alldata = pd.read_excel("Excel_and_CSV/FilteredDecks_Data.xlsx")
-    dfdata = df.merge(alldata, on='name')
-    dfview = dfdata[['name', 'wins','losses','arc 1','arc 2','arc 3']]
-    
-    writer = pd.ExcelWriter('Excel_and_CSV/SVOTopCut_Data.xlsx')
-    dfdata.to_excel(writer, 'Data')
-    dfview.to_excel(writer, 'View')
-    writer.save()
-    
-    em.excel_statistics('Excel_and_CSV/SVOTopCut_Data.xlsx', 3)
-    
-
+# Input : battlefy tourneyhash and stagehash
+# example : https://battlefy.com/shadowverse-open/svo-seao-monthly-cup-september/5f02c8825522b86652930ae3/stage/5f6574dd1104cd7a261297b9/bracket/7
+# 5f02c8825522b86652930ae3 is tourney hash and 5f6574dd1104cd7a261297b9 is stagehash
 def SVO_posttourney_scraper(tourneyhash , stagehash):
     # # We are dealing with 3 data frame
     # # dfa = overall dataframe from filtered data
@@ -177,7 +165,6 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     #Calculate Win-Ban Archetype Ratio
     winbanstats = sh.get_win_ban_archetype(alldf)
     
-    
     writer = pd.ExcelWriter('Excel_and_CSV/Post_SVO_Data.xlsx')
     alldf_view.to_excel(writer, 'Sheet1')
     winbanstats.to_excel(writer, 'Archetype Stats')
@@ -185,28 +172,13 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     
     # convert svoportal link to archetype name
     em.excel_convert_quick('Excel_and_CSV/Post_SVO_Data.xlsx', 'Sheet1', True)
-        
-    
-# url = 'https://sv.j-cg.com/compe/2373'
-# source = requests.get(url).text
-# soup = bs(source, 'lxml')
 
-# winners = soup.find_all('p', class_="rank rank-1")
-# winnerlist = []
-# for win in winners:
-#     name = win.findNext().text
-#     winnerlist.append(name)
-# namedf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
-
-# df = pd.read_excel('Excel_and_CSV/FilteredDecks_View.xlsx')
-# fdf = df.merge(namedf)
-# decks = fdf.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
-# decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
     
+# This function will retrieve matches and bans for queried player. It will return a dataframe that can be observed in Main file.
+# Sample input :
 # player = 'TK Zy'
 # tourneyhash = '5f02c761bf38ff0aa1f90bcf'
 # stagehash = '5f37504d6ce6de28d63dd645'
-
 def SVO_ban_peek(player, tourneyhash, stagehash):
     
     dfa = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx') 
@@ -265,6 +237,26 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
     return search
 
 
+# JCG Groupstage Checker
+def JCG_group_winner_check(url):
+    source = requests.get(url).text
+    soup = bs(source, 'lxml')
+    winners = soup.find_all('p', class_="rank rank-1")
+    winnerlist = []
+    for win in winners:
+        name = win.findNext().text
+        winnerlist.append(name)
+    namedf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
+    
+    df = pd.read_excel('Excel_and_CSV/FilteredDecks_View.xlsx')
+    fdf = df.merge(namedf)
+    
+    return fdf
+
+
+
+# Incomplete code for JCG archetype winrate calculator.
+
 # df = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx')
 # df = df[['name','arc 1', 'arc 2']]
 
@@ -311,43 +303,3 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
 # summary = wintotal[['Deck Archetype','WinTotal']]
 # summary['LossTotal'] = losstotal['LossTotal']
 # summary['Winrate'] = summary['WinTotal']/(summary['WinTotal'] + summary['LossTotal'])
-
-
-def isTop16JCG(df, jsonlink):
-    top16JCG = False
-    if (len(df.index) <= 16):
-        compeID = jsonlink.split('/')[6]
-        homepage = 'https://sv.j-cg.com/compe/' + compeID
-        source = requests.get(homepage).text
-        soup = bs(source, 'lxml')
-        placement = soup.find('p', class_="rank rank-1")
-        if (placement != None):
-            top16JCG = True
-            
-    return top16JCG
-
-def retrieveTop16(jsonlink):
-    compeID = jsonlink.split('/')[6]
-    tourpage = 'https://sv.j-cg.com/compe/view/tour/' + compeID
-    source = requests.get(tourpage).text
-    soup = bs(source, 'lxml')
-    
-    namelist = []
-    legend = soup.find_all('div', class_='name_abbr')
-    for entry in legend:
-        namelist.append(entry.text)
-    
-    namedf = pd.DataFrame(namelist).rename(columns={0:'name'})
-    namedf = namedf['name'].value_counts().rename_axis("name").reset_index(name = 'Count')
-    
-    mainpage = 'https://sv.j-cg.com/compe/' + compeID
-    source2 = requests.get(mainpage).text
-    soup2 = bs(source2, 'lxml')
-    
-    firstplace = soup2.find('p', class_='rank rank-1').findNext().text
-    secondplace = soup2.find('p', class_='rank rank-2').findNext().text
-    
-    namedf.at[0,'name'] = firstplace
-    namedf.at[1,'name'] = secondplace
-    
-    return namedf

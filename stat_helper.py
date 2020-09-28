@@ -7,7 +7,8 @@ to create clean excel/df based statistics. mostly being called by excel_module
 """
 
 import pandas as pd
-
+from bs4 import BeautifulSoup as bs
+import requests
 
 def add_lineup_column_3decks(df):
     # add new column which contains all 3 decks, then make them as Set to take care the uniformity
@@ -22,26 +23,30 @@ def add_lineup_column_2decks(df):
     return df_added_lineup
 
 def get_lineup_df(df):
+    # creating a new df that consists of lineup and the number of people that bringing that lineup in tourney
     lineup = df["Lineup"].value_counts(normalize = False, ascending = False)
     lineup = lineup.rename_axis("Lineup").reset_index(name = 'Count')
     lineup['Player %'] = (round((lineup['Count']/(int(df.shape[0])))*100, 2))
     return lineup
 
 def get_decks_df(df, maxdeck):
+    # creating a new df that consists of archetypes and the number of people that bringing that archetype in tourney
     decks = df.loc[:,'arc 1':f'arc {maxdeck}'].stack().value_counts(normalize = False, ascending = False)
     decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
     decks['Player %'] = (round((decks['Count']/(int(df.shape[0])))*100, 2))
     return decks
 
 def add_statistics_tool(df):
+    # count average, median, and standard Deviation and add them into df
     mean = round(df.mean(axis=1),2)
     median = df.median(axis=1)
     std = round(df.std(axis=1),2)
     df['Median'] = median
     df['Std Deviation'] = std
-    df['Mean'] = mean
+    df['Average'] = mean
     return df
 
+#filter for popular archetype, nowadays i just keep it as 1 as min occurence because we want to see the whole thing
 def get_popular_archetype(df, min_occurrence, maxdeck):
         
     # check the number of occurence (refer to statistics)
@@ -50,6 +55,7 @@ def get_popular_archetype(df, min_occurrence, maxdeck):
     popular_archetype = decks['Deck Archetype'].tolist()
     return popular_archetype
 
+# This function will add ban 1, ban 2, ban 3, and total ban into master dataframe. required for W/L/B data
 def get_ban_data(dfa, dfb, dfc):
     # Create a dataframe that contains 'name' and 'bannedClass'(dfd) by merging data from matches (dfb) and teams (dfc)
     dfb1 = pd.DataFrame(list(dfb['top']))
@@ -73,7 +79,6 @@ def get_ban_data(dfa, dfb, dfc):
     dfd3c = pd.merge(dfd3b, dfd3, how='left')
     dfd3c = dfd3c.rename(columns={'bannedClass':'class 3','count':'ban 3'})
     dfd3c = dfd3c.fillna(0)
-    dfa = dfa.rename(columns={'bannedClass':'class 1'})
     
     # Caluclate ban percentage
     dfd3c['totalban'] = dfd3c['ban 1'] + dfd3c['ban 2'] + dfd3c['ban 3']
@@ -83,6 +88,7 @@ def get_ban_data(dfa, dfb, dfc):
     dfd3c = dfd3c.fillna(0)
     return dfd3c
 
+# This function will add win 1, win 2, win 3, loss 1, loss 2, loss 3 and total match into master dataframe. required for W/L/B data
 def get_win_loss_data(dfa, dfb, dfc, playerdict):
     # create a new column, called top name and bot name. first, retrieve team ID from top, then convert team ID into actual name based on playerdict 
     dfb['top teamID'] = dfb.loc[:,'top'].apply(lambda x: x['teamID'])
@@ -141,6 +147,7 @@ def get_win_loss_data(dfa, dfb, dfc, playerdict):
     dfd3f = dfd3f.fillna(0)    
     return dfd3f
 
+# This function is respinsible for creating a dataframe for win ban percentage for all archetype. It will be featured in Archetype Stats sheet in post svo result.
 def get_win_ban_archetype(alldf):
     # Make a df that only consists of archetypes, and their ban percentage for every single player
     decks = alldf.loc[:,'arc 1':'arc 3'].stack().reset_index().rename(columns={0:'archetype'})
@@ -166,8 +173,52 @@ def get_win_ban_archetype(alldf):
     
     return winbanstats
 
+def isTop16JCG(df, jsonlink):
+    top16JCG = False
+    if (len(df.index) <= 16):
+        compeID = jsonlink.split('/')[6]
+        homepage = 'https://sv.j-cg.com/compe/' + compeID
+        source = requests.get(homepage).text
+        soup = bs(source, 'lxml')
+        placement = soup.find('p', class_="rank rank-1")
+        if (placement != None):
+            top16JCG = True
+            
+    return top16JCG
 
-# # incomplete code for Archetype Matchup. will follow later
+def retrieveTop16JCG(jsonlink):
+    compeID = jsonlink.split('/')[6]
+    tourpage = 'https://sv.j-cg.com/compe/view/tour/' + compeID
+    source = requests.get(tourpage).text
+    soup = bs(source, 'lxml')
+    
+    namelist = []
+    legend = soup.find_all('div', class_='name_abbr')
+    for entry in legend:
+        namelist.append(entry.text)
+    
+    namedf = pd.DataFrame(namelist).rename(columns={0:'name'})
+    namedf = namedf['name'].value_counts().rename_axis("name").reset_index(name = 'Count')
+    
+    mainpage = 'https://sv.j-cg.com/compe/' + compeID
+    source2 = requests.get(mainpage).text
+    soup2 = bs(source2, 'lxml')
+    
+    firstplace = soup2.find('p', class_='rank rank-1').findNext().text
+    secondplace = soup2.find('p', class_='rank rank-2').findNext().text
+    
+    namedf.at[0,'name'] = firstplace
+    namedf.at[1,'name'] = secondplace
+    
+    return namedf
+
+def deck_quick_count(df):
+    decks = df.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
+    decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
+    
+    return decks
+
+# # incomplete code for Archetype Matchup. Abandoned due to low sample in single SVO which makes the data kinda nonsense. Might be revisited if somehow SVO becomes bigger 
     
 # dfb['top teamID'] = dfb.loc[:,'top'].apply(lambda x: x['teamID'])
 # dfb['bot teamID'] = dfb.loc[:,'bottom'].apply(lambda x: x['teamID'])
