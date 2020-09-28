@@ -32,6 +32,6 @@ Features :
   - Battlefy Tournaments
     - Main input is JSON data directly from battlefy
     - Currently only MS tournaments were customized
-    - Using mnasurge_bfy_scraper method, informations such as Archetypes, Lineups, and Deck Breakdowns will be generated into excel files
+    - Using manasurge_bfy_scraper method, informations such as Archetypes, Lineups, and Deck Breakdowns will be generated into excel files
     
 Contact me at Zhiff#6585 on discord if you have further question
