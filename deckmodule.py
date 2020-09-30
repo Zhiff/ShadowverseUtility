@@ -46,7 +46,7 @@ class Deck:
         i = 0
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
-        df = pd.read_excel('Excel_and_CSV/FortuneHandMeta.xlsx')
+        df = pd.read_excel('Excel_and_CSV/StormOverRivayleMeta.xlsx')
         cleaned_values = df[['Archetype Name', 'Hash Code 1', 'Hash Code 2','Hash Code 3']].values
         
         # Iterate each row in array
@@ -71,7 +71,7 @@ class Deck:
     
     
     def deck_details(self):
-        cardhash = pd.read_csv('Excel_and_CSV/00_URLcode_JULY.csv')
+        cardhash = pd.read_csv('Excel_and_CSV/00_URLcode.csv')
         url = self.svlink
         if ('https://shadowverse-portal.com' in url):
             # Svportal syntax processing
@@ -81,8 +81,11 @@ class Deck:
             removestart = url.split('.',3)[3]
             if '?' in removestart:
                 cleanhash = removestart.split('?',1)[0]
-            else :
+            elif '&' in removestart:
                 cleanhash = removestart.split('&',1)[0]
+            else:
+                cleanhash = removestart
+
             decklist = cleanhash.split('.')
             df = pd.DataFrame(decklist)
             
