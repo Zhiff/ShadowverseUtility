@@ -238,24 +238,6 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
     
     return search
 
-
-# JCG Groupstage Checker
-# def JCG_group_winner_check(url):
-#     source = requests.get(url).text
-#     soup = bs(source, 'lxml')
-#     winners = soup.find_all('p', class_="rank rank-1")
-#     winnerlist = []
-#     for win in winners:
-#         name = win.findNext().text
-#         winnerlist.append(name)
-#     namedf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
-    
-#     df = pd.read_excel('Excel_and_CSV/FilteredDecks_View.xlsx')
-#     fdf = df.merge(namedf)
-    
-#     return fdf
-
-
 def JCG_group_winner_check(url):
     source = requests.get(url).text
     soup = bs(source, 'lxml')
