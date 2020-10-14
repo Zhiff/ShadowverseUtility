@@ -240,20 +240,62 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
 
 
 # JCG Groupstage Checker
+# def JCG_group_winner_check(url):
+#     source = requests.get(url).text
+#     soup = bs(source, 'lxml')
+#     winners = soup.find_all('p', class_="rank rank-1")
+#     winnerlist = []
+#     for win in winners:
+#         name = win.findNext().text
+#         winnerlist.append(name)
+#     namedf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
+    
+#     df = pd.read_excel('Excel_and_CSV/FilteredDecks_View.xlsx')
+#     fdf = df.merge(namedf)
+    
+#     return fdf
+
+
 def JCG_group_winner_check(url):
     source = requests.get(url).text
     soup = bs(source, 'lxml')
-    winners = soup.find_all('p', class_="rank rank-1")
-    winnerlist = []
-    for win in winners:
-        name = win.findNext().text
-        winnerlist.append(name)
-    namedf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
     
-    df = pd.read_excel('Excel_and_CSV/FilteredDecks_View.xlsx')
-    fdf = df.merge(namedf)
+    names = []
+    deck1 = []
+    deck2 = []
     
-    return fdf
+    allfinal = soup.find_all('div', class_='round round4')
+    
+    for finalround in allfinal:
+        
+        fin = finalround.select('li')[1]
+        right = fin.find('li', class_='tour_match right winner')
+        left = fin.find('li', class_='tour_match left winner')    
+        finalpage = str(fin).split("'")[1]
+        urllink = finalpage
+        
+        match = requests.get(urllink).text
+        soupm = bs(match, 'lxml') 
+        
+        if right == None: 
+            name = left.find('div').text
+            links = soupm.find('div', class_='team_wrap leftteam').find_all('a')
+        else:
+            name = right.find('div').text
+            links = soupm.find('div', class_='team_wrap rightteam').find_all('a')
+        
+        decka = links[0].get('href')
+        arc1 =  Deck(decka).archetype_checker()
+        deckb = links[1].get('href')
+        arc2 =  Deck(deckb).archetype_checker()
+        
+        names.append(name)
+        deck1.append(arc1)
+        deck2.append(arc2)
+    
+    df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+    return df
+
 
 
 
