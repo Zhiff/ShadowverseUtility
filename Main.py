@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/WEST Contenders.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/TSTop32.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -44,15 +44,15 @@ from bs4 import BeautifulSoup as bs
 # Input : Json page from respective website
 # Requirements :    - JSON link must be valid
 
-# ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2448/json')
+ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2454/json')
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f4e2b55a3eaa925df8594a2/teams')
 
 # Quick Groupstage check for JCG
 # Input : JCG page for specified tourney (not top 16)
 # Requirements : JCG_Scraper for specified tourney needs to be ran first
 
-name = ws.JCG_group_winner_check('https://sv.j-cg.com/compe/view/tour/2425')  
-count = sh.deck_quick_count(name)
+# name = ws.JCG_group_winner_check('https://sv.j-cg.com/compe/view/tour/2431')  
+# count = sh.deck_quick_count(name)
 
 
 # Ban Analyzer
