@@ -45,7 +45,7 @@ def excel_convert_dataset(svo_raw, maxdeck):
     elif maxdeck == 2:
         df = sh.add_lineup_column_2decks(df)
     
-    writer = pd.ExcelWriter("Excel_and_CSV/FilteredDecks_Data.xlsx")
+    writer = pd.ExcelWriter("Excel_and_CSV/FilteredDecks_Data.xlsx", options={'strings_to_urls': False})
     df.to_excel(writer, 'MainData')
     writer.save()
 
@@ -56,7 +56,7 @@ def excel_statistics(filtered_data, maxdeck):
     #Adding a new column in df called lineup. Lineup is basically a list of 3 decks that has been sorted ex : {sword, dragon, blood}
     df = pd.read_excel(filtered_data)        
     outputfile = "Excel_and_CSV/Statistics and Breakdown.xlsx"
-    writer = pd.ExcelWriter(outputfile)
+    writer = pd.ExcelWriter(outputfile, options={'strings_to_urls': False})
     if maxdeck == 3:
         df = sh.add_lineup_column_3decks(df)        
     elif maxdeck == 2:

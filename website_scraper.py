@@ -94,7 +94,7 @@ def manasurge_bfy_scraper(jsonlink):
     
     df = df.rename(columns={2:'deck 1', 3:'deck 2', 4:'deck 3'})
     
-    writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx')
+    writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx',options={'strings_to_urls': False})
     df.to_excel(writer)
     writer.save()
     
@@ -166,7 +166,7 @@ def SVO_posttourney_scraper(tourneyhash , stagehash):
     #Calculate Win-Ban Archetype Ratio
     winbanstats = sh.get_win_ban_archetype(alldf)
     
-    writer = pd.ExcelWriter('Excel_and_CSV/Post_SVO_Data.xlsx')
+    writer = pd.ExcelWriter('Excel_and_CSV/Post_SVO_Data.xlsx',options={'strings_to_urls': False})
     alldf_view.to_excel(writer, 'Names and Links')
     winbanstats.to_excel(writer, 'Archetype Stats')
     writer.save()
@@ -279,7 +279,7 @@ def JCG_group_winner_check(url):
         
         names.append(name)
         deck1.append(arc1)
-        deck2.append(arc2)
+        deck2.append(arc2) 
     
     df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
     return df
