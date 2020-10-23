@@ -32,36 +32,36 @@ def SVO_initial_scraper(svoexcel):
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
 # input example 'https://sv.j-cg.com/compe/view/entrylist/2341/json'
 def JCG_scraper(jsonlink):
-    # jcglink = jsonlink
-    # response = requests.get(jcglink)
-    # data1 = response.json()
-    # data2 = pd.DataFrame(list(data1['participants']))
-    # data3 = data2.loc[data2['te'] == 1] # Only filter those who checked in
-    # data4 = pd.DataFrame(list(data3['dk'])).rename(columns={0:'deck 1',1:'deck 2'}) #Grab df from column dk, then rename it properly
-    # data5 = data3['nm'].reset_index().drop(['index'], axis=1) #create a series with name only
-    # data6 = pd.concat([data5, data4], axis=1) #combine name and deck1,deck2
+    jcglink = jsonlink
+    response = requests.get(jcglink)
+    data1 = response.json()
+    data2 = pd.DataFrame(list(data1['participants']))
+    data3 = data2.loc[data2['te'] == 1] # Only filter those who checked in
+    data4 = pd.DataFrame(list(data3['dk'])).rename(columns={0:'deck 1',1:'deck 2'}) #Grab df from column dk, then rename it properly
+    data5 = data3['nm'].reset_index().drop(['index'], axis=1) #create a series with name only
+    data6 = pd.concat([data5, data4], axis=1) #combine name and deck1,deck2
     
-    # #JCG deck syntax Handling
-    # sv = 'https://shadowverse-portal.com/deck/'
-    # lang_eng = '?lang=en'
-    # data6 = data6.rename(columns={'nm':'name'})
-    # data6['deck 1'] = data6['deck 1'].apply(lambda x: x['hs'] if x else None)
-    # data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
-    # data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
-    # data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
-    # df = data6
+    #JCG deck syntax Handling
+    sv = 'https://shadowverse-portal.com/deck/'
+    lang_eng = '?lang=en'
+    data6 = data6.rename(columns={'nm':'name'})
+    data6['deck 1'] = data6['deck 1'].apply(lambda x: x['hs'] if x else None)
+    data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+    data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
+    data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+    df = data6
     
-    # # Additional handling for top16 JCG Data, it will retrieve the ranking and sort it accordingly instead of registration based.
-    # if sh.isTop16JCG(data6, jsonlink):
-    #     namedf = sh.retrieveTop16JCG(jsonlink)
-    #     data7 = namedf.merge(data6)
-    #     rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
-    #     df = pd.concat([rankings, data7],axis=1)
-    #     df = df[['Rank', 'name', 'deck 1', 'deck 2']]
+    # Additional handling for top16 JCG Data, it will retrieve the ranking and sort it accordingly instead of registration based.
+    if sh.isTop16JCG(data6, jsonlink):
+        namedf = sh.retrieveTop16JCG(jsonlink)
+        data7 = namedf.merge(data6)
+        rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
+        df = pd.concat([rankings, data7],axis=1)
+        df = df[['Rank', 'name', 'deck 1', 'deck 2']]
         
-    # writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
-    # df.to_excel(writer, index=False)
-    # writer.save()
+    writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
+    df.to_excel(writer, index=False)
+    writer.save()
     
     # Calls functions from excel module to process raw sheets
     em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
