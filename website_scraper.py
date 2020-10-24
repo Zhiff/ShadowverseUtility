@@ -27,6 +27,55 @@ def SVO_initial_scraper(svoexcel):
     em.combine_view_and_stats()
     em.add_class_color(1)
 
+
+
+
+#JCG Tourney Link Retriever 
+#Retrieves latest tourney of your choosing below:
+#1.) pick sv_format = {rotation, unlimited, 2pick}
+#2.) tourney_stage = {qualifying, winner}
+#3.) check if it's completed (終了)
+# Returns the 4 digit string code of the latest tourney for scraping
+def JCG_latest_tourney(sv_format, tourney_stage):
+
+    jcglink = 'https://sv.j-cg.com/compe/' + sv_format #1st page or 20 most recent tourney stages
+    formats = { 'rotation' : 'ローテーション大会' , 'unlimited' : 'アンリミテッド大会' , '2pick' : '2Pick大会' }
+    stage = {'qualifying' : 'グループ予選', 'winner' : '決勝トーナメント'}
+    
+    source = requests.get(jcglink).text
+    soup = bs(source, 'lxml')
+       
+    tourney = soup.find_all('tr', class_="competition commit") #tourney strted/finish while class_="competition" -> tourney has not started 
+    latest_tourney = False
+     
+    #Find relevant data in 'tourney' need (dates are also found in 'tourney')
+    for tourney_code in tourney:
+        name_text = tourney_code.find_all('span', class_="nobr")   
+        potential_format = name_text[-2].text
+        potential_stage = name_text[-1].text
+        potential_status = tourney_code.find('td', class_="status").text
+        
+        #Does it meet our conditions? (Note: First one is always the latest so no dates were used for now)
+        if potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '終了':
+            latest_tourney = True
+            potential_id = tourney_code.get("competition_id")
+            tourney_date = tourney_code.find('td', class_="date").text
+            latest_tourney_code = str(potential_id)
+            #latest_jsonlink = f'https://sv.j-cg.com/compe/view/entrylist/{latest_tourney_code}/json'
+            break
+       
+    if latest_tourney == True:
+        print(f'Tourney Code: {latest_tourney_code} Date: {tourney_date}') #verification
+    else:
+        print('No tourney found')
+    
+    #return latest_tourney_code 
+
+#Note: I don't the status of tourney if it's ongoing so need to re-check on that.
+#Note2: You may delete unecessary comments.
+    
+    
+    
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
