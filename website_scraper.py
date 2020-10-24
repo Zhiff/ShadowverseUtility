@@ -59,22 +59,13 @@ def JCG_latest_tourney(sv_format, tourney_stage):
         if potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '終了':
             latest_tourney = True
             potential_id = tourney_code.get("competition_id")
-            tourney_date = tourney_code.find('td', class_="date").text
             latest_tourney_code = str(potential_id)
-            #latest_jsonlink = f'https://sv.j-cg.com/compe/view/entrylist/{latest_tourney_code}/json'
             break
        
-    if latest_tourney == True:
-        print(f'Tourney Code: {latest_tourney_code} Date: {tourney_date}') #verification
-    else:
-        print('No tourney found')
+    if latest_tourney == False:
+        latest_tourney_code = None
     
-    #return latest_tourney_code 
-
-#Note: I don't the status of tourney if it's ongoing so need to re-check on that.
-#Note2: You may delete unecessary comments.
-    
-    
+    return latest_tourney_code     
     
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
