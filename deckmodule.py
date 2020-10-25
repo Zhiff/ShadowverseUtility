@@ -16,7 +16,7 @@ class Deck:
         self.formats = formats
         
     def class_checker(self):
-        crafts = { 1 : 'Forestcraft' , 2 : 'Swordcraft' , 3 : 'Runecraft' , 4 : 'Dragoncraft' ,5 : 'Shadowcraft' , 6 : 'Bloodcraft' , 7 : 'Havencraft' , 8 : 'Portalcraft' }
+        crafts = { 1 : 'Forest' , 2 : 'Sword' , 3 : 'Rune' , 4 : 'Dragon' ,5 : 'Shadow' , 6 : 'Blood' , 7 : 'Haven' , 8 : 'Portal' }
         url = self.svlink
         if ('https://shadowverse-portal.com' in url):
             # Svportal syntax, class identity is the second number after the dot inside list

@@ -192,3 +192,9 @@ def add_class_color(mode):
     
     excel.save(file)
 
+def count_deck(filtered_data, maxdeck):
+    df = pd.read_excel(filtered_data)
+    decks = sh.get_decks_df(df, maxdeck)
+    decks = decks[['Deck Archetype', 'Count']]
+    
+    return decks

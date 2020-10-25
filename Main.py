@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-ws.SVO_initial_scraper('Excel_and_CSV/SEAOCo.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SEAOCo.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -44,14 +44,14 @@ ws.SVO_initial_scraper('Excel_and_CSV/SEAOCo.xlsx')
 # Input : Json page from respective website
 # Requirements :    - JSON link must be valid
 
-# ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2454/json')
+ws.JCG_scraper('https://sv.j-cg.com/compe/view/entrylist/2436/json')
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f4e2b55a3eaa925df8594a2/teams')
 
 # Quick Groupstage check for JCG
 # Input : JCG page for specified tourney (not top 16)
 # Requirements : JCG_Scraper for specified tourney needs to be ran first
 
-# name = ws.JCG_group_winner_check('https://sv.j-cg.com/compe/view/tour/2431')  
+# name = ws.JCG_group_winner_check('https://sv.j-cg.com/compe/view/tour/2433')  
 # count = sh.deck_quick_count(name)
 
 
@@ -63,4 +63,8 @@ ws.SVO_initial_scraper('Excel_and_CSV/SEAOCo.xlsx')
 # player = 'TK 雪見小梅'
 
 # stats = ws.SVO_ban_peek(player, bfy_tourneyhash, bfy_stagehash)
+
+
+
+
 

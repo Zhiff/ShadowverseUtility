@@ -71,7 +71,7 @@ def JCG_latest_tourney(sv_format, tourney_stage):
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
 # input example 'https://sv.j-cg.com/compe/view/entrylist/2341/json'
-def JCG_scraper(jsonlink):
+def JCG_scraper(jsonlink, analysis='single'):
     jcglink = jsonlink
     response = requests.get(jcglink)
     data1 = response.json()
@@ -97,19 +97,29 @@ def JCG_scraper(jsonlink):
         data7 = namedf.merge(data6)
         rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
         df = pd.concat([rankings, data7],axis=1)
+        df = df.dropna()
         df = df[['Rank', 'name', 'deck 1', 'deck 2']]
         
     writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
     df.to_excel(writer, index=False)
     writer.save()
     
-    # Calls functions from excel module to process raw sheets
-    em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
-    em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
-    em.combine_view_and_stats()
-    em.add_class_color(1)
+    if (analysis == 'single'):
+        # Calls functions from excel module to process raw sheets
+        em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
+        em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
+        em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+        em.combine_view_and_stats()
+        em.add_class_color(1)
+    elif (analysis == 'multiple'):
+        em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
+        df = em.count_deck('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+        
+    
+    return df
+        
 
+        
 #Scrap data from MS Gaming in Battlefy
 #requirements : Json link : //tournaments/..../teams . Can be found in response at Participants tab
 #input example https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f1e79da534e897bd0c64673/teams 
@@ -392,4 +402,33 @@ def JCG_group_winner_check(url):
 # dfb.to_excel(writer, 'Top32')
 # writer.save()
 
+# # Input : JCG competition ID lists
 
+# jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433'] #group
+# jcgid = ['2418', '2442', '2445', '2448', '2449', '2451', '2454', '2456'] #top16
+def generate_archetype_trends(jcgIDs):
+    flag_first = True
+    for ids in jcgIDs:
+        # Find the Date
+        link = 'https://sv.j-cg.com/compe/' + ids
+        source = requests.get(link).text
+        soup = bs(source, 'lxml')
+        date = soup.find_all('span', class_='nobr')[6].text
+        # Find the Json
+        json = 'https://sv.j-cg.com/compe/view/entrylist/'+ ids + '/json'
+        decks = JCG_scraper(json, 'multiple')
+        
+        if decks is not None: #Validity Check
+            if flag_first == True:
+                #For the first instance, we simply initialize the data frame
+                arc_df = decks.rename(columns={'Count':date})
+                flag_first = False
+            else:
+                #Append dataframe with new dataframe
+                added_df = decks.rename(columns={'Count':date})
+                arc_df = pd.merge(arc_df, added_df, on='Deck Archetype', how='outer')
+                
+    arc_df = arc_df.fillna(0)
+    writer = pd.ExcelWriter("Excel_and_CSV/Graph.xlsx")
+    arc_df.to_excel(writer, 'stats')
+    writer.save()
