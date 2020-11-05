@@ -8,6 +8,7 @@ This is Deck Module. This module contains Deck Class which store all info about 
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests
+import pykakasi
 
 class Deck:
     
@@ -18,7 +19,7 @@ class Deck:
     def class_checker(self):
         crafts = { 1 : 'Forest' , 2 : 'Sword' , 3 : 'Rune' , 4 : 'Dragon' ,5 : 'Shadow' , 6 : 'Blood' , 7 : 'Haven' , 8 : 'Portal' }
         url = self.svlink
-        if ('https://shadowverse-portal.com' in url):
+        if ('https://shadowverse-portal.com/deck' in url):
             # Svportal syntax, class identity is the second number after the dot inside list
             classcode = url.split('.')[2] 
             craft_name = crafts.get(int(classcode)) #TRY
@@ -46,7 +47,11 @@ class Deck:
         i = 0
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
-        df = pd.read_excel('Excel_and_CSV/StormOverRivayleMeta.xlsx')
+        if self.formats == 'rotation':
+            df = pd.read_excel('Excel_and_CSV/StormOverRivayleMeta.xlsx')
+        elif self.formats == 'unlimited':
+            df = pd.read_excel('Excel_and_CSV/UnlimitedMeta.xlsx')
+        
         cleaned_values = df[['Archetype Name', 'Hash Code 1', 'Hash Code 2','Hash Code 3']].values
         
         # Iterate each row in array
@@ -71,7 +76,7 @@ class Deck:
     
     
     def deck_details(self):
-        cardhash = pd.read_csv('Excel_and_CSV/00_URLcode.csv')
+        cardhash = pd.read_csv('Excel_and_CSV/generatedURLcode.csv')
         url = self.svlink
         if ('https://shadowverse-portal.com' in url):
             # Svportal syntax processing
@@ -162,3 +167,58 @@ class Deck:
             alldf = alldf[[cols[-1]] + cols[0:-1]]
             
             alldf.to_csv(filename, index=False)
+
+
+def id_to_hash(uniqueID):
+    a, b = divmod(uniqueID, 64)
+    c, d = divmod(a, 64)
+    e, f = divmod(c, 64)
+    g, h = divmod(e, 64)
+    
+    hashes = ['','','','','']
+    df = pd.read_csv('Excel_and_CSV/Base64.csv')
+    alpha = df.to_dict("dict")
+    hashes[4] = alpha.get("alphanumeric").get(b)
+    hashes[3] = alpha.get("alphanumeric").get(d)
+    hashes[2] = alpha.get("alphanumeric").get(f)
+    hashes[1] = alpha.get("alphanumeric").get(h)
+    hashes[0] = alpha.get("alphanumeric").get(g)
+    
+    finalhash = ''.join(hashes)
+    return finalhash
+
+def convert_kanji(text):
+    kks = pykakasi.kakasi()
+    kks.setMode('H','a')
+    kks.setMode('K','a')
+    kks.setMode('J','a')
+    kks.setMode('r', 'Passport')
+    kks.setMode('s', True)
+    conv = kks.getConverter()
+    result = conv.do(text)
+    return result
+
+
+json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
+response = requests.get(json)        
+data = response.json()
+dfa = pd.DataFrame(data)
+dfb = dfa.transpose()
+dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+dffinal = dfc.copy()
+dffinal['id_'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+dffinal = dffinal.sort_index()
+dffinal = dffinal.rename(columns={'name_':'CardName', 'id_':'Code'})
+dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
+
+jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+response2 = requests.get(jsonjp)
+data2 = response2.json()
+ad = pd.DataFrame(data2).transpose()
+ae = ad.copy()
+ae['cv_romaji'] = ae.loc[:,'cv_'].apply(lambda x: convert_kanji(x))
+ae = ae[['cv_','cv_romaji']]
+ae = ae.sort_index()
+comp = pd.concat([dffinal,ae], axis=1)
+
+

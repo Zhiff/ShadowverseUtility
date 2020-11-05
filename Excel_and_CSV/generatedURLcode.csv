@@ -1,0 +1,2804 @@
+expansion_,craft_,rarity_,pp_,CardName,Code
+Basic,Neutral,Bronze,1,Goblin,5zWm2
+Basic,Neutral,Bronze,2,Fighter,5zWmC
+Basic,Neutral,Bronze,3,Mercenary Drifter,5zWmM
+Basic,Neutral,Bronze,4,Goliath,5zWmW
+Basic,Neutral,Bronze,5,Angelic Sword Maiden,5zWmg
+Basic,Neutral,Bronze,2,Well of Destiny,5zW_g
+Basic,Neutral,Gold,3,Harnessed Flame,5zbeY
+Basic,Neutral,Gold,3,Harnessed Glass,5zbei
+Basic,Forestcraft,Bronze,1,Water Fairy,5zvAY
+Basic,Forestcraft,Bronze,2,Fairy Whisperer,5zvAi
+Basic,Forestcraft,Bronze,4,Okami,5zvAs
+Basic,Forestcraft,Bronze,2,Elf Guard,5zvB0
+Basic,Forestcraft,Bronze,5,Treant,5zvBA
+Basic,Forestcraft,Bronze,3,Dark Elf Faure,5zvBK
+Basic,Forestcraft,Bronze,6,Elf Tracker,5zvBU
+Basic,Forestcraft,Bronze,2,Sylvan Justice,5zvvQ
+Basic,Forestcraft,Silver,6,Magna Botanist,5zxco
+Basic,Forestcraft,Silver,2,Elf Metallurgist,5zxcy
+Basic,Forestcraft,Silver,4,Rose Gardener,5zxd6
+Basic,Swordcraft,Bronze,1,Quickblader,5-Hb2
+Basic,Swordcraft,Bronze,2,Oathless Knight,5-HbC
+Basic,Swordcraft,Bronze,3,Ascetic Knight,5-HbM
+Basic,Swordcraft,Bronze,4,White General,5-HbW
+Basic,Swordcraft,Bronze,5,Ninja Master,5-Hbg
+Basic,Swordcraft,Bronze,2,Kunoichi Trainee,5-Hbq
+Basic,Swordcraft,Bronze,1,Unbridled Fury,5-IJw
+Basic,Swordcraft,Bronze,3,Forge Weaponry,5-IK4
+Basic,Swordcraft,Silver,4,Floral Fencer,5-K1I
+Basic,Swordcraft,Silver,6,Sage Commander,5-K1S
+Basic,Swordcraft,Silver,4,Royal Banner,5-KGw
+Basic,Runecraft,Bronze,2,"Sammy, Wizard's Apprentice",5-f_Y
+Basic,Runecraft,Bronze,1,Insight,5-gkQ
+Basic,Runecraft,Bronze,2,Magic Missile,5-gka
+Basic,Runecraft,Bronze,2,Conjure Golem,5-gkk
+Basic,Runecraft,Bronze,2,Wind Blast,5-gku
+Basic,Runecraft,Bronze,3,Summon Snow,5-gl2
+Basic,Runecraft,Bronze,4,Conjure Twosome,5-glC
+Basic,Runecraft,Bronze,8,Fiery Embrace,5-glM
+Basic,Runecraft,Silver,10,Flame Destroyer,5-iRo
+Basic,Runecraft,Silver,4,Demonflame Mage,5-iRy
+Basic,Runecraft,Silver,5,Lightning Shooter,5-iS6
+Basic,Dragoncraft,Bronze,2,Dragonrider,5_2Q2
+Basic,Dragoncraft,Bronze,5,Disaster Dragon,5_2QC
+Basic,Dragoncraft,Bronze,4,Death Dragon,5_2QM
+Basic,Dragoncraft,Bronze,6,Dragonguard,5_2QW
+Basic,Dragoncraft,Bronze,3,Firstborn Dragon,5_2Qg
+Basic,Dragoncraft,Bronze,2,Dragon Oracle,5_38w
+Basic,Dragoncraft,Bronze,1,Blazing Breath,5_394
+Basic,Dragoncraft,Bronze,4,Serpent Wrath,5_39E
+Basic,Dragoncraft,Silver,4,Dragon Warrior,5_4sI
+Basic,Dragoncraft,Silver,7,Dread Dragon,5_4sS
+Basic,Dragoncraft,Silver,7,Conflagration,5_5bA
+Basic,Shadowcraft,Bronze,2,Spartoi Sergeant,5_QqY
+Basic,Shadowcraft,Bronze,2,Spectre,5_Qqi
+Basic,Shadowcraft,Bronze,3,Apprentice Necromancer,5_Qqs
+Basic,Shadowcraft,Bronze,4,Elder Spartoi Soldier,5_Qr0
+Basic,Shadowcraft,Bronze,5,Gravewaker,5_QrA
+Basic,Shadowcraft,Bronze,6,Ghostly Rider,5_QrK
+Basic,Shadowcraft,Bronze,2,Undying Resentment,5_RZQ
+Basic,Shadowcraft,Bronze,4,Call of the Void,5_RZa
+Basic,Shadowcraft,Silver,4,Playful Necromancer,5_TGo
+Basic,Shadowcraft,Silver,4,Hell's Unleasher,5_TGy
+Basic,Shadowcraft,Silver,7,Undead King,5_TH6
+Basic,Bloodcraft,Bronze,2,Nightmare,5_pF2
+Basic,Bloodcraft,Bronze,2,Sweetfang Vampire,5_pFC
+Basic,Bloodcraft,Bronze,3,Crazed Executioner,5_pFM
+Basic,Bloodcraft,Bronze,6,Imp Lancer,5_pFW
+Basic,Bloodcraft,Bronze,4,Dark General,5_pFg
+Basic,Bloodcraft,Bronze,2,Blood Pact,5_pzw
+Basic,Bloodcraft,Bronze,2,Razory Claw,5_p-4
+Basic,Bloodcraft,Bronze,4,Crimson Purge,5_p-E
+Basic,Bloodcraft,Silver,7,Abyss Beast,5_rhI
+Basic,Bloodcraft,Silver,4,Wardrobe Raider,5_rhS
+Basic,Bloodcraft,Silver,6,Demonic Storm,5_sQA
+Basic,Havencraft,Bronze,2,Snake Priestess,60BfY
+Basic,Havencraft,Bronze,7,Curate,60Bfi
+Basic,Havencraft,Bronze,2,Beastly Vow,60C8o
+Basic,Havencraft,Bronze,1,Summon Pegasus,60C8y
+Basic,Havencraft,Bronze,3,Featherwyrm's Descent,60C96
+Basic,Havencraft,Bronze,2,Hallowed Dogma,60COQ
+Basic,Havencraft,Bronze,2,Blackened Scripture,60COa
+Basic,Havencraft,Bronze,5,Acolyte's Light,60COk
+Basic,Havencraft,Silver,5,Greater Priestess,60E5o
+Basic,Havencraft,Silver,4,Priest of the Cudgel,60E5y
+Basic,Havencraft,Silver,5,Dual Flames,60Eb2
+Basic,Portalcraft,Bronze,3,Toy Soldier,60a42
+Basic,Portalcraft,Bronze,2,Puppeteer,60a4C
+Basic,Portalcraft,Bronze,3,Automaton Knight,60a4M
+Basic,Portalcraft,Bronze,4,Ironforged Fighter,60a4W
+Basic,Portalcraft,Bronze,6,Black Iron Soldier,60a4g
+Basic,Portalcraft,Bronze,2,Mechanized Servant,60a4q
+Basic,Portalcraft,Bronze,2,Magisteel Lion,60a4-
+Basic,Portalcraft,Bronze,2,Dimension Cut,60aow
+Basic,Portalcraft,Silver,2,Magisteel Puppet,60cWI
+Basic,Portalcraft,Silver,4,Roan Winged Nexx,60cWS
+Basic,Portalcraft,Silver,4,Puppeteer's Strings,60dFA
+Standard Card Pack,Neutral,Bronze,2,Minotaur,61Kv2
+Standard Card Pack,Neutral,Bronze,4,Desert Rider,61KvC
+Standard Card Pack,Neutral,Bronze,3,Shield Angel,61KvM
+Standard Card Pack,Neutral,Bronze,3,Healing Angel,61KvW
+Standard Card Pack,Neutral,Bronze,2,Keen Enchantment,61Ldw
+Standard Card Pack,Neutral,Bronze,3,Cloud Chorus,61Le4
+Standard Card Pack,Neutral,Bronze,4,Demonic Strike,61LeE
+Standard Card Pack,Neutral,Silver,2,Bellringer Angel,61NLI
+Standard Card Pack,Neutral,Silver,3,Lizardman,61NLS
+Standard Card Pack,Neutral,Silver,8,Gilgamesh,61NLc
+Standard Card Pack,Neutral,Silver,5,Goblinmount Demon,61NLm
+Standard Card Pack,Neutral,Silver,1,Angelic Snipe,61O4A
+Standard Card Pack,Neutral,Silver,3,Angelic Barrage,61O4K
+Standard Card Pack,Neutral,Silver,5,Execution,61O4U
+Standard Card Pack,Neutral,Silver,2,Trail of Light,61O4e
+Standard Card Pack,Neutral,Gold,4,Urd,61PnY
+Standard Card Pack,Neutral,Gold,5,Wind God,61Pni
+Standard Card Pack,Neutral,Gold,6,Angel Crusher,61Pns
+Standard Card Pack,Neutral,Gold,6,Athena,61Po0
+Standard Card Pack,Neutral,Gold,4,Path to Purgatory,61Q1A
+Standard Card Pack,Neutral,Gold,2,Altered Fate,61QWQ
+Standard Card Pack,Neutral,Legendary,7,Gabriel,61SDo
+Standard Card Pack,Neutral,Legendary,8,Lucifer,61SDy
+Standard Card Pack,Neutral,Legendary,10,Prince of Darkness,61SE6
+Standard Card Pack,Forestcraft,Bronze,1,Elf Child May,61jJY
+Standard Card Pack,Forestcraft,Bronze,1,Fairy Champion,61jJi
+Standard Card Pack,Forestcraft,Bronze,2,Dungeoncrawl Fairy,61jJs
+Standard Card Pack,Forestcraft,Bronze,2,Fairy Bringer,61jK0
+Standard Card Pack,Forestcraft,Bronze,3,Archer,61jKA
+Standard Card Pack,Forestcraft,Bronze,3,Fen Sprite,61jKK
+Standard Card Pack,Forestcraft,Bronze,2,Wandering Elf Mage,61jKU
+Standard Card Pack,Forestcraft,Bronze,5,Fairy Caster,61jKe
+Standard Card Pack,Forestcraft,Bronze,2,Elf Wanderer,61jKo
+Standard Card Pack,Forestcraft,Bronze,3,Pixie Paradise,61jZA
+Standard Card Pack,Forestcraft,Bronze,2,Forest of Dreams,61joo
+Standard Card Pack,Forestcraft,Bronze,1,Nature's Guidance,61k2Q
+Standard Card Pack,Forestcraft,Bronze,2,Pixie Mischief,61k2a
+Standard Card Pack,Forestcraft,Bronze,4,Way of the Outlaw,61k2k
+Standard Card Pack,Forestcraft,Bronze,2,Woodkin Curse,61k2u
+Standard Card Pack,Forestcraft,Bronze,1,Fairy Circle,61k32
+Standard Card Pack,Forestcraft,Bronze,3,Elemental Lance,61k3C
+Standard Card Pack,Forestcraft,Silver,3,Waltzing Fairy,61llo
+Standard Card Pack,Forestcraft,Silver,2,Blessed Fairy Dancer,61lly
+Standard Card Pack,Forestcraft,Silver,3,Tam Lin,61lm6
+Standard Card Pack,Forestcraft,Silver,3,Carnivorous Flower,61lmG
+Standard Card Pack,Forestcraft,Silver,5,Elf Prophetess,61lmQ
+Standard Card Pack,Forestcraft,Silver,6,Elder Treant,61lma
+Standard Card Pack,Forestcraft,Silver,6,Fairy Beast,61lmk
+Standard Card Pack,Forestcraft,Silver,4,Elven Princess Mage,61lmu
+Standard Card Pack,Forestcraft,Silver,4,Mana Elk,61ln2
+Standard Card Pack,Forestcraft,Silver,8,Forest Giant,61lnC
+Standard Card Pack,Forestcraft,Silver,7,Forest Archelon,61lnM
+Standard Card Pack,Forestcraft,Silver,4,Harvest Festival,61l_Q
+Standard Card Pack,Forestcraft,Silver,1,Woodland Refuge,61l_a
+Standard Card Pack,Forestcraft,Gold,4,Petal Fencer,61oC2
+Standard Card Pack,Forestcraft,Gold,2,Rhinoceroach,61oCC
+Standard Card Pack,Forestcraft,Gold,5,Noble Fairy,61oCM
+Standard Card Pack,Forestcraft,Gold,8,Ancient Forest Dragon,61oCW
+Standard Card Pack,Forestcraft,Gold,5,Robin Hood,61oCg
+Standard Card Pack,Forestcraft,Gold,5,Titania's Sanctuary,61oRg
+Standard Card Pack,Forestcraft,Gold,5,Will of the Forest,61oww
+Standard Card Pack,Forestcraft,Gold,9,Silver Bolt,61ox4
+Standard Card Pack,Forestcraft,Gold,7,Homecoming,61oxE
+Standard Card Pack,Forestcraft,Legendary,6,Fairy Princess,61qeI
+Standard Card Pack,Forestcraft,Legendary,3,Ancient Elf,61qeS
+Standard Card Pack,Forestcraft,Legendary,8,Rose Queen,61qec
+Standard Card Pack,Swordcraft,Bronze,1,Ninja Trainee,625k2
+Standard Card Pack,Swordcraft,Bronze,2,Fervid Soldier,625kC
+Standard Card Pack,Swordcraft,Bronze,2,Palace Fencer,625kM
+Standard Card Pack,Swordcraft,Bronze,2,Cyclone Soldier,625kW
+Standard Card Pack,Swordcraft,Bronze,2,Centaur Vanguard,625kg
+Standard Card Pack,Swordcraft,Bronze,3,Fencer,625kq
+Standard Card Pack,Swordcraft,Bronze,4,Courageous Knight,625k-
+Standard Card Pack,Swordcraft,Bronze,5,Sentry,625l8
+Standard Card Pack,Swordcraft,Bronze,3,Novice Trooper,625lI
+Standard Card Pack,Swordcraft,Bronze,3,Snippy Gardener,625lS
+Standard Card Pack,Swordcraft,Bronze,2,Veteran Lancer,625lc
+Standard Card Pack,Swordcraft,Bronze,1,Vanguard,625lm
+Standard Card Pack,Swordcraft,Bronze,6,Warbound Cavalier,625lw
+Standard Card Pack,Swordcraft,Bronze,6,Admiral,625m4
+Standard Card Pack,Swordcraft,Bronze,4,Rousing Step,626Sw
+Standard Card Pack,Swordcraft,Bronze,5,Onslaught,626T4
+Standard Card Pack,Swordcraft,Bronze,3,Giant Slayer,626TE
+Standard Card Pack,Swordcraft,Silver,2,Maid Leader,628AI
+Standard Card Pack,Swordcraft,Silver,2,Assassin,628AS
+Standard Card Pack,Swordcraft,Silver,4,Cursed General,628Ac
+Standard Card Pack,Swordcraft,Silver,5,Percival,628Am
+Standard Card Pack,Swordcraft,Silver,3,Navy Lieutenant,628Aw
+Standard Card Pack,Swordcraft,Silver,5,Noble Knight,628B4
+Standard Card Pack,Swordcraft,Silver,3,Pompous Princess,628BE
+Standard Card Pack,Swordcraft,Silver,2,Luminous Knight,628BO
+Standard Card Pack,Swordcraft,Silver,2,Princess Vanguard,628BY
+Standard Card Pack,Swordcraft,Silver,4,Swordsman,628Bi
+Standard Card Pack,Swordcraft,Silver,8,Enraged General,628Bs
+Standard Card Pack,Swordcraft,Silver,2,Ironwrought Fortress,628Pw
+Standard Card Pack,Swordcraft,Silver,2,Conscription,628vA
+Standard Card Pack,Swordcraft,Gold,4,Shadowed Assassin,62AcY
+Standard Card Pack,Swordcraft,Gold,8,Dragonewt Charlotte,62Aci
+Standard Card Pack,Swordcraft,Gold,3,Gemstaff Commander,62Acs
+Standard Card Pack,Swordcraft,Gold,7,Frontguard General,62Ad0
+Standard Card Pack,Swordcraft,Gold,4,"Latham, Vanguard Captain",62AdA
+Standard Card Pack,Swordcraft,Gold,5,Arthurian Light,62AsA
+Standard Card Pack,Swordcraft,Gold,1,Front Lines,62AsK
+Standard Card Pack,Swordcraft,Gold,4,Stratagem,62BLQ
+Standard Card Pack,Swordcraft,Gold,6,Alwida's Command,62BLa
+Standard Card Pack,Swordcraft,Legendary,6,Sea Queen Otohime,62D2o
+Standard Card Pack,Swordcraft,Legendary,5,"Aurelia, Regal Saber",62D2y
+Standard Card Pack,Swordcraft,Legendary,6,Tsubaki,62D36
+Standard Card Pack,Runecraft,Bronze,2,Penguin Wizard,62U8Y
+Standard Card Pack,Runecraft,Bronze,2,Crafty Warlock,62U8i
+Standard Card Pack,Runecraft,Bronze,4,Crest Wizard,62U8s
+Standard Card Pack,Runecraft,Bronze,3,Runic Guardian,62U90
+Standard Card Pack,Runecraft,Bronze,3,Gauntleted Healer,62U9A
+Standard Card Pack,Runecraft,Bronze,2,Apprentice Alchemist,62U9K
+Standard Card Pack,Runecraft,Bronze,6,Master Alchemist,62U9U
+Standard Card Pack,Runecraft,Bronze,5,Whirlwind Mage,62U9e
+Standard Card Pack,Runecraft,Bronze,6,Spurned Witch,62U9o
+Standard Card Pack,Runecraft,Bronze,4,Veteran Alchemist,62U9y
+Standard Card Pack,Runecraft,Bronze,2,Teachings of Creation,62UOA
+Standard Card Pack,Runecraft,Bronze,4,Alchemist's Workshop,62UOK
+Standard Card Pack,Runecraft,Bronze,3,Elementary Alchemy,62UOU
+Standard Card Pack,Runecraft,Bronze,2,Kaleidoscopic Glow,62UtQ
+Standard Card Pack,Runecraft,Bronze,5,Fate's Hand,62Uta
+Standard Card Pack,Runecraft,Bronze,4,Fissure Bomb,62Utk
+Standard Card Pack,Runecraft,Bronze,7,Twin Guardians,62Utu
+Standard Card Pack,Runecraft,Silver,6,Gem Golem,62Wao
+Standard Card Pack,Runecraft,Silver,3,Spectral Wizard,62Way
+Standard Card Pack,Runecraft,Silver,6,Witchcrafter Magisa,62Wb6
+Standard Card Pack,Runecraft,Silver,2,Scholarly Witch,62WbG
+Standard Card Pack,Runecraft,Silver,4,Queen Medb,62WbQ
+Standard Card Pack,Runecraft,Silver,5,Flame Witch,62Wba
+Standard Card Pack,Runecraft,Silver,4,Rune Blade Summoner,62Wbk
+Standard Card Pack,Runecraft,Silver,3,Price of Magic,62WqQ
+Standard Card Pack,Runecraft,Silver,5,Golem Protection,62XJg
+Standard Card Pack,Runecraft,Silver,7,Alchemical Lore,62XJq
+Standard Card Pack,Runecraft,Silver,1,Commence Experiment,62XJ-
+Standard Card Pack,Runecraft,Silver,3,Sorcery Cache,62XK8
+Standard Card Pack,Runecraft,Silver,3,Petrification,62XKI
+Standard Card Pack,Runecraft,Gold,5,Ancient Alchemist,62Z12
+Standard Card Pack,Runecraft,Gold,7,Dragonbond Mage,62Z1C
+Standard Card Pack,Runecraft,Gold,5,Conjuring Force,62ZGg
+Standard Card Pack,Runecraft,Gold,7,Juno's Secret Laboratory,62ZWI
+Standard Card Pack,Runecraft,Gold,6,Arcane Enlightenment,62Zlw
+Standard Card Pack,Runecraft,Gold,20,Dimension Shift,62Zm4
+Standard Card Pack,Runecraft,Gold,3,First Curse,62ZmE
+Standard Card Pack,Runecraft,Gold,4,Fire Chain,62ZmO
+Standard Card Pack,Runecraft,Gold,5,Winter's Caprice,62ZmY
+Standard Card Pack,Runecraft,Legendary,9,Mythril Golem,62bTI
+Standard Card Pack,Runecraft,Legendary,4,Merlin,62bTS
+Standard Card Pack,Runecraft,Legendary,8,Arch Summoner Erasmus,62bTc
+Standard Card Pack,Dragoncraft,Bronze,1,Ivory Dragon,62sZ2
+Standard Card Pack,Dragoncraft,Bronze,2,Maelstrom Dragon,62sZC
+Standard Card Pack,Dragoncraft,Bronze,3,"Aiela, Dragon Knight",62sZM
+Standard Card Pack,Dragoncraft,Bronze,3,Twin-Headed Dragon,62sZW
+Standard Card Pack,Dragoncraft,Bronze,4,Glint Dragon,62sZg
+Standard Card Pack,Dragoncraft,Bronze,2,Sandstorm Dragon,62sZq
+Standard Card Pack,Dragoncraft,Bronze,5,Seabrand Dragon,62sZ-
+Standard Card Pack,Dragoncraft,Bronze,7,Skull Dragon,62sa8
+Standard Card Pack,Dragoncraft,Bronze,8,Inferno Dragon,62saI
+Standard Card Pack,Dragoncraft,Bronze,3,Roc,62saS
+Standard Card Pack,Dragoncraft,Bronze,2,Fire Lizard,62sac
+Standard Card Pack,Dragoncraft,Bronze,3,Trinity Dragon,62sam
+Standard Card Pack,Dragoncraft,Bronze,7,Glacial Dragon,62saw
+Standard Card Pack,Dragoncraft,Bronze,2,Dragon Wings,62tHw
+Standard Card Pack,Dragoncraft,Bronze,3,Dragon Cry,62tI4
+Standard Card Pack,Dragoncraft,Bronze,4,Serpent Force,62tIE
+Standard Card Pack,Dragoncraft,Bronze,2,Wild Hunt,62tIO
+Standard Card Pack,Dragoncraft,Silver,3,Dragonewt Princess,62u_I
+Standard Card Pack,Dragoncraft,Silver,4,Grim Reaper,62u_S
+Standard Card Pack,Dragoncraft,Silver,3,Sky Dragon Ethica,62u_c
+Standard Card Pack,Dragoncraft,Silver,4,Leviathan,62u_m
+Standard Card Pack,Dragoncraft,Silver,5,Lightning Behemoth,62u_w
+Standard Card Pack,Dragoncraft,Silver,6,Dragonrider Devil,62v04
+Standard Card Pack,Dragoncraft,Silver,7,Shenlong,62v0E
+Standard Card Pack,Dragoncraft,Silver,3,Imprisoned Dragon,62v0O
+Standard Card Pack,Dragoncraft,Silver,3,Ace Dragoon,62v0Y
+Standard Card Pack,Dragoncraft,Silver,6,Mist Dragon,62v0i
+Standard Card Pack,Dragoncraft,Silver,2,Golden Dragon's Den,62vEw
+Standard Card Pack,Dragoncraft,Silver,2,Dragon Emissary,62vkA
+Standard Card Pack,Dragoncraft,Silver,4,Draconification,62vkK
+Standard Card Pack,Dragoncraft,Gold,2,Dragonewt Scholar,62xRY
+Standard Card Pack,Dragoncraft,Gold,10,Genesis Dragon,62xRi
+Standard Card Pack,Dragoncraft,Gold,6,Wyvern Cavalier,62xRs
+Standard Card Pack,Dragoncraft,Gold,2,Shapeshifting Mage,62xS0
+Standard Card Pack,Dragoncraft,Gold,9,Orb Dragon,62xSA
+Standard Card Pack,Dragoncraft,Gold,7,Hydra,62xSK
+Standard Card Pack,Dragoncraft,Gold,4,Deathmist Dragon,62xSU
+Standard Card Pack,Dragoncraft,Gold,6,Wyrm Spire,62xhA
+Standard Card Pack,Dragoncraft,Gold,5,Phoenix Roost,62xhK
+Standard Card Pack,Dragoncraft,Legendary,9,Fafnir,62zto
+Standard Card Pack,Dragoncraft,Legendary,6,Dark Dragoon Forte,62zty
+Standard Card Pack,Dragoncraft,Legendary,8,Zirnitra,62zu6
+Standard Card Pack,Shadowcraft,Bronze,2,Skeleton Viper,63EzY
+Standard Card Pack,Shadowcraft,Bronze,2,Skullcradle Widow,63Ezi
+Standard Card Pack,Shadowcraft,Bronze,3,Tenacious Ghost,63Ezs
+Standard Card Pack,Shadowcraft,Bronze,3,Rabbit Necromancer,63E-0
+Standard Card Pack,Shadowcraft,Bronze,3,Skeleton Knight,63E-A
+Standard Card Pack,Shadowcraft,Bronze,2,Wight,63E-K
+Standard Card Pack,Shadowcraft,Bronze,7,Cursed Soldier,63E-U
+Standard Card Pack,Shadowcraft,Bronze,5,Soul Eater,63E-e
+Standard Card Pack,Shadowcraft,Bronze,3,Spartoi,63E-o
+Standard Card Pack,Shadowcraft,Bronze,7,Orcus,63E-y
+Standard Card Pack,Shadowcraft,Bronze,2,Lesser Mummy,63E_6
+Standard Card Pack,Shadowcraft,Bronze,1,Skull Beast,63E_G
+Standard Card Pack,Shadowcraft,Bronze,4,Guilty Courier,63E_Q
+Standard Card Pack,Shadowcraft,Bronze,1,Soul Conversion,63FiQ
+Standard Card Pack,Shadowcraft,Bronze,2,Highway to Hell,63Fia
+Standard Card Pack,Shadowcraft,Bronze,3,Soul Hunt,63Fik
+Standard Card Pack,Shadowcraft,Bronze,3,Impious Resurrection,63Fiu
+Standard Card Pack,Shadowcraft,Silver,1,Skeleton Fighter,63HPo
+Standard Card Pack,Shadowcraft,Silver,2,Deadly Widow,63HPy
+Standard Card Pack,Shadowcraft,Silver,3,Necroelementist,63HQ6
+Standard Card Pack,Shadowcraft,Silver,4,Skull Rider,63HQG
+Standard Card Pack,Shadowcraft,Silver,3,Goetia Mage,63HQQ
+Standard Card Pack,Shadowcraft,Silver,5,Soul Glutton,63HQa
+Standard Card Pack,Shadowcraft,Silver,6,Necropolis Queen,63HQk
+Standard Card Pack,Shadowcraft,Silver,5,Soulhungry Wraith,63HQu
+Standard Card Pack,Shadowcraft,Silver,8,Soul Grinder,63HR2
+Standard Card Pack,Shadowcraft,Silver,5,Dullahan,63HRC
+Standard Card Pack,Shadowcraft,Silver,1,Burial Grounds,63HfQ
+Standard Card Pack,Shadowcraft,Silver,4,Curse of Rebirth,63I8g
+Standard Card Pack,Shadowcraft,Silver,2,Ethereal Form,63I8q
+Standard Card Pack,Shadowcraft,Gold,4,Wight King,63Js2
+Standard Card Pack,Shadowcraft,Gold,3,Madame Lich,63JsC
+Standard Card Pack,Shadowcraft,Gold,4,Phantom Dragon,63JsM
+Standard Card Pack,Shadowcraft,Gold,6,Deathly Tyrant,63JsW
+Standard Card Pack,Shadowcraft,Gold,8,Mordecai the Duelist,63Jsg
+Standard Card Pack,Shadowcraft,Gold,1,Ghouls' Banquet,63K5g
+Standard Card Pack,Shadowcraft,Gold,4,Phantom Howl,63Kaw
+Standard Card Pack,Shadowcraft,Gold,3,Foul Tempest,63Kb4
+Standard Card Pack,Shadowcraft,Gold,6,Death's Breath,63KbE
+Standard Card Pack,Shadowcraft,Legendary,5,Cerberus,63MII
+Standard Card Pack,Shadowcraft,Legendary,9,Lord Atomy,63MIS
+Standard Card Pack,Shadowcraft,Legendary,8,Pluto,63MIc
+Standard Card Pack,Bloodcraft,Bronze,2,Lilith,63dO2
+Standard Card Pack,Bloodcraft,Bronze,2,Venomous Cobra,63dOC
+Standard Card Pack,Bloodcraft,Bronze,2,Rain Devil,63dOM
+Standard Card Pack,Bloodcraft,Bronze,1,Ambling Wraith,63dOW
+Standard Card Pack,Bloodcraft,Bronze,2,Blood Wolf,63dOg
+Standard Card Pack,Bloodcraft,Bronze,3,Metal Gargoyle,63dOq
+Standard Card Pack,Bloodcraft,Bronze,3,Killer Devil,63dO-
+Standard Card Pack,Bloodcraft,Bronze,4,Raging Giant,63dP8
+Standard Card Pack,Bloodcraft,Bronze,4,Barbaric Demon,63dPI
+Standard Card Pack,Bloodcraft,Bronze,5,Gluttonous Gorger,63dPS
+Standard Card Pack,Bloodcraft,Bronze,3,Demonhand Assassin,63dPc
+Standard Card Pack,Bloodcraft,Bronze,6,Rampaging Giant,63dPm
+Standard Card Pack,Bloodcraft,Bronze,3,Demonic Sniper,63dPw
+Standard Card Pack,Bloodcraft,Bronze,3,Succubus,63dQ4
+Standard Card Pack,Bloodcraft,Bronze,2,Limil's Way,63e6w
+Standard Card Pack,Bloodcraft,Bronze,2,Summon Bloodkin,63e74
+Standard Card Pack,Bloodcraft,Bronze,3,Blood Rage,63e7E
+Standard Card Pack,Bloodcraft,Silver,3,Devil of Vengeance,63fqI
+Standard Card Pack,Bloodcraft,Silver,2,Mormo,63fqS
+Standard Card Pack,Bloodcraft,Silver,3,Midnight Vampire,63fqc
+Standard Card Pack,Bloodcraft,Silver,4,Geryon,63fqm
+Standard Card Pack,Bloodcraft,Silver,7,Alucard,63fqw
+Standard Card Pack,Bloodcraft,Silver,1,Cursebrand Vampire,63fr4
+Standard Card Pack,Bloodcraft,Silver,2,Dark Summoner,63frE
+Standard Card Pack,Bloodcraft,Silver,3,Vampire Lykos,63frO
+Standard Card Pack,Bloodcraft,Silver,3,Masked Butcher,63frY
+Standard Card Pack,Bloodcraft,Silver,5,Vampire Bard,63fri
+Standard Card Pack,Bloodcraft,Silver,1,Bloodfed Flowerbed,63gJY
+Standard Card Pack,Bloodcraft,Silver,4,Night Horde,63gZA
+Standard Card Pack,Bloodcraft,Silver,5,Savage Hunt,63gZK
+Standard Card Pack,Bloodcraft,Gold,8,Furiae,63iGY
+Standard Card Pack,Bloodcraft,Gold,3,Demon Commander Laura,63iGi
+Standard Card Pack,Bloodcraft,Gold,5,Erinyes,63iGs
+Standard Card Pack,Bloodcraft,Gold,4,Righteous Devil,63iH0
+Standard Card Pack,Bloodcraft,Gold,9,Temptress Vampire,63iHA
+Standard Card Pack,Bloodcraft,Gold,6,Medusa,63iHK
+Standard Card Pack,Bloodcraft,Gold,3,Dire Bond,63ilo
+Standard Card Pack,Bloodcraft,Gold,5,Diabolic Drain,63i_Q
+Standard Card Pack,Bloodcraft,Gold,8,Revelation,63i_a
+Standard Card Pack,Bloodcraft,Legendary,6,Queen Vampire,63kio
+Standard Card Pack,Bloodcraft,Legendary,4,Soul Dealer,63kiy
+Standard Card Pack,Bloodcraft,Legendary,5,Beast Dominator,63kj6
+Standard Card Pack,Havencraft,Bronze,2,Rabbit Healer,63_oY
+Standard Card Pack,Havencraft,Bronze,2,Ardent Nun,63_oi
+Standard Card Pack,Havencraft,Bronze,3,Sister Initiate,63_os
+Standard Card Pack,Havencraft,Bronze,3,Dark Priest,63_p0
+Standard Card Pack,Havencraft,Bronze,4,Guardian Nun,63_pA
+Standard Card Pack,Havencraft,Bronze,5,Healing Priestess,63_pK
+Standard Card Pack,Havencraft,Bronze,6,Divine Armor,63_pU
+Standard Card Pack,Havencraft,Bronze,8,Masked Giant,63_pe
+Standard Card Pack,Havencraft,Bronze,2,Mainyu,63_po
+Standard Card Pack,Havencraft,Bronze,4,Canoness,63_py
+Standard Card Pack,Havencraft,Bronze,1,Pinion Prayer,640Ho
+Standard Card Pack,Havencraft,Bronze,1,Sacred Plea,640Hy
+Standard Card Pack,Havencraft,Bronze,2,Heretical Inquiry,640I6
+Standard Card Pack,Havencraft,Bronze,4,Pious Fox,640IG
+Standard Card Pack,Havencraft,Bronze,3,Divine Birdsong,640IQ
+Standard Card Pack,Havencraft,Bronze,3,Power of Protection,640XQ
+Standard Card Pack,Havencraft,Bronze,3,Healing Prayer,640Xa
+Standard Card Pack,Havencraft,Silver,3,Temple Defender,642Eo
+Standard Card Pack,Havencraft,Silver,3,Prism Priestess,642Ey
+Standard Card Pack,Havencraft,Silver,5,Cleric Lancer,642F6
+Standard Card Pack,Havencraft,Silver,4,Cruel Priestess,642FG
+Standard Card Pack,Havencraft,Silver,7,White Knight,642FQ
+Standard Card Pack,Havencraft,Silver,2,Protectoress,642Fa
+Standard Card Pack,Havencraft,Silver,3,Radiant Shaman,642Fk
+Standard Card Pack,Havencraft,Silver,3,Holy Mage,642Fu
+Standard Card Pack,Havencraft,Silver,6,Angelic Noble,642G2
+Standard Card Pack,Havencraft,Silver,5,Shrine Knight Maiden,642GC
+Standard Card Pack,Havencraft,Silver,2,Guardian Sun,642UQ
+Standard Card Pack,Havencraft,Silver,2,Noble Fangs,642k2
+Standard Card Pack,Havencraft,Silver,4,Death Sentence,642kC
+Standard Card Pack,Havencraft,Gold,9,Incandescent Dragon,644h2
+Standard Card Pack,Havencraft,Gold,6,Arch Priestess Laelia,644hC
+Standard Card Pack,Havencraft,Gold,1,Hare of Illusions,645AI
+Standard Card Pack,Havencraft,Gold,2,Holy Sentinel,645AS
+Standard Card Pack,Havencraft,Gold,6,Chorus of Prayer,645Ac
+Standard Card Pack,Havencraft,Gold,2,Devourer of Heavens,645Am
+Standard Card Pack,Havencraft,Gold,6,Themis's Decree,645Pw
+Standard Card Pack,Havencraft,Gold,2,Love's Gospel,645Q4
+Standard Card Pack,Havencraft,Gold,4,Dark Offering,645QE
+Standard Card Pack,Havencraft,Legendary,7,Skullfane,6477I
+Standard Card Pack,Havencraft,Legendary,6,Moon Al-mi'raj,6477S
+Standard Card Pack,Havencraft,Legendary,8,Jeanne d'Arc,6477c
+Darkness Evolved,Neutral,Bronze,7,Imperial Mammoth,65922
+Darkness Evolved,Neutral,Bronze,6,Raging Ettin,6592C
+Darkness Evolved,Neutral,Bronze,5,Dance of Death,659nE
+Darkness Evolved,Neutral,Bronze,6,Spellbook Decryption,659nO
+Darkness Evolved,Neutral,Silver,2,Unicorn Dancer Unica,65BUS
+Darkness Evolved,Neutral,Silver,4,Humpty Dumpty,65BUc
+Darkness Evolved,Neutral,Silver,3,Surefire Bullet,65CDA
+Darkness Evolved,Neutral,Gold,8,Archangel Reina,65Dwi
+Darkness Evolved,Neutral,Gold,2,Demonic Simulacrum,65Dws
+Darkness Evolved,Neutral,Legendary,9,Dark Angel Olivia,65GMo
+Darkness Evolved,Neutral,Legendary,8,Odin,65GMy
+Darkness Evolved,Forestcraft,Bronze,2,Dwarf Perfumer,65XSY
+Darkness Evolved,Forestcraft,Bronze,2,Elf Bard,65XSi
+Darkness Evolved,Forestcraft,Bronze,3,Elf Healer,65XSs
+Darkness Evolved,Forestcraft,Bronze,4,Underbrush Beast Girl,65XT0
+Darkness Evolved,Forestcraft,Bronze,5,Verdant Steward,65XTK
+Darkness Evolved,Forestcraft,Bronze,2,Glimmering Wings,65YC2
+Darkness Evolved,Forestcraft,Silver,4,Yuel the Ancient,65Zuo
+Darkness Evolved,Forestcraft,Silver,6,Master of the Canopies,65Zv6
+Darkness Evolved,Forestcraft,Silver,7,"Baalt, King of the Elves",65ZvG
+Darkness Evolved,Forestcraft,Silver,3,Elven Archery,65adq
+Darkness Evolved,Forestcraft,Gold,6,Elf Knight Cynthia,65cL2
+Darkness Evolved,Forestcraft,Gold,6,Grand Archer Selwyn,65cLC
+Darkness Evolved,Forestcraft,Gold,2,Elf Girl Liza,65cLM
+Darkness Evolved,Forestcraft,Legendary,5,Crystalia Tia,65enI
+Darkness Evolved,Swordcraft,Bronze,3,Swift Infiltrator,65vt2
+Darkness Evolved,Swordcraft,Bronze,2,Fearless Banneret,65vtC
+Darkness Evolved,Swordcraft,Bronze,5,Assault Commander,65vtW
+Darkness Evolved,Swordcraft,Bronze,5,Avant Blader,65vtg
+Darkness Evolved,Swordcraft,Bronze,4,Mirage Defender,65vtq
+Darkness Evolved,Swordcraft,Bronze,1,Mentor's Teachings,65wcO
+Darkness Evolved,Swordcraft,Silver,2,Gunner Maid Seria,65yJI
+Darkness Evolved,Swordcraft,Silver,3,Ruthless Assassin,65yJS
+Darkness Evolved,Swordcraft,Silver,7,Koga Kunoichi,65yJm
+Darkness Evolved,Swordcraft,Silver,2,Whole-Souled Swing,65z2e
+Darkness Evolved,Swordcraft,Gold,3,White Paladin,65-lY
+Darkness Evolved,Swordcraft,Gold,9,Leonidas,65-ls
+Darkness Evolved,Swordcraft,Gold,3,Rogue's Creed,65-_K
+Darkness Evolved,Swordcraft,Legendary,8,Alexander,661Bo
+Darkness Evolved,Runecraft,Bronze,4,Crystal Bombarder,66IHi
+Darkness Evolved,Runecraft,Bronze,3,Witchette Emmylou,66IIA
+Darkness Evolved,Runecraft,Bronze,5,Grand Gargoyle,66IIK
+Darkness Evolved,Runecraft,Bronze,1,Scrap Iron Smelter,66IXe
+Darkness Evolved,Runecraft,Bronze,2,Red-Hot Ritual,66IXo
+Darkness Evolved,Runecraft,Bronze,3,Witchbolt,66J0Q
+Darkness Evolved,Runecraft,Silver,4,"Remi & Rami, Witchy Duo",66Kjo
+Darkness Evolved,Runecraft,Silver,6,Shadow Witch,66Kjy
+Darkness Evolved,Runecraft,Silver,7,Multipart Experiment,66LS-
+Darkness Evolved,Runecraft,Silver,3,Summon Iceform,66LT8
+Darkness Evolved,Runecraft,Gold,2,Timeworn Mage Levi,66NA2
+Darkness Evolved,Runecraft,Gold,5,Rimewind,66Nv4
+Darkness Evolved,Runecraft,Gold,6,Calamitous Curse,66NvE
+Darkness Evolved,Runecraft,Legendary,5,Sun Oracle Pascale,66PcI
+Darkness Evolved,Dragoncraft,Bronze,3,Ironscale Dragonfolk,66gi2
+Darkness Evolved,Dragoncraft,Bronze,2,Mushussu,66giC
+Darkness Evolved,Dragoncraft,Bronze,2,Wildfang Dragonewt,66giW
+Darkness Evolved,Dragoncraft,Bronze,6,Island Whale,66gig
+Darkness Evolved,Dragoncraft,Bronze,5,Queen Serpent,66giq
+Darkness Evolved,Dragoncraft,Bronze,4,Dragon Counsel,66hRE
+Darkness Evolved,Dragoncraft,Silver,5,Transmogrified Wyrm,66j8I
+Darkness Evolved,Dragoncraft,Silver,4,Siegfried,66j8S
+Darkness Evolved,Dragoncraft,Silver,4,Noxious Dragon,66j8m
+Darkness Evolved,Dragoncraft,Silver,2,Dragonewt Fist,66jtU
+Darkness Evolved,Dragoncraft,Gold,7,Neptune,66laY
+Darkness Evolved,Dragoncraft,Gold,9,Polyphonic Roar,66lqK
+Darkness Evolved,Dragoncraft,Gold,3,Dracomancer's Rites,66lqU
+Darkness Evolved,Dragoncraft,Legendary,3,Dragonsong Flute,66oGQ
+Darkness Evolved,Shadowcraft,Bronze,2,Dark Conjurer,6736Y
+Darkness Evolved,Shadowcraft,Bronze,3,Deathchaser,6736i
+Darkness Evolved,Shadowcraft,Bronze,4,Malicious Ghost,6736s
+Darkness Evolved,Shadowcraft,Bronze,5,Commander of Destruction,67370
+Darkness Evolved,Shadowcraft,Bronze,3,Spartoi Soldier,6737K
+Darkness Evolved,Shadowcraft,Bronze,3,Deathbrand,673s2
+Darkness Evolved,Shadowcraft,Silver,5,Charon,675Yo
+Darkness Evolved,Shadowcraft,Silver,9,Andras,675Yy
+Darkness Evolved,Shadowcraft,Silver,3,Bone Chimera,675ZG
+Darkness Evolved,Shadowcraft,Silver,2,Rise of the Dead,676H-
+Darkness Evolved,Shadowcraft,Gold,5,Ceridwen,677_2
+Darkness Evolved,Shadowcraft,Gold,3,Spirit Cycle,678UI
+Darkness Evolved,Shadowcraft,Gold,3,Midnight Haunt,678US
+Darkness Evolved,Shadowcraft,Legendary,7,Lord of the Flies,67ARI
+Darkness Evolved,Bloodcraft,Bronze,2,Demonic Hedonist,67RX2
+Darkness Evolved,Bloodcraft,Bronze,3,Mini Soul Devil,67RXC
+Darkness Evolved,Bloodcraft,Bronze,6,Demonic Thrall,67RXM
+Darkness Evolved,Bloodcraft,Bronze,2,Serpent Charmer,67RXW
+Darkness Evolved,Bloodcraft,Bronze,5,Soul Navigator,67RXq
+Darkness Evolved,Bloodcraft,Bronze,2,Vampiric Kiss,67SGY
+Darkness Evolved,Bloodcraft,Silver,4,Labyrinth Devil,67TzI
+Darkness Evolved,Bloodcraft,Silver,7,Frenzied Juggernaut,67TzS
+Darkness Evolved,Bloodcraft,Silver,1,Precious Bloodfangs,67UiU
+Darkness Evolved,Bloodcraft,Silver,2,Medusa's Gaze,67Uie
+Darkness Evolved,Bloodcraft,Gold,8,Azazel,67WPY
+Darkness Evolved,Bloodcraft,Gold,2,"Vania, Vampire Princess",67WPs
+Darkness Evolved,Bloodcraft,Gold,2,Vampiric Fortress,67WfK
+Darkness Evolved,Bloodcraft,Legendary,5,Bloody Mary,67Yro
+Darkness Evolved,Havencraft,Bronze,2,Heavenly Hound,67pxY
+Darkness Evolved,Havencraft,Bronze,3,Sky Sprite,67pxi
+Darkness Evolved,Havencraft,Bronze,4,Holy Fox Grimaud,67pxs
+Darkness Evolved,Havencraft,Bronze,5,Pinion Prince,67pyA
+Darkness Evolved,Havencraft,Bronze,2,Godsteel Wings,67qQo
+Darkness Evolved,Havencraft,Bronze,2,Monastic Holy Water,67qgu
+Darkness Evolved,Havencraft,Silver,3,Sledgehammer Exorcist,67sNo
+Darkness Evolved,Havencraft,Silver,5,Radiance Angel,67sO6
+Darkness Evolved,Havencraft,Silver,2,Beastcall Aria,67st2
+Darkness Evolved,Havencraft,Silver,3,Forbidden Ritual,67stC
+Darkness Evolved,Havencraft,Gold,6,Kaguya,67uq2
+Darkness Evolved,Havencraft,Gold,6,Winged Sentinel Garuda,67uqM
+Darkness Evolved,Havencraft,Gold,3,Elana's Prayer,67v3q
+Darkness Evolved,Havencraft,Legendary,8,Enstatued Seraph,67xlY
+Rise of Bahamut,Neutral,Bronze,3,Goblin Mage,68zBM
+Rise of Bahamut,Neutral,Bronze,2,Sektor,68zBW
+Rise of Bahamut,Neutral,Bronze,3,Angel of the Word,68zBg
+Rise of Bahamut,Neutral,Bronze,2,Hamsa,68zBq
+Rise of Bahamut,Neutral,Bronze,2,Valkyrie's Spear,68zQq
+Rise of Bahamut,Neutral,Silver,5,Fortunehunter Feena,68_dS
+Rise of Bahamut,Neutral,Silver,2,"Lyrial, Celestial Archer",68_dc
+Rise of Bahamut,Neutral,Silver,3,Gourmet Emperor Khaiza,68_dm
+Rise of Bahamut,Neutral,Silver,5,Call of Cocytus,690MA
+Rise of Bahamut,Neutral,Gold,4,Uriel,6923Y
+Rise of Bahamut,Neutral,Gold,4,Goblinbreaker Teena,6923i
+Rise of Bahamut,Neutral,Gold,5,"Lucius, Goblin Slayer",6923s
+Rise of Bahamut,Neutral,Legendary,10,Bahamut,694Vo
+Rise of Bahamut,Neutral,Legendary,7,Sahaquiel,694Vy
+Rise of Bahamut,Forestcraft,Bronze,4,Fairy Knight,69Lbs
+Rise of Bahamut,Forestcraft,Bronze,3,Forest Spirit,69Lc0
+Rise of Bahamut,Forestcraft,Bronze,1,Felpurr Kitten,69LcA
+Rise of Bahamut,Forestcraft,Bronze,7,Forest Gigas,69LcK
+Rise of Bahamut,Forestcraft,Bronze,1,Entangling Vines,69MKa
+Rise of Bahamut,Forestcraft,Silver,5,Pegasus Elf,69O1y
+Rise of Bahamut,Forestcraft,Silver,2,Crystalia Lily,69O26
+Rise of Bahamut,Forestcraft,Silver,5,"Lionel, Elf Prince",69O2G
+Rise of Bahamut,Forestcraft,Silver,3,Swords to Woodlands,69Omg
+Rise of Bahamut,Forestcraft,Gold,5,Elf of the Gemstones,69QUC
+Rise of Bahamut,Forestcraft,Gold,6,Maahes,69QUM
+Rise of Bahamut,Forestcraft,Gold,3,Selwyn's Command,69RCw
+Rise of Bahamut,Forestcraft,Legendary,8,White Wolf of Eldwood,69SwI
+Rise of Bahamut,Swordcraft,Bronze,3,Blitz Lancer,69k0M
+Rise of Bahamut,Swordcraft,Bronze,6,Swordwhip Maid,69k0W
+Rise of Bahamut,Swordcraft,Bronze,2,Samurai,69k0g
+Rise of Bahamut,Swordcraft,Bronze,3,Thief,69k0q
+Rise of Bahamut,Swordcraft,Bronze,3,Art of the Ninja,69kl4
+Rise of Bahamut,Swordcraft,Silver,5,"Monika, Cloudhall Admiral",69mSS
+Rise of Bahamut,Swordcraft,Silver,2,"Gelt, Vice Captain",69mSc
+Rise of Bahamut,Swordcraft,Silver,4,"Jeno, Levin Vanguard",69mSm
+Rise of Bahamut,Swordcraft,Silver,5,Cyclone Blade,69nBA
+Rise of Bahamut,Swordcraft,Gold,4,"Amelia, Silver Paladin",69oui
+Rise of Bahamut,Swordcraft,Gold,8,Fangblade Slayer,69ous
+Rise of Bahamut,Swordcraft,Gold,3,Castle in the Sky,69pNo
+Rise of Bahamut,Swordcraft,Legendary,5,"Albert, Levin Saber",69rKo
+Rise of Bahamut,Runecraft,Bronze,2,"Craig, Wizard of Mysteria",6A6Qs
+Rise of Bahamut,Runecraft,Bronze,4,Timeless Witch,6A6R0
+Rise of Bahamut,Runecraft,Bronze,5,Ogler,6A6RA
+Rise of Bahamut,Runecraft,Bronze,6,Blade Mage,6A6RK
+Rise of Bahamut,Runecraft,Bronze,3,Rite of Exorcism,6A79Q
+Rise of Bahamut,Runecraft,Silver,6,Disaster Witch,6A8sy
+Rise of Bahamut,Runecraft,Silver,2,Dwarf Alchemist,6A8t6
+Rise of Bahamut,Runecraft,Silver,3,"Clarke, Arcane Scholar",6A8tG
+Rise of Bahamut,Runecraft,Silver,4,Piercing Rune,6A9bg
+Rise of Bahamut,Runecraft,Gold,8,"Anne, Belle of Mysteria",6ABJC
+Rise of Bahamut,Runecraft,Gold,6,Professor of Taboos,6ABJM
+Rise of Bahamut,Runecraft,Gold,3,Secrets of Erasmus,6AC1w
+Rise of Bahamut,Runecraft,Legendary,9,"Daria, Dimensional Witch",6ADlI
+Rise of Bahamut,Dragoncraft,Bronze,5,Cunning Wyvern,6AUrM
+Rise of Bahamut,Dragoncraft,Bronze,3,Griffon Knight,6AUrW
+Rise of Bahamut,Dragoncraft,Bronze,2,Dragontamer,6AUrg
+Rise of Bahamut,Dragoncraft,Bronze,2,Luxfang Kit,6AUrq
+Rise of Bahamut,Dragoncraft,Bronze,5,Dragonclaw Pendant,6AV4q
+Rise of Bahamut,Dragoncraft,Silver,3,"Eyfa, Wyvern Rider",6AXHS
+Rise of Bahamut,Dragoncraft,Silver,4,Pyroxene Dragon,6AXHc
+Rise of Bahamut,Dragoncraft,Silver,6,Owl Guardian,6AXHm
+Rise of Bahamut,Dragoncraft,Silver,5,Draconic Fervor,6AY0A
+Rise of Bahamut,Dragoncraft,Gold,8,Grea the Dragonborn,6AZji
+Rise of Bahamut,Dragoncraft,Gold,2,Date Masamune,6AZjs
+Rise of Bahamut,Dragoncraft,Gold,2,Breath of the Salamander,6AaSQ
+Rise of Bahamut,Dragoncraft,Legendary,9,Imperial Dragoon,6Ac9o
+Rise of Bahamut,Shadowcraft,Bronze,2,Ghosthound Sexton,6AtFs
+Rise of Bahamut,Shadowcraft,Bronze,3,Feathered Patroller,6AtG0
+Rise of Bahamut,Shadowcraft,Bronze,3,Attendant of Night,6AtGA
+Rise of Bahamut,Shadowcraft,Bronze,3,Zombie Buccaneer,6AtGK
+Rise of Bahamut,Shadowcraft,Bronze,3,Voices of Resentment,6At-a
+Rise of Bahamut,Shadowcraft,Silver,4,Necroassassin,6Avhy
+Rise of Bahamut,Shadowcraft,Silver,2,Lurching Corpse,6Avi6
+Rise of Bahamut,Shadowcraft,Silver,7,Underworld Watchman Khawy,6AviG
+Rise of Bahamut,Shadowcraft,Silver,1,Ghostly Grasp,6AwQg
+Rise of Bahamut,Shadowcraft,Gold,6,Balor,6Ay8C
+Rise of Bahamut,Shadowcraft,Gold,2,Shadow Reaper,6Ay8M
+Rise of Bahamut,Shadowcraft,Gold,3,Pact with the Nethergod,6Aysw
+Rise of Bahamut,Shadowcraft,Legendary,8,Nephthys,6A-aI
+Rise of Bahamut,Bloodcraft,Bronze,2,"Yurius, Levin Duke",6BFgM
+Rise of Bahamut,Bloodcraft,Bronze,4,Moriana the Bejeweled,6BFgW
+Rise of Bahamut,Bloodcraft,Bronze,3,Alpha Wolfman,6BFgg
+Rise of Bahamut,Bloodcraft,Bronze,6,Brazen Demoness,6BFgq
+Rise of Bahamut,Bloodcraft,Bronze,1,Executioner's Axe,6BGOw
+Rise of Bahamut,Bloodcraft,Silver,3,"Veight, Vampire Noble",6BI6S
+Rise of Bahamut,Bloodcraft,Silver,5,Squall Lancer,6BI6c
+Rise of Bahamut,Bloodcraft,Silver,6,Flood Behemoth,6BI6m
+Rise of Bahamut,Bloodcraft,Silver,2,Hungering Horde,6BIrA
+Rise of Bahamut,Bloodcraft,Gold,7,Ice Blade Warfiend,6BKYi
+Rise of Bahamut,Bloodcraft,Gold,5,Mastema,6BKYs
+Rise of Bahamut,Bloodcraft,Gold,3,Sadistic Night,6BLHQ
+Rise of Bahamut,Bloodcraft,Legendary,7,Bloodhungry Matriarch,6BM-o
+Rise of Bahamut,Havencraft,Bronze,3,Master Sage,6Be4s
+Rise of Bahamut,Havencraft,Bronze,7,Soul Collector,6Be50
+Rise of Bahamut,Havencraft,Bronze,2,Frog Cleric,6Be5A
+Rise of Bahamut,Havencraft,Bronze,4,Veteran Tamer,6Be5K
+Rise of Bahamut,Havencraft,Bronze,7,Manifestation of Faith,6BepQ
+Rise of Bahamut,Havencraft,Silver,5,Ancient Lion Spirit,6BgWy
+Rise of Bahamut,Havencraft,Silver,2,Luxwing Reno,6BgX6
+Rise of Bahamut,Havencraft,Silver,3,"Damus, Oracle of Iniquity",6BgXG
+Rise of Bahamut,Havencraft,Silver,3,Pegasus Sculpture,6Bh02
+Rise of Bahamut,Havencraft,Gold,7,Luxhorn Sarissa,6BizC
+Rise of Bahamut,Havencraft,Gold,6,Valhallan General,6BizM
+Rise of Bahamut,Havencraft,Gold,4,Tribunal of Good and Evil,6BjSI
+Rise of Bahamut,Havencraft,Legendary,5,Eidolon of Madness,6BlPI
+Tempest of the Gods,Neutral,Bronze,3,Axe Fighter,6CnKC
+Tempest of the Gods,Neutral,Bronze,1,Wise Merman,6CnKM
+Tempest of the Gods,Neutral,Bronze,2,Owlcat,6CnKW
+Tempest of the Gods,Neutral,Bronze,3,Test of Strength,6CnpI
+Tempest of the Gods,Neutral,Silver,5,Goblin Princess,6CpmS
+Tempest of the Gods,Neutral,Silver,2,Wandering Bard Elta,6Cpmc
+Tempest of the Gods,Neutral,Silver,4,Impartial Strix,6Cpmm
+Tempest of the Gods,Neutral,Silver,3,Frozen Mammoth,6Cp_w
+Tempest of the Gods,Neutral,Gold,7,"Arriet, Soothing Harpist",6CsCY
+Tempest of the Gods,Neutral,Gold,3,"Grimnir, War Cyclone",6CsCi
+Tempest of the Gods,Neutral,Gold,8,Earthshock Ogre,6CsCs
+Tempest of the Gods,Neutral,Legendary,10,Zeus,6Cueo
+Tempest of the Gods,Neutral,Legendary,9,Israfil,6Cuey
+Tempest of the Gods,Forestcraft,Bronze,2,Dryad,6D9ki
+Tempest of the Gods,Forestcraft,Bronze,3,Cybele,6D9ks
+Tempest of the Gods,Forestcraft,Bronze,3,Beetle Warrior,6D9l0
+Tempest of the Gods,Forestcraft,Bronze,3,Ivy Spellbomb,6DATQ
+Tempest of the Gods,Forestcraft,Silver,2,"Sukuna, Brave and Small",6DCAy
+Tempest of the Gods,Forestcraft,Silver,4,"Vist, Elf Butler",6DCB6
+Tempest of the Gods,Forestcraft,Silver,7,Mighty Dwarf,6DCBG
+Tempest of the Gods,Forestcraft,Silver,3,Man-Eating Mangrove,6DCg2
+Tempest of the Gods,Forestcraft,Gold,6,Crystalia Aerin,6DEdC
+Tempest of the Gods,Forestcraft,Gold,5,Jungle Warden,6DEdM
+Tempest of the Gods,Forestcraft,Gold,4,Fairy Cage,6DEsg
+Tempest of the Gods,Forestcraft,Legendary,7,Elf Queen,6DH3I
+Tempest of the Gods,Forestcraft,Legendary,8,Deepwood Anomaly,6DH3S
+Tempest of the Gods,Swordcraft,Bronze,2,Naval Guard Simone,6DY9C
+Tempest of the Gods,Swordcraft,Bronze,5,Tristan of the Round Table,6DY9M
+Tempest of the Gods,Swordcraft,Bronze,4,Vagabond Frog,6DY9W
+Tempest of the Gods,Swordcraft,Bronze,1,Spring Cleaning,6DYeI
+Tempest of the Gods,Swordcraft,Silver,5,Luminous Mage,6DabS
+Tempest of the Gods,Swordcraft,Silver,6,Jolly Rogers,6Dabc
+Tempest of the Gods,Swordcraft,Silver,4,Shrouded Assassin,6Dabm
+Tempest of the Gods,Swordcraft,Silver,3,Luminous Standard,6Daqw
+Tempest of the Gods,Swordcraft,Gold,3,Captain Lecia,6Dd1i
+Tempest of the Gods,Swordcraft,Gold,8,Captain Walfrid,6Dd1s
+Tempest of the Gods,Swordcraft,Gold,5,Support Cannon,6DdHA
+Tempest of the Gods,Swordcraft,Legendary,7,Roland the Incorruptible,6DfTo
+Tempest of the Gods,Swordcraft,Legendary,4,Gawain of the Round Table,6DfTy
+Tempest of the Gods,Runecraft,Bronze,3,Dazzling Healer,6DwZi
+Tempest of the Gods,Runecraft,Bronze,3,Mage of Nightfall,6DwZs
+Tempest of the Gods,Runecraft,Bronze,4,Halo Golem,6Dwa0
+Tempest of the Gods,Runecraft,Bronze,2,Enchanted Library,6Dx2o
+Tempest of the Gods,Runecraft,Silver,2,Freshman Lou,6Dy_y
+Tempest of the Gods,Runecraft,Silver,2,Magic Illusionist,6Dz06
+Tempest of the Gods,Runecraft,Silver,9,Chimera,6Dz0G
+Tempest of the Gods,Runecraft,Silver,7,Enchanted Sword,6Dzkg
+Tempest of the Gods,Runecraft,Gold,5,Magic Girl Melvie,6D_SC
+Tempest of the Gods,Runecraft,Gold,8,Elder Mage of Dragonlore,6D_SM
+Tempest of the Gods,Runecraft,Gold,6,Mutagenic Bolt,6E0Aw
+Tempest of the Gods,Runecraft,Legendary,9,Wordwielder Ginger,6E1uI
+Tempest of the Gods,Runecraft,Legendary,6,Hulking Giant,6E1uS
+Tempest of the Gods,Dragoncraft,Bronze,3,Aqua Nereid,6EI-C
+Tempest of the Gods,Dragoncraft,Bronze,3,Dragoon Scyther,6EI-M
+Tempest of the Gods,Dragoncraft,Bronze,5,Hippocampus,6EI-W
+Tempest of the Gods,Dragoncraft,Bronze,1,Dragon's Nest,6EJDg
+Tempest of the Gods,Dragoncraft,Silver,5,Venomous Pucewyrm,6ELQS
+Tempest of the Gods,Dragoncraft,Silver,4,Wind Reader Zell,6ELQc
+Tempest of the Gods,Dragoncraft,Silver,5,Wrath Drake,6ELQm
+Tempest of the Gods,Dragoncraft,Silver,6,Lightning Blast,6EM9A
+Tempest of the Gods,Dragoncraft,Gold,6,Phoenix Rider Aina,6ENsi
+Tempest of the Gods,Dragoncraft,Gold,4,Rahab,6ENss
+Tempest of the Gods,Dragoncraft,Gold,4,Dragonslayer's Price,6EObQ
+Tempest of the Gods,Dragoncraft,Legendary,5,Sibyl of the Waterwyrm,6EQIo
+Tempest of the Gods,Dragoncraft,Legendary,8,Ouroboros,6EQIy
+Tempest of the Gods,Shadowcraft,Bronze,1,Deadmoon Disciple,6EhOi
+Tempest of the Gods,Shadowcraft,Bronze,6,Ebon Reaper,6EhOs
+Tempest of the Gods,Shadowcraft,Bronze,3,Goblin Zombie,6EhP0
+Tempest of the Gods,Shadowcraft,Bronze,2,Zombie Party,6Ei7Q
+Tempest of the Gods,Shadowcraft,Silver,4,Orthrus,6Ejqy
+Tempest of the Gods,Shadowcraft,Silver,4,Prince Catacomb,6Ejr6
+Tempest of the Gods,Shadowcraft,Silver,5,Dolorblade Warrior,6EjrG
+Tempest of the Gods,Shadowcraft,Silver,2,Grave Desecration,6Ek4Q
+Tempest of the Gods,Shadowcraft,Gold,2,Little Soulsquasher,6EmHC
+Tempest of the Gods,Shadowcraft,Gold,8,Immortal Thane,6EmHM
+Tempest of the Gods,Shadowcraft,Gold,4,Death's Ledger,6EmmI
+Tempest of the Gods,Shadowcraft,Legendary,3,Minthe of the Underworld,6EojI
+Tempest of the Gods,Shadowcraft,Legendary,7,Demonlord Eachtar,6EojS
+Tempest of the Gods,Bloodcraft,Bronze,2,Spiderweb Imp,6F3pC
+Tempest of the Gods,Bloodcraft,Bronze,4,Assault Werewolf,6F3pM
+Tempest of the Gods,Bloodcraft,Bronze,3,Frogbat,6F3pW
+Tempest of the Gods,Bloodcraft,Bronze,6,Stolen Life,6F4Xw
+Tempest of the Gods,Bloodcraft,Silver,2,Baphomet,6F6FS
+Tempest of the Gods,Bloodcraft,Silver,5,Vlad,6F6Fc
+Tempest of the Gods,Bloodcraft,Silver,5,Dark Airjammer,6F6Fm
+Tempest of the Gods,Bloodcraft,Silver,2,Mask of the Black Death,6F6kY
+Tempest of the Gods,Bloodcraft,Gold,7,Soul Dominator,6F8hi
+Tempest of the Gods,Bloodcraft,Gold,2,"Galretto, Devil of Love",6F8hs
+Tempest of the Gods,Bloodcraft,Gold,3,Blood Moon,6F9Ao
+Tempest of the Gods,Bloodcraft,Legendary,4,Belphegor,6FB7o
+Tempest of the Gods,Bloodcraft,Legendary,8,Maelstrom Serpent,6FB7y
+Tempest of the Gods,Havencraft,Bronze,4,Pure Healer,6FSDi
+Tempest of the Gods,Havencraft,Bronze,2,Mist Shaman,6FSDs
+Tempest of the Gods,Havencraft,Bronze,4,Octobishop,6FSE0
+Tempest of the Gods,Havencraft,Bronze,3,Candelabra of Prayers,6FSTA
+Tempest of the Gods,Havencraft,Silver,5,Gravekeeper Sonia,6FUfy
+Tempest of the Gods,Havencraft,Silver,2,Holy Bowman Kel,6FUg6
+Tempest of the Gods,Havencraft,Silver,6,Calydonian Boar,6FUgG
+Tempest of the Gods,Havencraft,Silver,4,Iron Maiden,6FV92
+Tempest of the Gods,Havencraft,Gold,3,"Zoe, Queen of Goldenia",6FX6C
+Tempest of the Gods,Havencraft,Gold,6,Judge of Retribution,6FX6M
+Tempest of the Gods,Havencraft,Gold,8,Tarnished Grail,6FXbI
+Tempest of the Gods,Havencraft,Legendary,6,Dark Jeanne,6FZYI
+Tempest of the Gods,Havencraft,Legendary,9,Heavenly Aegis,6FZYS
+Wonderland Dreams,Neutral,Bronze,5,"Ephemera, Angelic Slacker",6GbT2
+Wonderland Dreams,Neutral,Bronze,3,Angelic Knight,6GbTC
+Wonderland Dreams,Neutral,Bronze,4,Goblin Leader,6GbTM
+Wonderland Dreams,Neutral,Bronze,7,Eggsplosion,6GcBw
+Wonderland Dreams,Neutral,Silver,2,Actress Feria,6GdvI
+Wonderland Dreams,Neutral,Silver,5,Gruff Mountaineer Captain,6GdvS
+Wonderland Dreams,Neutral,Silver,6,Lion Champion,6Gdvc
+Wonderland Dreams,Neutral,Silver,1,Into the Looking Glass,6GeeA
+Wonderland Dreams,Neutral,Gold,3,Rapunzel,6GgLY
+Wonderland Dreams,Neutral,Gold,5,"Snow, Whitecat Sage",6GgLi
+Wonderland Dreams,Neutral,Gold,5,Hector,6GgLs
+Wonderland Dreams,Neutral,Legendary,4,"Alice, Wonderland Explorer",6Gino
+Wonderland Dreams,Neutral,Legendary,10,Queen of the Dread Sea,6Giny
+Wonderland Dreams,Forestcraft,Bronze,4,Flower Princess,6GztY
+Wonderland Dreams,Forestcraft,Bronze,2,"Tweedle Dum, Tweedle Dee",6Gzti
+Wonderland Dreams,Forestcraft,Bronze,3,Kindly Treant,6Gzts
+Wonderland Dreams,Forestcraft,Bronze,3,Woodland Band,6G-7A
+Wonderland Dreams,Forestcraft,Silver,2,Abby the Axe Girl,6H0Jo
+Wonderland Dreams,Forestcraft,Silver,4,Snowfield Warrior,6H0Jy
+Wonderland Dreams,Forestcraft,Silver,6,Sylvan Elder,6H0K6
+Wonderland Dreams,Forestcraft,Silver,2,Wood of Brambles,6H0p2
+Wonderland Dreams,Forestcraft,Gold,3,"Magical Fairy, Lilac",6H2m2
+Wonderland Dreams,Forestcraft,Gold,4,Fairy Driver,6H2mC
+Wonderland Dreams,Forestcraft,Gold,2,Elf Twins' Assault,6H3Uw
+Wonderland Dreams,Forestcraft,Legendary,6,Beauty and the Beast,6H5CI
+Wonderland Dreams,Forestcraft,Legendary,2,Fairy Dragon,6H5CS
+Wonderland Dreams,Swordcraft,Bronze,5,Kunoichi Master,6HMI2
+Wonderland Dreams,Swordcraft,Bronze,6,Axe Destroyer,6HMIC
+Wonderland Dreams,Swordcraft,Bronze,3,Rabbit Ear Attendant,6HMIM
+Wonderland Dreams,Swordcraft,Bronze,3,Kiss of the Princess,6HN0w
+Wonderland Dreams,Swordcraft,Silver,3,Young Ogrehunter Momo,6HOkI
+Wonderland Dreams,Swordcraft,Silver,3,Old Man and Old Woman,6HOkS
+Wonderland Dreams,Swordcraft,Silver,2,Bladed Hedgehog,6HOkc
+Wonderland Dreams,Swordcraft,Silver,2,Shield of Flame,6HPTA
+Wonderland Dreams,Swordcraft,Gold,2,"Maisy, Red Riding Hood",6HRAY
+Wonderland Dreams,Swordcraft,Gold,5,White Ridge Swordsman,6HRAi
+Wonderland Dreams,Swordcraft,Gold,5,Council of Card Knights,6HRvQ
+Wonderland Dreams,Swordcraft,Legendary,3,Cinderella,6HTco
+Wonderland Dreams,Swordcraft,Legendary,8,Hero of Antiquity,6HTcy
+Wonderland Dreams,Runecraft,Bronze,2,Witch of Sweets,6HkiY
+Wonderland Dreams,Runecraft,Bronze,4,Apprentice Swordmage,6Hkii
+Wonderland Dreams,Runecraft,Bronze,2,Carbuncle of Mysteria,6Hkis
+Wonderland Dreams,Runecraft,Bronze,1,Witch's Cauldron,6HkyA
+Wonderland Dreams,Runecraft,Silver,5,Illusionist,6Hn8o
+Wonderland Dreams,Runecraft,Silver,6,"Mr. Heinlein, Shadow Mage",6Hn8y
+Wonderland Dreams,Runecraft,Silver,3,Mysterian Grimoire,6Hn96
+Wonderland Dreams,Runecraft,Silver,3,Gingerbread House,6HnOQ
+Wonderland Dreams,Runecraft,Gold,5,"Falise, Leonardian Mage",6Hpb2
+Wonderland Dreams,Runecraft,Gold,6,Master Mage Levi,6HpbC
+Wonderland Dreams,Runecraft,Gold,2,Golem Assault,6HqJw
+Wonderland Dreams,Runecraft,Legendary,5,Wizardess of Oz,6Hs1I
+Wonderland Dreams,Runecraft,Legendary,3,Abomination Awakened,6Hs1S
+Wonderland Dreams,Dragoncraft,Bronze,2,Dragon Summoner,6I772
+Wonderland Dreams,Dragoncraft,Bronze,4,Elder Tortoise,6I77C
+Wonderland Dreams,Dragoncraft,Bronze,7,Ebon Beast Warrior,6I77M
+Wonderland Dreams,Dragoncraft,Bronze,4,Dragon Sculpture,6I7Mg
+Wonderland Dreams,Dragoncraft,Silver,6,Hippogryph Rider,6I9ZI
+Wonderland Dreams,Dragoncraft,Silver,3,Master of Draconic Arts,6I9ZS
+Wonderland Dreams,Dragoncraft,Silver,9,Fortress Crab,6I9Zc
+Wonderland Dreams,Dragoncraft,Silver,6,Draconic Lance,6IAIA
+Wonderland Dreams,Dragoncraft,Gold,3,Dramatic Dragonblader,6IB_Y
+Wonderland Dreams,Dragoncraft,Gold,3,Red Ragewyrm,6IB_i
+Wonderland Dreams,Dragoncraft,Gold,7,Tilting at Windmills,6ICFA
+Wonderland Dreams,Dragoncraft,Legendary,9,Wyrm God of the Skies,6IERo
+Wonderland Dreams,Dragoncraft,Legendary,8,Jabberwock,6IERy
+Wonderland Dreams,Shadowcraft,Bronze,2,Demon Eater,6IVXY
+Wonderland Dreams,Shadowcraft,Bronze,7,Mad Hatter,6IVXi
+Wonderland Dreams,Shadowcraft,Bronze,2,Skeleton Ogre,6IVXs
+Wonderland Dreams,Shadowcraft,Bronze,1,Haunted House,6IW0o
+Wonderland Dreams,Shadowcraft,Silver,2,Usher of Styx,6IXzo
+Wonderland Dreams,Shadowcraft,Silver,4,Nightmare Executioner,6IXzy
+Wonderland Dreams,Shadowcraft,Silver,4,Caterpillar of Riddles,6IX-6
+Wonderland Dreams,Shadowcraft,Silver,2,Siren's Tears,6IYDQ
+Wonderland Dreams,Shadowcraft,Gold,6,"Odile, Black Swan",6IaQ2
+Wonderland Dreams,Shadowcraft,Gold,5,Ded Moroz,6IaQC
+Wonderland Dreams,Shadowcraft,Gold,2,Poisoned Apple of Rebirth,6Ib8w
+Wonderland Dreams,Shadowcraft,Legendary,7,Dark Alice,6IcsI
+Wonderland Dreams,Shadowcraft,Legendary,4,Corpselord of Woe,6IcsS
+Wonderland Dreams,Bloodcraft,Bronze,3,Disagreeable Demon,6Ity2
+Wonderland Dreams,Bloodcraft,Bronze,5,Big Knuckle Bodyguard,6ItyC
+Wonderland Dreams,Bloodcraft,Bronze,2,Tove,6ItyM
+Wonderland Dreams,Bloodcraft,Bronze,3,Demon Key,6IuRI
+Wonderland Dreams,Bloodcraft,Silver,5,Scarlet Sabreur,6IwOI
+Wonderland Dreams,Bloodcraft,Silver,2,Boy Who Cried Wolf,6IwOS
+Wonderland Dreams,Bloodcraft,Silver,5,Bandersnatch,6IwOc
+Wonderland Dreams,Bloodcraft,Silver,1,Furtive Fangs,6Ix7A
+Wonderland Dreams,Bloodcraft,Gold,7,"Emeralda, Demonic Officer",6IyqY
+Wonderland Dreams,Bloodcraft,Gold,6,Phantom Cat,6Iyqi
+Wonderland Dreams,Bloodcraft,Gold,3,Lethal Blade,6IzZQ
+Wonderland Dreams,Bloodcraft,Legendary,6,"Carabosse, Wicked Fairy",6I_Go
+Wonderland Dreams,Bloodcraft,Legendary,8,Spawn of the Abyss,6I_Gy
+Wonderland Dreams,Havencraft,Bronze,4,Birdkeeping Disciple,6JGMY
+Wonderland Dreams,Havencraft,Bronze,6,Monk of Purification,6JGMi
+Wonderland Dreams,Havencraft,Bronze,3,White Tiger,6JGMs
+Wonderland Dreams,Havencraft,Bronze,2,Temple of the Inquisition,6JGro
+Wonderland Dreams,Havencraft,Silver,5,Tenko,6JIoo
+Wonderland Dreams,Havencraft,Silver,6,Eagle Man,6JIoy
+Wonderland Dreams,Havencraft,Silver,6,Hati,6JIp6
+Wonderland Dreams,Havencraft,Silver,5,March Hare's Teatime,6JJI2
+Wonderland Dreams,Havencraft,Gold,6,"Odette, White Swan",6JLF2
+Wonderland Dreams,Havencraft,Gold,2,"Naoise, Red Branch Knight",6JLFC
+Wonderland Dreams,Havencraft,Gold,2,Alice's Adventure,6JLUg
+Wonderland Dreams,Havencraft,Legendary,2,Princess Snow White,6JNhI
+Wonderland Dreams,Havencraft,Legendary,7,Lion of the Golden City,6JNhS
+Starforged Legends,Neutral,Bronze,3,Nyx,6KPc2
+Starforged Legends,Neutral,Bronze,6,Mr. Full Moon,6KPcC
+Starforged Legends,Neutral,Bronze,8,Rampaging Mammoth,6KPcM
+Starforged Legends,Neutral,Bronze,3,Night's Way,6KQ5I
+Starforged Legends,Neutral,Silver,2,Evelisia the Fallen,6KS2I
+Starforged Legends,Neutral,Silver,3,Purehearted Singer,6KS2S
+Starforged Legends,Neutral,Silver,7,Gigas,6KS2c
+Starforged Legends,Neutral,Silver,1,Mystic Ring,6KSnA
+Starforged Legends,Neutral,Gold,5,Helblindi,6KUUi
+Starforged Legends,Neutral,Gold,5,Qilin,6KUUs
+Starforged Legends,Neutral,Gold,2,Staircase to Paradise,6KUzo
+Starforged Legends,Neutral,Legendary,5,Loki,6KWwo
+Starforged Legends,Neutral,Legendary,7,Zodiac Demon,6KWwy
+Starforged Legends,Forestcraft,Bronze,2,Fita the Gentle Elf,6Ko0Y
+Starforged Legends,Forestcraft,Bronze,3,Starry Elf,6Ko0i
+Starforged Legends,Forestcraft,Bronze,6,Ipiria,6Ko0s
+Starforged Legends,Forestcraft,Bronze,1,Airbound Barrage,6KolQ
+Starforged Legends,Forestcraft,Silver,2,Elf Singer Harmony,6KqSo
+Starforged Legends,Forestcraft,Silver,4,"Ariana, Natural Tutor",6KqSy
+Starforged Legends,Forestcraft,Silver,6,Dolorblade Demon,6KqT6
+Starforged Legends,Forestcraft,Silver,2,Elf Song,6KrBg
+Starforged Legends,Forestcraft,Gold,5,Venus,6Ksv2
+Starforged Legends,Forestcraft,Gold,3,Demon Child Zain,6KsvC
+Starforged Legends,Forestcraft,Gold,1,Spring-Green Protection,6KtOI
+Starforged Legends,Forestcraft,Legendary,6,Cassiopeia,6KvLI
+Starforged Legends,Forestcraft,Legendary,10,King Elephant,6KvLS
+Starforged Legends,Swordcraft,Bronze,3,Flail Knight,6LAR2
+Starforged Legends,Swordcraft,Bronze,8,King of the Horned Crown,6LARC
+Starforged Legends,Swordcraft,Bronze,5,Pollux,6LARM
+Starforged Legends,Swordcraft,Bronze,5,Unsheathed Blade,6LB9w
+Starforged Legends,Swordcraft,Silver,2,Cuhullin,6LCtI
+Starforged Legends,Swordcraft,Silver,3,Princess Juliet,6LCtS
+Starforged Legends,Swordcraft,Silver,3,Lord General Romeo,6LCtc
+Starforged Legends,Swordcraft,Silver,2,Armor of the Stars,6LDcA
+Starforged Legends,Swordcraft,Gold,2,"Lux, Solar Lancer",6LFJY
+Starforged Legends,Swordcraft,Gold,1,Perseus,6LFJi
+Starforged Legends,Swordcraft,Gold,5,Round Table Assembly,6LG2Q
+Starforged Legends,Swordcraft,Legendary,3,"Mars, Silent Flame General",6LHlo
+Starforged Legends,Swordcraft,Legendary,5,Barbarossa,6LHly
+Starforged Legends,Runecraft,Bronze,4,Lightning Lancer,6LYrY
+Starforged Legends,Runecraft,Bronze,6,Astrologist of the Mist,6LYri
+Starforged Legends,Runecraft,Bronze,2,Magic Owl,6LYrs
+Starforged Legends,Runecraft,Bronze,1,Starseer's Telescope,6LZ5A
+Starforged Legends,Runecraft,Silver,4,"Lorea, Dancer of the Sun",6LbHo
+Starforged Legends,Runecraft,Silver,3,Magic Gun Hunter,6LbHy
+Starforged Legends,Runecraft,Silver,3,"Karl, Pious Instructor",6LbI6
+Starforged Legends,Runecraft,Silver,3,Concentration,6Lc0g
+Starforged Legends,Runecraft,Gold,3,Europa,6Ldk2
+Starforged Legends,Runecraft,Gold,5,Wild Golem,6LdkC
+Starforged Legends,Runecraft,Gold,2,Chain of Calling,6LeSw
+Starforged Legends,Runecraft,Legendary,2,Star Reader Stella,6LgAI
+Starforged Legends,Runecraft,Legendary,9,Giant Chimera,6LgAS
+Starforged Legends,Dragoncraft,Bronze,2,Dragonrearer Matilda,6LxG2
+Starforged Legends,Dragoncraft,Bronze,6,Scaled Berserker,6LxGC
+Starforged Legends,Dragoncraft,Bronze,3,Estrella Beast,6LxGM
+Starforged Legends,Dragoncraft,Bronze,2,Dragon's Foresight,6Lx-w
+Starforged Legends,Dragoncraft,Silver,5,Beast Rider,6LziI
+Starforged Legends,Dragoncraft,Silver,3,Beowulf,6LziS
+Starforged Legends,Dragoncraft,Silver,9,Cetus,6Lzic
+Starforged Legends,Dragoncraft,Silver,7,Canyon of the Dragons,6L-BY
+Starforged Legends,Dragoncraft,Gold,5,Draconic Singer,6M08Y
+Starforged Legends,Dragoncraft,Gold,3,Star Phoenix,6M08i
+Starforged Legends,Dragoncraft,Gold,3,Avowed Strike,6M0tQ
+Starforged Legends,Dragoncraft,Legendary,4,Prime Dragon Keeper,6M2ao
+Starforged Legends,Dragoncraft,Legendary,10,Python,6M2ay
+Starforged Legends,Shadowcraft,Bronze,5,Dark Bladefiend,6MJgY
+Starforged Legends,Shadowcraft,Bronze,4,Castor,6MJgi
+Starforged Legends,Shadowcraft,Bronze,2,Belenus,6MJgs
+Starforged Legends,Shadowcraft,Bronze,2,Gloaming Tombs,6MJwA
+Starforged Legends,Shadowcraft,Silver,3,"Sora, Martial Artist",6MM6o
+Starforged Legends,Shadowcraft,Silver,8,"Lute, Leonard Necromancer",6MM6y
+Starforged Legends,Shadowcraft,Silver,5,Hresvelgr,6MM76
+Starforged Legends,Shadowcraft,Silver,2,Troth's Curse,6MMrg
+Starforged Legends,Shadowcraft,Gold,4,Ceres of the Night,6MOZ2
+Starforged Legends,Shadowcraft,Gold,2,Andrealphus,6MOZC
+Starforged Legends,Shadowcraft,Gold,7,Mist of Extinction,6MPHw
+Starforged Legends,Shadowcraft,Legendary,4,Twilight Queen,6MQ_I
+Starforged Legends,Shadowcraft,Legendary,7,Mail of Obliteration,6MQ_S
+Starforged Legends,Bloodcraft,Bronze,7,Gunnlod,6Mi52
+Starforged Legends,Bloodcraft,Bronze,3,Fanged Serpent,6Mi5C
+Starforged Legends,Bloodcraft,Bronze,2,Scorpius,6Mi5M
+Starforged Legends,Bloodcraft,Bronze,3,Venomous Bite,6Mipw
+Starforged Legends,Bloodcraft,Silver,4,Euryale,6MkXI
+Starforged Legends,Bloodcraft,Silver,6,Fenrir,6MkXS
+Starforged Legends,Bloodcraft,Silver,2,Demonic Ram,6MkXc
+Starforged Legends,Bloodcraft,Silver,2,Snarling Chains,6MlGA
+Starforged Legends,Bloodcraft,Gold,7,Stheno,6MmzY
+Starforged Legends,Bloodcraft,Gold,5,Fulminous Demon,6Mmzi
+Starforged Legends,Bloodcraft,Gold,3,Trial of the Gorgons,6MniQ
+Starforged Legends,Bloodcraft,Legendary,4,Venomfang Medusa,6MpPo
+Starforged Legends,Bloodcraft,Legendary,5,Jormungand,6MpPy
+Starforged Legends,Havencraft,Bronze,3,Sister of Punishment,6N4VY
+Starforged Legends,Havencraft,Bronze,4,Starchaser Sprite,6N4Vi
+Starforged Legends,Havencraft,Bronze,2,Star Bishop,6N4Vs
+Starforged Legends,Havencraft,Bronze,2,Red-Hot Boots,6N4-o
+Starforged Legends,Havencraft,Silver,6,Star Priestess,6N6xo
+Starforged Legends,Havencraft,Silver,3,Aegina,6N6xy
+Starforged Legends,Havencraft,Silver,5,Temple Ogre,6N6y6
+Starforged Legends,Havencraft,Silver,3,Star Torrent,6N7gg
+Starforged Legends,Havencraft,Gold,2,Andromeda,6N9O2
+Starforged Legends,Havencraft,Gold,8,Taurus the Great,6N9OC
+Starforged Legends,Havencraft,Gold,1,Globe of the Starways,6N9tI
+Starforged Legends,Havencraft,Legendary,6,Aether of the White Wing,6NBqI
+Starforged Legends,Havencraft,Legendary,7,Heresy's Avatar,6NBqS
+Chronogenesis,Neutral,Bronze,3,Dungeon Explorer Chloe,6ODl2
+Chronogenesis,Neutral,Bronze,3,Burly Axewielder,6ODlC
+Chronogenesis,Neutral,Bronze,2,Happy Pig,6ODlM
+Chronogenesis,Neutral,Bronze,3,Pitfall,6OETw
+Chronogenesis,Neutral,Silver,5,Holy Angel Altaia,6OGBI
+Chronogenesis,Neutral,Silver,3,Goblinmount Ogre,6OGBS
+Chronogenesis,Neutral,Silver,1,Treasure Map,6OGwA
+Chronogenesis,Neutral,Gold,4,Shining Bellringer Angel,6OIdY
+Chronogenesis,Neutral,Gold,3,Goblin Emperor,6OIdi
+Chronogenesis,Neutral,Gold,4,Fall from Grace,6OJMQ
+Chronogenesis,Neutral,Legendary,8,Chronos,6OL3o
+Chronogenesis,Neutral,Legendary,3,Badb Catha,6OL3y
+Chronogenesis,Forestcraft,Bronze,3,Adept Archer,6Oc9Y
+Chronogenesis,Forestcraft,Bronze,4,Weald Philosopher,6Oc9i
+Chronogenesis,Forestcraft,Bronze,2,Leaf Man,6Oc9s
+Chronogenesis,Forestcraft,Bronze,1,Firesprite Grove,6Oceo
+Chronogenesis,Forestcraft,Silver,3,Crimsonbow Elf,6Oebo
+Chronogenesis,Forestcraft,Silver,2,Furious Elder Weedman,6Oeby
+Chronogenesis,Forestcraft,Silver,3,Instincts Unleashed,6OfKg
+Chronogenesis,Forestcraft,Gold,2,"Rayne, Elf Smith",6Oh22
+Chronogenesis,Forestcraft,Gold,6,Fairy Saber,6Oh2C
+Chronogenesis,Forestcraft,Gold,1,Fairy Torrent,6Ohmw
+Chronogenesis,Forestcraft,Legendary,4,"Aria, Guiding Fairy",6OjUI
+Chronogenesis,Forestcraft,Legendary,2,Insect Lord,6OjUS
+Chronogenesis,Swordcraft,Bronze,5,Castle Guardian,6O-a2
+Chronogenesis,Swordcraft,Bronze,3,Merchantette,6O-aC
+Chronogenesis,Swordcraft,Bronze,1,Wolf Fang Swordsman,6O-aM
+Chronogenesis,Swordcraft,Bronze,3,Assassination Jutsu,6O_Iw
+Chronogenesis,Swordcraft,Silver,4,Frontline Cavalier,6P10I
+Chronogenesis,Swordcraft,Silver,2,Homebound Mercenary,6P10S
+Chronogenesis,Swordcraft,Silver,1,Accolade,6P1lA
+Chronogenesis,Swordcraft,Gold,3,Lancer of the Tempest,6P3SY
+Chronogenesis,Swordcraft,Gold,2,Noble Chancellor,6P3Si
+Chronogenesis,Swordcraft,Gold,4,Confront Adversity,6P4BQ
+Chronogenesis,Swordcraft,Legendary,6,Darksaber Melissa,6P5uo
+Chronogenesis,Swordcraft,Legendary,7,"Arthur, Knight King",6P5uy
+Chronogenesis,Runecraft,Bronze,3,Mysterian Summoner Vayle,6PM-Y
+Chronogenesis,Runecraft,Bronze,2,"Mr. Bertrand, Magic Mentor",6PM-i
+Chronogenesis,Runecraft,Bronze,7,Expel Soul,6PNjQ
+Chronogenesis,Runecraft,Bronze,5,Chain Lightning,6PNja
+Chronogenesis,Runecraft,Silver,4,Joycrafter Sammy,6PPQo
+Chronogenesis,Runecraft,Silver,2,Silent Laboratory,6PPgQ
+Chronogenesis,Runecraft,Silver,1,Mysterian Knowledge,6PQ9g
+Chronogenesis,Runecraft,Gold,5,Class President Hanna,6PRt2
+Chronogenesis,Runecraft,Gold,4,Nova Flare,6PSbw
+Chronogenesis,Runecraft,Gold,6,Grand Summoning,6PSc4
+Chronogenesis,Runecraft,Legendary,5,"Mysteria, Magic Founder",6PUJI
+Chronogenesis,Runecraft,Legendary,8,Silver Blade Golem,6PUJS
+Chronogenesis,Dragoncraft,Bronze,3,Dragon Aficionado,6PlP2
+Chronogenesis,Dragoncraft,Bronze,4,Basilisk Rider,6PlPC
+Chronogenesis,Dragoncraft,Bronze,8,Frostfire Dragon,6PlPM
+Chronogenesis,Dragoncraft,Bronze,1,Stormborne Wings,6Pm7w
+Chronogenesis,Dragoncraft,Silver,2,"Marion, Fierce Dragonewt",6PnrI
+Chronogenesis,Dragoncraft,Silver,4,Tower Warden Adelle,6PnrS
+Chronogenesis,Dragoncraft,Silver,1,Dragon Horde,6PoaA
+Chronogenesis,Dragoncraft,Gold,2,"Aiela, Dragon Sword",6PqHY
+Chronogenesis,Dragoncraft,Gold,9,Frenzied Drake,6PqHi
+Chronogenesis,Dragoncraft,Gold,4,Dragonrend Quake,6Pr0Q
+Chronogenesis,Dragoncraft,Legendary,7,"Zirnitra, Dragon's Flame",6Psjo
+Chronogenesis,Dragoncraft,Legendary,10,Azi Dahaka,6Psjy
+Chronogenesis,Shadowcraft,Bronze,2,Gloomy Necromancer,6Q7pY
+Chronogenesis,Shadowcraft,Bronze,4,Mummy,6Q7pi
+Chronogenesis,Shadowcraft,Bronze,2,Bone Bug,6Q7ps
+Chronogenesis,Shadowcraft,Bronze,4,Skull Ring,6Q8Io
+Chronogenesis,Shadowcraft,Silver,3,Soulcaller,6QAFo
+Chronogenesis,Shadowcraft,Silver,7,Anubis,6QAFy
+Chronogenesis,Shadowcraft,Silver,1,Grave Invitation,6QA-g
+Chronogenesis,Shadowcraft,Gold,8,Death Dragon Caller,6QCi2
+Chronogenesis,Shadowcraft,Gold,6,Skeleton Prince,6QCiC
+Chronogenesis,Shadowcraft,Gold,5,"Sow Death, Reap Life",6QDQw
+Chronogenesis,Shadowcraft,Legendary,5,Underworld Ruler Aisha,6QF8I
+Chronogenesis,Shadowcraft,Legendary,8,Abyss Straddler,6QF8S
+Chronogenesis,Bloodcraft,Bronze,2,Glassbrand Demon,6QWE2
+Chronogenesis,Bloodcraft,Bronze,3,Savage Wolf,6QWEC
+Chronogenesis,Bloodcraft,Bronze,2,Cursed Scarecrow,6QWEM
+Chronogenesis,Bloodcraft,Bronze,3,Blood Drinker's Brand,6QWyw
+Chronogenesis,Bloodcraft,Silver,3,Vassago,6QYgI
+Chronogenesis,Bloodcraft,Silver,3,Pazuzu,6QYgS
+Chronogenesis,Bloodcraft,Silver,4,Devil Blade,6QYvw
+Chronogenesis,Bloodcraft,Gold,3,Endearing Succubus Lilith,6Qb6Y
+Chronogenesis,Bloodcraft,Gold,4,Terror Demon,6Qb6i
+Chronogenesis,Bloodcraft,Gold,6,Reach of the Archdemon,6QbrQ
+Chronogenesis,Bloodcraft,Legendary,5,Nacht,6QdYo
+Chronogenesis,Bloodcraft,Legendary,9,Diabolus Psema,6QdYy
+Chronogenesis,Havencraft,Bronze,2,Sister of the Sword,6QueY
+Chronogenesis,Havencraft,Bronze,4,Oathplume Warrior,6Quei
+Chronogenesis,Havencraft,Bronze,2,Gemstone Carapace,6Qv7o
+Chronogenesis,Havencraft,Bronze,1,Featherfall Hourglass,6Qv7y
+Chronogenesis,Havencraft,Silver,6,Arch Priestess Cattleya,6Qx4o
+Chronogenesis,Havencraft,Silver,2,Godscale's Banquet,6Qxa2
+Chronogenesis,Havencraft,Silver,5,Pure Annihilation,6Qxpg
+Chronogenesis,Havencraft,Gold,4,Pegasus Dullahan,6QzX2
+Chronogenesis,Havencraft,Gold,1,Summit Temple,6Qzmg
+Chronogenesis,Havencraft,Gold,4,Ancient Protector,6Q-0I
+Chronogenesis,Havencraft,Legendary,3,"Jeanne, Beacon of Salvation",6Q_zI
+Chronogenesis,Havencraft,Legendary,7,Heavenly Knight,6Q_zS
+Chronogenesis,Portalcraft,Bronze,4,Mechanical Bowman,6RH32
+Chronogenesis,Portalcraft,Bronze,2,Bear Puppeteer,6RH3C
+Chronogenesis,Portalcraft,Bronze,4,Gravikinetic Warrior,6RH3M
+Chronogenesis,Portalcraft,Bronze,5,Mana Pistol Merc,6RH3W
+Chronogenesis,Portalcraft,Bronze,3,Cat Cannoneer,6RH3g
+Chronogenesis,Portalcraft,Bronze,3,Steel Demolitionist,6RH3q
+Chronogenesis,Portalcraft,Bronze,3,Iron Staff Mechanic,6RH3-
+Chronogenesis,Portalcraft,Bronze,6,Captain Meteo,6RH48
+Chronogenesis,Portalcraft,Bronze,2,Hamelin,6RH4I
+Chronogenesis,Portalcraft,Bronze,2,Mech Wing Swordsman,6RH4S
+Chronogenesis,Portalcraft,Bronze,8,Airship Whale,6RH4c
+Chronogenesis,Portalcraft,Bronze,5,Masked Puppet,6RH4m
+Chronogenesis,Portalcraft,Bronze,2,Demon's Epitaph,6RH4w
+Chronogenesis,Portalcraft,Bronze,3,Cursed Stone,6RH54
+Chronogenesis,Portalcraft,Bronze,3,Tranquil Cog,6RHYI
+Chronogenesis,Portalcraft,Bronze,3,Puppet Room,6RHYS
+Chronogenesis,Portalcraft,Bronze,1,Acceleratium,6RHYc
+Chronogenesis,Portalcraft,Silver,2,"Rosa, Mech Wing Maiden",6RJVI
+Chronogenesis,Portalcraft,Silver,2,Flower Doll,6RJVS
+Chronogenesis,Portalcraft,Silver,2,Icarus,6RJVc
+Chronogenesis,Portalcraft,Silver,3,Fervent Machine Soldier,6RJVm
+Chronogenesis,Portalcraft,Silver,7,Colossal Construct,6RJVw
+Chronogenesis,Portalcraft,Silver,9,Vengeful Puppeteer Noah,6RJW4
+Chronogenesis,Portalcraft,Silver,2,"Machine Artisan, Geno",6RJWE
+Chronogenesis,Portalcraft,Silver,9,Amethyst Giant,6RJWO
+Chronogenesis,Portalcraft,Silver,5,Unidentified Subject,6RJWY
+Chronogenesis,Portalcraft,Silver,5,Automaton Soldier,6RJWi
+Chronogenesis,Portalcraft,Silver,1,Ancient Amplifier,6RJ-Y
+Chronogenesis,Portalcraft,Silver,3,Substitution,6RKEA
+Chronogenesis,Portalcraft,Silver,1,Metaproduction,6RKEK
+Chronogenesis,Portalcraft,Gold,6,"Safira, Synthetic Beast",6RLxY
+Chronogenesis,Portalcraft,Gold,5,Hakrabi,6RLxi
+Chronogenesis,Portalcraft,Gold,4,Silver Cog Spinner,6RLxs
+Chronogenesis,Portalcraft,Gold,8,Empyreal Swordsman,6RLy0
+Chronogenesis,Portalcraft,Gold,4,Morton the Manipulator,6RLyA
+Chronogenesis,Portalcraft,Gold,7,God Bullet Golem,6RLyK
+Chronogenesis,Portalcraft,Gold,1,Nilpotent Entity,6RMQo
+Chronogenesis,Portalcraft,Gold,5,Otherworld Rift,6RMgQ
+Chronogenesis,Portalcraft,Gold,0,Biofabrication,6RMga
+Chronogenesis,Portalcraft,Legendary,8,Magna Legacy,6RONo
+Chronogenesis,Portalcraft,Legendary,5,"Spinaria, Keeper of Enigmas",6RONy
+Chronogenesis,Portalcraft,Legendary,5,Deus Ex Machina,6ROO6
+Dawnbreak Nightedge,Neutral,Bronze,3,Valkyrie of Chaos,6S1u2
+Dawnbreak Nightedge,Neutral,Bronze,2,Tart Man,6S1uC
+Dawnbreak Nightedge,Neutral,Bronze,1,Fount of Angels,6S2NI
+Dawnbreak Nightedge,Neutral,Silver,2,Valkyrie of Order,6S4KI
+Dawnbreak Nightedge,Neutral,Silver,5,Divine Retribution,6S53A
+Dawnbreak Nightedge,Neutral,Gold,6,Suttungr,6S6mY
+Dawnbreak Nightedge,Neutral,Gold,2,Paradise Vanguard,6S6mi
+Dawnbreak Nightedge,Neutral,Gold,4,Oceanus,6S6ms
+Dawnbreak Nightedge,Neutral,Legendary,7,Marduk,6S9Co
+Dawnbreak Nightedge,Neutral,Legendary,3,Moon and Sun,6S9xg
+Dawnbreak Nightedge,Forestcraft,Bronze,4,Elf General,6SQIY
+Dawnbreak Nightedge,Forestcraft,Bronze,2,Servant of the Spellgrove,6SQIi
+Dawnbreak Nightedge,Forestcraft,Bronze,3,Grasshopper Conductor,6SQIs
+Dawnbreak Nightedge,Forestcraft,Bronze,2,Flower of Fairies,6SQno
+Dawnbreak Nightedge,Forestcraft,Silver,4,Fashionista Nelcha,6SSko
+Dawnbreak Nightedge,Forestcraft,Silver,3,Owl Man,6SSky
+Dawnbreak Nightedge,Forestcraft,Silver,4,Forest Whispers,6STTg
+Dawnbreak Nightedge,Forestcraft,Gold,2,"Paula, Icy Warmth",6SVB2
+Dawnbreak Nightedge,Forestcraft,Gold,5,Swiftgait Okami,6SVBC
+Dawnbreak Nightedge,Forestcraft,Gold,2,Storied Falconer,6SVBM
+Dawnbreak Nightedge,Forestcraft,Legendary,6,Yggdrasil,6SXdI
+Dawnbreak Nightedge,Forestcraft,Legendary,6,White Vanara,6SXdS
+Dawnbreak Nightedge,Forestcraft,Legendary,6,Greenglen Axeman,6SXdc
+Dawnbreak Nightedge,Swordcraft,Bronze,1,Axe Princess,6Soj2
+Dawnbreak Nightedge,Swordcraft,Bronze,3,Master Samurai,6SojC
+Dawnbreak Nightedge,Swordcraft,Bronze,2,Holy Bear Knight,6SojM
+Dawnbreak Nightedge,Swordcraft,Bronze,4,Frontline Ramparts,6SpCI
+Dawnbreak Nightedge,Swordcraft,Silver,3,"Nonja, Silent Maid",6Sr9I
+Dawnbreak Nightedge,Swordcraft,Silver,2,Savage Swordsman,6Sr9S
+Dawnbreak Nightedge,Swordcraft,Silver,3,"Valse, Magical Marksman",6Sr9c
+Dawnbreak Nightedge,Swordcraft,Gold,2,Innocent Princess Prim,6StbY
+Dawnbreak Nightedge,Swordcraft,Gold,2,"Dario, Demon Count",6Stbi
+Dawnbreak Nightedge,Swordcraft,Gold,1,Chromatic Duel,6SuKQ
+Dawnbreak Nightedge,Swordcraft,Legendary,2,Sky Commander Celia,6Sw1o
+Dawnbreak Nightedge,Swordcraft,Legendary,8,Sky Fortress,6Sw1y
+Dawnbreak Nightedge,Swordcraft,Legendary,6,Spartacus,6Sw26
+Dawnbreak Nightedge,Runecraft,Bronze,2,Witch of Foresight,6TB7Y
+Dawnbreak Nightedge,Runecraft,Bronze,4,Moonshade Mage,6TB7i
+Dawnbreak Nightedge,Runecraft,Bronze,2,Beastfaced Mage,6TB7s
+Dawnbreak Nightedge,Runecraft,Bronze,5,Staff of Whirlwinds,6TBsQ
+Dawnbreak Nightedge,Runecraft,Silver,3,"Elusa, Magic Wunderkind",6TDZo
+Dawnbreak Nightedge,Runecraft,Silver,2,Mysterian Wyrmist,6TDZy
+Dawnbreak Nightedge,Runecraft,Silver,4,Summoning Drills,6TE32
+Dawnbreak Nightedge,Runecraft,Gold,7,Snowman King,6TG02
+Dawnbreak Nightedge,Runecraft,Gold,7,"Bergent, Onion Patchmaster",6TG0C
+Dawnbreak Nightedge,Runecraft,Gold,3,Absolute Zeroblade,6TGkw
+Dawnbreak Nightedge,Runecraft,Legendary,4,"Runie, Destiny's Bard",6TISI
+Dawnbreak Nightedge,Runecraft,Legendary,9,Unbodied Witch,6TISS
+Dawnbreak Nightedge,Runecraft,Legendary,5,Truthseeker Faust,6TISc
+Dawnbreak Nightedge,Dragoncraft,Bronze,6,Twilight Dragoon Coda,6TZY2
+Dawnbreak Nightedge,Dragoncraft,Bronze,5,Drakewing Assassin,6TZYC
+Dawnbreak Nightedge,Dragoncraft,Bronze,3,Dragonclad Blademaster,6TZYM
+Dawnbreak Nightedge,Dragoncraft,Bronze,2,Somniferous Whitewyrm,6TZYW
+Dawnbreak Nightedge,Dragoncraft,Silver,2,Heroic Dragonslayer,6Tb-I
+Dawnbreak Nightedge,Dragoncraft,Silver,5,Galua of Two Breaths,6Tb-S
+Dawnbreak Nightedge,Dragoncraft,Silver,2,Waters of the Orca,6TcjA
+Dawnbreak Nightedge,Dragoncraft,Gold,3,Dragoncleaver Roy,6TeQY
+Dawnbreak Nightedge,Dragoncraft,Gold,8,Dragonplate Warrior,6TeQi
+Dawnbreak Nightedge,Dragoncraft,Gold,3,Force of the Dragonewt,6Tf9Q
+Dawnbreak Nightedge,Dragoncraft,Legendary,9,Jerva of Draconic Mail,6Tgso
+Dawnbreak Nightedge,Dragoncraft,Legendary,10,Lindworm,6Tgsy
+Dawnbreak Nightedge,Dragoncraft,Legendary,2,Whitefrost Dragonewt Filene,6Tgt6
+Dawnbreak Nightedge,Shadowcraft,Bronze,2,Orator of the Bones,6TxyY
+Dawnbreak Nightedge,Shadowcraft,Bronze,5,Death the Nyctophile,6Txyi
+Dawnbreak Nightedge,Shadowcraft,Bronze,1,Mischievous Spirit,6Txys
+Dawnbreak Nightedge,Shadowcraft,Bronze,2,Regenerate Spirit,6TyhQ
+Dawnbreak Nightedge,Shadowcraft,Silver,3,Big Soul Hunter,6T-Oo
+Dawnbreak Nightedge,Shadowcraft,Silver,4,Mighty Arm Skeleton,6T-Oy
+Dawnbreak Nightedge,Shadowcraft,Silver,3,Poltergeist,6T_7g
+Dawnbreak Nightedge,Shadowcraft,Gold,7,Fickle Resurrector,6U0r2
+Dawnbreak Nightedge,Shadowcraft,Gold,3,Everdark Strix,6U0rC
+Dawnbreak Nightedge,Shadowcraft,Gold,2,Lord Deathskull,6U0rM
+Dawnbreak Nightedge,Shadowcraft,Legendary,6,"Ceridwen, Eternity Hunter",6U3HI
+Dawnbreak Nightedge,Shadowcraft,Legendary,7,Hinterland Ghoul,6U3HS
+Dawnbreak Nightedge,Shadowcraft,Legendary,7,"Arcus, Ghostly Manager",6U3Hc
+Dawnbreak Nightedge,Bloodcraft,Bronze,3,Nightmare Devil,6UKN2
+Dawnbreak Nightedge,Bloodcraft,Bronze,9,Calamity's Archdemon,6UKNC
+Dawnbreak Nightedge,Bloodcraft,Bronze,5,Delirious Demon,6UKNM
+Dawnbreak Nightedge,Bloodcraft,Bronze,2,Summon Bloodkin,6UL5w
+Dawnbreak Nightedge,Bloodcraft,Silver,1,"Buller, Blood Maiden",6UMpI
+Dawnbreak Nightedge,Bloodcraft,Silver,2,Silverchain Disciple,6UMpS
+Dawnbreak Nightedge,Bloodcraft,Silver,1,Red Talonstrike,6UNYA
+Dawnbreak Nightedge,Bloodcraft,Gold,5,Oldblood King,6UPFY
+Dawnbreak Nightedge,Bloodcraft,Gold,2,"Raven, Eventide Vampire",6UPFi
+Dawnbreak Nightedge,Bloodcraft,Gold,0,Gift for Bloodkin,6UP-Q
+Dawnbreak Nightedge,Bloodcraft,Legendary,6,"Vania, Nightshade Vampire",6URho
+Dawnbreak Nightedge,Bloodcraft,Legendary,8,Darkfeast Bat,6URhy
+Dawnbreak Nightedge,Bloodcraft,Legendary,3,"Waltz, King of Wolves",6URi6
+Dawnbreak Nightedge,Havencraft,Bronze,2,Deathscythe Nun,6Uini
+Dawnbreak Nightedge,Havencraft,Bronze,5,Lycaon,6Uins
+Dawnbreak Nightedge,Havencraft,Bronze,2,Moriae Encomium,6UjGo
+Dawnbreak Nightedge,Havencraft,Bronze,2,Holy Lion Crystal,6UjWQ
+Dawnbreak Nightedge,Havencraft,Silver,3,Peaceweaver,6UlDo
+Dawnbreak Nightedge,Havencraft,Silver,2,Temple of the Holy Lion,6UlTQ
+Dawnbreak Nightedge,Havencraft,Silver,4,Opposing Statues,6Ulj2
+Dawnbreak Nightedge,Havencraft,Gold,2,Jeweled Priestess,6Ung2
+Dawnbreak Nightedge,Havencraft,Gold,5,Tenko's Shrine,6Unvg
+Dawnbreak Nightedge,Havencraft,Gold,3,Whitefang Temple,6Uo9I
+Dawnbreak Nightedge,Havencraft,Legendary,7,Godsworn Alexiel,6Uq6I
+Dawnbreak Nightedge,Havencraft,Legendary,5,Ceryneian Hind,6Uq6S
+Dawnbreak Nightedge,Havencraft,Legendary,6,Tutankhamun,6Uq6c
+Dawnbreak Nightedge,Portalcraft,Bronze,2,Knower of History,6V5C2
+Dawnbreak Nightedge,Portalcraft,Bronze,4,Cruel Puppetmaster,6V5CC
+Dawnbreak Nightedge,Portalcraft,Bronze,3,Junk,6V5CM
+Dawnbreak Nightedge,Portalcraft,Bronze,2,Rocket Knuckles,6V5ww
+Dawnbreak Nightedge,Portalcraft,Silver,2,"Miriam, Synthetic Being",6V7eI
+Dawnbreak Nightedge,Portalcraft,Silver,5,"Dirk, Steelarm Battler",6V7eS
+Dawnbreak Nightedge,Portalcraft,Silver,4,Crystal Cannon,6V7tw
+Dawnbreak Nightedge,Portalcraft,Gold,7,"Zwei, Murderous Puppet",6VA4Y
+Dawnbreak Nightedge,Portalcraft,Gold,3,Devil of the Gaps,6VA4i
+Dawnbreak Nightedge,Portalcraft,Gold,5,Heartless Battle,6VApQ
+Dawnbreak Nightedge,Portalcraft,Legendary,8,"Orchis, Puppet Girl",6VCWo
+Dawnbreak Nightedge,Portalcraft,Legendary,7,That Which Erases,6VCWy
+Dawnbreak Nightedge,Portalcraft,Legendary,7,Electromagical Rhino,6VCX6
+Brigade of the Sky,Neutral,Bronze,4,"Rackam, Airship Pilot",6Vs12
+Brigade of the Sky,Neutral,Bronze,3,Lowain of the Brofamily,6Vs1C
+Brigade of the Sky,Neutral,Bronze,2,Investigation,6Vslw
+Brigade of the Sky,Neutral,Silver,6,"Katalina, Sky Guardian",6VuTI
+Brigade of the Sky,Neutral,Silver,2,Genesis of Legend,6VuyY
+Brigade of the Sky,Neutral,Gold,2,"Lyria, Azure Maiden",6VwvY
+Brigade of the Sky,Neutral,Gold,3,"Khaiza, Radical Gourmand",6Vwvi
+Brigade of the Sky,Neutral,Gold,2,Seraphic Blade,6VxeQ
+Brigade of the Sky,Neutral,Legendary,9,Proto Bahamut,6VzLo
+Brigade of the Sky,Neutral,Legendary,2,Legendary Fighter,6VzLy
+Brigade of the Sky,Forestcraft,Bronze,2,Devil Flower,6WERY
+Brigade of the Sky,Forestcraft,Bronze,2,Utopian Fairy,6WERi
+Brigade of the Sky,Forestcraft,Bronze,3,Myconid,6WERs
+Brigade of the Sky,Forestcraft,Bronze,1,Fairy Refuge,6WEwo
+Brigade of the Sky,Forestcraft,Silver,4,Sutera of the Sacred Bow,6WGto
+Brigade of the Sky,Forestcraft,Silver,5,Witherwood Guardian,6WGty
+Brigade of the Sky,Forestcraft,Silver,8,Owlbear,6WGu6
+Brigade of the Sky,Forestcraft,Gold,3,"Shamu & Shama, Noblekin",6WJK2
+Brigade of the Sky,Forestcraft,Gold,4,"Metera, Peerless Shot",6WJKC
+Brigade of the Sky,Forestcraft,Gold,4,Burst Shot,6WK2w
+Brigade of the Sky,Forestcraft,Legendary,5,"Korwa, Ravishing Designer",6WLmI
+Brigade of the Sky,Forestcraft,Legendary,5,Godhunter Selwyn,6WLmS
+Brigade of the Sky,Forestcraft,Legendary,9,Sky Devouring Horror,6WLmc
+Brigade of the Sky,Swordcraft,Bronze,3,"Tanya, Shadow Enforcer",6Wcs2
+Brigade of the Sky,Swordcraft,Bronze,4,Princess Teena,6WcsC
+Brigade of the Sky,Swordcraft,Bronze,2,Tycoon,6WcsM
+Brigade of the Sky,Swordcraft,Bronze,1,Grand Auction,6Wdaw
+Brigade of the Sky,Swordcraft,Silver,3,"Charlotta, Tiny Justice",6WfII
+Brigade of the Sky,Swordcraft,Silver,1,Sellsword Lucius,6WfIS
+Brigade of the Sky,Swordcraft,Silver,2,Ageworn Weaponry,6WfnY
+Brigade of the Sky,Swordcraft,Gold,4,"Dei, Secret Agent",6WhkY
+Brigade of the Sky,Swordcraft,Gold,5,Sky Gladiator,6Whki
+Brigade of the Sky,Swordcraft,Gold,5,Dragon Knights,6WiTQ
+Brigade of the Sky,Swordcraft,Legendary,6,"Zeta, Crimson Lancer",6WkAo
+Brigade of the Sky,Swordcraft,Legendary,8,"Latham, Honorable Knight",6WkAy
+Brigade of the Sky,Swordcraft,Legendary,6,Ironfist Beast Warrior,6WkB6
+Brigade of the Sky,Runecraft,Bronze,2,Black Witch Anna,6W_GY
+Brigade of the Sky,Runecraft,Bronze,5,Peacemancer,6W_Gi
+Brigade of the Sky,Runecraft,Bronze,2,Grand Spire,6W__Q
+Brigade of the Sky,Runecraft,Bronze,5,Fate's Hand,6W__a
+Brigade of the Sky,Runecraft,Silver,8,Abyss Summoner,6X1io
+Brigade of the Sky,Runecraft,Silver,3,"Clarisse, Unpolished Mage",6X1iy
+Brigade of the Sky,Runecraft,Silver,4,Burgeoning Genius,6X2Rg
+Brigade of the Sky,Runecraft,Gold,7,"Ms. Miranda, Light Mage",6X492
+Brigade of the Sky,Runecraft,Gold,4,"Cagliostro, Adorable Genius",6X49C
+Brigade of the Sky,Runecraft,Gold,1,Mystic Rune,6X4Og
+Brigade of the Sky,Runecraft,Legendary,6,"Arulumaya, Mystic Seer",6X6bI
+Brigade of the Sky,Runecraft,Legendary,6,Despondent Chimera,6X6bS
+Brigade of the Sky,Runecraft,Legendary,4,"Vesper, Witchhunter",6X6bc
+Brigade of the Sky,Dragoncraft,Bronze,2,Dragon Huntress,6XNh2
+Brigade of the Sky,Dragoncraft,Bronze,7,Albacore,6XNhC
+Brigade of the Sky,Dragoncraft,Bronze,3,Venomtail Salamander,6XNhM
+Brigade of the Sky,Dragoncraft,Bronze,5,Tail Swing,6XOPw
+Brigade of the Sky,Dragoncraft,Silver,3,"Aliza, Pugilist Princess",6XQ7I
+Brigade of the Sky,Dragoncraft,Silver,2,Hatchling,6XQ7S
+Brigade of the Sky,Dragoncraft,Silver,3,Dragon Sanctum,6XQcY
+Brigade of the Sky,Dragoncraft,Gold,5,True Dragon Scathacha,6XSZY
+Brigade of the Sky,Dragoncraft,Gold,4,Pyrewyrm Commander,6XSZi
+Brigade of the Sky,Dragoncraft,Gold,8,Poseidon,6XSZs
+Brigade of the Sky,Dragoncraft,Legendary,11,"Zooey, Arbiter of the Skies",6XU_o
+Brigade of the Sky,Dragoncraft,Legendary,7,Adramelech,6XU_y
+Brigade of the Sky,Dragoncraft,Legendary,6,Warbreaker Dragoon,6XV06
+Brigade of the Sky,Shadowcraft,Bronze,5,Melancholic Medium,6Xm5Y
+Brigade of the Sky,Shadowcraft,Bronze,2,"Sarunan, Cursebound Lover",6Xm5i
+Brigade of the Sky,Shadowcraft,Bronze,2,Golden Casket,6XmLA
+Brigade of the Sky,Shadowcraft,Bronze,1,Soul Conversion,6XmqQ
+Brigade of the Sky,Shadowcraft,Silver,3,"Fran, Monster Girl",6XoXo
+Brigade of the Sky,Shadowcraft,Silver,2,"Lady Grey, Deathweaver",6XoXy
+Brigade of the Sky,Shadowcraft,Silver,4,Stygian Warden,6XoY6
+Brigade of the Sky,Shadowcraft,Gold,3,Fiendish Wraithknight,6Xq-2
+Brigade of the Sky,Shadowcraft,Gold,2,"Danua, Grim Puppetmaster",6Xq-C
+Brigade of the Sky,Shadowcraft,Gold,7,Plagued City,6XrTI
+Brigade of the Sky,Shadowcraft,Legendary,2,"Ferry, Spirit Maiden",6XtQI
+Brigade of the Sky,Shadowcraft,Legendary,10,"Mordecai, Eternal Duelist",6XtQS
+Brigade of the Sky,Shadowcraft,Legendary,1,Gremory,6XtQc
+Brigade of the Sky,Bloodcraft,Bronze,2,Bewitching Succubus,6Y8W2
+Brigade of the Sky,Bloodcraft,Bronze,3,"Zehek, the Cursebranded",6Y8WC
+Brigade of the Sky,Bloodcraft,Bronze,4,Devil Hand,6Y8WM
+Brigade of the Sky,Bloodcraft,Bronze,3,Crimson Desire,6Y9Ew
+Brigade of the Sky,Bloodcraft,Silver,2,Alexandrite Demon,6YAyI
+Brigade of the Sky,Bloodcraft,Silver,6,"Pommern, Erste's Pride",6YAyS
+Brigade of the Sky,Bloodcraft,Silver,0,Restless Parish,6YBRY
+Brigade of the Sky,Bloodcraft,Gold,5,Evil Eye Demon,6YDOY
+Brigade of the Sky,Bloodcraft,Gold,4,"Narmaya, Ephemeral Blade",6YDOi
+Brigade of the Sky,Bloodcraft,Gold,3,Girtablilu,6YDOs
+Brigade of the Sky,Bloodcraft,Legendary,2,"Vira, Knight Fanatic",6YFqo
+Brigade of the Sky,Bloodcraft,Legendary,10,Purson,6YFqy
+Brigade of the Sky,Bloodcraft,Legendary,5,Thunder Behemoth,6YFr6
+Brigade of the Sky,Havencraft,Bronze,3,Bashful Al-mi'raj,6YWwY
+Brigade of the Sky,Havencraft,Bronze,2,"Hazen, Priest of the Wind",6YWwi
+Brigade of the Sky,Havencraft,Bronze,5,Angelic Idol,6YWws
+Brigade of the Sky,Havencraft,Bronze,1,Sealed Tome,6YXPo
+Brigade of the Sky,Havencraft,Silver,1,Father Punishment,6YZMo
+Brigade of the Sky,Havencraft,Silver,3,"Sophia, Pious Pilgrim",6YZMy
+Brigade of the Sky,Havencraft,Silver,3,Prism Swing,6Ya5g
+Brigade of the Sky,Havencraft,Gold,2,Holy Priest Lorena,6Ybp2
+Brigade of the Sky,Havencraft,Gold,1,"Petra, Ether of the Wind",6YbpC
+Brigade of the Sky,Havencraft,Gold,8,Themis's Purge,6YcXw
+Brigade of the Sky,Havencraft,Legendary,6,"De La Fille, Gem Princess",6YeFI
+Brigade of the Sky,Havencraft,Legendary,9,"Garuda, Ruler of Storms",6YeFS
+Brigade of the Sky,Havencraft,Legendary,9,"Tzekibaba, Forsaken God",6YeFc
+Brigade of the Sky,Portalcraft,Bronze,3,"Jessica, Cheerful Cannoneer",6YvL2
+Brigade of the Sky,Portalcraft,Bronze,2,Ancient War Machine,6YvLC
+Brigade of the Sky,Portalcraft,Bronze,5,Enkidu,6YvLM
+Brigade of the Sky,Portalcraft,Bronze,1,Ancient Apparatus,6YvqI
+Brigade of the Sky,Portalcraft,Silver,6,"Basileus, Outworld Invader",6YxnI
+Brigade of the Sky,Portalcraft,Silver,5,"Nicholas, Stalwart Inventor",6YxnS
+Brigade of the Sky,Portalcraft,Silver,5,Captivating Conductor,6YyWA
+Brigade of the Sky,Portalcraft,Gold,2,Paracelsus,6Y-DY
+Brigade of the Sky,Portalcraft,Gold,3,"Cucouroux, Green Gunsmith",6Y-Di
+Brigade of the Sky,Portalcraft,Gold,5,Artifact Spark,6Y-yQ
+Brigade of the Sky,Portalcraft,Legendary,7,"Silva, Ardent Sniper",6Z0fo
+Brigade of the Sky,Portalcraft,Legendary,2,"Lococo, Little Puppeteer",6Z0fy
+Brigade of the Sky,Portalcraft,Legendary,3,Malocchio,6Z0g6
+Omen of the Ten,Neutral,Bronze,6,Sgathaich,6ZgA2
+Omen of the Ten,Neutral,Bronze,1,Steadfast Angel,6ZgAC
+Omen of the Ten,Neutral,Bronze,2,Goblin Fighter,6ZgAM
+Omen of the Ten,Neutral,Silver,7,Armored Troll,6ZicI
+Omen of the Ten,Neutral,Silver,3,Craving's Splendor,6ZjLA
+Omen of the Ten,Neutral,Gold,4,"Feena, Dynamite Daredevil",6Zl2Y
+Omen of the Ten,Neutral,Gold,5,Apostle of Craving,6Zl2i
+Omen of the Ten,Neutral,Gold,4,"Lyrial, Archer Throne",6Zl2s
+Omen of the Ten,Neutral,Legendary,5,"Mjerrabaine, Omen of One",6ZnUo
+Omen of the Ten,Neutral,Legendary,7,"Gilnelise, Omen of Craving",6ZnUy
+Omen of the Ten,Forestcraft,Bronze,4,Furious Mountain Deity,6a2aY
+Omen of the Ten,Forestcraft,Bronze,2,Servant of Unkilling,6a2ai
+Omen of the Ten,Forestcraft,Bronze,2,Whispering Woods,6a33o
+Omen of the Ten,Forestcraft,Bronze,1,Fairy Circle,6a3JQ
+Omen of the Ten,Forestcraft,Silver,5,Hornet Soldier,6a50o
+Omen of the Ten,Forestcraft,Silver,4,Disciple of Unkilling,6a50y
+Omen of the Ten,Forestcraft,Silver,0,Mark of the Unkilling,6a5lg
+Omen of the Ten,Forestcraft,Gold,7,Luxglaive Bayle,6a7T2
+Omen of the Ten,Forestcraft,Gold,5,Apostle of Unkilling,6a7TC
+Omen of the Ten,Forestcraft,Gold,2,"Lily, Crystalian Conductor",6a7TM
+Omen of the Ten,Forestcraft,Legendary,10,"Izudia, Omen of Unkilling",6a9vI
+Omen of the Ten,Forestcraft,Legendary,1,"Tia, Crystalian Noble",6a9vS
+Omen of the Ten,Forestcraft,Legendary,3,"Liza, Queen of the Forest",6a9vc
+Omen of the Ten,Swordcraft,Bronze,4,Battlefield Beauty,6aQ_2
+Omen of the Ten,Swordcraft,Bronze,3,Weathered Vanguard,6aQ_C
+Omen of the Ten,Swordcraft,Bronze,2,Servant of Usurpation,6aQ_M
+Omen of the Ten,Swordcraft,Bronze,2,Usurping Spineblade,6aRjw
+Omen of the Ten,Swordcraft,Silver,4,Aloadae,6aTRI
+Omen of the Ten,Swordcraft,Silver,3,High-Seas Hero,6aTRS
+Omen of the Ten,Swordcraft,Silver,3,Disciple of Usurpation,6aTRc
+Omen of the Ten,Swordcraft,Gold,1,Rapier Master,6aVtY
+Omen of the Ten,Swordcraft,Gold,5,Apostle of Usurpation,6aVti
+Omen of the Ten,Swordcraft,Gold,5,Giantsbane Swordsman,6aVts
+Omen of the Ten,Swordcraft,Legendary,3,"Octrice, Omen of Usurpation",6aYJo
+Omen of the Ten,Swordcraft,Legendary,9,Jiraiya,6aYJy
+Omen of the Ten,Swordcraft,Legendary,5,"Magnolia, Battlefield Muse",6aYK6
+Omen of the Ten,Runecraft,Bronze,2,"Owen, Knight of Mysteria",6apPY
+Omen of the Ten,Runecraft,Bronze,7,Servant of Truth,6apPi
+Omen of the Ten,Runecraft,Bronze,1,Scrap Iron Smelter,6apfA
+Omen of the Ten,Runecraft,Bronze,3,Astral Divination,6aq8Q
+Omen of the Ten,Runecraft,Silver,3,Disciple of Truth,6arro
+Omen of the Ten,Runecraft,Silver,6,Truth's Adjudication,6asag
+Omen of the Ten,Runecraft,Silver,3,Sleep Incantation,6asaq
+Omen of the Ten,Runecraft,Gold,9,"Anne, Mysterian Prodigy",6auI2
+Omen of the Ten,Runecraft,Gold,2,Apostle of Truth,6auIC
+Omen of the Ten,Runecraft,Gold,3,"Grea, Mysterian Dragoness",6auIM
+Omen of the Ten,Runecraft,Legendary,20,Prophetess of Creation,6awkI
+Omen of the Ten,Runecraft,Legendary,7,"Raio, Omen of Truth",6awkS
+Omen of the Ten,Runecraft,Legendary,5,Orichalcum Golem,6awkc
+Omen of the Ten,Dragoncraft,Bronze,3,Serpent Drake,6bBq2
+Omen of the Ten,Dragoncraft,Bronze,4,Draconic Sniper,6bBqC
+Omen of the Ten,Dragoncraft,Bronze,2,Servant of Disdain,6bBqM
+Omen of the Ten,Dragoncraft,Bronze,3,Mesozoic Era,6bCYw
+Omen of the Ten,Dragoncraft,Silver,4,Griffonback Guard,6bEGI
+Omen of the Ten,Dragoncraft,Silver,1,"Giselle, Mermaid Healer",6bEGS
+Omen of the Ten,Dragoncraft,Silver,1,Disciple of Disdain,6bEGc
+Omen of the Ten,Dragoncraft,Gold,4,Apostle of Disdain,6bGiY
+Omen of the Ten,Dragoncraft,Gold,4,Pure-Voiced Dragoon,6bGii
+Omen of the Ten,Dragoncraft,Gold,1,Disdainful Rending,6bHRQ
+Omen of the Ten,Dragoncraft,Legendary,5,"Galmieux, Omen of Disdain",6bJ8o
+Omen of the Ten,Dragoncraft,Legendary,7,"Jabberwock, Nightmare Spawn",6bJ8y
+Omen of the Ten,Dragoncraft,Legendary,2,"Masamune, Raging Dragon",6bJ96
+Omen of the Ten,Shadowcraft,Bronze,5,Netherworld Horseman,6baEY
+Omen of the Ten,Shadowcraft,Bronze,4,Sinister Sarcophagus,6baEi
+Omen of the Ten,Shadowcraft,Bronze,2,Servant of Silence,6baEs
+Omen of the Ten,Shadowcraft,Bronze,1,Silent Purge,6bazQ
+Omen of the Ten,Shadowcraft,Silver,4,"Orthrus, Junior Hellhound",6bcgo
+Omen of the Ten,Shadowcraft,Silver,3,Disciple of Silence,6bcgy
+Omen of the Ten,Shadowcraft,Silver,8,Vile Torrent,6bdPg
+Omen of the Ten,Shadowcraft,Gold,6,"Charon, Stygian Ferrywoman",6bf72
+Omen of the Ten,Shadowcraft,Gold,4,Apostle of Silence,6bf7C
+Omen of the Ten,Shadowcraft,Gold,5,"Crow, Regent of Darkness",6bf7M
+Omen of the Ten,Shadowcraft,Legendary,5,"Cerberus, Hound of Hades",6bhZI
+Omen of the Ten,Shadowcraft,Legendary,3,"Rulenye, Omen of Silence",6bhZS
+Omen of the Ten,Shadowcraft,Legendary,4,Osiris,6bhZc
+Omen of the Ten,Bloodcraft,Bronze,4,Swordserpent Guardian,6byf2
+Omen of the Ten,Bloodcraft,Bronze,2,Bloodthirsty Hamster,6byfC
+Omen of the Ten,Bloodcraft,Bronze,2,Servant of Lust,6byfM
+Omen of the Ten,Bloodcraft,Bronze,3,Throne of Solitude,6bz8I
+Omen of the Ten,Bloodcraft,Silver,4,Dark Elemental,6b_5I
+Omen of the Ten,Bloodcraft,Silver,1,Disciple of Lust,6b_5S
+Omen of the Ten,Bloodcraft,Silver,2,Wings of Lust,6b_qA
+Omen of the Ten,Bloodcraft,Gold,5,Apostle of Lust,6c1XY
+Omen of the Ten,Bloodcraft,Gold,4,Flauros,6c1Xi
+Omen of the Ten,Bloodcraft,Gold,4,"Trill, Devilish Idol",6c1Xs
+Omen of the Ten,Bloodcraft,Legendary,3,"Valnareik, Omen of Lust",6c3zo
+Omen of the Ten,Bloodcraft,Legendary,7,Calamity Bringer,6c3zy
+Omen of the Ten,Bloodcraft,Legendary,5,"Milnard, Dark Fiend",6c3-6
+Omen of the Ten,Havencraft,Bronze,2,Sister Falconer,6cL3Y
+Omen of the Ten,Havencraft,Bronze,7,Sanctum Keepers,6cL3i
+Omen of the Ten,Havencraft,Bronze,3,Servant of Repose,6cL3s
+Omen of the Ten,Havencraft,Bronze,2,Realm of Repose,6cLYo
+Omen of the Ten,Havencraft,Silver,2,Unicorn Knight,6cNVo
+Omen of the Ten,Havencraft,Silver,2,Disciple of Repose,6cNVy
+Omen of the Ten,Havencraft,Silver,3,Feather Rush,6cOEg
+Omen of the Ten,Havencraft,Gold,4,Apostle of Repose,6cPy2
+Omen of the Ten,Havencraft,Gold,5,Assault Priest,6cPyC
+Omen of the Ten,Havencraft,Gold,3,City of Gold,6cQBg
+Omen of the Ten,Havencraft,Legendary,8,"Lapis, Glorious Seraph",6cSOI
+Omen of the Ten,Havencraft,Legendary,4,"Marwynn, Omen of Repose",6cSOS
+Omen of the Ten,Havencraft,Legendary,4,Holy Lion of Salvation,6cSOc
+Omen of the Ten,Portalcraft,Bronze,2,Hydro Alchemist,6cjU2
+Omen of the Ten,Portalcraft,Bronze,7,Silver Automaton,6cjUC
+Omen of the Ten,Portalcraft,Bronze,3,Servant of Destruction,6cjUM
+Omen of the Ten,Portalcraft,Bronze,2,Windup,6ckCw
+Omen of the Ten,Portalcraft,Silver,1,Inspired Inventor,6clwI
+Omen of the Ten,Portalcraft,Silver,2,Disciple of Destruction,6clwS
+Omen of the Ten,Portalcraft,Silver,0,Mechanization,6cmfA
+Omen of the Ten,Portalcraft,Gold,4,Apostle of Destruction,6coMY
+Omen of the Ten,Portalcraft,Gold,2,Rukina of the Resistance,6coMi
+Omen of the Ten,Portalcraft,Gold,4,Destructive Refrain,6cp5Q
+Omen of the Ten,Portalcraft,Legendary,4,"Lishenna, Omen of Destruction",6cqoo
+Omen of the Ten,Portalcraft,Legendary,4,Enervating Mail,6cqoy
+Omen of the Ten,Portalcraft,Legendary,6,New Order,6cqp6
+Altersphere,Neutral,Bronze,3,Barkeep,6dUJ2
+Altersphere,Neutral,Bronze,4,High Enchantress,6dUJC
+Altersphere,Neutral,Bronze,2,"Reize, Spice Cherub",6dUJM
+Altersphere,Neutral,Silver,7,"Reina, Evolution's Herald",6dWlI
+Altersphere,Neutral,Silver,4,Fortune's Font,6dXEY
+Altersphere,Neutral,Gold,2,"Ephemera, Sword Angel",6dZBY
+Altersphere,Neutral,Gold,7,Steelclad Minotaur,6dZBi
+Altersphere,Neutral,Gold,5,Slash of the One,6dZwQ
+Altersphere,Neutral,Legendary,9,Prince of Cocytus,6dbdo
+Altersphere,Neutral,Legendary,7,Alterplane Arbiter,6dbdy
+Altersphere,Forestcraft,Bronze,2,Zealot of Unkilling,6dsjY
+Altersphere,Forestcraft,Bronze,3,Insane Dark Elf,6dsji
+Altersphere,Forestcraft,Bronze,1,"Lila, Arborist",6dsjs
+Altersphere,Forestcraft,Bronze,3,Ward of Unkilling,6dtCo
+Altersphere,Forestcraft,Silver,5,Forest Defender,6dv9o
+Altersphere,Forestcraft,Silver,2,"Michelle, the Mind Reader",6dv9y
+Altersphere,Forestcraft,Silver,2,Predatory Might,6dvug
+Altersphere,Forestcraft,Gold,5,"Setus, the Beastblade",6dxc2
+Altersphere,Forestcraft,Gold,4,"Lycoris, Poisoner Princess",6dxcC
+Altersphere,Forestcraft,Gold,4,"Lina & Lena, Twin Souls",6dxcM
+Altersphere,Forestcraft,Legendary,4,"Carbuncle, Immortal Jewel",6d-2I
+Altersphere,Forestcraft,Legendary,6,Forest Oracle Pascale,6d-2S
+Altersphere,Forestcraft,Legendary,8,"Bab'zz, Hornet Queen",6d-2c
+Altersphere,Swordcraft,Bronze,3,Wardog,6eF82
+Altersphere,Swordcraft,Bronze,4,Zealot of Usurpation,6eF8C
+Altersphere,Swordcraft,Bronze,2,"Ernesta, Magic Dealer",6eF8M
+Altersphere,Swordcraft,Bronze,2,Godsent Stride,6eFsw
+Altersphere,Swordcraft,Silver,7,Madlance Centaur,6eHaI
+Altersphere,Swordcraft,Silver,3,"Ilmisuna, Arms Dealer",6eHaS
+Altersphere,Swordcraft,Silver,5,Dance of Usurpation,6eIJA
+Altersphere,Swordcraft,Gold,2,"Leod, the Crescent Blade",6eK0Y
+Altersphere,Swordcraft,Gold,7,"Alyaska, Master Dealer",6eK0i
+Altersphere,Swordcraft,Gold,5,Soldier's Vow,6eKGA
+Altersphere,Swordcraft,Legendary,7,Blazing Lion Admiral,6eMSo
+Altersphere,Swordcraft,Legendary,3,Aether of the Warrior Wing,6eMSy
+Altersphere,Swordcraft,Legendary,10,"Dionne, Dancing Blade",6eMT6
+Altersphere,Runecraft,Bronze,2,Rabbit Mage,6edYY
+Altersphere,Runecraft,Bronze,9,Zealot of Truth,6edYi
+Altersphere,Runecraft,Bronze,3,"Tico, Mysterian Spellnerd",6edYs
+Altersphere,Runecraft,Bronze,2,Witch Snap,6eeHQ
+Altersphere,Runecraft,Silver,5,Centaur Shaman,6ef-o
+Altersphere,Runecraft,Silver,4,"Palla, Student Teacher",6ef-y
+Altersphere,Runecraft,Silver,3,Veridic Discovery,6egjg
+Altersphere,Runecraft,Gold,3,"Eleanor, Cosmic Flower",6eiR2
+Altersphere,Runecraft,Gold,4,Lovely-Heart Monika,6eiRC
+Altersphere,Runecraft,Gold,7,Edict of Truth,6ej9w
+Altersphere,Runecraft,Legendary,3,Slumbering Calamity,6ektI
+Altersphere,Runecraft,Legendary,6,Sweet-Tooth Medusa,6ektS
+Altersphere,Runecraft,Legendary,2,"Geos, Runehammer",6ektc
+Altersphere,Dragoncraft,Bronze,4,Geovore,6e_z2
+Altersphere,Dragoncraft,Bronze,2,Zealot of Disdain,6e_zC
+Altersphere,Dragoncraft,Bronze,3,Righteous Dragoon,6e_zM
+Altersphere,Dragoncraft,Bronze,2,Sneer of Disdain,6f0hw
+Altersphere,Dragoncraft,Silver,5,Vile Violet Dragon,6f2PI
+Altersphere,Dragoncraft,Silver,8,"Elios, Loyal Dragoon",6f2PS
+Altersphere,Dragoncraft,Silver,3,Dragonsoul Princess,6f2Pc
+Altersphere,Dragoncraft,Gold,8,Wildflame Dragon,6f4rY
+Altersphere,Dragoncraft,Gold,3,Annerose,6f4ri
+Altersphere,Dragoncraft,Gold,2,Powerforge,6f5aQ
+Altersphere,Dragoncraft,Legendary,4,Hastewing Dragonewt,6f7Ho
+Altersphere,Dragoncraft,Legendary,7,Dragon Empress Otohime,6f7Hy
+Altersphere,Dragoncraft,Legendary,4,Tlaloc,6f7I6
+Altersphere,Shadowcraft,Bronze,2,Buffalo Bones,6fONY
+Altersphere,Shadowcraft,Bronze,4,Zealot of Silence,6fONi
+Altersphere,Shadowcraft,Bronze,5,Marian the Mummy,6fONs
+Altersphere,Shadowcraft,Bronze,2,Manifest Malice,6fP6Q
+Altersphere,Shadowcraft,Silver,2,Wight Knight,6fQpo
+Altersphere,Shadowcraft,Silver,3,Chris Pumpkinhead,6fQpy
+Altersphere,Shadowcraft,Silver,8,Death's Mistress,6fQq6
+Altersphere,Shadowcraft,Gold,2,"Nicola, Forbidden Strength",6fTG2
+Altersphere,Shadowcraft,Gold,7,Gluttonous Empress,6fTGC
+Altersphere,Shadowcraft,Gold,1,Sonata of Silence,6fT-w
+Altersphere,Shadowcraft,Legendary,4,"Zebet, Lady of the Flies",6fViI
+Altersphere,Shadowcraft,Legendary,9,Corpsewyrm Fafnir,6fViS
+Altersphere,Shadowcraft,Legendary,12,"Tartarus, the Tormentor",6fVic
+Altersphere,Bloodcraft,Bronze,3,Furfur,6fmo2
+Altersphere,Bloodcraft,Bronze,4,Zealot of Lust,6fmoC
+Altersphere,Bloodcraft,Bronze,8,Arion,6fmoM
+Altersphere,Bloodcraft,Bronze,2,Devil Raider,6fmoW
+Altersphere,Bloodcraft,Silver,6,Pactbound Demon,6fpEI
+Altersphere,Bloodcraft,Silver,5,Salome,6fpES
+Altersphere,Bloodcraft,Silver,1,Kiss of Lust,6fpzA
+Altersphere,Bloodcraft,Gold,2,"Vuella, One-Winged Demon",6frgY
+Altersphere,Bloodcraft,Gold,2,Lykos Berserker,6frgi
+Altersphere,Bloodcraft,Gold,3,Relinquish Reason,6fsPQ
+Altersphere,Bloodcraft,Legendary,4,Diabolus Agito,6fu6o
+Altersphere,Bloodcraft,Legendary,8,Crimson Rose Queen,6fu6y
+Altersphere,Bloodcraft,Legendary,4,"Laura, Enraged Commander",6fu76
+Altersphere,Havencraft,Bronze,1,Temple Windbear,6g9CY
+Altersphere,Havencraft,Bronze,4,Zealot of Repose,6g9Ci
+Altersphere,Havencraft,Bronze,2,Malevolent Al-mi'raj,6g9Cs
+Altersphere,Havencraft,Bronze,5,Forgotten Sanctuary,6g9ho
+Altersphere,Havencraft,Silver,9,Battlefield Inquisitor,6gBeo
+Altersphere,Havencraft,Silver,2,"Colette, Holy Gunner",6gBey
+Altersphere,Havencraft,Silver,4,Manifestation of Repose,6gCNg
+Altersphere,Havencraft,Gold,3,"Marlone, Light of Balance",6gE52
+Altersphere,Havencraft,Gold,3,Sekhmet,6gE5C
+Altersphere,Havencraft,Gold,4,Vengeful Radiance,6gEpw
+Altersphere,Havencraft,Legendary,6,"Laina, Sister of Judgment",6gGXI
+Altersphere,Havencraft,Legendary,7,Holylord Eachtar,6gGXS
+Altersphere,Havencraft,Legendary,1,Elysian Saint-Hares,6gGXc
+Altersphere,Portalcraft,Bronze,8,Draco Marionette,6gXd2
+Altersphere,Portalcraft,Bronze,5,Zealot of Destruction,6gXdC
+Altersphere,Portalcraft,Bronze,3,"Viola, Duchess of Dolls",6gXdM
+Altersphere,Portalcraft,Bronze,1,Joy of Destruction,6gYLw
+Altersphere,Portalcraft,Silver,2,Marionette Lad,6ga3I
+Altersphere,Portalcraft,Silver,3,Angel of the Iron Steed,6ga3S
+Altersphere,Portalcraft,Silver,4,Alterplane Onslaught,6gaoA
+Altersphere,Portalcraft,Gold,4,"Liam, Master of Puppets",6gcVY
+Altersphere,Portalcraft,Gold,9,"Tylle, the Worldgate",6gcVi
+Altersphere,Portalcraft,Gold,3,"Maisha, Hero of Purgation",6gcVs
+Altersphere,Portalcraft,Legendary,5,"Dyne, Master Swordsman",6gexo
+Altersphere,Portalcraft,Legendary,9,"Sylvia, the Condemner",6gexy
+Altersphere,Portalcraft,Legendary,1,Orb of Desecration,6gfR2
+Steel Rebellion,Neutral,Bronze,4,"Aldis, Trendsetting Seraph",6hIS2
+Steel Rebellion,Neutral,Bronze,2,"Hnikar, Warring Thunder",6hISC
+Steel Rebellion,Neutral,Bronze,2,Robogoblin,6hISM
+Steel Rebellion,Neutral,Silver,6,"Catherine, Epicurean Angel",6hKuI
+Steel Rebellion,Neutral,Silver,3,"Jafnhar, Warring Flame",6hKuS
+Steel Rebellion,Neutral,Gold,8,Mechawing Angel,6hNKY
+Steel Rebellion,Neutral,Gold,3,"Grimnir, Warring Tempest",6hNKi
+Steel Rebellion,Neutral,Gold,5,Heaven's Gate,6hNaA
+Steel Rebellion,Neutral,Legendary,8,Technolord,6hPmo
+Steel Rebellion,Neutral,Legendary,7,"Odin, Wargod Ascendant",6hPmy
+Steel Rebellion,Forestcraft,Bronze,2,Daisybow Archer,6hgsY
+Steel Rebellion,Forestcraft,Bronze,3,Forest Hermit,6hgsi
+Steel Rebellion,Forestcraft,Bronze,1,Robotic Bagworm,6hgss
+Steel Rebellion,Forestcraft,Bronze,1,Nature's Guidance,6hhbQ
+Steel Rebellion,Forestcraft,Silver,4,Ironbow Sniper,6hjIo
+Steel Rebellion,Forestcraft,Silver,5,Nature's Warden,6hjIy
+Steel Rebellion,Forestcraft,Silver,3,Arboreal Core,6hjYQ
+Steel Rebellion,Forestcraft,Gold,7,Mechalance Elf,6hll2
+Steel Rebellion,Forestcraft,Gold,3,"Milolo, Li'l Mountain Lass",6hllC
+Steel Rebellion,Forestcraft,Gold,2,Aria's Whirlwind,6hmTw
+Steel Rebellion,Forestcraft,Legendary,6,"Cynthia, the Queen's Blade",6hoBI
+Steel Rebellion,Forestcraft,Legendary,2,"Cleft, Dual Fencer",6hoBS
+Steel Rebellion,Forestcraft,Legendary,8,Lord of the Vajano Marsh,6hoBc
+Steel Rebellion,Swordcraft,Bronze,2,Cybercannoneer,6i3H2
+Steel Rebellion,Swordcraft,Bronze,2,Dauntless Commander,6i3HC
+Steel Rebellion,Swordcraft,Bronze,3,Phantom Assassin,6i3HM
+Steel Rebellion,Swordcraft,Bronze,5,Dualblade Flurry,6i3_w
+Steel Rebellion,Swordcraft,Silver,4,Mechablade Soldier,6i5jS
+Steel Rebellion,Swordcraft,Silver,3,Glorious Core,6i5yw
+Steel Rebellion,Swordcraft,Silver,2,Ivory Sword Dance,6i6SA
+Steel Rebellion,Swordcraft,Gold,4,Stampeding Fortress,6i89Y
+Steel Rebellion,Swordcraft,Gold,3,"Troya, Thunder of Hagelberg",6i89i
+Steel Rebellion,Swordcraft,Gold,7,"Azord, Duke of the Mists",6i89s
+Steel Rebellion,Swordcraft,Legendary,4,"Lecia, Sky Saber",6iAbo
+Steel Rebellion,Swordcraft,Legendary,7,"Johann, Ironforged Hero",6iAby
+Steel Rebellion,Swordcraft,Legendary,5,Swordflash Panther,6iAc6
+Steel Rebellion,Runecraft,Bronze,8,Magiblade Witch,6iRhY
+Steel Rebellion,Runecraft,Bronze,4,Mechastaff Sorcerer,6iRhi
+Steel Rebellion,Runecraft,Bronze,2,"Shirati, Mysterian Mogul",6iRhs
+Steel Rebellion,Runecraft,Bronze,5,Golem's Rampage,6iSQQ
+Steel Rebellion,Runecraft,Silver,5,"Hanna, Mysterian Paragon",6iU7o
+Steel Rebellion,Runecraft,Silver,2,Mechanized Lifeform,6iU7y
+Steel Rebellion,Runecraft,Silver,3,Sagacious Core,6iUNQ
+Steel Rebellion,Runecraft,Gold,3,Magitech Golem,6iWa2
+Steel Rebellion,Runecraft,Gold,10,"Clarke, Knowledge Seeker",6iWaC
+Steel Rebellion,Runecraft,Gold,2,Presto Chango,6iXIw
+Steel Rebellion,Runecraft,Legendary,3,"Magisa, Ruinfist Witch",6iZ0I
+Steel Rebellion,Runecraft,Legendary,4,"Tetra, Sapphire Rebel",6iZ0S
+Steel Rebellion,Runecraft,Legendary,2,"Solomon, Lord of Magic",6iZ0c
+Steel Rebellion,Dragoncraft,Bronze,2,Doting Dragoneer,6iq62
+Steel Rebellion,Dragoncraft,Bronze,4,Mechafin Diver,6iq6C
+Steel Rebellion,Dragoncraft,Bronze,2,Boomfish,6iq6M
+Steel Rebellion,Dragoncraft,Bronze,4,Overwhelming Crush,6iqqw
+Steel Rebellion,Dragoncraft,Silver,2,Assault Dragoon,6isYI
+Steel Rebellion,Dragoncraft,Silver,7,Wyrmcannon Dragonewt,6isYS
+Steel Rebellion,Dragoncraft,Silver,3,Draconic Core,6isnw
+Steel Rebellion,Dragoncraft,Gold,1,Soaring Dragonewt,6iu-Y
+Steel Rebellion,Dragoncraft,Gold,5,Ruinous Dragon,6iu-i
+Steel Rebellion,Dragoncraft,Gold,8,Dragon Ranch,6ivTo
+Steel Rebellion,Dragoncraft,Legendary,7,"Forte, Ruler of the Skies",6ixQo
+Steel Rebellion,Dragoncraft,Legendary,2,"Byron, Fullmetal Dragoon",6ixQy
+Steel Rebellion,Dragoncraft,Legendary,10,"Dagon, Lord of the Seas",6ixR6
+Steel Rebellion,Shadowcraft,Bronze,2,Ghostwriter,6jCWY
+Steel Rebellion,Shadowcraft,Bronze,2,Ghoul,6jCWi
+Steel Rebellion,Shadowcraft,Bronze,4,Bone Drone,6jCWs
+Steel Rebellion,Shadowcraft,Bronze,3,Soulsteal,6jDFQ
+Steel Rebellion,Shadowcraft,Silver,2,Deadly Dreamer,6jEyo
+Steel Rebellion,Shadowcraft,Silver,5,Robozombie,6jEyy
+Steel Rebellion,Shadowcraft,Silver,3,Phantasmal Core,6jFCQ
+Steel Rebellion,Shadowcraft,Gold,8,Baleful Necromancer,6jHP2
+Steel Rebellion,Shadowcraft,Gold,4,Hellfire Hound,6jHPC
+Steel Rebellion,Shadowcraft,Gold,1,Deathguard,6jI7w
+Steel Rebellion,Shadowcraft,Legendary,5,"Ceres, Eternal Bride",6jJrI
+Steel Rebellion,Shadowcraft,Legendary,4,"Aenea, Amethyst Rebel",6jJrS
+Steel Rebellion,Shadowcraft,Legendary,7,Colossal Skull Lord,6jJrc
+Steel Rebellion,Bloodcraft,Bronze,2,"Liberté, Werewolf Pup",6jax2
+Steel Rebellion,Bloodcraft,Bronze,4,Berserk Demon,6jaxC
+Steel Rebellion,Bloodcraft,Bronze,3,Armored Bat,6jaxM
+Steel Rebellion,Bloodcraft,Bronze,3,Viper Lash,6jbfw
+Steel Rebellion,Bloodcraft,Silver,2,Hellblaze Demon,6jdNI
+Steel Rebellion,Bloodcraft,Silver,5,Metal-Blade Demon,6jdNS
+Steel Rebellion,Bloodcraft,Silver,3,Sanguine Core,6jdcw
+Steel Rebellion,Bloodcraft,Gold,10,Destructive Succubus,6jfpY
+Steel Rebellion,Bloodcraft,Gold,2,"Doublame, Duke and Dame",6jfpi
+Steel Rebellion,Bloodcraft,Gold,3,Unleash the Nightmare,6jgYQ
+Steel Rebellion,Bloodcraft,Legendary,5,"Medusa, Evil-Eyed Serpent",6jiFo
+Steel Rebellion,Bloodcraft,Legendary,2,"Mono, Garnet Rebel",6jiFy
+Steel Rebellion,Bloodcraft,Legendary,6,"Slayn, Steelwrought Vampire",6jiG6
+Steel Rebellion,Havencraft,Bronze,3,Ironknuckle Nun,6jzLY
+Steel Rebellion,Havencraft,Bronze,5,Featherfolk Gardener,6jzLi
+Steel Rebellion,Havencraft,Bronze,2,White Hart,6jzLs
+Steel Rebellion,Havencraft,Bronze,4,Fiery Paean,6jzqo
+Steel Rebellion,Havencraft,Silver,2,"Marcotte, Heretical Sister",6j_no
+Steel Rebellion,Havencraft,Silver,2,Robofalcon,6j_ny
+Steel Rebellion,Havencraft,Silver,3,Saintly Core,6k01Q
+Steel Rebellion,Havencraft,Gold,7,Father Refinement,6k2E2
+Steel Rebellion,Havencraft,Gold,4,"Sonia, Protector of Hope",6k2EC
+Steel Rebellion,Havencraft,Gold,6,Purging Light,6k2yw
+Steel Rebellion,Havencraft,Legendary,3,"Zoe, Queen of Hope",6k4gI
+Steel Rebellion,Havencraft,Legendary,4,"Limonia, Flawed Saint",6k4gS
+Steel Rebellion,Havencraft,Legendary,5,The Untrue God,6k4gc
+Steel Rebellion,Portalcraft,Bronze,2,"Mia, Angelic Doll",6kLm2
+Steel Rebellion,Portalcraft,Bronze,3,Creeping Slime,6kLmC
+Steel Rebellion,Portalcraft,Bronze,2,Prototype Warrior,6kLmM
+Steel Rebellion,Portalcraft,Bronze,4,Pull the Strings,6kMUw
+Steel Rebellion,Portalcraft,Silver,1,Mechagun Wielder,6kOCI
+Steel Rebellion,Portalcraft,Silver,4,Displacer Bot,6kOCS
+Steel Rebellion,Portalcraft,Silver,3,Alpha Core,6kORw
+Steel Rebellion,Portalcraft,Gold,2,"Shin, Lawful Light",6kQeY
+Steel Rebellion,Portalcraft,Gold,3,Puppet Troupemaster,6kQei
+Steel Rebellion,Portalcraft,Gold,1,Augmentation Bestowal,6kRNQ
+Steel Rebellion,Portalcraft,Legendary,7,"Gullias, Silverbeast Lord",6kT4o
+Steel Rebellion,Portalcraft,Legendary,8,"Shion, Mercurial Aegis",6kT4y
+Steel Rebellion,Portalcraft,Legendary,6,"Belphomet, Lord of Aiolon",6kT56
+Rebirth of Glory,Neutral,Bronze,2,Hoverboard Mercenary,6l6b2
+Rebirth of Glory,Neutral,Bronze,4,Great Goliath,6l6bC
+Rebirth of Glory,Neutral,Bronze,2,Strategic Assembly,6l74I
+Rebirth of Glory,Neutral,Silver,2,"Unica, Unicorn Maiden",6l91I
+Rebirth of Glory,Neutral,Silver,2,Apollo,6l91S
+Rebirth of Glory,Neutral,Gold,6,"Urd, Goddess of Restoration",6lBTY
+Rebirth of Glory,Neutral,Gold,3,"Hamsa, Hallowed Fowl",6lBTi
+Rebirth of Glory,Neutral,Gold,4,Angelic Smite,6lCCQ
+Rebirth of Glory,Neutral,Legendary,8,"Olivia, Blackened Wing",6lDvo
+Rebirth of Glory,Neutral,Legendary,10,"Zeus, the Supreme",6lDvy
+Rebirth of Glory,Forestcraft,Bronze,4,Heroic Fairy Champion,6lU_Y
+Rebirth of Glory,Forestcraft,Bronze,5,Dryad of the Grove,6lU_i
+Rebirth of Glory,Forestcraft,Bronze,3,Mechaclaw Elf,6lU_s
+Rebirth of Glory,Forestcraft,Bronze,3,Harvest Season,6lVkQ
+Rebirth of Glory,Forestcraft,Silver,2,Wellspring Elf Princess,6lXRo
+Rebirth of Glory,Forestcraft,Silver,3,"Meliai, Wing Shredder",6lXRy
+Rebirth of Glory,Forestcraft,Silver,4,Nature Corroded,6lYAg
+Rebirth of Glory,Forestcraft,Gold,1,Whirlwind Rhinoceroach,6lZu2
+Rebirth of Glory,Forestcraft,Gold,2,Guard of the Machinatree,6lZuC
+Rebirth of Glory,Forestcraft,Gold,1,"May, Eager Elf",6lZuM
+Rebirth of Glory,Forestcraft,Legendary,7,"Omnis, Prime Okami",6lcKI
+Rebirth of Glory,Forestcraft,Legendary,3,"Tista, Wings of Mercy",6lcKS
+Rebirth of Glory,Forestcraft,Legendary,3,Miracle of Love,6ld3A
+Rebirth of Glory,Swordcraft,Bronze,1,"Lounes, Levin Apprentice",6ltQ2
+Rebirth of Glory,Swordcraft,Bronze,2,Levin Archer,6ltQC
+Rebirth of Glory,Swordcraft,Bronze,3,Veteran Vagabond Frog,6ltQM
+Rebirth of Glory,Swordcraft,Bronze,4,Brave Intervention,6lu8w
+Rebirth of Glory,Swordcraft,Silver,2,Splendid Fencer,6lvsI
+Rebirth of Glory,Swordcraft,Silver,2,"Jeno, Levin Stalwart",6lvsS
+Rebirth of Glory,Swordcraft,Silver,1,King's Welcome,6lwbA
+Rebirth of Glory,Swordcraft,Gold,3,Autoblade Patroller,6lyIY
+Rebirth of Glory,Swordcraft,Gold,7,Honored Frontguard General,6lyIi
+Rebirth of Glory,Swordcraft,Gold,1,Meet the Levin Sisters!,6lz1Q
+Rebirth of Glory,Swordcraft,Legendary,7,"Alwida, Pirate Queen",6l-ko
+Rebirth of Glory,Swordcraft,Legendary,5,"Albert, Levin Champion",6l-ky
+Rebirth of Glory,Swordcraft,Legendary,0,Everlasting Castle,6l--Q
+Rebirth of Glory,Runecraft,Bronze,2,Jetbroom Witch,6mFqY
+Rebirth of Glory,Runecraft,Bronze,8,Twinblade Mage,6mFqi
+Rebirth of Glory,Runecraft,Bronze,2,Electrokitty,6mFqs
+Rebirth of Glory,Runecraft,Bronze,1,Witch's Cauldron,6mG4A
+Rebirth of Glory,Runecraft,Silver,3,"Emmylou, Smilemancer",6mIGo
+Rebirth of Glory,Runecraft,Silver,5,Mechabook Sorcerer,6mIGy
+Rebirth of Glory,Runecraft,Silver,5,Disintegration,6mI_g
+Rebirth of Glory,Runecraft,Gold,1,"Melvie, Princess Witch",6mKj2
+Rebirth of Glory,Runecraft,Gold,4,"Levi, Accomplished Mage",6mKjC
+Rebirth of Glory,Runecraft,Gold,2,The Mysterian Project,6mLRw
+Rebirth of Glory,Runecraft,Legendary,9,"Ginger, Accursed Word",6mN9I
+Rebirth of Glory,Runecraft,Legendary,6,"Erasmus, Master Summoner",6mN9S
+Rebirth of Glory,Runecraft,Legendary,3,Golem Squad,6mNuA
+Rebirth of Glory,Dragoncraft,Bronze,2,Gadget Mermaid,6meF2
+Rebirth of Glory,Dragoncraft,Bronze,5,"Zell, Wind Whisperer",6meFC
+Rebirth of Glory,Dragoncraft,Bronze,3,Splendorous Roc,6meFM
+Rebirth of Glory,Dragoncraft,Bronze,2,Orca Run,6mezw
+Rebirth of Glory,Dragoncraft,Silver,4,"Eyfa, Windrider",6mghI
+Rebirth of Glory,Dragoncraft,Silver,3,Steelclaw Wyrm Bruiser,6mghS
+Rebirth of Glory,Dragoncraft,Silver,7,Helix Mushussu,6mghc
+Rebirth of Glory,Dragoncraft,Gold,3,Wise Dragonewt Scholar,6mj7Y
+Rebirth of Glory,Dragoncraft,Gold,4,"Ian, Dragon Buster",6mj7i
+Rebirth of Glory,Dragoncraft,Gold,1,Dragon's Hoard,6mjco
+Rebirth of Glory,Dragoncraft,Legendary,10,Genesis Dragon of Disaster,6mlZo
+Rebirth of Glory,Dragoncraft,Legendary,8,Hulking Dragonewt,6mlZy
+Rebirth of Glory,Dragoncraft,Legendary,6,"Aiela, Devoted Knight",6mla6
+Rebirth of Glory,Shadowcraft,Bronze,1,"Mino, Crafty Reaper",6n0fY
+Rebirth of Glory,Shadowcraft,Bronze,3,Mechasaw Deathbringer,6n0fi
+Rebirth of Glory,Shadowcraft,Bronze,2,Greater Lesser Mummy,6n0fs
+Rebirth of Glory,Shadowcraft,Bronze,5,Bone Blast,6n1OQ
+Rebirth of Glory,Shadowcraft,Silver,7,"Tithi, Underworld Shaman",6n35o
+Rebirth of Glory,Shadowcraft,Silver,2,Irongear Corpsman,6n35y
+Rebirth of Glory,Shadowcraft,Silver,4,Fatal Fields,6n3b2
+Rebirth of Glory,Shadowcraft,Gold,3,"Khawy, Underworld Heir",6n5Y2
+Rebirth of Glory,Shadowcraft,Gold,2,"Sora, Arcane Fist",6n5YC
+Rebirth of Glory,Shadowcraft,Gold,7,Spectral Cascade,6n6Gw
+Rebirth of Glory,Shadowcraft,Legendary,12,"Hades, Father of Purgatory",6n7-I
+Rebirth of Glory,Shadowcraft,Legendary,4,"Aisha, Underworld Sovereign",6n7-S
+Rebirth of Glory,Shadowcraft,Legendary,4,"Lara, Soul Taker",6n7-c
+Rebirth of Glory,Bloodcraft,Bronze,2,Gearsnake Tamer,6nP42
+Rebirth of Glory,Bloodcraft,Bronze,3,"Nefilio, Dour Demon",6nP4C
+Rebirth of Glory,Bloodcraft,Bronze,2,Swarming Wraith,6nP4M
+Rebirth of Glory,Bloodcraft,Bronze,2,Entrancing Blow,6nPow
+Rebirth of Glory,Bloodcraft,Silver,2,"Nightmare, Dreameater",6nRWI
+Rebirth of Glory,Bloodcraft,Silver,4,Mechaforge Devil,6nRWS
+Rebirth of Glory,Bloodcraft,Silver,3,Prison of Pain,6nR_Y
+Rebirth of Glory,Bloodcraft,Gold,4,"Azazel, the Depraved",6nTyY
+Rebirth of Glory,Bloodcraft,Gold,6,Heartsick Demon,6nTyi
+Rebirth of Glory,Bloodcraft,Gold,6,"Moriana, Shadow Devil",6nTys
+Rebirth of Glory,Bloodcraft,Legendary,8,Seductress Vampire,6nWOo
+Rebirth of Glory,Bloodcraft,Legendary,3,"Yurius, Traitorous Duke",6nWOy
+Rebirth of Glory,Bloodcraft,Legendary,8,Spawn of Exile,6nWP6
+Rebirth of Glory,Havencraft,Bronze,1,Tender Rabbit Healer,6nnUY
+Rebirth of Glory,Havencraft,Bronze,5,Steelwing,6nnUi
+Rebirth of Glory,Havencraft,Bronze,2,Fervid Heavenly Hound,6nnUs
+Rebirth of Glory,Havencraft,Bronze,2,Pinion Lake,6nnzo
+Rebirth of Glory,Havencraft,Silver,2,Robowing Precant,6npwo
+Rebirth of Glory,Havencraft,Silver,6,Heretic Priest,6npwy
+Rebirth of Glory,Havencraft,Silver,1,Passing of Lore,6nqfg
+Rebirth of Glory,Havencraft,Gold,4,"Kel, Holy Marksman",6nsN2
+Rebirth of Glory,Havencraft,Gold,2,"Laelia, Saint of Peace",6nsNC
+Rebirth of Glory,Havencraft,Gold,1,Golden Bell,6nssI
+Rebirth of Glory,Havencraft,Legendary,4,"Imina, Mad Eidolon",6nupI
+Rebirth of Glory,Havencraft,Legendary,4,"Elana, Purest Prayer",6nupS
+Rebirth of Glory,Havencraft,Legendary,1,Destiny Wing Knight,6nupc
+Rebirth of Glory,Portalcraft,Bronze,2,Cat Gunner,6o9v2
+Rebirth of Glory,Portalcraft,Bronze,4,"Hamelin, Fey Flautist",6o9vC
+Rebirth of Glory,Portalcraft,Bronze,6,Mechanical Mammoth,6o9vM
+Rebirth of Glory,Portalcraft,Bronze,3,Puppet Shock,6oAdw
+Rebirth of Glory,Portalcraft,Silver,2,"Licht, the Gearturner",6oCLI
+Rebirth of Glory,Portalcraft,Silver,4,"Icarus, Sunbound Wing",6oCLS
+Rebirth of Glory,Portalcraft,Silver,1,Metadivision,6oD4A
+Rebirth of Glory,Portalcraft,Gold,7,Artifact Duplicator,6oEnY
+Rebirth of Glory,Portalcraft,Gold,4,Aerial Craft,6oEni
+Rebirth of Glory,Portalcraft,Gold,2,"Vier, Doll Slayer",6oEns
+Rebirth of Glory,Portalcraft,Legendary,7,Magna Giant,6oHDo
+Rebirth of Glory,Portalcraft,Legendary,5,"Zwei, Resonant Heart",6oHDy
+Rebirth of Glory,Portalcraft,Legendary,6,"Orchis, Linked Heart",6oHE6
+Verdant Conflict,Neutral,Bronze,3,Alchemical Confectioner,6owk2
+Verdant Conflict,Neutral,Bronze,2,Sweet-Tooth Sleuth,6owkC
+Verdant Conflict,Neutral,Bronze,2,Travelers' Respite,6oxSw
+Verdant Conflict,Neutral,Silver,2,Extreme Carrot,6ozAI
+Verdant Conflict,Neutral,Silver,5,Giving Gourmet,6ozAS
+Verdant Conflict,Neutral,Gold,2,Desert Pathfinder,6o_cY
+Verdant Conflict,Neutral,Gold,2,Dawn's Splendor,6o_ci
+Verdant Conflict,Neutral,Gold,3,Gourmet Emperor's Kitchen,6p0LQ
+Verdant Conflict,Neutral,Legendary,6,Viridia Magna,6p22o
+Verdant Conflict,Neutral,Legendary,6,Shiva,6p22y
+Verdant Conflict,Forestcraft,Bronze,4,Wily Puck,6pJ8Y
+Verdant Conflict,Forestcraft,Bronze,6,Elven Sentry,6pJ8i
+Verdant Conflict,Forestcraft,Bronze,2,Ghastly Treant,6pJ8s
+Verdant Conflict,Forestcraft,Bronze,1,Airbound Barrage,6pJtQ
+Verdant Conflict,Forestcraft,Silver,4,Elven Pikeman,6pLao
+Verdant Conflict,Forestcraft,Silver,2,Blossom Spirit,6pLay
+Verdant Conflict,Forestcraft,Silver,1,Fertile Aether,6pMJg
+Verdant Conflict,Forestcraft,Gold,3,"Irene, Harvest Defender",6pO12
+Verdant Conflict,Forestcraft,Gold,2,Avatar of Fruition,6pO1C
+Verdant Conflict,Forestcraft,Gold,1,Divine Smithing,6pOlw
+Verdant Conflict,Forestcraft,Legendary,3,"Amataz, Fairy Blader",6pQTI
+Verdant Conflict,Forestcraft,Legendary,5,"Ladica, the Stoneclaw",6pQTS
+Verdant Conflict,Forestcraft,Legendary,9,Primal Giant,6pQTc
+Verdant Conflict,Swordcraft,Bronze,3,Adept Thief,6phZ2
+Verdant Conflict,Swordcraft,Bronze,5,Levin Scholar,6phZC
+Verdant Conflict,Swordcraft,Bronze,2,Lupine Axeman,6phZM
+Verdant Conflict,Swordcraft,Bronze,2,Mirror Image,6piHw
+Verdant Conflict,Swordcraft,Silver,5,Swift Tigress,6pj_I
+Verdant Conflict,Swordcraft,Silver,2,"Valse, Champion Deadeye",6pj_S
+Verdant Conflict,Swordcraft,Silver,1,Tempered Aether,6pkkA
+Verdant Conflict,Swordcraft,Gold,6,"Mistolina, Forest Princess",6pmRY
+Verdant Conflict,Swordcraft,Gold,2,Elegance in Action,6pnAQ
+Verdant Conflict,Swordcraft,Gold,1,Levin Justice,6pnAa
+Verdant Conflict,Swordcraft,Legendary,7,Regal Wildcat,6poto
+Verdant Conflict,Swordcraft,Legendary,4,"Bayleon, Sovereign Light",6poty
+Verdant Conflict,Swordcraft,Legendary,3,Tsubaki of the Demon Blade,6pou6
+Verdant Conflict,Runecraft,Bronze,2,Geoelementist,6q3zY
+Verdant Conflict,Runecraft,Bronze,3,Passionate Potioneer,6q3zi
+Verdant Conflict,Runecraft,Bronze,2,Gigahand Golem,6q3zs
+Verdant Conflict,Runecraft,Bronze,2,Mysterian Wisdom,6q4iQ
+Verdant Conflict,Runecraft,Silver,3,Pyromancer,6q6Po
+Verdant Conflict,Runecraft,Silver,2,Silent Laboratory,6q6fQ
+Verdant Conflict,Runecraft,Silver,1,Arcane Aether,6q78g
+Verdant Conflict,Runecraft,Gold,9,"Riley, Hydroshaman",6q8s2
+Verdant Conflict,Runecraft,Gold,5,Chaos Wielder,6q8sC
+Verdant Conflict,Runecraft,Gold,7,Arcane Item Shop,6q95g
+Verdant Conflict,Runecraft,Legendary,7,Apex Elemental,6qBII
+Verdant Conflict,Runecraft,Legendary,3,Wish Wielder,6qBIS
+Verdant Conflict,Runecraft,Legendary,5,"Medea, Ritual Sorceress",6qBIc
+Verdant Conflict,Dragoncraft,Bronze,8,Dragonblader,6qSO2
+Verdant Conflict,Dragoncraft,Bronze,3,Dragon Chef,6qSOC
+Verdant Conflict,Dragoncraft,Bronze,2,Lightning Velociraptor,6qSOM
+Verdant Conflict,Dragoncraft,Bronze,5,Dragonewt Needler,6qSOW
+Verdant Conflict,Dragoncraft,Silver,2,Bubbleborne Mermaid,6qUqI
+Verdant Conflict,Dragoncraft,Silver,3,Whirlwind Pteranodon,6qUqS
+Verdant Conflict,Dragoncraft,Silver,1,Feral Aether,6qVZA
+Verdant Conflict,Dragoncraft,Gold,6,Hoarfrost Triceratops,6qXGY
+Verdant Conflict,Dragoncraft,Gold,1,"Marion, Elegant Dragonewt",6qXGi
+Verdant Conflict,Dragoncraft,Gold,5,Phoenix Howl,6qX_Q
+Verdant Conflict,Dragoncraft,Legendary,8,"Neptune, Tidemistress",6qZio
+Verdant Conflict,Dragoncraft,Legendary,4,"Valdain, Cursed Shadow",6qZiy
+Verdant Conflict,Dragoncraft,Legendary,9,Wildfire Tyrannosaur,6qZj6
+Verdant Conflict,Shadowcraft,Bronze,4,Soul Snatcher,6qqoY
+Verdant Conflict,Shadowcraft,Bronze,3,Vengeful Possession,6qqoi
+Verdant Conflict,Shadowcraft,Bronze,2,Revenant Ram,6qqos
+Verdant Conflict,Shadowcraft,Bronze,5,Lonesome Specter,6qqp0
+Verdant Conflict,Shadowcraft,Silver,8,"Guilt, Existential Blader",6qtEo
+Verdant Conflict,Shadowcraft,Silver,1,Night of the Living Dog,6qtEy
+Verdant Conflict,Shadowcraft,Silver,1,Necromantic Aether,6qtzg
+Verdant Conflict,Shadowcraft,Gold,3,"Helio, Sacrosanct Spirit",6qvh2
+Verdant Conflict,Shadowcraft,Gold,5,Immortal Elephant,6qvhC
+Verdant Conflict,Shadowcraft,Gold,3,Fighting Jiangshi,6qvhM
+Verdant Conflict,Shadowcraft,Legendary,5,"Lubelle, Necrofamily",6qy7I
+Verdant Conflict,Shadowcraft,Legendary,2,Thoth,6qy7S
+Verdant Conflict,Shadowcraft,Legendary,2,Legendary Skeleton,6qy7c
+Verdant Conflict,Bloodcraft,Bronze,2,Leraje,6rDD2
+Verdant Conflict,Bloodcraft,Bronze,3,Ogre Champion,6rDDC
+Verdant Conflict,Bloodcraft,Bronze,2,Corrupted Bat,6rDDM
+Verdant Conflict,Bloodcraft,Bronze,2,Deal with the Devil,6rDxw
+Verdant Conflict,Bloodcraft,Silver,4,"Yuna, Vampire Seeker",6rFfI
+Verdant Conflict,Bloodcraft,Silver,3,Frenzied Werewolf,6rFfS
+Verdant Conflict,Bloodcraft,Silver,1,Lunatic Aether,6rGOA
+Verdant Conflict,Bloodcraft,Gold,5,"Sharanzaya, Masked Mayhem",6rI5Y
+Verdant Conflict,Bloodcraft,Gold,6,Nightprowl Vampire,6rI5i
+Verdant Conflict,Bloodcraft,Gold,5,"Balto, Malice Deflector",6rI5s
+Verdant Conflict,Bloodcraft,Legendary,6,"Yuzuki, Righteous Demon",6rKXo
+Verdant Conflict,Bloodcraft,Legendary,7,Cradle of Dark Divinity,6rKXy
+Verdant Conflict,Bloodcraft,Legendary,3,Kudlak,6rKY6
+Verdant Conflict,Havencraft,Bronze,5,Greatsword Sister,6rbdY
+Verdant Conflict,Havencraft,Bronze,6,Priest of Excess,6rbdi
+Verdant Conflict,Havencraft,Bronze,2,Saintly Squeaks,6rbds
+Verdant Conflict,Havencraft,Bronze,1,Snnneak Attack!,6rc6o
+Verdant Conflict,Havencraft,Silver,1,"Pyne, Holy Police",6re3o
+Verdant Conflict,Havencraft,Silver,2,Featherfolk Punisher,6re3y
+Verdant Conflict,Havencraft,Silver,1,Virtuous Aether,6reog
+Verdant Conflict,Havencraft,Gold,5,Master Adjudicator,6rgW2
+Verdant Conflict,Havencraft,Gold,8,"Agnes, Hollow Feather",6rgWC
+Verdant Conflict,Havencraft,Gold,3,Hallowed Cave Shrine,6rg_I
+Verdant Conflict,Havencraft,Legendary,4,"Daffodil, Meus Princess",6riyI
+Verdant Conflict,Havencraft,Legendary,8,Iridescent Sphinx,6riyS
+Verdant Conflict,Havencraft,Legendary,7,"Charaton, Iceflame Priest",6riyc
+Verdant Conflict,Portalcraft,Bronze,7,Dazzling Archer,6r-22
+Verdant Conflict,Portalcraft,Bronze,2,Doll Meister,6r-2C
+Verdant Conflict,Portalcraft,Bronze,2,Drill Hedgehog,6r-2M
+Verdant Conflict,Portalcraft,Bronze,1,Doll Operation,6r-mw
+Verdant Conflict,Portalcraft,Silver,4,Enhanced Tiger,6s0UI
+Verdant Conflict,Portalcraft,Silver,3,"Ines, Maiden of Clouds",6s0US
+Verdant Conflict,Portalcraft,Silver,1,Enigmatic Aether,6s1DA
+Verdant Conflict,Portalcraft,Gold,6,Cannon Hermit Crab,6s2wY
+Verdant Conflict,Portalcraft,Gold,2,"Mugnier, Purifying Light",6s2wi
+Verdant Conflict,Portalcraft,Gold,2,Artifact Call,6s3fQ
+Verdant Conflict,Portalcraft,Legendary,8,Dreadnought Gorilla,6s5Mo
+Verdant Conflict,Portalcraft,Legendary,4,Absolute Modesty,6s5My
+Verdant Conflict,Portalcraft,Legendary,2,Awakened Ragna,6s65g
+Ultimate Colosseum,Neutral,Bronze,4,Sheep Rider,6skt2
+Ultimate Colosseum,Neutral,Bronze,2,Bazooka Goblins,6sktC
+Ultimate Colosseum,Neutral,Bronze,1,Sentry Gate,6slMI
+Ultimate Colosseum,Neutral,Silver,5,"Chaht, Ringside Announcer",6snJI
+Ultimate Colosseum,Neutral,Silver,1,Clash of Heroes,6so2A
+Ultimate Colosseum,Neutral,Gold,6,"Mithra, Daybreak Deity",6splY
+Ultimate Colosseum,Neutral,Gold,3,Princess Knight,6spli
+Ultimate Colosseum,Neutral,Gold,3,Colosseum on High,6sp_A
+Ultimate Colosseum,Neutral,Legendary,7,"Athena, Divine Shield",6ssBo
+Ultimate Colosseum,Neutral,Legendary,9,Mammoth God's Colosseum,6ssBy
+Ultimate Colosseum,Forestcraft,Bronze,2,Greenwood Guardian,6t7HY
+Ultimate Colosseum,Forestcraft,Bronze,1,Crossbow Sniper,6t7Hi
+Ultimate Colosseum,Forestcraft,Bronze,3,Mallet Monkey,6t7Hs
+Ultimate Colosseum,Forestcraft,Bronze,1,Synchronized Slash,6t80Q
+Ultimate Colosseum,Forestcraft,Silver,2,Woodland Cleaver,6t9jo
+Ultimate Colosseum,Forestcraft,Silver,3,Assault Jaguar,6t9jy
+Ultimate Colosseum,Forestcraft,Silver,1,Spiritshine,6tASg
+Ultimate Colosseum,Forestcraft,Gold,4,Wildwood Matriarch,6tCA2
+Ultimate Colosseum,Forestcraft,Gold,2,"Rino, Cleansweep Archer",6tCAC
+Ultimate Colosseum,Forestcraft,Gold,2,Greenbrier Elf,6tCAM
+Ultimate Colosseum,Forestcraft,Legendary,8,"Lymaga, Forest Champion",6tEcI
+Ultimate Colosseum,Forestcraft,Legendary,2,"Kokkoro, Faithful Guide",6tEcS
+Ultimate Colosseum,Forestcraft,Legendary,1,Phantasmal Fairy Dragon,6tEcc
+Ultimate Colosseum,Swordcraft,Bronze,6,Petalwink Paladin,6tVi2
+Ultimate Colosseum,Swordcraft,Bronze,2,Samurai Outlaw,6tViC
+Ultimate Colosseum,Swordcraft,Bronze,3,Fox Lancer,6tViM
+Ultimate Colosseum,Swordcraft,Bronze,4,Breakneck Draw,6tWQw
+Ultimate Colosseum,Swordcraft,Silver,5,Quickdraw Maven,6tY8I
+Ultimate Colosseum,Swordcraft,Silver,2,Twinsword Master,6tY8S
+Ultimate Colosseum,Swordcraft,Silver,1,Grand Acquisition,6tYtA
+Ultimate Colosseum,Swordcraft,Gold,2,Steadfast Samurai,6taaY
+Ultimate Colosseum,Swordcraft,Gold,4,"Shizuru, Sisterly Sabreur",6taai
+Ultimate Colosseum,Swordcraft,Gold,3,Courtly Dance,6tbJQ
+Ultimate Colosseum,Swordcraft,Legendary,1,"Kagemitsu, Matchless Blade",6td0o
+Ultimate Colosseum,Swordcraft,Legendary,3,"Pecorine, Peckish Princess",6td0y
+Ultimate Colosseum,Swordcraft,Legendary,5,Luxblade Arriet,6td16
+Ultimate Colosseum,Runecraft,Bronze,1,Talisman Disciple,6tu6Y
+Ultimate Colosseum,Runecraft,Bronze,2,Aeroelementalist,6tu6i
+Ultimate Colosseum,Runecraft,Bronze,2,Charming Gentlemouse,6tu6s
+Ultimate Colosseum,Runecraft,Bronze,2,Shikigami Summons,6turQ
+Ultimate Colosseum,Runecraft,Silver,7,Traditional Sorcerer,6twYo
+Ultimate Colosseum,Runecraft,Silver,8,Demoncaller,6twYy
+Ultimate Colosseum,Runecraft,Silver,6,Crimson Meteor Storm,6txHg
+Ultimate Colosseum,Runecraft,Gold,3,"Kyoka, Prize Pupil",6ty_2
+Ultimate Colosseum,Runecraft,Gold,5,Curse Crafter,6ty_C
+Ultimate Colosseum,Runecraft,Gold,2,Mirror of Truth,6tzEg
+Ultimate Colosseum,Runecraft,Legendary,15,"Kuon, Founder of Onmyodo",6t_RI
+Ultimate Colosseum,Runecraft,Legendary,6,"Karyl, Catty Sorceress",6t_RS
+Ultimate Colosseum,Runecraft,Legendary,8,Forbidden Darkmage,6t_Rc
+Ultimate Colosseum,Dragoncraft,Bronze,2,Swordwhip Dragoon,6uGX2
+Ultimate Colosseum,Dragoncraft,Bronze,7,Trident Merman,6uGXC
+Ultimate Colosseum,Dragoncraft,Bronze,5,Poisonous Dilophosaurus,6uGXM
+Ultimate Colosseum,Dragoncraft,Bronze,1,Flamewinged Might,6uHFw
+Ultimate Colosseum,Dragoncraft,Silver,6,Jadelong Tactician,6uIzI
+Ultimate Colosseum,Dragoncraft,Silver,3,Aquascale Stalwart,6uIzS
+Ultimate Colosseum,Dragoncraft,Silver,2,Ice Dancing Dragonewt,6uIzc
+Ultimate Colosseum,Dragoncraft,Gold,5,Phoenix Empress,6uLPY
+Ultimate Colosseum,Dragoncraft,Gold,2,"Inori, Timid Dragonmaiden",6uLPi
+Ultimate Colosseum,Dragoncraft,Gold,4,Raremetal Dragon,6uLPs
+Ultimate Colosseum,Dragoncraft,Legendary,2,"Garyu, Supreme Dragonkin",6uNro
+Ultimate Colosseum,Dragoncraft,Legendary,7,"Kaya, Draconine Brawler",6uNry
+Ultimate Colosseum,Dragoncraft,Legendary,3,Darkprison Dragon,6uNs6
+Ultimate Colosseum,Shadowcraft,Bronze,3,Zashiki-Warashi,6uexY
+Ultimate Colosseum,Shadowcraft,Bronze,2,Bone Crane,6uexi
+Ultimate Colosseum,Shadowcraft,Bronze,3,Mummy Chef,6uexs
+Ultimate Colosseum,Shadowcraft,Bronze,1,Demonic Procession,6ufgQ
+Ultimate Colosseum,Shadowcraft,Silver,2,Yuki-Onna,6uhNo
+Ultimate Colosseum,Shadowcraft,Silver,3,Kasha,6uhNy
+Ultimate Colosseum,Shadowcraft,Silver,7,Path to Perdition,6uht2
+Ultimate Colosseum,Shadowcraft,Gold,1,"Miyako, Pudding Poltergeist",6ujq2
+Ultimate Colosseum,Shadowcraft,Gold,4,Shuten-Doji,6ujqC
+Ultimate Colosseum,Shadowcraft,Gold,2,Grudge Knight,6ujqM
+Ultimate Colosseum,Shadowcraft,Legendary,9,"Ginsetsu, Great Fox",6umGI
+Ultimate Colosseum,Shadowcraft,Legendary,4,"Shinobu, Mausoleum Medium",6umGS
+Ultimate Colosseum,Shadowcraft,Legendary,7,"Arcus, Soulful Manager",6umGc
+Ultimate Colosseum,Bloodcraft,Bronze,2,Rookie Succubus,6v1M2
+Ultimate Colosseum,Bloodcraft,Bronze,2,Antelope Pelt Warrior,6v1MC
+Ultimate Colosseum,Bloodcraft,Bronze,6,Giant Cobra,6v1MM
+Ultimate Colosseum,Bloodcraft,Bronze,2,Berserker's Pelt,6v1rI
+Ultimate Colosseum,Bloodcraft,Silver,3,Cougar Pelt Warrior,6v3oI
+Ultimate Colosseum,Bloodcraft,Silver,2,Boar Pelt Warrior,6v3oS
+Ultimate Colosseum,Bloodcraft,Silver,1,"Lucius, Vampire Slayer",6v3oc
+Ultimate Colosseum,Bloodcraft,Gold,3,Bear Pelt Warrior,6v6EY
+Ultimate Colosseum,Bloodcraft,Gold,2,"Io, Enchanting Educator",6v6Ei
+Ultimate Colosseum,Bloodcraft,Gold,1,Creeping Madness,6v6zQ
+Ultimate Colosseum,Bloodcraft,Legendary,4,Aragavy the Berserker,6v8go
+Ultimate Colosseum,Bloodcraft,Legendary,3,"Illya, Queen of Night",6v8gy
+Ultimate Colosseum,Bloodcraft,Legendary,9,Permafrost Behemoth,6v8h6
+Ultimate Colosseum,Havencraft,Bronze,2,Winged Staff Priestess,6vPmY
+Ultimate Colosseum,Havencraft,Bronze,5,Calm Featherfolk,6vPmi
+Ultimate Colosseum,Havencraft,Bronze,3,Saintly Griffon,6vPms
+Ultimate Colosseum,Havencraft,Bronze,2,Holy Counterattack,6vQVQ
+Ultimate Colosseum,Havencraft,Silver,5,Holy Lancer,6vSCo
+Ultimate Colosseum,Havencraft,Silver,4,Golden Eagle,6vSCy
+Ultimate Colosseum,Havencraft,Silver,3,Feather Sanctuary,6vSi2
+Ultimate Colosseum,Havencraft,Gold,3,Saintly Leader,6vUf2
+Ultimate Colosseum,Havencraft,Gold,3,"Yukari, Holy Guardian",6vUfC
+Ultimate Colosseum,Havencraft,Gold,5,Manifest Devotion,6vVNw
+Ultimate Colosseum,Havencraft,Legendary,6,"Wilbert, Grand Knight",6vX5I
+Ultimate Colosseum,Havencraft,Legendary,4,"Saren, Orphanage Matron",6vX5S
+Ultimate Colosseum,Havencraft,Legendary,6,Goddess of the West Wind,6vX5c
+Ultimate Colosseum,Portalcraft,Bronze,1,Sure-Sighted Lancer,6voB2
+Ultimate Colosseum,Portalcraft,Bronze,3,Gravity Grappler,6voBC
+Ultimate Colosseum,Portalcraft,Bronze,2,Begoggled Mole,6voBM
+Ultimate Colosseum,Portalcraft,Bronze,0,Focus,6vovw
+Ultimate Colosseum,Portalcraft,Silver,1,Barrage Brawler,6vqdI
+Ultimate Colosseum,Portalcraft,Silver,3,Boost Kicker,6vqdS
+Ultimate Colosseum,Portalcraft,Silver,3,Box of Puppets,6vr6Y
+Ultimate Colosseum,Portalcraft,Gold,2,Phantom Blade Wielder,6vt3Y
+Ultimate Colosseum,Portalcraft,Gold,4,Fearsome Fortress,6vt3i
+Ultimate Colosseum,Portalcraft,Gold,2,"Ameth, Dream Emissary",6vt3s
+Ultimate Colosseum,Portalcraft,Legendary,3,"Karula, Arts Master",6vvVo
+Ultimate Colosseum,Portalcraft,Legendary,10,Omniscient Kaiser,6vvVy
+Ultimate Colosseum,Portalcraft,Legendary,9,Vertex Colony,6vvW6
+World Uprooted,Neutral,Bronze,3,Plucky Treasure Hunter,6wZ02
+World Uprooted,Neutral,Bronze,2,Wayfaring Illustrator,6wZ0C
+World Uprooted,Neutral,Bronze,6,We've Got a Case!,6wZkw
+World Uprooted,Neutral,Silver,3,Romantic Chanteuse,6wbSI
+World Uprooted,Neutral,Silver,3,Goblin Warpack,6wcBA
+World Uprooted,Neutral,Gold,2,Changewing Cherub,6wduY
+World Uprooted,Neutral,Gold,7,Boom Devil,6wdui
+World Uprooted,Neutral,Gold,6,Mythcleaver,6weNo
+World Uprooted,Neutral,Legendary,3,"Gabriel, Heavenly Voice",6wgKo
+World Uprooted,Neutral,Legendary,7,Natur Al'machinus,6wgKy
+World Uprooted,Forestcraft,Bronze,5,Fairy Officer,6wxQY
+World Uprooted,Forestcraft,Bronze,2,Springleaf Sprite,6wxQi
+World Uprooted,Forestcraft,Bronze,1,Ironback Beetle,6wxQs
+World Uprooted,Forestcraft,Bronze,2,Take to the Canopies,6wy9Q
+World Uprooted,Forestcraft,Silver,2,Mechaboomerang Elf,6wzso
+World Uprooted,Forestcraft,Silver,6,Forest Hatcheteer,6wzsy
+World Uprooted,Forestcraft,Silver,4,Fairy Menhir,6w-M2
+World Uprooted,Forestcraft,Gold,5,Windfall Fay,6x0J2
+World Uprooted,Forestcraft,Gold,4,Ironglider Elf,6x0JC
+World Uprooted,Forestcraft,Gold,2,Intertwined Resolve,6x11w
+World Uprooted,Forestcraft,Legendary,12,Awakened Gaia,6x2lI
+World Uprooted,Forestcraft,Legendary,7,"Damian, Drillarm Brawler",6x2lS
+World Uprooted,Forestcraft,Legendary,3,Elf Queen of Abundant Life,6x2lc
+World Uprooted,Swordcraft,Bronze,2,Gizmo Courier,6xJr2
+World Uprooted,Swordcraft,Bronze,3,Nightclad Assassin,6xJrC
+World Uprooted,Swordcraft,Bronze,8,Impact Soldier,6xJrM
+World Uprooted,Swordcraft,Bronze,3,Wee Merchant's Appraisal,6xKZw
+World Uprooted,Swordcraft,Silver,3,"Gelt, Resolute Knight",6xMHI
+World Uprooted,Swordcraft,Silver,2,Panther Scout,6xMHS
+World Uprooted,Swordcraft,Silver,2,Levin Beastmaster,6xMHc
+World Uprooted,Swordcraft,Gold,3,Lady of the Lance,6xOjY
+World Uprooted,Swordcraft,Gold,2,Pompous Prince,6xOji
+World Uprooted,Swordcraft,Gold,3,Stroke of Conviction,6xPSQ
+World Uprooted,Swordcraft,Legendary,7,"Patrick, Rhiceros Knight",6xR9o
+World Uprooted,Swordcraft,Legendary,5,"Grayson, Rocket Blader",6xR9y
+World Uprooted,Swordcraft,Legendary,5,"Amelia, the Silverflash",6xRA6
+World Uprooted,Runecraft,Bronze,2,Device Diviner,6xiFY
+World Uprooted,Runecraft,Bronze,5,Frostrune Knight,6xiFi
+World Uprooted,Runecraft,Bronze,9,Aethereal Golem,6xiFs
+World Uprooted,Runecraft,Bronze,3,Mystic Absorption,6xi-Q
+World Uprooted,Runecraft,Silver,2,Earth Sorceress,6xkho
+World Uprooted,Runecraft,Silver,2,Vergewalker Magician,6xkhy
+World Uprooted,Runecraft,Silver,0,Spellbinder's Preparation,6xkxQ
+World Uprooted,Runecraft,Gold,3,Stormelementalist,6xn82
+World Uprooted,Runecraft,Gold,3,Formbender,6xn8C
+World Uprooted,Runecraft,Gold,2,Sorcery in Solidarity,6xnsw
+World Uprooted,Runecraft,Legendary,8,"Daria, Infinity Witch",6xpaI
+World Uprooted,Runecraft,Legendary,18,"Regalore, Steel Chimera",6xpaS
+World Uprooted,Runecraft,Legendary,2,"Uhlein, Grand Magus",6xpac
+World Uprooted,Dragoncraft,Bronze,4,Dragoon Medic,6y4g2
+World Uprooted,Dragoncraft,Bronze,6,Tonfa Dragonewt,6y4gC
+World Uprooted,Dragoncraft,Bronze,2,Rockback Ankylosaurus,6y4gM
+World Uprooted,Dragoncraft,Bronze,3,Dragonfolk's Wail,6y5Ow
+World Uprooted,Dragoncraft,Silver,4,Draconitron,6y76I
+World Uprooted,Dragoncraft,Silver,5,Petalspine Stegosaurus,6y76S
+World Uprooted,Dragoncraft,Silver,1,Scalebound Plight,6y7rA
+World Uprooted,Dragoncraft,Gold,3,Steelstorm Dragonewt,6y9YY
+World Uprooted,Dragoncraft,Gold,2,Steelcap Pachycephalosaurus,6y9Yi
+World Uprooted,Dragoncraft,Gold,3,Cursed Furor,6yAHQ
+World Uprooted,Dragoncraft,Legendary,2,"Rola, Inferno Dragoon",6yB-o
+World Uprooted,Dragoncraft,Legendary,6,Shipsbane Plesiosaurus,6yB-y
+World Uprooted,Dragoncraft,Legendary,6,"Jerva, Wyrm Transcendent",6yB_6
+World Uprooted,Shadowcraft,Bronze,4,Dancing Ghost,6yT4Y
+World Uprooted,Shadowcraft,Bronze,3,Spectral Servant,6yT4i
+World Uprooted,Shadowcraft,Bronze,5,Whole-Spirited Necromancer,6yT4s
+World Uprooted,Shadowcraft,Bronze,2,Ghastly Assault,6yTpQ
+World Uprooted,Shadowcraft,Silver,3,Beastly Medium,6yVWo
+World Uprooted,Shadowcraft,Silver,2,Triscythe Reaper,6yVWy
+World Uprooted,Shadowcraft,Silver,4,Fatal Order,6yWFg
+World Uprooted,Shadowcraft,Gold,2,Jackshovel Gravedigger,6yXz2
+World Uprooted,Shadowcraft,Gold,3,Sarcophagus Wraith,6yXzC
+World Uprooted,Shadowcraft,Gold,5,Friends Forever,6yYhw
+World Uprooted,Shadowcraft,Legendary,2,"Gremory, Death Teller",6yaPI
+World Uprooted,Shadowcraft,Legendary,10,He Who Once Rocked,6yaPS
+World Uprooted,Shadowcraft,Legendary,5,Nightmare Devourer,6yaPc
+World Uprooted,Bloodcraft,Bronze,2,Vampiric Bloodbinder,6yrV2
+World Uprooted,Bloodcraft,Bronze,4,Bloodstained Berserker,6yrVC
+World Uprooted,Bloodcraft,Bronze,5,Aloof Archfiend,6yrVM
+World Uprooted,Bloodcraft,Bronze,3,Cursebrand Strike,6ysDw
+World Uprooted,Bloodcraft,Silver,5,Moonlight Vampire,6ytxI
+World Uprooted,Bloodcraft,Silver,2,Hellspear Warrior,6ytxS
+World Uprooted,Bloodcraft,Silver,2,Wicked Pact,6yugA
+World Uprooted,Bloodcraft,Gold,3,Mechashot Devil,6ywNY
+World Uprooted,Bloodcraft,Gold,3,Ravening Corruption,6ywNi
+World Uprooted,Bloodcraft,Gold,2,Garnet Waltz,6yx6Q
+World Uprooted,Bloodcraft,Legendary,6,"Nerea, Beast Empress",6yypo
+World Uprooted,Bloodcraft,Legendary,4,"Neun, Daybreak Vampire",6yypy
+World Uprooted,Bloodcraft,Legendary,10,Ruinweb Spider,6yyq6
+World Uprooted,Havencraft,Bronze,2,Sol Sister,6zDvY
+World Uprooted,Havencraft,Bronze,4,Graywing Featherfolk,6zDvi
+World Uprooted,Havencraft,Bronze,3,Fortune Fowl,6zDvs
+World Uprooted,Havencraft,Bronze,2,Blind Justice,6zEeQ
+World Uprooted,Havencraft,Silver,4,Holylight Convert,6zGLo
+World Uprooted,Havencraft,Silver,3,Radiant Meus,6zGLy
+World Uprooted,Havencraft,Silver,2,Pilgrims' Path,6zGr2
+World Uprooted,Havencraft,Gold,2,Sweetwing Seraph,6zIo2
+World Uprooted,Havencraft,Gold,2,Robowhip Reverend,6zIoC
+World Uprooted,Havencraft,Gold,3,Major Prayers,6zJWw
+World Uprooted,Havencraft,Legendary,5,"Justine, Holy Al-mi'raj",6zLEI
+World Uprooted,Havencraft,Legendary,6,"Vice, Death Grip",6zLES
+World Uprooted,Havencraft,Legendary,5,"Garuda, Wings of Paradise",6zLEc
+World Uprooted,Portalcraft,Bronze,2,Android Artisan,6zcK2
+World Uprooted,Portalcraft,Bronze,3,Magic Gunsmith,6zcKC
+World Uprooted,Portalcraft,Bronze,3,Ironclad Armadillo,6zcKM
+World Uprooted,Portalcraft,Bronze,1,Syntonization,6zd2w
+World Uprooted,Portalcraft,Silver,8,Vibrochakram Thrower,6zemI
+World Uprooted,Portalcraft,Silver,1,Technomancer,6zemS
+World Uprooted,Portalcraft,Silver,4,Puppet Bomb,6zfVA
+World Uprooted,Portalcraft,Gold,4,Ironsting Archaeologist,6zhCY
+World Uprooted,Portalcraft,Gold,5,Lasershell Tortoise,6zhCi
+World Uprooted,Portalcraft,Gold,4,Rebel Against Fate,6zhxQ
+World Uprooted,Portalcraft,Legendary,2,"Ralmia, Sonic Racer",6zjeo
+World Uprooted,Portalcraft,Legendary,8,"Belphomet, Worldreaver",6zjey
+World Uprooted,Portalcraft,Legendary,6,Bearminator,6zjf6
+Fortune's Hand,Neutral,Bronze,8,Pureshot Angel,6-N92
+Fortune's Hand,Neutral,Bronze,4,Winged Courier,6-N9C
+Fortune's Hand,Neutral,Bronze,2,Sudden Showers,6-Ntw
+Fortune's Hand,Neutral,Silver,2,Cloud Gigas,6-PbI
+Fortune's Hand,Neutral,Silver,6,Titanic Showdown,6-Q4Y
+Fortune's Hand,Neutral,Gold,5,Starbright Deity,6-S1Y
+Fortune's Hand,Neutral,Gold,5,Archangel of Evocation,6-S1i
+Fortune's Hand,Neutral,Gold,4,Resolve of the Fallen,6-SmQ
+Fortune's Hand,Neutral,Legendary,6,"XXI. Zelgenea, The World",6-UTo
+Fortune's Hand,Neutral,Legendary,4,"Fieran, Havensent Wind God",6-UTy
+Fortune's Hand,Forestcraft,Bronze,4,Reclusive Ponderer,6-lZY
+Fortune's Hand,Forestcraft,Bronze,2,Blossoming Archer,6-lZi
+Fortune's Hand,Forestcraft,Bronze,7,Deepwood Wolf,6-lZs
+Fortune's Hand,Forestcraft,Bronze,4,Fairy Assault,6-mIQ
+Fortune's Hand,Forestcraft,Silver,5,Optimistic Beastmaster,6-n_o
+Fortune's Hand,Forestcraft,Silver,1,Lumbering Carapace,6-n_y
+Fortune's Hand,Forestcraft,Silver,2,Soothing Spell,6-okg
+Fortune's Hand,Forestcraft,Gold,4,Chipper Skipper,6-qS2
+Fortune's Hand,Forestcraft,Gold,7,"Lionel, Woodland Shadow",6-qSC
+Fortune's Hand,Forestcraft,Gold,3,Life Banquet,6-rAw
+Fortune's Hand,Forestcraft,Legendary,3,"XII. Wolfraud, Hanged Man",6-suI
+Fortune's Hand,Forestcraft,Legendary,6,Terrorformer,6-suS
+Fortune's Hand,Forestcraft,Legendary,3,"Aerin, Forever Brilliant",6-suc
+Fortune's Hand,Swordcraft,Bronze,9,Selfless Noble,6_7-2
+Fortune's Hand,Swordcraft,Bronze,5,Strikelance Knight,6_7-C
+Fortune's Hand,Swordcraft,Bronze,2,Honorable Thief,6_7-M
+Fortune's Hand,Swordcraft,Bronze,1,Pompous Summons,6_8iw
+Fortune's Hand,Swordcraft,Silver,3,Empress of Serenity,6_AQI
+Fortune's Hand,Swordcraft,Silver,1,"Ernesta, Weapons Hawker",6_AQS
+Fortune's Hand,Swordcraft,Silver,2,Shield Phalanx,6_B9A
+Fortune's Hand,Swordcraft,Gold,4,Prudent General,6_CsY
+Fortune's Hand,Swordcraft,Gold,2,"Ilmisuna, Discord Hawker",6_Csi
+Fortune's Hand,Swordcraft,Gold,1,Decisive Strike,6_DbQ
+Fortune's Hand,Swordcraft,Legendary,3,"VII. Oluon, The Chariot",6_FIo
+Fortune's Hand,Swordcraft,Legendary,6,Diamond Paladin,6_FIy
+Fortune's Hand,Swordcraft,Legendary,4,"Alyaska, War Hawker",6_FJ6
+Fortune's Hand,Runecraft,Bronze,2,Creative Conjurer,6_WOY
+Fortune's Hand,Runecraft,Bronze,3,Arcane Auteur,6_WOi
+Fortune's Hand,Runecraft,Bronze,4,Piquant Potioneer,6_WOs
+Fortune's Hand,Runecraft,Bronze,1,Magical Augmentation,6_X7Q
+Fortune's Hand,Runecraft,Silver,1,Juggling Moggy,6_Yqo
+Fortune's Hand,Runecraft,Silver,5,Sweetspell Sorcerer,6_Yqy
+Fortune's Hand,Runecraft,Silver,2,Authoring Tomorrow,6_ZZg
+Fortune's Hand,Runecraft,Gold,4,Imperator of Magic,6_bH2
+Fortune's Hand,Runecraft,Gold,8,Alchemical Craftschief,6_bHC
+Fortune's Hand,Runecraft,Gold,2,Madcap Conjuration,6_b_w
+Fortune's Hand,Runecraft,Legendary,2,"0. Lhynkal, The Fool",6_djI
+Fortune's Hand,Runecraft,Legendary,6,Adamantine Golem,6_djS
+Fortune's Hand,Runecraft,Legendary,2,"Runie, Resolute Diviner",6_djc
+Fortune's Hand,Dragoncraft,Bronze,2,Springwell Dragon Keeper,6_up2
+Fortune's Hand,Dragoncraft,Bronze,1,Dragonclad Lancer,6_upC
+Fortune's Hand,Dragoncraft,Bronze,2,Tropical Grouper,6_upM
+Fortune's Hand,Dragoncraft,Bronze,3,Dragon Spawning,6_vXw
+Fortune's Hand,Dragoncraft,Silver,3,Heliodragon,6_xFI
+Fortune's Hand,Dragoncraft,Silver,2,Wavecrest Angler,6_xFS
+Fortune's Hand,Dragoncraft,Silver,4,Dragon Impact,6_x-A
+Fortune's Hand,Dragoncraft,Gold,3,Slaughtering Dragonewt,6_zhY
+Fortune's Hand,Dragoncraft,Gold,6,Eternal Whale,6_zhi
+Fortune's Hand,Dragoncraft,Gold,2,Draconic Call,6_-QQ
+Fortune's Hand,Dragoncraft,Legendary,10,"XI. Erntz, Justice",7007o
+Fortune's Hand,Dragoncraft,Legendary,3,Turncoat Dragon Summoner,7007y
+Fortune's Hand,Dragoncraft,Legendary,3,"Filene, Absolute Zero",70086
+Fortune's Hand,Shadowcraft,Bronze,4,Death Fowl,70HDY
+Fortune's Hand,Shadowcraft,Bronze,3,Spirit Curator,70HDi
+Fortune's Hand,Shadowcraft,Bronze,5,Soul Box,70HDs
+Fortune's Hand,Shadowcraft,Bronze,2,Savoring Slash,70HyQ
+Fortune's Hand,Shadowcraft,Silver,6,Cloistered Sacristan,70Jfo
+Fortune's Hand,Shadowcraft,Silver,2,Ghostly Maid,70Jfy
+Fortune's Hand,Shadowcraft,Silver,2,Coffin of the Unknown Soul,70K92
+Fortune's Hand,Shadowcraft,Gold,9,Deathbringer,70M62
+Fortune's Hand,Shadowcraft,Gold,2,Bonenanza Necromancer,70M6C
+Fortune's Hand,Shadowcraft,Gold,2,Forced Resurrection,70Mqw
+Fortune's Hand,Shadowcraft,Legendary,5,"VI. Milteo, The Lovers",70OYI
+Fortune's Hand,Shadowcraft,Legendary,8,Conquering Dreadlord,70OYS
+Fortune's Hand,Shadowcraft,Legendary,6,"Nephthys, Goddess of Amenta",70OYc
+Fortune's Hand,Bloodcraft,Bronze,2,Moonrise Werewolf,70fe2
+Fortune's Hand,Bloodcraft,Bronze,1,Silverbolt Hunter,70feC
+Fortune's Hand,Bloodcraft,Bronze,4,Curmudgeon Ogre,70feM
+Fortune's Hand,Bloodcraft,Bronze,2,Dark Summons,70gMw
+Fortune's Hand,Bloodcraft,Silver,3,Tyrant of Mayhem,70i4I
+Fortune's Hand,Bloodcraft,Silver,2,Whiplash Imp,70i4S
+Fortune's Hand,Bloodcraft,Silver,5,Burning Constriction,70ipA
+Fortune's Hand,Bloodcraft,Gold,7,Vampire of Calamity,70kWY
+Fortune's Hand,Bloodcraft,Gold,2,Contemptuous Demon,70kWi
+Fortune's Hand,Bloodcraft,Gold,1,Nightscreech,70lFQ
+Fortune's Hand,Bloodcraft,Legendary,9,"XIV. Luzen, Temperance",70myo
+Fortune's Hand,Bloodcraft,Legendary,4,"Darhold, Abyssal Contract",70myy
+Fortune's Hand,Bloodcraft,Legendary,3,Baal,70mz6
+Fortune's Hand,Havencraft,Bronze,4,Priestess of Foresight,7122Y
+Fortune's Hand,Havencraft,Bronze,2,Stalwart Featherfolk,7122i
+Fortune's Hand,Havencraft,Bronze,2,Prismaplume Bird,7122s
+Fortune's Hand,Havencraft,Bronze,4,Holybright Altar,712Xo
+Fortune's Hand,Havencraft,Silver,3,Four-Pillar Tortoise,714Uo
+Fortune's Hand,Havencraft,Silver,6,Puresong Priest,714Uy
+Fortune's Hand,Havencraft,Silver,1,Jeweled Brilliance,715Dg
+Fortune's Hand,Havencraft,Gold,5,Reverend Adjudicator,716x2
+Fortune's Hand,Havencraft,Gold,3,"Lorena, Iron-Willed Priest",716xC
+Fortune's Hand,Havencraft,Gold,1,Temple of Heresy,717QI
+Fortune's Hand,Havencraft,Legendary,5,"VIII. Sofina, Strength",719NI
+Fortune's Hand,Havencraft,Legendary,3,"Sarissa, Luxflash Spear",719NS
+Fortune's Hand,Havencraft,Legendary,5,"Ra, Radiance Incarnate",719Nc
+Fortune's Hand,Portalcraft,Bronze,2,Marionette Expert,71QT2
+Fortune's Hand,Portalcraft,Bronze,1,Robotic Engineer,71QTC
+Fortune's Hand,Portalcraft,Bronze,3,Steelslash Tiger,71QTM
+Fortune's Hand,Portalcraft,Bronze,5,Pop Goes the Poppet,71RBw
+Fortune's Hand,Portalcraft,Silver,2,Cat Tuner,71SvI
+Fortune's Hand,Portalcraft,Silver,4,Powerlifting Puppeteer,71SvS
+Fortune's Hand,Portalcraft,Silver,1,Artifact Scan,71TeA
+Fortune's Hand,Portalcraft,Gold,5,Mind Splitter,71VLY
+Fortune's Hand,Portalcraft,Gold,2,"Lazuli, Gateway Homunculus",71VLi
+Fortune's Hand,Portalcraft,Gold,3,Inverted Manipulation,71W4Q
+Fortune's Hand,Portalcraft,Legendary,3,"X. Slaus, Wheel of Fortune",71Xno
+Fortune's Hand,Portalcraft,Legendary,4,Dimension Dominator,71Xny
+Fortune's Hand,Portalcraft,Legendary,5,"Lucille, Keeper of Relics",71Xo6
+Storm over Rivayle,Neutral,Bronze,1,Rivaylian Bandit,72BI2
+Storm over Rivayle,Neutral,Bronze,2,Quixotic Adventurer,72BIC
+Storm over Rivayle,Neutral,Bronze,3,Spice Shower,72C0w
+Storm over Rivayle,Neutral,Silver,3,Vagabond Lizard,72DkI
+Storm over Rivayle,Neutral,Silver,5,Supercharged Guitarist,72DkS
+Storm over Rivayle,Neutral,Gold,2,Wandering Chef,72GAY
+Storm over Rivayle,Neutral,Gold,4,Embodiment of Cocytus,72GvQ
+Storm over Rivayle,Neutral,Legendary,10,"Lucifer, Fallen Angel",72Ico
+Storm over Rivayle,Neutral,Legendary,2,Ramiel,72Icy
+Storm over Rivayle,Forestcraft,Bronze,3,Lookout Elf,72ZiY
+Storm over Rivayle,Forestcraft,Bronze,2,Forest Patroller,72Zii
+Storm over Rivayle,Forestcraft,Bronze,1,Cactus Cowboy,72Zis
+Storm over Rivayle,Forestcraft,Bronze,3,Hornet Strike,72aRQ
+Storm over Rivayle,Forestcraft,Silver,5,"Carmine, Breaker of Smiles",72c8o
+Storm over Rivayle,Forestcraft,Silver,4,Varmint Hunter,72c8y
+Storm over Rivayle,Forestcraft,Silver,2,Corrosive Thorns,72ctg
+Storm over Rivayle,Forestcraft,Gold,6,Giant Pastures,72eb2
+Storm over Rivayle,Forestcraft,Gold,2,"Sukuna, Mighty Malleteer",72ebC
+Storm over Rivayle,Forestcraft,Legendary,1,"Shamu & Shama, Posh Felines",72h1I
+Storm over Rivayle,Forestcraft,Legendary,5,"Loxis, Homestead Pioneer",72h1S
+Storm over Rivayle,Swordcraft,Bronze,3,Frontline Instructor,72y72
+Storm over Rivayle,Swordcraft,Bronze,2,Naht's Henchman,72y7C
+Storm over Rivayle,Swordcraft,Bronze,1,Shinobi Tanuki,72y7M
+Storm over Rivayle,Swordcraft,Bronze,3,Bandit Raid,72yrw
+Storm over Rivayle,Swordcraft,Silver,3,Outlaw Gunner,72-ZI
+Storm over Rivayle,Swordcraft,Silver,5,Stalwart Slinger,72-ZS
+Storm over Rivayle,Swordcraft,Silver,1,Dramatic Retreat,72_IA
+Storm over Rivayle,Swordcraft,Gold,5,"Reinhardt, the Deathless",730_Y
+Storm over Rivayle,Swordcraft,Gold,3,Graceful Maneuver,731kQ
+Storm over Rivayle,Swordcraft,Legendary,5,"Bunny & Baron, Specter Duo",733Ro
+Storm over Rivayle,Swordcraft,Legendary,4,"Nahtnaught, Cursed Queen",733Ry
+Storm over Rivayle,Runecraft,Bronze,2,Rivaylian Deputy,73KXY
+Storm over Rivayle,Runecraft,Bronze,4,Mirror Witch,73KXi
+Storm over Rivayle,Runecraft,Bronze,3,Crystal Fencer,73KXs
+Storm over Rivayle,Runecraft,Bronze,4,Terra Nova,73LGQ
+Storm over Rivayle,Runecraft,Silver,5,Artistic Arcanist,73Mzo
+Storm over Rivayle,Runecraft,Silver,7,Golem Marshal,73Mzy
+Storm over Rivayle,Runecraft,Silver,2,Scorching Blast,73Nig
+Storm over Rivayle,Runecraft,Gold,3,Magical Gunslinger,73PQ2
+Storm over Rivayle,Runecraft,Gold,4,"Faust, Overzealous Observer",73PQC
+Storm over Rivayle,Runecraft,Legendary,1,"Maiser, Neighborhood Hero",73RsI
+Storm over Rivayle,Runecraft,Legendary,4,"Vincent, the Peacekeeper",73RsS
+Storm over Rivayle,Dragoncraft,Bronze,3,Mermaid Guide,73iy2
+Storm over Rivayle,Dragoncraft,Bronze,1,Wyrmfire Engineer,73iyC
+Storm over Rivayle,Dragoncraft,Bronze,8,Pumpkin Dragon,73iyM
+Storm over Rivayle,Dragoncraft,Bronze,2,Thunderous Roar,73jgw
+Storm over Rivayle,Dragoncraft,Silver,7,Azureflame Dragonewt,73lOI
+Storm over Rivayle,Dragoncraft,Silver,2,Dragonfolk Artificer,73lOS
+Storm over Rivayle,Dragoncraft,Silver,2,Draconic Counsel,73m7A
+Storm over Rivayle,Dragoncraft,Gold,2,Resplendent Phoenix,73nqY
+Storm over Rivayle,Dragoncraft,Gold,3,Balefire Wrenchsmith,73nqi
+Storm over Rivayle,Dragoncraft,Legendary,10,Dragon-Devouring Dread,73qGo
+Storm over Rivayle,Dragoncraft,Legendary,3,"Reggie, Peerless Artisan",73qGy
+Storm over Rivayle,Shadowcraft,Bronze,3,Grudge Teller,745MY
+Storm over Rivayle,Shadowcraft,Bronze,1,Bone Fanatic,745Mi
+Storm over Rivayle,Shadowcraft,Bronze,2,Skeleton Dreamer,745Ms
+Storm over Rivayle,Shadowcraft,Bronze,1,Cursed Coin,745ro
+Storm over Rivayle,Shadowcraft,Silver,6,Gold Mine Necromancer,747oo
+Storm over Rivayle,Shadowcraft,Silver,4,Abysmal Wraith,747oy
+Storm over Rivayle,Shadowcraft,Silver,4,Necroimpulse,748Xg
+Storm over Rivayle,Shadowcraft,Gold,4,Greatpick Corpse,74AF2
+Storm over Rivayle,Shadowcraft,Gold,2,Death of the Party,74AkI
+Storm over Rivayle,Shadowcraft,Legendary,2,Gold Rush Ghost,74ChI
+Storm over Rivayle,Shadowcraft,Legendary,7,Invincible Monster Trio,74ChS
+Storm over Rivayle,Bloodcraft,Bronze,2,Scrappy Werewolf,74Tn2
+Storm over Rivayle,Bloodcraft,Bronze,9,Fulminating Berserker,74TnC
+Storm over Rivayle,Bloodcraft,Bronze,6,Roulette Vampire,74TnM
+Storm over Rivayle,Bloodcraft,Bronze,3,Spiderweb Array,74UVw
+Storm over Rivayle,Bloodcraft,Silver,2,Craps Devil,74WDI
+Storm over Rivayle,Bloodcraft,Silver,3,Redcap,74WDS
+Storm over Rivayle,Bloodcraft,Silver,1,Bloodfall,74WyA
+Storm over Rivayle,Bloodcraft,Gold,2,Showdown Demon,74YfY
+Storm over Rivayle,Bloodcraft,Gold,4,"Hazhan, Demonblade Knight",74Yfi
+Storm over Rivayle,Bloodcraft,Legendary,7,"Volteo, Hedonistic Dealer",74b5o
+Storm over Rivayle,Bloodcraft,Legendary,3,"Vuella, Unblemished Wings",74b5y
+Storm over Rivayle,Havencraft,Bronze,1,Sacred Stone Apostle,74sBY
+Storm over Rivayle,Havencraft,Bronze,3,Enchanted Knight,74sBi
+Storm over Rivayle,Havencraft,Bronze,9,Revolver Eagle,74sBs
+Storm over Rivayle,Havencraft,Bronze,5,Benevolent Blight,74swQ
+Storm over Rivayle,Havencraft,Silver,5,Shady Priest,74udo
+Storm over Rivayle,Havencraft,Silver,7,Set,74udy
+Storm over Rivayle,Havencraft,Silver,2,Pure Metamorphosis,74vMg
+Storm over Rivayle,Havencraft,Gold,2,Vengeful Sniper,74x42
+Storm over Rivayle,Havencraft,Gold,4,Holy Sanctuary,74xJg
+Storm over Rivayle,Havencraft,Legendary,4,"Selena, Sugarkiss Assassin",74zWI
+Storm over Rivayle,Havencraft,Legendary,7,"Anvelt, Judgment's Cannon",74zWS
+Storm over Rivayle,Portalcraft,Bronze,3,Yo-Yo Beam Girl,75Ec2
+Storm over Rivayle,Portalcraft,Bronze,1,Stringmaster,75EcC
+Storm over Rivayle,Portalcraft,Bronze,4,Wretch,75EcM
+Storm over Rivayle,Portalcraft,Bronze,1,Mechanical Designs,75FKw
+Storm over Rivayle,Portalcraft,Silver,0,Capsule Homunculus,75H2I
+Storm over Rivayle,Portalcraft,Silver,2,Railmender Coyote,75H2S
+Storm over Rivayle,Portalcraft,Silver,2,Scavenge,75HnA
+Storm over Rivayle,Portalcraft,Gold,4,"Carnelia, Servant of Darkness",75JUY
+Storm over Rivayle,Portalcraft,Gold,0,Elemental Brink,75KDQ
+Storm over Rivayle,Portalcraft,Legendary,1,"Illganeau, Horror Astray",75Lwo
+Storm over Rivayle,Portalcraft,Legendary,7,"Iceschillendrig, Gilded Autocrat",75Lwy
+Promo,Forestcraft,Legendary,3,Ancient Elf,fof0I
+Promo,Swordcraft,Legendary,6,Sea Queen Otohime,fp1Qo
+Promo,Runecraft,Legendary,4,Merlin,fpPrI
+Promo,Dragoncraft,Legendary,6,Dark Dragoon Forte,fpoFo
+Promo,Shadowcraft,Legendary,5,Cerberus,fqAgI
+Promo,Bloodcraft,Legendary,6,Queen Vampire,fqZ4o
+Promo,Havencraft,Legendary,8,Jeanne d'Arc,fqxVI
+Promo,Forestcraft,Bronze,1,Airbound Barrage,fsMZQ
+Promo,Swordcraft,Bronze,1,"Ta-G, Katana Unsheathed",fskF2
+Promo,Swordcraft,Silver,2,Lancer,fsmhI
+Promo,Runecraft,Silver,3,Concentration,ft9qg
+Promo,Dragoncraft,Gold,6,Chaos Dragonrider AGRS,ftZyY
+Promo,Dragoncraft,Gold,3,Avowed Strike,ftahQ
+Promo,Shadowcraft,Bronze,5,Saber Alter,fttUY
+Promo,Bloodcraft,Silver,2,Snarling Chains,fuJ4A
+Promo,Havencraft,Silver,5,Berserker,fuglo
+Promo,Forestcraft,Legendary,8,Deepwood Anomaly,fwHII
+Promo,Swordcraft,Legendary,5,"Albert, Levin Saber",fwfio
+Promo,Runecraft,Legendary,6,Hulking Giant,fx27I
+Promo,Dragoncraft,Legendary,5,Sibyl of the Waterwyrm,fxQXo
+Promo,Shadowcraft,Legendary,8,Nephthys,fxoyI
+Promo,Bloodcraft,Legendary,4,Belphegor,fyBMo
+Promo,Havencraft,Legendary,9,Heavenly Aegis,fyZnI
+Chronogenesis,Forestcraft,Legendary,4,"Aria, Guiding Fairy",f-5RI
+Rise of Bahamut,Swordcraft,Legendary,5,"Albert, Levin Saber",f-Tro
+Rise of Bahamut,Runecraft,Legendary,9,"Daria, Dimensional Witch",f-sGI
+Rise of Bahamut,Dragoncraft,Legendary,9,"Aldos, Imperial Dragoon",f_Ego
+Standard Card Pack,Shadowcraft,Legendary,5,Cerberus,f_d5I
+Basic,Bloodcraft,Bronze,4,"Exella, Dark General",f_uB2
+Standard Card Pack,Havencraft,Legendary,6,"Ramina, Moon Al-mi'raj",g0NwI
+Chronogenesis,Portalcraft,Legendary,5,"Spinaria, Keeper of Enigmas",g0mKo
+Promo,Forestcraft,Bronze,2,Sylvan Justice,g1o-Q
+Promo,Swordcraft,Bronze,1,Unbridled Fury,g2BOw
+Promo,Runecraft,Bronze,1,Insight,g2ZpQ
+Promo,Dragoncraft,Bronze,2,Dragon Oracle,g2yDw
+Promo,Shadowcraft,Bronze,2,Undying Resentment,g3KeQ
+Promo,Bloodcraft,Bronze,2,Razory Claw,g3j34
+Promo,Havencraft,Bronze,2,Hallowed Dogma,g45TQ
+Promo,Portalcraft,Bronze,2,Dimension Cut,g4Ttw
+Starforged Legends,Forestcraft,Legendary,6,Cassiopeia,g5jjI
+Chronogenesis,Swordcraft,Legendary,6,Darksaber Melissa,g667o
+Wonderland Dreams,Runecraft,Legendary,5,Wizardess of Oz,g6UYI
+Dawnbreak Nightedge,Dragoncraft,Legendary,2,Whitefrost Dragonewt Filene,g6syo
+Rebirth of Glory,Shadowcraft,Legendary,4,"Aisha, Underworld Sovereign",g7FNI
+Starforged Legends,Bloodcraft,Legendary,4,Venomfang Medusa,g7dno
+Dawnbreak Nightedge,Havencraft,Legendary,7,Godsworn Alexiel,g80CI
+Dawnbreak Nightedge,Portalcraft,Legendary,8,"Orchis, Puppet Girl",g8Oco
+Promo,Neutral,Gold,2,Paradise Vanguard,g96_Y
+Promo,Neutral,Gold,2,Seraphic Blade,g97kQ
+Promo,Forestcraft,Silver,2,Predatory Might,gDHrg
+Promo,Swordcraft,Bronze,2,Godsent Stride,gDdpw
+Promo,Runecraft,Bronze,2,Witch Snap,gE0EQ
+Promo,Dragoncraft,Gold,2,Powerforge,gETXQ
+Promo,Shadowcraft,Bronze,2,Manifest Malice,gEn3Q
+Promo,Bloodcraft,Gold,3,Relinquish Reason,gFEMQ
+Promo,Havencraft,Gold,4,Vengeful Radiance,gFcmw
+Promo,Portalcraft,Bronze,1,Joy of Destruction,gFwIw
+Promo,Forestcraft,Bronze,1,Nature's Guidance,gH3YQ
+Promo,Forestcraft,Bronze,3,Harvest Season,gH3Ya
+Promo,Forestcraft,Silver,3,Arboreal Core,gH5VQ
+Promo,Swordcraft,Silver,3,Glorious Core,gHTvw
+Promo,Swordcraft,Silver,2,Ivory Sword Dance,gHUPA
+Promo,Swordcraft,Silver,1,King's Welcome,gHUPK
+Promo,Swordcraft,Gold,2,Elegance in Action,gHWrQ
+Promo,Runecraft,Bronze,5,Fate's Hand,gHqNQ
+Promo,Runecraft,Bronze,2,Wind Blast,gHqNa
+Promo,Runecraft,Bronze,2,Magic Missile,gHqNk
+Promo,Runecraft,Silver,3,Sagacious Core,gHsKQ
+Promo,Runecraft,Silver,3,Sagacious Core,gHsKa
+Promo,Dragoncraft,Bronze,4,Overwhelming Crush,gICnw
+Promo,Dragoncraft,Silver,3,Draconic Core,gIEkw
+Promo,Shadowcraft,Silver,3,Phantasmal Core,gId9Q
+Promo,Bloodcraft,Bronze,2,Entrancing Blow,gIzcw
+Promo,Bloodcraft,Silver,3,Sanguine Core,gI_Zw
+Promo,Havencraft,Silver,3,Saintly Core,gJN-Q
+Promo,Portalcraft,Silver,3,Alpha Core,gJmOw
+Promo,Portalcraft,Gold,1,Augmentation Bestowal,gJpKQ
+Promo,Portalcraft,Gold,2,Artifact Call,gJpKa
+Promo,Neutral,Gold,8,Mechawing Angel,gKZQY
+Promo,Neutral,Gold,4,Angelic Smite,gKa9Q
+Omen of the Ten,Forestcraft,Legendary,3,"Liza, Queen of the Forest",gOoQI
+Altersphere,Swordcraft,Legendary,10,"Dionne, Dancing Blade",gPAqo
+Ultimate Colosseum,Runecraft,Gold,3,"Kyoka, Prize Pupil",gPWp2
+Omen of the Ten,Runecraft,Legendary,20,"Teo, Prophetess of Creation",gPZFI
+Omen of the Ten,Dragoncraft,Legendary,5,"Galmieux, Omen of Disdain",gPxfo
+Ultimate Colosseum,Shadowcraft,Gold,1,"Miyako, Pudding Poltergeist",gQHe2
+Steel Rebellion,Shadowcraft,Legendary,4,"Aenea, Amethyst Rebel",gQK4I
+Steel Rebellion,Bloodcraft,Legendary,2,"Mono, Garnet Rebel",gQiUo
+Omen of the Ten,Havencraft,Legendary,8,"Lapis, Glorious Seraph",gR4vI
+Omen of the Ten,Portalcraft,Legendary,4,"Lishenna, Omen of Destruction",gRTJo
+Promo,Neutral,Bronze,2,Travelers' Respite,gS7Yw
+Promo,Neutral,Gold,2,Desert Pathfinder,gSBiY
+Promo,Neutral,Gold,4,Resolve of the Fallen,gW0aQ
+Promo,Forestcraft,Bronze,2,Sylvan Justice,gWK6Q
+Promo,Forestcraft,Silver,1,Spiritshine,gWMYg
+Promo,Forestcraft,Silver,2,Soothing Spell,gWMYq
+Promo,Swordcraft,Bronze,4,Breakneck Draw,gWiWw
+Promo,Swordcraft,Bronze,3,Forge Weaponry,gWiX4
+Promo,Swordcraft,Gold,1,Decisive Strike,gWnPQ
+Promo,Runecraft,Bronze,8,Fiery Embrace,gX4xQ
+Promo,Runecraft,Bronze,2,Conjure Golem,gX4xa
+Promo,Dragoncraft,Bronze,1,Flamewinged Might,gXTLw
+Promo,Dragoncraft,Bronze,2,Dragon Oracle,gXTM4
+Promo,Dragoncraft,Gold,2,Draconic Call,gXYEQ
+Promo,Shadowcraft,Bronze,2,Undying Resentment,gXrmQ
+Promo,Shadowcraft,Silver,4,Fatal Order,gXuCg
+Promo,Bloodcraft,Bronze,2,Blood Pact,gYEAw
+Promo,Bloodcraft,Silver,5,Burning Constriction,gYGdA
+Promo,Havencraft,Bronze,2,Blackened Scripture,gYcbQ
+Promo,Havencraft,Bronze,2,Blackened Scripture,gYcba
+Promo,Havencraft,Gold,1,Golden Bell,gYhEI
+Promo,Portalcraft,Bronze,0,Focus,gY-_w
+Promo,Portalcraft,Silver,1,Metadivision,gZ1SA
+Promo,Portalcraft,Silver,1,Artifact Scan,gZ1SK
+Verdant Conflict,Forestcraft,Legendary,5,"Ladica, the Stoneclaw",gaErI
+Verdant Conflict,Dragoncraft,Legendary,4,"Valdain, Cursed Shadow",gbO4o
+Token,Neutral,Bronze,5,Tin Soldier,rfHG2
+Token,Neutral,Bronze,3,Club Soldier,rfHGC
+Token,Neutral,Bronze,3,Heart Guardian,rfHGM
+Token,Neutral,Bronze,3,Spade Raider,rfHGW
+Token,Neutral,Bronze,3,Elsam of the Brofamily,rfHGg
+Token,Neutral,Bronze,3,Tomoi of the Brofamily,rfHGq
+Token,Neutral,Bronze,9,Human! Pyramid! Attack!,rfHG-
+Token,Neutral,Bronze,1,Assembly Droid,rfHH8
+Token,Neutral,Bronze,1,Naterran Great Tree,rfHVg
+Token,Neutral,Bronze,1,Dutiful Steed,rfHVq
+Token,Neutral,Bronze,2,Bullet Bike,rfHV-
+Token,Neutral,Bronze,3,Arcane Personnel Carrier,rfHW8
+Token,Neutral,Bronze,1,Repair Mode,rfH-w
+Token,Neutral,Silver,2,Ultimate Carrot,rfJiI
+Token,Neutral,Gold,4,Goblin King,rfM8Y
+Token,Neutral,Gold,3,Fallen Angel,rfM8i
+Token,Neutral,Gold,1,Ruthful Droplet,rfMtQ
+Token,Neutral,Gold,3,Ruthless Waterspout,rfMta
+Token,Neutral,Gold,1,Nourishing Fare,rfMtk
+Token,Neutral,Gold,1,Flaming-Hot Fare,rfMtu
+Token,Neutral,Legendary,5,Servant of Darkness,rfOao
+Token,Neutral,Legendary,6,Silent Rider,rfOay
+Token,Neutral,Legendary,7,Flame and Glass,rfOb6
+Token,Neutral,Legendary,3,Amaterasu,rfObG
+Token,Neutral,Legendary,3,Tsukuyomi,rfObQ
+Token,Neutral,Legendary,5,Flamelord of Deceit,rfOba
+Token,Neutral,Legendary,4,Scion of Desire,rfObk
+Token,Neutral,Legendary,6,Scorpion of Greed,rfObu
+Token,Neutral,Legendary,8,Heretical Hellbeast,rfOc2
+Token,Neutral,Legendary,2,Wrathful Icefiend,rfOcC
+Token,Neutral,Legendary,3,Vicious Commander,rfOcM
+Token,Neutral,Legendary,6,Demon of Purgatory,rfOcW
+Token,Neutral,Legendary,7,Gluttonous Behemoth,rfOcg
+Token,Neutral,Legendary,7,Dis's Damnation,rfPJg
+Token,Neutral,Legendary,10,Astaroth's Reckoning,rfPJq
+Token,Neutral,Legendary,3,Morrigna's Gospel,rfPJ-
+Token,Neutral,Legendary,1,Infernal Gaze,rfPK8
+Token,Neutral,Legendary,1,Infernal Surge,rfPKI
+Token,Neutral,Legendary,2,Heavenfall,rfPKS
+Token,Neutral,Legendary,4,Earthfall,rfPKc
+Token,Forestcraft,Bronze,1,Fairy,rffgY
+Token,Forestcraft,Bronze,0,Fairy Wisp,rffgi
+Token,Forestcraft,Bronze,1,Fairy's Yawn,rfg9o
+Token,Forestcraft,Bronze,1,Fairy's Awakening,rfg9y
+Token,Forestcraft,Silver,2,Hornet Warrior,rfi6o
+Token,Forestcraft,Silver,1,Angel's Dress,rfirg
+Token,Forestcraft,Silver,1,Demon's Dress,rfirq
+Token,Forestcraft,Silver,3,Hornet Sting,rfir-
+Token,Forestcraft,Gold,3,Skystride Raptor,rfkZ2
+Token,Forestcraft,Gold,2,"Paula, Gentle Warmth",rfkZC
+Token,Forestcraft,Gold,2,"Paula, Passionate Warmth",rfkZM
+Token,Forestcraft,Gold,2,Shamu's Antics,rflHw
+Token,Forestcraft,Gold,2,Shama's Gaze,rflI4
+Token,Forestcraft,Gold,2,Righteous Evocation,rflIE
+Token,Forestcraft,Gold,0,Arisa's Leadership,rflIO
+Token,Forestcraft,Gold,0,Ladica's Embrace,rflIY
+Token,Forestcraft,Legendary,4,Crystalia Eve,rfm_I
+Token,Forestcraft,Legendary,3,Gentle Forest Beauty,rfm_S
+Token,Forestcraft,Legendary,3,Irate Forest Beast,rfm_c
+Token,Forestcraft,Legendary,7,"Lymaga, Forest Champion",rfm_m
+Token,Forestcraft,Legendary,2,Thorn Burst,rfnkA
+Token,Forestcraft,Legendary,0,Blessings of Creation,rfnkK
+Token,Forestcraft,Legendary,0,Wrath of Nature,rfnkU
+Token,Forestcraft,Legendary,1,Fil,rfnke
+Token,Forestcraft,Legendary,1,Carbuncle's Sparkle,rfnko
+Token,Forestcraft,Legendary,3,Send 'Em Packing,rfnky
+Token,Forestcraft,Legendary,0,Treacherous Reversal,rfnl6
+Token,Swordcraft,Bronze,1,Knight,rg252
+Token,Swordcraft,Bronze,1,Heavy Knight,rg25C
+Token,Swordcraft,Bronze,2,Steelclad Knight,rg25M
+Token,Swordcraft,Bronze,3,Pirate,rg25W
+Token,Swordcraft,Bronze,3,Viking,rg25g
+Token,Swordcraft,Bronze,3,Fortress Guard,rg25q
+Token,Swordcraft,Bronze,1,Shield Guardian,rg25-
+Token,Swordcraft,Bronze,2,Buccaneer,rg268
+Token,Swordcraft,Bronze,2,Cannoneer,rg26I
+Token,Swordcraft,Bronze,2,Marine Raider,rg26S
+Token,Swordcraft,Bronze,1,Gilded Blade,rg2pw
+Token,Swordcraft,Bronze,1,Gilded Goblet,rg2q4
+Token,Swordcraft,Bronze,1,Gilded Boots,rg2qE
+Token,Swordcraft,Bronze,1,Gilded Necklace,rg2qO
+Token,Swordcraft,Silver,1,Dread Hound,rg4XI
+Token,Swordcraft,Silver,2,Greatshield,rg50Y
+Token,Swordcraft,Silver,2,Greatsword,rg50i
+Token,Swordcraft,Silver,5,Holy Purebomb,rg5GA
+Token,Swordcraft,Silver,1,Fatal Spellbomb,rg5GK
+Token,Swordcraft,Silver,4,Flarewing Spear,rg5GU
+Token,Swordcraft,Silver,2,Frostwing Spear,rg5Ge
+Token,Swordcraft,Gold,4,Queen Hemera the White,rg6zY
+Token,Swordcraft,Gold,4,Queen Magnus the Black,rg6zi
+Token,Swordcraft,Gold,0,"Evyn, Novice Agent",rg6zs
+Token,Swordcraft,Gold,5,"Vane, Indomitable Knight",rg6-0
+Token,Swordcraft,Gold,5,"Siegfried, Dragonslayer",rg6-A
+Token,Swordcraft,Gold,5,"Lancelot, Twinfang Prodigy",rg6-K
+Token,Swordcraft,Gold,5,"Percival, Lord of Flames",rg6-U
+Token,Swordcraft,Gold,2,"Lilje, Butler of the Mists",rg6-e
+Token,Swordcraft,Gold,2,"Sheena, Maid of the Mists",rg6-o
+Token,Swordcraft,Gold,7,"Azord, Duke of the Mists",rg6-y
+Token,Swordcraft,Gold,2,"Mina, Levin Vice Leader",rg6_6
+Token,Swordcraft,Gold,4,"Mona, Levin Mage",rg6_G
+Token,Swordcraft,Gold,3,"Mena, Levin Duelist",rg6_Q
+Token,Swordcraft,Gold,9,Leonidas's Resolve,rg7DA
+Token,Swordcraft,Gold,2,Infiltration,rg7iQ
+Token,Swordcraft,Gold,0,Veiled Reckoning,rg7ia
+Token,Swordcraft,Gold,2,Princess's Strike,rg7ik
+Token,Swordcraft,Gold,0,Erika's Sleight,rg7iu
+Token,Swordcraft,Gold,0,Mistolina's Swordplay,rg7j2
+Token,Swordcraft,Gold,0,Bayleon's Command,rg7jC
+Token,Swordcraft,Legendary,1,Otohime's Bodyguard,rg9Po
+Token,Swordcraft,Legendary,5,"Celia, Hope's Strategist",rg9Py
+Token,Swordcraft,Legendary,5,"Celia, Despair's Messenger",rg9Q6
+Token,Swordcraft,Legendary,4,"Beatrix, Undying Blue",rg9QG
+Token,Swordcraft,Legendary,1,"Nano, the Dawnblade",rg9QQ
+Token,Swordcraft,Legendary,8,Exterminus Weapon,rg9Qa
+Token,Swordcraft,Legendary,7,"VII. Oluon, Runaway Chariot",rg9Qk
+Token,Swordcraft,Legendary,4,"Val, Trusty Getaway Car",rg9Qu
+Token,Swordcraft,Legendary,7,Durandal the Incorruptible,rg9fQ
+Token,Swordcraft,Legendary,5,Twilight Blade,rgA8g
+Token,Swordcraft,Legendary,1,King's Might,rgA8q
+Token,Swordcraft,Legendary,0,Tyrant's Order,rgA8-
+Token,Swordcraft,Legendary,2,Desperados' Shot,rgA98
+Token,Runecraft,Bronze,1,Snowman,rgQVY
+Token,Runecraft,Bronze,2,Clay Golem,rgQVi
+Token,Runecraft,Bronze,4,Guardian Golem,rgQVs
+Token,Runecraft,Bronze,1,Scrap Golem,rgQW0
+Token,Runecraft,Bronze,3,Ice Golem,rgQWA
+Token,Runecraft,Bronze,1,Flame Rat,rgQWK
+Token,Runecraft,Bronze,1,Bunnicorn Nic-nic,rgQWU
+Token,Runecraft,Bronze,2,"Cayman, Mysterian Butler",rgQWe
+Token,Runecraft,Bronze,2,Paper Shikigami,rgQWo
+Token,Runecraft,Bronze,3,Demonic Shikigami,rgQWy
+Token,Runecraft,Bronze,1,Earth Essence,rgQlA
+Token,Runecraft,Bronze,2,Conjure Guardian,rgREQ
+Token,Runecraft,Bronze,1,Crimson Sorcery,rgREa
+Token,Runecraft,Bronze,2,Veridic Ritual,rgREk
+Token,Runecraft,Bronze,2,Mysterian Missile,rgREu
+Token,Runecraft,Bronze,2,Mysterian Circle,rgRF2
+Token,Runecraft,Bronze,5,Mysterian Rite,rgRFC
+Token,Runecraft,Bronze,2,Golem Summoning,rgRFM
+Token,Runecraft,Silver,6,Mysterian Whitewyrm,rgSxo
+Token,Runecraft,Silver,6,Mysterian Blackwyrm,rgSxy
+Token,Runecraft,Silver,6,Eldritch Chimera,rgSy6
+Token,Runecraft,Silver,6,Eldritch Demon,rgSyG
+Token,Runecraft,Gold,2,Snow Knight,rgVO2
+Token,Runecraft,Gold,2,Wild Snowman,rgVOC
+Token,Runecraft,Gold,2,Onion Patch,rgVOM
+Token,Runecraft,Gold,2,Anne's Summoning,rgVOW
+Token,Runecraft,Gold,7,"Morra, Monika's Familiar",rgVOg
+Token,Runecraft,Gold,7,Alchemical Craftschief,rgVOq
+Token,Runecraft,Gold,5,Emergency Summoning,rgVdg
+Token,Runecraft,Gold,5,Reactive Barrier,rgVdq
+Token,Runecraft,Gold,6,Second Curse,rgW6w
+Token,Runecraft,Gold,9,Final Curse,rgW74
+Token,Runecraft,Gold,2,Ars Magna,rgW7E
+Token,Runecraft,Gold,10,Anne's Sorcery,rgW7O
+Token,Runecraft,Gold,1,Grea's Ember,rgW7Y
+Token,Runecraft,Gold,3,Grea's Inferno,rgW7i
+Token,Runecraft,Gold,1,Splendid Conjury,rgW7s
+Token,Runecraft,Gold,0,Isabelle's Conjuration,rgW80
+Token,Runecraft,Gold,0,Tetra's Mettle,rgW8A
+Token,Runecraft,Legendary,7,Ultimate Clay Golem,rgXqI
+Token,Runecraft,Legendary,4,Celestial Shikigami,rgXqS
+Token,Runecraft,Legendary,2,Prophecy of Boons,rgYZA
+Token,Runecraft,Legendary,10,Prophecy of Doom,rgYZK
+Token,Runecraft,Legendary,1,Delta Cannon,rgYZU
+Token,Runecraft,Legendary,7,Seal of Solomon,rgYZe
+Token,Runecraft,Legendary,0,Ginger's Curse,rgYZo
+Token,Runecraft,Legendary,4,Rite of the Ignorant,rgYZy
+Token,Runecraft,Legendary,2,Scourge of the Omniscient,rgYa6
+Token,Runecraft,Legendary,2,Rapid Fire,rgYaG
+Token,Runecraft,Legendary,1,Words of Judgment,rgYaQ
+Token,Dragoncraft,Bronze,5,Dragon,rgow2
+Token,Dragoncraft,Bronze,6,Windblast Dragon,rgowC
+Token,Dragoncraft,Bronze,2,Megalorca,rgowM
+Token,Dragoncraft,Bronze,1,Fire Drake Whelp,rgowW
+Token,Dragoncraft,Bronze,3,Basilisk,rgowg
+Token,Dragoncraft,Bronze,4,Dragon's Handspur,rgpew
+Token,Dragoncraft,Silver,7,Whitescale Dragon,rgrMI
+Token,Dragoncraft,Silver,7,Blackscale Dragon,rgrMS
+Token,Dragoncraft,Silver,3,Trample,rgrrY
+Token,Dragoncraft,Silver,3,Whirlwind,rgrri
+Token,Dragoncraft,Silver,2,White Breath,rgs5K
+Token,Dragoncraft,Silver,4,Black Breath,rgs5U
+Token,Dragoncraft,Silver,1,Draconic Counsel,rgs5e
+Token,Dragoncraft,Gold,2,Poseidon's Guard,rgtoY
+Token,Dragoncraft,Gold,4,"Ian & Adelle, Newlyweds",rgtoi
+Token,Dragoncraft,Gold,4,"Adelle, Jealous Dragon",rgtos
+Token,Dragoncraft,Gold,1,Eternal Whale,rgtp0
+Token,Dragoncraft,Gold,10,Dragon Sphere,rgu2A
+Token,Dragoncraft,Gold,2,Dragonlife Blade,rguXQ
+Token,Dragoncraft,Gold,2,Dragonstrife Blade,rguXa
+Token,Dragoncraft,Gold,1,Dragoon's Command,rguXk
+Token,Dragoncraft,Gold,2,Dragoon's Meditation,rguXu
+Token,Dragoncraft,Gold,0,Rowen's Roar,rguY2
+Token,Dragoncraft,Gold,0,Valdain's Claw,rguYC
+Token,Dragoncraft,Legendary,10,Virtuous Lindworm,rgwEo
+Token,Dragoncraft,Legendary,10,Iniquitous Lindworm,rgwEy
+Token,Dragoncraft,Legendary,10,"Zooey, Arbiter of the Skies",rgwF6
+Token,Dragoncraft,Legendary,2,Hellflame Dragon,rgwFG
+Token,Dragoncraft,Legendary,2,Otohime's Vanguard,rgwFQ
+Token,Dragoncraft,Legendary,6,Devoted Dragon,rgwFa
+Token,Dragoncraft,Legendary,5,Supreme Golden Dragon,rgwFk
+Token,Dragoncraft,Legendary,5,Supreme Silver Dragon,rgwFu
+Token,Dragoncraft,Legendary,7,Azure Dragon's Rage,rgwG2
+Token,Dragoncraft,Legendary,5,Crimson Dragon's Sorrow,rgwGC
+Token,Dragoncraft,Legendary,2,Whitefrost Whisper,rgwzg
+Token,Dragoncraft,Legendary,4,Shadow's Corrosion,rgwzq
+Token,Shadowcraft,Bronze,1,Skeleton,rhBKY
+Token,Shadowcraft,Bronze,1,Ghost,rhBKi
+Token,Shadowcraft,Bronze,2,Zombie,rhBKs
+Token,Shadowcraft,Bronze,4,Lich,rhBL0
+Token,Shadowcraft,Bronze,5,Profane Resurrection,rhBaA
+Token,Shadowcraft,Bronze,5,Fabled Treasure,rhBaK
+Token,Shadowcraft,Silver,8,Giant Skull,rhDmo
+Token,Shadowcraft,Silver,8,Hell Lord Skeleton,rhDmy
+Token,Shadowcraft,Silver,0,Fran's Attendant,rhDn6
+Token,Shadowcraft,Silver,3,Deep Dream,rhEG2
+Token,Shadowcraft,Silver,0,Fran's Curse,rhEVg
+Token,Shadowcraft,Gold,4,Spellplate Cavalier,rhGD2
+Token,Shadowcraft,Gold,4,Bone Cavalier,rhGDC
+Token,Shadowcraft,Gold,6,Infernal Crown,rhGiI
+Token,Shadowcraft,Gold,1,Descent into Madness,rhGxw
+Token,Shadowcraft,Gold,5,Forbidden Art,rhGy4
+Token,Shadowcraft,Gold,2,Pudding Time,rhGyE
+Token,Shadowcraft,Gold,0,Luna's Game,rhGyO
+Token,Shadowcraft,Gold,0,Aenea's Friendship,rhGyY
+Token,Shadowcraft,Legendary,4,Velocious Beetle,rhIfI
+Token,Shadowcraft,Legendary,4,Virulent Hornet,rhIfS
+Token,Shadowcraft,Legendary,4,Vicious Scorpion,rhIfc
+Token,Shadowcraft,Legendary,1,"Mimi, Right Paw Hellhound",rhIfm
+Token,Shadowcraft,Legendary,1,"Coco, Left Paw Hellhound",rhIfw
+Token,Shadowcraft,Legendary,8,Lurker in the Dark,rhIg4
+Token,Shadowcraft,Legendary,4,Vengeful Mantis,rhIgE
+Token,Shadowcraft,Legendary,4,Veiled Shudderfly,rhIgO
+Token,Shadowcraft,Legendary,4,Roly-Poly Mk I,rhIgY
+Token,Shadowcraft,Legendary,7,"Hades, Father of Purgatory",rhIgi
+Token,Shadowcraft,Legendary,3,Necrofauna,rhIgs
+Token,Shadowcraft,Legendary,2,One-Tailed Fox,rhIh0
+Token,Shadowcraft,Legendary,2,Skullfather,rhIhA
+Token,Shadowcraft,Legendary,9,He Who Once Rocked,rhIhK
+Token,Shadowcraft,Legendary,1,Mimi,rhJOA
+Token,Shadowcraft,Legendary,1,Coco,rhJOK
+Token,Shadowcraft,Legendary,5,Eternal Potion,rhJOU
+Token,Shadowcraft,Legendary,1,Instant Potion,rhJOe
+Token,Shadowcraft,Legendary,6,Eternal Vow,rhJOo
+Token,Shadowcraft,Legendary,1,Fleeting Joy,rhJOy
+Token,Bloodcraft,Bronze,1,Forest Bat,rhZl2
+Token,Bloodcraft,Bronze,1,Serpent,rhZlC
+Token,Bloodcraft,Silver,5,"Buller, Saintly Maiden",rhcBI
+Token,Bloodcraft,Silver,5,"Buller, Dark Maiden",rhcBS
+Token,Bloodcraft,Silver,2,Night Fall,rhcgY
+Token,Bloodcraft,Silver,2,Madness Revealed,rhcgi
+Token,Bloodcraft,Silver,2,Blazing Sapphire,rhcgs
+Token,Bloodcraft,Silver,4,Blazing Ruby,rhch0
+Token,Bloodcraft,Gold,2,"Raven, Noontide Vampire",rhedY
+Token,Bloodcraft,Gold,2,"Raven, Midnight Vampire",rhedi
+Token,Bloodcraft,Gold,2,"Aza & Iza, Feline Maids",rheds
+Token,Bloodcraft,Gold,2,Peckish Owlcat,rhee0
+Token,Bloodcraft,Gold,2,Leoparion,rheeA
+Token,Bloodcraft,Gold,3,Demon Song,rhfMQ
+Token,Bloodcraft,Gold,0,Urias's Revelry,rhfMa
+Token,Bloodcraft,Gold,0,Mono's Resolve,rhfMk
+Token,Bloodcraft,Legendary,8,Medusiana,rhh3o
+Token,Bloodcraft,Legendary,6,Kind Queen Vania,rhh3y
+Token,Bloodcraft,Legendary,6,Blood Queen Vania,rhh46
+Token,Bloodcraft,Legendary,2,Voice of the Abyss,rhh4G
+Token,Bloodcraft,Legendary,3,Kudlak,rhh4Q
+Token,Bloodcraft,Legendary,4,"XIV. Luzen, Temperance",rhh4a
+Token,Bloodcraft,Legendary,3,Unselfish Grace,rhhZ2
+Token,Bloodcraft,Legendary,2,Crimson Burst,rhhog
+Token,Bloodcraft,Legendary,5,Alpha Drive,rhhoq
+Token,Bloodcraft,Legendary,1,Insatiable Desire,rhho-
+Token,Havencraft,Bronze,3,Holy Falcon,rhy9Y
+Token,Havencraft,Bronze,4,Holyflame Tiger,rhy9i
+Token,Havencraft,Bronze,5,Pegasus,rhy9s
+Token,Havencraft,Bronze,5,Guardian Fox,rhyA0
+Token,Havencraft,Bronze,6,Holywing Dragon,rhyAA
+Token,Havencraft,Bronze,5,Regal Falcon,rhyAK
+Token,Havencraft,Bronze,6,Barong,rhyAU
+Token,Havencraft,Bronze,4,Dream Rabbit,rhyAe
+Token,Havencraft,Bronze,5,Adamantium Bird,rhyAo
+Token,Havencraft,Bronze,4,Bejeweled Tortoise,rhyAy
+Token,Havencraft,Bronze,3,White Snake,rhyB6
+Token,Havencraft,Bronze,3,Time Owl,rhyBG
+Token,Havencraft,Bronze,2,Holy Shield Lion,rhyBQ
+Token,Havencraft,Bronze,3,"Meowskers, Ruff-Tuff Major",rhyBa
+Token,Havencraft,Bronze,2,Sacred Teachings,rhyeo
+Token,Havencraft,Bronze,2,Forbidden Teachings,rhyey
+Token,Havencraft,Silver,4,Holy Fowl of Ivory,rh-bo
+Token,Havencraft,Silver,4,Hexed Fowl of Ebon,rh-by
+Token,Havencraft,Silver,4,Holy Plate Lion,rh-c6
+Token,Havencraft,Silver,6,Unicorn,rh-cG
+Token,Havencraft,Silver,3,Unicorn Spear,rh_Kq
+Token,Havencraft,Gold,4,Heaven's Golem,ri122
+Token,Havencraft,Gold,6,Holy King Lion,ri12C
+Token,Havencraft,Gold,6,Ephemeral Moon,ri1XI
+Token,Havencraft,Gold,1,White Diamond,ri1XS
+Token,Havencraft,Gold,1,Black Diamond,ri1Xc
+Token,Havencraft,Gold,1,Lorena's Holy Water,ri1mw
+Token,Havencraft,Gold,2,Lorena's Iron Fist,ri1n4
+Token,Havencraft,Gold,1,Mark of Balance,ri1nE
+Token,Havencraft,Gold,0,Eris's Prayer,ri1nO
+Token,Havencraft,Gold,0,Meowskers's Raid,ri1nY
+Token,Havencraft,Legendary,5,Ceryneian Lighthind,ri3UI
+Token,Havencraft,Legendary,5,Ceryneian Darkhind,ri3US
+Token,Havencraft,Legendary,2,Holy Cavalier,ri3Uc
+Token,Havencraft,Legendary,1,Meus Knight,ri3Um
+Token,Havencraft,Legendary,8,Awakened Seraph,ri3zY
+Token,Havencraft,Legendary,8,Renascent Seraph,ri3zi
+Token,Havencraft,Legendary,8,"Seraph Lapis, Glory Be",ri3zs
+Token,Havencraft,Legendary,4,Totem of Madness,ri3-0
+Token,Havencraft,Legendary,2,Somnolent Strength,ri3-A
+Token,Havencraft,Legendary,0,Salvation Ex Limonia,ri4DA
+Token,Havencraft,Legendary,2,Haven Fire,ri4DK
+Token,Portalcraft,Bronze,1,Ancient Artifact,riKa2
+Token,Portalcraft,Bronze,3,Mystic Artifact,riKaC
+Token,Portalcraft,Bronze,1,Analyzing Artifact,riKaM
+Token,Portalcraft,Bronze,5,Radiant Artifact,riKaW
+Token,Portalcraft,Bronze,0,Puppet,riKag
+Token,Portalcraft,Bronze,7,Prime Artifact,riKaq
+Token,Portalcraft,Bronze,3,Bifurcating Artifact,riKa-
+Token,Portalcraft,Bronze,5,Barrier Artifact,riKb8
+Token,Portalcraft,Bronze,5,Keenedge Artifact,riKbI
+Token,Portalcraft,Bronze,5,Airstrike Artifact,riKbS
+Token,Portalcraft,Bronze,1,Artifact Squadron,riL3I
+Token,Portalcraft,Bronze,1,Artifact's Glow,riL3S
+Token,Portalcraft,Bronze,7,Paradigm Shift,riLIw
+Token,Portalcraft,Silver,2,L'Ange Miriam,riN0I
+Token,Portalcraft,Silver,2,La Diablotine Miriam,riN0S
+Token,Portalcraft,Silver,5,"Robomi, Steel Warrior",riN0c
+Token,Portalcraft,Silver,2,Miraculous Invention,riNFw
+Token,Portalcraft,Silver,1,Hazardous Invention,riNG4
+Token,Portalcraft,Silver,3,"Go, Go, Robomi!",riNVY
+Token,Portalcraft,Gold,3,Victoria,riPSY
+Token,Portalcraft,Gold,2,Guardform Golem,riPSi
+Token,Portalcraft,Gold,2,Strikeform Golem,riPSs
+Token,Portalcraft,Gold,2,"Camieux, Gunpowder Gal",riPT0
+Token,Portalcraft,Gold,10,"Shin, Chaotic Darkness",riPTA
+Token,Portalcraft,Gold,2,Doll Slayer,riPTK
+Token,Portalcraft,Gold,1,Blade of Light,riQBQ
+Token,Portalcraft,Gold,1,Blade of Dark,riQBa
+Token,Portalcraft,Gold,7,Purgation's Blade,riQBk
+Token,Portalcraft,Gold,4,Chaos Awakens,riQBu
+Token,Portalcraft,Gold,0,Yuwan's Fury,riQC2
+Token,Portalcraft,Gold,0,Belphomet's Crackdown,riQCC
+Token,Portalcraft,Legendary,1,Spinaria's Artifact,riRuo
+Token,Portalcraft,Legendary,8,"Orchis, Resolute Puppet",riRuy
+Token,Portalcraft,Legendary,8,"Orchis, Vengeful Puppet",riRv6
+Token,Portalcraft,Legendary,3,Lloyd the Android,riRvG
+Token,Portalcraft,Legendary,1,Marionette//Uno,riRvQ
+Token,Portalcraft,Legendary,4,Marionette//Due,riRva
+Token,Portalcraft,Legendary,6,Marionette//Tre,riRvk
+Token,Portalcraft,Legendary,7,Artifact Rhino,riRvu
+Token,Portalcraft,Legendary,2,Lococo's Teddy Bear,riRw2
+Token,Portalcraft,Legendary,8,Avatar of Desecration,riRwC
+Token,Portalcraft,Legendary,8,"Tisiphone, the Malignant",riRwM
+Token,Portalcraft,Legendary,8,"Alecto, the Dissonant",riRwW
+Token,Portalcraft,Legendary,8,"Megaera, the Indignant",riRwg
+Token,Portalcraft,Legendary,0,"Vesha, Herald of Ravage",riRwq
+Token,Portalcraft,Legendary,0,"Izalue, Herald of Death",riRw-
+Token,Portalcraft,Legendary,0,"Jotet, Herald of Despair",riRx8
+Token,Portalcraft,Legendary,4,Armored Tentacle,riRxI
+Token,Portalcraft,Legendary,4,Assault Tentacle,riRxS
+Token,Portalcraft,Legendary,3,"Spinaria & Lucille, Keepers",riRxc
+Token,Portalcraft,Legendary,8,Magitrain,riRxm
+Token,Portalcraft,Legendary,10,Destruction in White,riS8Q
+Token,Portalcraft,Legendary,10,Destruction in Black,riS8a
+Token,Portalcraft,Legendary,3,Wheel of Misfortune,riSO2
+Token,Portalcraft,Legendary,3,Gullian Aura,riSdg
+Token,Portalcraft,Legendary,0,Gullian Howl,riSdq
+Token,Portalcraft,Legendary,1,Dead to Rights,riSd-
+Token,Portalcraft,Legendary,4,Wretched Tryst,riSe8

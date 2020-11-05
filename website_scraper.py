@@ -40,7 +40,7 @@ def JCG_latest_tourney(sv_format, tourney_stage):
 
     jcglink = 'https://sv.j-cg.com/compe/' + sv_format #1st page or 20 most recent tourney stages
     formats = { 'rotation' : 'ローテーション大会' , 'unlimited' : 'アンリミテッド大会' , '2pick' : '2Pick大会' }
-    stage = {'qualifying' : 'グループ予選', 'winner' : '決勝トーナメント'}
+    stage = {'group' : 'グループ予選', 'top16' : '決勝トーナメント'}
     
     source = requests.get(jcglink).text
     soup = bs(source, 'lxml')
@@ -60,8 +60,11 @@ def JCG_latest_tourney(sv_format, tourney_stage):
             latest_tourney = True
             potential_id = tourney_code.get("competition_id")
             latest_tourney_code = str(potential_id)
+            tourney_date = tourney_code.find('td', class_="date").text
             break
-       
+    
+    if latest_tourney:
+        print(f'Tournament Date: {tourney_date}')
     if latest_tourney == False:
         latest_tourney_code = None
     
@@ -144,7 +147,7 @@ def manasurge_bfy_scraper(jsonlink):
     
     df = df.rename(columns={2:'deck 1', 3:'deck 2', 4:'deck 3'})
     
-    writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx',options={'strings_to_urls': False})
+    writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx')
     df.to_excel(writer)
     writer.save()
     
@@ -404,8 +407,8 @@ def JCG_group_winner_check(url):
 
 # # Input : JCG competition ID lists
 
-# jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433'] #group
-# jcgid = ['2418', '2442', '2445', '2448', '2449', '2451', '2454', '2456'] #top16
+# jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436'] #group
+# jcgid = ['2418', '2442', '2445', '2448', '2449', '2451', '2454', '2456', '2460'] #top16
 def generate_archetype_trends(jcgIDs):
     flag_first = True
     for ids in jcgIDs:
@@ -430,5 +433,5 @@ def generate_archetype_trends(jcgIDs):
                 
     arc_df = arc_df.fillna(0)
     writer = pd.ExcelWriter("Excel_and_CSV/Graph.xlsx")
-    arc_df.to_excel(writer, 'stats')
+    arc_df.to_excel(writer, 'stats', index=False)
     writer.save()
