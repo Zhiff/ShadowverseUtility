@@ -198,6 +198,7 @@ def convert_kanji(text):
     result = conv.do(text)
     return result
 
+# json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 
 json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
 response = requests.get(json)        

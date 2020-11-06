@@ -11,6 +11,7 @@ import excel_module as em
 import stat_helper as sh
 from deckmodule import Deck
 from bs4 import BeautifulSoup as bs
+import numpy as np
 
 
 #SVO scraper
@@ -44,23 +45,31 @@ def JCG_latest_tourney(sv_format, tourney_stage):
     
     source = requests.get(jcglink).text
     soup = bs(source, 'lxml')
-       
-    tourney = soup.find_all('tr', class_="competition commit") #tourney strted/finish while class_="competition" -> tourney has not started 
+    
+    ongoing = soup.find_all('tr', class_="competition")
+    # finished = soup.find_all('tr', class_="competition commit") #tourney strted/finish while class_="competition" -> tourney has not started 
+    # tourney = ongoing + finished
     latest_tourney = False
      
     #Find relevant data in 'tourney' need (dates are also found in 'tourney')
-    for tourney_code in tourney:
+    for tourney_code in ongoing:
         name_text = tourney_code.find_all('span', class_="nobr")   
         potential_format = name_text[-2].text
         potential_stage = name_text[-1].text
         potential_status = tourney_code.find('td', class_="status").text
         
         #Does it meet our conditions? (Note: First one is always the latest so no dates were used for now)
-        if potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '終了':
+        if potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '開催中':
             latest_tourney = True
             potential_id = tourney_code.get("competition_id")
             latest_tourney_code = str(potential_id)
-            tourney_date = tourney_code.find('td', class_="date").text
+            tourney_date = tourney_code.find('td', class_="date").text + '(Still Ongoing)'
+            break
+        elif potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '終了':
+            latest_tourney = True
+            potential_id = tourney_code.get("competition_id")
+            latest_tourney_code = str(potential_id)
+            tourney_date = tourney_code.find('td', class_="date").text + '(Finished)'
             break
     
     if latest_tourney:
@@ -435,3 +444,61 @@ def generate_archetype_trends(jcgIDs):
     writer = pd.ExcelWriter("Excel_and_CSV/Graph.xlsx")
     arc_df.to_excel(writer, 'stats', index=False)
     writer.save()
+
+
+
+#DSAL
+def DSAL_scraper(link):
+    link = 'http://www.littleworld.tokyo/RoundOfDarkness/openingPartySecond'
+    source = requests.get(link).text
+    soup = bs(source, 'lxml')
+    # Team Scraper
+    teamcontainer = soup.find_all('div', class_='pricing')
+    teamlist = []
+    for team in teamcontainer:
+        teamname = team.find('h1').text
+        teamlist.append(teamname)
+        
+    # Deck Scraper
+    deckcontainer = soup.find_all('button', class_='btn btn-round btn-info')
+    deck1list = []
+    deck2list = []
+    deck3list = []
+    deck4list = []
+    deck5list = []
+    
+    for links in deckcontainer[::5]:
+        ocdeck = links.get('onclick')
+        deck = ocdeck.split("'")[1]
+        deck1list.append(deck)
+    for links in deckcontainer[1::5]:
+        ocdeck = links.get('onclick')
+        deck = ocdeck.split("'")[1]
+        deck2list.append(deck)
+    for links in deckcontainer[2::5]:
+        ocdeck = links.get('onclick')
+        deck = ocdeck.split("'")[1]
+        deck3list.append(deck)
+    for links in deckcontainer[3::5]:
+        ocdeck = links.get('onclick')
+        deck = ocdeck.split("'")[1]
+        deck4list.append(deck)
+    for links in deckcontainer[4::5]:
+        ocdeck = links.get('onclick')
+        deck = ocdeck.split("'")[1]
+        deck5list.append(deck)
+    # Combine everything and rename
+    db = np.column_stack((teamlist, deck1list, deck2list, deck3list, deck4list, deck5list))
+    df = pd.DataFrame(db)
+    df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2', 3:'deck 3', 4:'deck 4', 5:'deck 5'})
+    
+    writer = pd.ExcelWriter('Excel_and_CSV/DSAL_Raw.xlsx')
+    df.to_excel(writer, index=False) 
+    writer.save()
+    
+    em.excel_convert_quick('Excel_and_CSV/DSAL_Raw.xlsx', 'Sheet1')
+    em.excel_convert_dataset('Excel_and_CSV/DSAL_Raw.xlsx', 5)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 5)
+    em.combine_view_and_stats()
+    em.add_class_color(1)
+    

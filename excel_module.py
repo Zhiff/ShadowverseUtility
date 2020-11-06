@@ -44,6 +44,8 @@ def excel_convert_dataset(svo_raw, maxdeck):
         df = sh.add_lineup_column_3decks(df)       
     elif maxdeck == 2:
         df = sh.add_lineup_column_2decks(df)
+    elif maxdeck == 5:
+        df = sh.add_lineup_column_5decks(df)
     
     writer = pd.ExcelWriter("Excel_and_CSV/FilteredDecks_Data.xlsx", options={'strings_to_urls': False})
     df.to_excel(writer, 'MainData')
@@ -61,6 +63,8 @@ def excel_statistics(filtered_data, maxdeck):
         df = sh.add_lineup_column_3decks(df)        
     elif maxdeck == 2:
         df = sh.add_lineup_column_2decks(df) 
+    elif maxdeck == 5:
+        df = sh.add_lineup_column_5decks(df)
     
     # Create a new dataframe that consists only lineup and their amount of occurrence
     lineup = sh.get_lineup_df(df)

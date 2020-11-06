@@ -22,6 +22,13 @@ def add_lineup_column_2decks(df):
     df_added_lineup['Lineup'] = df_added_lineup['Lineup'].apply(set)
     return df_added_lineup
 
+def add_lineup_column_5decks(df):
+    # add new column which contains all 2 decks, then make them as Set to take care the uniformity
+    df_added_lineup = df.assign(Lineup = list(zip(df['arc 1'],df['arc 2'],df['arc 3'],df['arc 4'],df['arc 5'])) )
+    df_added_lineup['Lineup'] = df_added_lineup['Lineup'].apply(set)
+    return df_added_lineup
+
+
 def get_lineup_df(df):
     # creating a new df that consists of lineup and the number of people that bringing that lineup in tourney
     lineup = df["Lineup"].value_counts(normalize = False, ascending = False)
