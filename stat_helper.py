@@ -48,10 +48,15 @@ def add_statistics_tool(df):
     mean = round(df.mean(axis=1),2)
     median = df.median(axis=1)
     std = round(df.std(axis=1),2)
+    # if there is more than 3 players, add card copies details as info
+    if (len(df.columns)>3):
+        count = df.apply(lambda x:x.value_counts(normalize=True), axis=1).fillna(0)
+        df = pd.concat([df,count], axis=1)
     df['Median'] = median
     df['Std Deviation'] = std
     df['Average'] = mean
     return df
+
 
 #filter for popular archetype, nowadays i just keep it as 1 as min occurence because we want to see the whole thing
 def get_popular_archetype(df, min_occurrence, maxdeck):
