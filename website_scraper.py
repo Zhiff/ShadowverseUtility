@@ -101,14 +101,16 @@ def JCG_scraper(jsonlink, analysis='single'):
     data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
     data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
-    df = data6
+    
+    data7 = sh.handle_duplicate_row(data6, 'name')
+    df = data7
     
     # Additional handling for top16 JCG Data, it will retrieve the ranking and sort it accordingly instead of registration based.
     if sh.isTop16JCG(data6, jsonlink):
         namedf = sh.retrieveTop16JCG(jsonlink)
-        data7 = namedf.merge(data6)
+        data8 = namedf.merge(data7)
         rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
-        df = pd.concat([rankings, data7],axis=1)
+        df = pd.concat([rankings, data8],axis=1)
         df = df.dropna()
         df = df[['Rank', 'name', 'deck 1', 'deck 2']]
         
@@ -155,6 +157,7 @@ def manasurge_bfy_scraper(jsonlink):
             df[i][j] = df[i][j]['value']
     
     df = df.rename(columns={2:'deck 1', 3:'deck 2', 4:'deck 3'})
+    df = sh.handle_duplicate_row(df, 'name')
     
     writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx')
     df.to_excel(writer)
