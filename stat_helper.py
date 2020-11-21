@@ -230,6 +230,11 @@ def deck_quick_count(df):
     
     return decks
 
+def handle_duplicate_row(df, columnname):    
+    df[columnname] = df[columnname].where(~df[columnname].duplicated(), df[columnname] + '_dp')
+    df[columnname] = df[columnname] + df.groupby(by=columnname).cumcount().astype(str).replace('0','')
+    return df
+
 # # incomplete code for Archetype Matchup. Abandoned due to low sample in single SVO which makes the data kinda nonsense. Might be revisited if somehow SVO becomes bigger 
     
 # dfb['top teamID'] = dfb.loc[:,'top'].apply(lambda x: x['teamID'])
