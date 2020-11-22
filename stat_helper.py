@@ -225,15 +225,38 @@ def retrieveTop16JCG(jsonlink):
     return namedf
 
 def deck_quick_count(df):
-    decks = df.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
+    decks = df.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
     decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
     
     return decks
+
+def lineups_quick_count(df):
+    lineup = df.assign(Lineup = list(zip(df['arc 1'],df['arc 2'])) )
+    lineup['Lineup'] = lineup['Lineup'].apply(set)
+    lineup = lineup['Lineup'].value_counts(normalize = False, ascending = False)
+    lineup = lineup.rename_axis("Lineup").reset_index(name = 'Count')
+    
+    return lineup
 
 def handle_duplicate_row(df, columnname):    
     df[columnname] = df[columnname].where(~df[columnname].duplicated(), df[columnname] + '_dp')
     df[columnname] = df[columnname] + df.groupby(by=columnname).cumcount().astype(str).replace('0','')
     return df
+
+def IsGroupStageOver(code):
+    state = False
+    tour = 'https://sv.j-cg.com/compe/' + code
+    source = requests.get(tour).text
+    soup = bs(source, 'lxml')
+    
+    lista = soup.findAll('ol', class_='teamlist')
+    ex = len(lista)
+    if ex == 16:
+        state = True
+    
+    return state
+
+
 
 # # incomplete code for Archetype Matchup. Abandoned due to low sample in single SVO which makes the data kinda nonsense. Might be revisited if somehow SVO becomes bigger 
     

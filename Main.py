@@ -45,8 +45,7 @@ from bs4 import BeautifulSoup as bs
 # Requirements :    - JSON link must be valid
 
 tcode = ws.JCG_latest_tourney('rotation', 'group')
-json = 'https://sv.j-cg.com/compe/view/entrylist/' + tcode + '/json'
-ws.JCG_scraper(json)
+ws.JCG_scraper(tcode)
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
 
@@ -54,7 +53,9 @@ ws.JCG_scraper(json)
 # Input : JCG page for specified tourney (not top 16)
 # Requirements : JCG_Scraper for specified tourney needs to be ran first
 
-# name = ws.JCG_group_winner_check('https://sv.j-cg.com/compe/view/tour/2471')  
+# tcode = '2474'
+# tour = 'https://sv.j-cg.com/compe/view/tour/' + tcode
+# name = ws.JCG_group_winner_check(tour)  
 # count = sh.deck_quick_count(name)
 
 # DSAL_scraper('http://www.littleworld.tokyo/RoundOfDarkness/openingPartySecond')
@@ -68,4 +69,3 @@ ws.JCG_scraper(json)
 # player = 'TK 雪見小梅'
 
 # stats = ws.SVO_ban_peek(player, bfy_tourneyhash, bfy_stagehash)
-
