@@ -9,6 +9,7 @@ import pandas as pd
 import excel_module as em
 import website_scraper as ws
 import stat_helper as sh
+import t2_stats as t2
 from deckmodule import Deck
 import openpyxl as oxl
 import requests
@@ -69,3 +70,12 @@ ws.JCG_scraper(tcode)
 # player = 'TK 雪見小梅'
 
 # stats = ws.SVO_ban_peek(player, bfy_tourneyhash, bfy_stagehash)
+
+
+# JCG T2 Website Scaping: It will produce 1 excel file
+# Input : links of JCG T2 qualifying and final tourney (2 links)
+# Requirements : Random bugs (sv.j-cg.com/compe/view/match/2481/528568/) don't occur
+
+#tcodes = t2.JCG_T2_scraper([ws.JCG_latest_tourney('2pick', 'group'), ws.JCG_latest_tourney('2pick', 'top16')])
+#t2.JCG_T2_scraper(tcodes)
+
