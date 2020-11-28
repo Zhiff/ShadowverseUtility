@@ -25,7 +25,7 @@ def SVO_initial_scraper(svoexcel):
     em.excel_convert_quick(svoexcel, 'Sheet1')
     em.excel_convert_dataset(svoexcel, 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
-    em.combine_view_and_stats()
+    em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(1)
 
 
@@ -83,7 +83,8 @@ def JCG_latest_tourney(sv_format, tourney_stage):
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
 # input example 'https://sv.j-cg.com/compe/view/entrylist/2341/json'
-def JCG_scraper(jsonlink, analysis='single'):
+def JCG_scraper(tcode, analysis='single'):
+    jsonlink = 'https://sv.j-cg.com/compe/view/entrylist/' + tcode + '/json'
     jcglink = jsonlink
     response = requests.get(jcglink)
     data1 = response.json()
@@ -101,14 +102,16 @@ def JCG_scraper(jsonlink, analysis='single'):
     data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
     data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
-    df = data6
+    
+    data7 = sh.handle_duplicate_row(data6, 'name')
+    df = data7
     
     # Additional handling for top16 JCG Data, it will retrieve the ranking and sort it accordingly instead of registration based.
     if sh.isTop16JCG(data6, jsonlink):
         namedf = sh.retrieveTop16JCG(jsonlink)
-        data7 = namedf.merge(data6)
+        data8 = namedf.merge(data7)
         rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
-        df = pd.concat([rankings, data7],axis=1)
+        df = pd.concat([rankings, data8],axis=1)
         df = df.dropna()
         df = df[['Rank', 'name', 'deck 1', 'deck 2']]
         
@@ -120,9 +123,18 @@ def JCG_scraper(jsonlink, analysis='single'):
         # Calls functions from excel module to process raw sheets
         em.excel_convert_quick('Excel_and_CSV/JCG_Raw.xlsx', 'Sheet1')
         em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
-        em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
-        em.combine_view_and_stats()
-        em.add_class_color(1)
+        em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)        
+        em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
+        
+        if (sh.IsGroupStageOver(tcode)):
+            tour = 'https://sv.j-cg.com/compe/view/tour/' + tcode
+            top16 = JCG_group_winner_check(tour)
+            em.add_top16_names(top16)
+            em.add_conversion_rate(top16)   
+            em.add_class_color(1)
+        else:
+            em.add_class_color(3)
+            
     elif (analysis == 'multiple'):
         em.excel_convert_dataset('Excel_and_CSV/JCG_Raw.xlsx', 2)
         df = em.count_deck('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
@@ -155,6 +167,7 @@ def manasurge_bfy_scraper(jsonlink):
             df[i][j] = df[i][j]['value']
     
     df = df.rename(columns={2:'deck 1', 3:'deck 2', 4:'deck 3'})
+    df = sh.handle_duplicate_row(df, 'name')
     
     writer = pd.ExcelWriter('Excel_and_CSV/MS_Raw.xlsx')
     df.to_excel(writer)
@@ -164,7 +177,7 @@ def manasurge_bfy_scraper(jsonlink):
     em.excel_convert_quick('Excel_and_CSV/MS_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/MS_Raw.xlsx', 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
-    em.combine_view_and_stats()
+    em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(1)
     
 # Scrap info from battlefy to see W/L/B stats and Archetype stats in Post_SVO file.
@@ -343,7 +356,7 @@ def JCG_group_winner_check(url):
         deck1.append(arc1)
         deck2.append(arc2) 
     
-    df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+    df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'arc 1', 2:'arc 2'})
     return df
 
 
@@ -499,6 +512,6 @@ def DSAL_scraper(link):
     em.excel_convert_quick('Excel_and_CSV/DSAL_Raw.xlsx', 'Sheet1')
     em.excel_convert_dataset('Excel_and_CSV/DSAL_Raw.xlsx', 5)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 5)
-    em.combine_view_and_stats()
+    em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(1)
     

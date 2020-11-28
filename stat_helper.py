@@ -48,10 +48,15 @@ def add_statistics_tool(df):
     mean = round(df.mean(axis=1),2)
     median = df.median(axis=1)
     std = round(df.std(axis=1),2)
+    # if there is more than 3 players, add card copies details as info
+    if (len(df.columns)>3):
+        count = df.apply(lambda x:x.value_counts(normalize=True), axis=1).fillna(0)
+        df = pd.concat([df,count], axis=1)
     df['Median'] = median
     df['Std Deviation'] = std
     df['Average'] = mean
     return df
+
 
 #filter for popular archetype, nowadays i just keep it as 1 as min occurence because we want to see the whole thing
 def get_popular_archetype(df, min_occurrence, maxdeck):
@@ -220,10 +225,38 @@ def retrieveTop16JCG(jsonlink):
     return namedf
 
 def deck_quick_count(df):
-    decks = df.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
+    decks = df.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
     decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
     
     return decks
+
+def lineups_quick_count(df):
+    lineup = df.assign(Lineup = list(zip(df['arc 1'],df['arc 2'])) )
+    lineup['Lineup'] = lineup['Lineup'].apply(set)
+    lineup = lineup['Lineup'].value_counts(normalize = False, ascending = False)
+    lineup = lineup.rename_axis("Lineup").reset_index(name = 'Count')
+    
+    return lineup
+
+def handle_duplicate_row(df, columnname):    
+    df[columnname] = df[columnname].where(~df[columnname].duplicated(), df[columnname] + '_dp')
+    df[columnname] = df[columnname] + df.groupby(by=columnname).cumcount().astype(str).replace('0','')
+    return df
+
+def IsGroupStageOver(code):
+    state = False
+    tour = 'https://sv.j-cg.com/compe/' + code
+    source = requests.get(tour).text
+    soup = bs(source, 'lxml')
+    
+    lista = soup.findAll('ol', class_='teamlist')
+    ex = len(lista)
+    if ex == 16:
+        state = True
+    
+    return state
+
+
 
 # # incomplete code for Archetype Matchup. Abandoned due to low sample in single SVO which makes the data kinda nonsense. Might be revisited if somehow SVO becomes bigger 
     

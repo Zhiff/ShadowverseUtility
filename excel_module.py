@@ -128,15 +128,14 @@ def tournament_breakdown(df, excelwriter, maxdeck):
             arc_df.to_excel(excelwriter, archetype)
 
 #This function will combine filtereddecks_view into stats and breakdown.xlsx for easier spreadsheets export
-def combine_view_and_stats():
-    file1 = 'Excel_and_CSV/FilteredDecks_View.xlsx'
-    file2 = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
-    excel1 = oxl.load_workbook(file1)
-    excel2 = oxl.load_workbook(file2)
+def combine_view_and_stats(viewfile, sheetname):
+    file = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
+    excel1 = oxl.load_workbook(viewfile)
+    excel2 = oxl.load_workbook(file)
     
     # assign source sheet and destination sheet
     src = excel1.worksheets[0]
-    dst = excel2.create_sheet(title="Names and Links", index=0)
+    dst = excel2.create_sheet(title=sheetname, index=0)
     
     # copy all the decklist content in source to destination
     for row in src:
@@ -144,7 +143,7 @@ def combine_view_and_stats():
             dst[cell.coordinate].hyperlink = cell.hyperlink
             dst[cell.coordinate].value = cell.value
             
-    excel2.save(file2)
+    excel2.save(file)
 
 #This function will freeze first 2 column in statistics and highlight the important cards
 def statistics_freeze_highlight(excelfile):
@@ -189,10 +188,19 @@ def add_class_color(mode):
     sheet = excel.worksheets[0]
     conditionalFormat(sheet)
     if (mode == 1):
+        sheet = excel.worksheets[1]
+        conditionalFormat(sheet)
         sheet = excel['Decks']
+        conditionalFormat(sheet)
+        sheet = excel['Top16 Conversion']
         conditionalFormat(sheet)
     elif (mode == 2):
         sheet = excel.worksheets[1]
+        conditionalFormat(sheet)
+    elif (mode == 3):
+        sheet = excel['Decks']
+        conditionalFormat(sheet)
+    
     
     excel.save(file)
 
@@ -202,3 +210,61 @@ def count_deck(filtered_data, maxdeck):
     decks = decks[['Deck Archetype', 'Count']]
     
     return decks
+
+def add_top16_names(top16df):
+    file2 = 'Excel_and_CSV/FilteredDecks_Data.xlsx'
+    file3 = 'Excel_and_CSV/JCGTop16_View.xlsx'
+    
+    #Create Top 16 Excel with Deck
+    namedf = pd.read_excel(file2)
+    namedffilter =  namedf[['name', 'deck 1', 'deck 2']]
+    mergedname = top16df.merge(namedffilter)
+    mergednamefilter = mergedname[['name', 'deck 1', 'deck 2']]
+    writer2 = pd.ExcelWriter(file3, options={'strings_to_urls': False})
+    mergednamefilter.to_excel(writer2, 'Qualified for Top16', index=False)
+    writer2.save()
+    
+    #Convert Top 16 decklinks back into Archetype and add it to statistics
+    excel_convert_quick(file3, 'Qualified for Top16', True)
+    combine_view_and_stats(file3, 'Qualified for Top16')
+    
+
+def add_conversion_rate(top16df):
+
+    #Initialization
+    file1 = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
+    book = oxl.load_workbook(file1)
+    writer = pd.ExcelWriter(file1, engine='openpyxl')
+    writer.book = book
+    
+    #count deck and combine with data
+    decks = sh.deck_quick_count(top16df)
+    decksdf = pd.read_excel(file1, sheet_name='Decks')
+    decksdf = decksdf.rename(columns={'Count':'Total'})
+    decksdffilter = decksdf[['Deck Archetype', 'Total']]
+    mergedeck = decks.merge(decksdffilter)
+    mergedeck['Conversion Rate %'] = round(mergedeck['Count']/mergedeck['Total'], 4)*100 
+    
+    mergedeck.to_excel(writer, sheet_name='Top16 Conversion')
+    writer.save()
+    
+    currentorder=book.sheetnames
+    myorder = neworder(currentorder, 4)
+    book._sheets = [book._sheets[i] for i in myorder]
+    book.save(file1)
+
+#reordering sheets
+def neworder(shlist, tpos):
+    """Takes a list of ints, and inserts the last int, to tpos location (0-index)"""
+    lst = []
+    lpos = (len(shlist) - 1)
+    # Just a counter
+    for x in range(len(shlist)):
+        if x > (tpos - 1) and x != tpos:
+            lst.append(x-1)
+        elif x == tpos:
+            lst.append(lpos)
+        else:
+            lst.append(x)
+
+    return lst
