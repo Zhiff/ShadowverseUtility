@@ -23,10 +23,10 @@ import numpy as np
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 3)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
+    em.excel_convert_dataset(svoexcel, 2)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
-    em.add_class_color(1)
+    em.add_class_color(3)
 
 
 
@@ -84,6 +84,7 @@ def JCG_latest_tourney(sv_format, tourney_stage):
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
 # input example 'https://sv.j-cg.com/compe/view/entrylist/2341/json'
 def JCG_scraper(tcode, analysis='single'):
+    gameformat = 'rotation'
     jsonlink = 'https://sv.j-cg.com/compe/view/entrylist/' + tcode + '/json'
     jcglink = jsonlink
     response = requests.get(jcglink)
@@ -126,7 +127,7 @@ def JCG_scraper(tcode, analysis='single'):
         em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)        
         em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
         
-        if (sh.IsGroupStageOver(tcode)):
+        if (sh.IsGroupStageOver(tcode) & (gameformat == 'rotation')):
             tour = 'https://sv.j-cg.com/compe/view/tour/' + tcode
             top16 = JCG_group_winner_check(tour)
             em.add_top16_names(top16)
@@ -353,8 +354,10 @@ def JCG_group_winner_check(url):
             arc2 =  Deck(deckb).archetype_checker()
         
         names.append(name)
-        deck1.append(arc1)
-        deck2.append(arc2) 
+        # deck1.append(arc1)
+        # deck2.append(arc2) 
+        deck1.append(decka)
+        deck2.append(deckb) 
     
     df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'arc 1', 2:'arc 2'})
     return df
@@ -430,7 +433,7 @@ def JCG_group_winner_check(url):
 # # Input : JCG competition ID lists
 
 # jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436'] #group
-# jcgid = ['2418', '2442', '2445', '2448', '2449', '2451', '2454', '2456', '2460'] #top16
+
 def generate_archetype_trends(jcgIDs):
     flag_first = True
     for ids in jcgIDs:
@@ -440,8 +443,8 @@ def generate_archetype_trends(jcgIDs):
         soup = bs(source, 'lxml')
         date = soup.find_all('span', class_='nobr')[6].text
         # Find the Json
-        json = 'https://sv.j-cg.com/compe/view/entrylist/'+ ids + '/json'
-        decks = JCG_scraper(json, 'multiple')
+        # json = 'https://sv.j-cg.com/compe/view/entrylist/'+ ids + '/json'
+        decks = JCG_scraper(ids, 'multiple')
         
         if decks is not None: #Validity Check
             if flag_first == True:
@@ -457,7 +460,6 @@ def generate_archetype_trends(jcgIDs):
     writer = pd.ExcelWriter("Excel_and_CSV/Graph.xlsx")
     arc_df.to_excel(writer, 'stats', index=False)
     writer.save()
-
 
 
 #DSAL

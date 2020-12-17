@@ -168,6 +168,20 @@ class Deck:
             
             alldf.to_csv(filename, index=False)
 
+#deckbuilder -> saved decklist converter
+
+    def deckbuilder_converter(self):
+        sv = 'https://shadowverse-portal.com/deck/'
+        lang_eng = '?lang=en'
+        url = self.svlink
+        if ('https://shadowverse-portal.com' in url):
+            removestart = url.split('=')[1]
+            cleanhash = removestart.split('&',1)[0]
+            new_url = sv + cleanhash + lang_eng
+            
+        return new_url
+
+
 
 def id_to_hash(uniqueID):
     a, b = divmod(uniqueID, 64)
@@ -198,28 +212,30 @@ def convert_kanji(text):
     result = conv.do(text)
     return result
 
-# json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+# # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 
-json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
-response = requests.get(json)        
-data = response.json()
-dfa = pd.DataFrame(data)
-dfb = dfa.transpose()
-dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
-dffinal = dfc.copy()
-dffinal['id_'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
-dffinal = dffinal.sort_index()
-dffinal = dffinal.rename(columns={'name_':'CardName', 'id_':'Code'})
-dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
+# json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
+# response = requests.get(json)        
+# data = response.json()
+# dfa = pd.DataFrame(data)
+# dfb = dfa.transpose()
+# dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+# dffinal = dfc.copy()
+# dffinal['id_'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+# dffinal = dffinal.sort_index()
+# dffinal = dffinal.rename(columns={'name_':'CardName', 'id_':'Code'})
+# dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
 
-jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
-response2 = requests.get(jsonjp)
-data2 = response2.json()
-ad = pd.DataFrame(data2).transpose()
-ae = ad.copy()
-ae['cv_romaji'] = ae.loc[:,'cv_'].apply(lambda x: convert_kanji(x))
-ae = ae[['cv_','cv_romaji']]
-ae = ae.sort_index()
-comp = pd.concat([dffinal,ae], axis=1)
+# jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+# response2 = requests.get(jsonjp)
+# data2 = response2.json()
+# ad = pd.DataFrame(data2).transpose()
+# ae = ad.copy()
+# ae['cv_romaji'] = ae.loc[:,'cv_'].apply(lambda x: convert_kanji(x))
+# ae = ae[['cv_','cv_romaji']]
+# ae = ae.sort_index()
+# comp = pd.concat([dffinal,ae], axis=1)
 
-
+# writer = pd.ExcelWriter('Excel_and_CSV/Seiyuu.xlsx')
+# comp.to_excel(writer, index=False) 
+# writer.save()

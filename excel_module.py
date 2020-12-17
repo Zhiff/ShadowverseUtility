@@ -213,20 +213,22 @@ def count_deck(filtered_data, maxdeck):
 
 def add_top16_names(top16df):
     file2 = 'Excel_and_CSV/FilteredDecks_Data.xlsx'
-    file3 = 'Excel_and_CSV/JCGTop16_View.xlsx'
+    file = 'Excel_and_CSV/JCGTop16_View.xlsx'
     
-    #Create Top 16 Excel with Deck
-    namedf = pd.read_excel(file2)
-    namedffilter =  namedf[['name', 'deck 1', 'deck 2']]
-    mergedname = top16df.merge(namedffilter)
-    mergednamefilter = mergedname[['name', 'deck 1', 'deck 2']]
-    writer2 = pd.ExcelWriter(file3, options={'strings_to_urls': False})
-    mergednamefilter.to_excel(writer2, 'Qualified for Top16', index=False)
-    writer2.save()
+    group = pd.DataFrame({'Group':['Group 1','Group 2','Group 3','Group 4','Group 5','Group 6','Group 7','Group 8','Group 9','Group 10','Group 11','Group 12','Group 13','Group 14','Group 15','Group 16']})
+    top16df['arc 1'] = top16df['arc 1'].apply(lambda x: Deck(x).deckbuilder_converter())
+    top16df['arc 2'] = top16df['arc 2'].apply(lambda x: Deck(x).deckbuilder_converter())
+    top16df = top16df.rename(columns={'arc 1':'deck 1', 'arc 2':'deck 2'})
+    df = pd.concat([group, top16df],axis=1)
+    
+    
+    writer = pd.ExcelWriter(file, options={'strings_to_urls': False})
+    df.to_excel(writer, 'Qualified for Top16', index=False)
+    writer.save()
     
     #Convert Top 16 decklinks back into Archetype and add it to statistics
-    excel_convert_quick(file3, 'Qualified for Top16', True)
-    combine_view_and_stats(file3, 'Qualified for Top16')
+    excel_convert_quick(file, 'Qualified for Top16', True)
+    combine_view_and_stats(file, 'Qualified for Top16')
     
 
 def add_conversion_rate(top16df):

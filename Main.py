@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/IgnideusHalloween.xlsx')
+ws.SVO_initial_scraper('Excel_and_CSV/shadowmania qualifier 2.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -45,8 +45,8 @@ from bs4 import BeautifulSoup as bs
 # Input : Json page from respective website
 # Requirements :    - JSON link must be valid
 
-tcode = ws.JCG_latest_tourney('rotation', 'group')
-ws.JCG_scraper(tcode)
+# tcode = ws.JCG_latest_tourney('rotation', 'top16')
+# ws.JCG_scraper(tcode)
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
 
@@ -79,3 +79,9 @@ ws.JCG_scraper(tcode)
 #tcodes = t2.JCG_T2_scraper([ws.JCG_latest_tourney('2pick', 'group'), ws.JCG_latest_tourney('2pick', 'top16')])
 #t2.JCG_T2_scraper(tcodes)
 
+
+#JCG Trends
+# Input : lists of JCG IDs
+
+# jcgids = ['2474','2477','2480','2482', '2504'] #group
+# ws.generate_archetype_trends(jcgids)
