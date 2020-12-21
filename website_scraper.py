@@ -23,8 +23,8 @@ import numpy as np
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 2)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+    em.excel_convert_dataset(svoexcel, 3)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -432,7 +432,7 @@ def JCG_group_winner_check(url):
 
 # # Input : JCG competition ID lists
 
-# jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436'] #group
+# jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436', '2440', '2466', '2468', '2471', '2472', '2474','2477','2480','2482', '2504', '2505'] #group
 
 def generate_archetype_trends(jcgIDs):
     flag_first = True

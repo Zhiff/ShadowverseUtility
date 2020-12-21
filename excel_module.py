@@ -240,6 +240,8 @@ def add_conversion_rate(top16df):
     writer.book = book
     
     #count deck and combine with data
+    top16df['arc 1'] = top16df['arc 1'].apply(lambda x: Deck(x).archetype_checker())
+    top16df['arc 2'] = top16df['arc 2'].apply(lambda x: Deck(x).archetype_checker())
     decks = sh.deck_quick_count(top16df)
     decksdf = pd.read_excel(file1, sheet_name='Decks')
     decksdf = decksdf.rename(columns={'Count':'Total'})
