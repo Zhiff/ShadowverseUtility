@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/smtop32.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/JCGOnline.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -83,5 +83,5 @@ ws.JCG_scraper(tcode)
 #JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436', '2440', '2466', '2468', '2471', '2472', '2474','2477','2480','2482', '2504', '2505', '2510','2513'] #group
+# jcgids = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436', '2440', '2466', '2468', '2471', '2472', '2474','2477','2480','2482', '2504', '2505', '2510','2513','2515'] #group
 # ws.generate_archetype_trends(jcgids)
