@@ -45,8 +45,8 @@ from bs4 import BeautifulSoup as bs
 # Input : Json page from respective website
 # Requirements :    - JSON link must be valid
 
-tcode = ws.JCG_latest_tourney('rotation', 'group')
-ws.JCG_scraper(tcode)
+# tcode = ws.JCG_latest_tourney('rotation', 'group')
+# ws.JCG_scraper(tcode)
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
 
@@ -74,10 +74,10 @@ ws.JCG_scraper(tcode)
 
 # JCG T2 Website Scaping: It will produce 1 excel file
 # Input : links of JCG T2 qualifying and final tourney (2 links)
-# Requirements : Random bugs (sv.j-cg.com/compe/view/match/2481/528568/) don't occur
+# If bug occurs: (e.g. sv.j-cg.com/compe/view/match/2481/528568/) a report is printed and manual fix is needed. 
 
-#tcodes = t2.JCG_T2_scraper([ws.JCG_latest_tourney('2pick', 'group'), ws.JCG_latest_tourney('2pick', 'top16')])
-#t2.JCG_T2_scraper(tcodes)
+tcodes = [ws.JCG_latest_tourney('2pick', 'group'), ws.JCG_latest_tourney('2pick', 'top16')]
+t2.JCG_T2_scraper(tcodes)
 
 
 #JCG Trends

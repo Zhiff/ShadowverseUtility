@@ -8,6 +8,7 @@ These modules are used to extract relevant take2 data (JCG only as of now)
 """
 import pandas as pd
 import requests
+import sys
 from bs4 import BeautifulSoup as bs
 
 
@@ -32,6 +33,7 @@ def JCG_2pick_scraper(tcodes, analysis='single'):
     
     #Opens every match link to check the winner and class won for #2
     #This loop extracts the match code for both tourneys
+    there_is_error = False #Set to true if exception/error/bug occured
     for code in tcodes:
         bracket_link = 'https://sv.j-cg.com/compe/view/tour/' + code
         source = requests.get(bracket_link).text
@@ -50,23 +52,30 @@ def JCG_2pick_scraper(tcodes, analysis='single'):
             m_info = m_soup.select('span[style*="vertical"]')
             
             #2. Retrieves every match with winner and class won
-            if bool(m_info) == True and match == None:  #Edit when bug (sv.j-cg.com/compe/view/match/2481/528568/) occurs
-                    winner.append("Bug")
-                    class_win.append('Bug')       
+            if there_is_error == True and match_number == '530225':  #Edit when bug (sv.j-cg.com/compe/view/match/2481/528568/) occurs
+                winner.append("ろさちい/silver")
+                class_win.append('Default')       
             else:
-                winner_name, winner_side = get_winnername(m_soup, default = not bool(m_info))
-                if  winner_name in dupe_list:
-                    winner_name = rename_JCGwinnername(m_soup, winner_name, winner_side)       
-                winner_class = str(m_info[3].text) if bool(m_info) == True else 'Default'
-                winner.append(winner_name)
-                class_win.append(winner_class)
-            print(match, end = "  ")  #check if it's working
+                try:
+                    winner_name, winner_side = get_winnername(m_soup, default = not bool(m_info))
+                    if  winner_name in dupe_list:
+                        winner_name = rename_JCGwinnername(m_soup, winner_name, winner_side)       
+                    winner_class = str(m_info[3].text) if bool(m_info) == True else 'Default'
+                    winner.append(winner_name)
+                    class_win.append(winner_class)
+                except Exception:
+                    print(f'\n Cannot find match_info at code:{code} match:{match_number}')
+                    print(f'Link: https://sv.j-cg.com/compe/view/match/{code}/{match_number}/')
+                    print(str(sys.exc_info()[0]))
+                    
+
+            print(match, end = "\r")  #check if it's working
         
         #Create the dataset #2
         winner_df = pd.DataFrame(winner).rename(columns={0:'Winner'})
         class_win_df = pd.DataFrame(class_win).rename(columns={0:'Class'})
-        listdf = [winner_df, class_win_df]
-        match_data = pd.concat(listdf, axis=1)
+        list_df = [winner_df, class_win_df]
+        match_data = pd.concat(list_df, axis=1)
     
     return player_data, match_data
 
@@ -104,8 +113,7 @@ def JCG_2pick_pickwin_index(matches):
 #Returns dataset of the the Number of Wins per Class per Player
 def JCG_2pick_playerclass_win_count(players,matches):
     
-    rank = {'8':'Winner', '7' : 'Runner-up', '6' : 'Top 4', '5' : 'Top 8', '4' : 'Top 16', \
-            '3' : 'Round 4', '2' : 'Round 3', '1' : 'Round 2', '0' : 'Round 1'}
+
     crafttranslate = { 'エルフ' : 'Forest' , 'ロイヤル' : 'Sword' , 'ウィッチ' : 'Rune' , 'ドラゴン' : 'Dragon', \
                       'ネクロマンサー' : 'Shadow' , 'ヴァンパイア' : 'Blood' , 'ビショップ' : 'Haven' , 'ネメシス' : 'Portal' } 
     class_names = ["Forest", "Sword", "Rune", "Dragon", "Shadow", "Blood", "Haven", "Portal", "Default"]
@@ -114,7 +122,7 @@ def JCG_2pick_playerclass_win_count(players,matches):
     combined_tally = matches.value_counts().reset_index().rename(columns={0:'Count', 'Winner' : 'Player'})
     combined2_tally = matches["Winner"].value_counts().reset_index().rename(columns={'Winner':'Total','index':'Player'})
     combined_tally = combined_tally.replace({"Class": crafttranslate})
-    player_tally = pd.merge(players,combined2_tally,on='Player',how='outer').sort_values(by=['Total'], ascending=False)
+    player_tally = pd.merge(players,combined2_tally,on='Player',how='outer')
     
     #Adds no. of wins per class per player
     for classes in class_names:
@@ -122,8 +130,19 @@ def JCG_2pick_playerclass_win_count(players,matches):
         class_tally = class_tally[['Player','Count']]
         player_tally = pd.merge(player_tally, class_tally,on='Player',how='outer').rename(columns={'Count':classes})
     
-    #Add rank
+
     player_tally = player_tally.fillna(0)
+
+       
+    return player_tally
+
+
+def add_player_rank(player_tally):
+    
+    rank = {'8':'Winner', '7' : 'Runner-up', '6' : 'Top 4', '5' : 'Top 8', '4' : 'Top 16', \
+        '3' : 'Round 4', '2' : 'Round 3', '1' : 'Round 2', '0' : 'Round 1'}
+    #Add rank
+    player_tally = player_tally.sort_values(by=['Total'], ascending=False)
     rank_tally = pd.DataFrame([rank[str(int(x))] for x in player_tally["Total"]],columns=['Rank'])
     player_tally = rank_tally.join(player_tally)
     
@@ -145,20 +164,14 @@ def JCG_2pick_writer(tcode,pw_index,player_tally):
     #PickWin Index
     PW_sheet = writer.sheets['PickWin Index']
     PW_sheet.conditional_format('F2:F9', {'type': '2_color_scale', 'min_value' : 0, 'max_value' : 8})
-    PW_sheet.write('C11', f'JCG SV 2Pick {tourney_name_locate[3].text}')
-    PW_sheet.write('C12', f'{tourney_name_locate[5].text} {tourney_name_locate[6].text}')
-    PW_sheet.write('D11', 'PW_index > 1')
-    PW_sheet.write('D12', 'PW_index = 1')
-    PW_sheet.write('D13', 'PW_index < 1')
-    PW_sheet.write('E11', 'Popular and Winning')
-    PW_sheet.write('E12', 'Average')
-    PW_sheet.write('E13', 'Unpopular or Losing')
     
     #Player Tally
     PT_sheet = writer.sheets['Player Tally']
     PT_sheet.ignore_errors({'number_stored_as_text': 'D2:D258'})
     PT_sheet.freeze_panes(1,0)
     PT_sheet.conditional_format('F2:M257', {'type': '2_color_scale', 'min_value' : 0, 'max_value' : 3, 'min_color': '#FFFFFF', 'max_color' :'#7FBA00'})
+    
+
     writer.save()
 
 #Rename duplicate names by adding their respective ID No. to their names
@@ -209,6 +222,48 @@ def rename_JCGwinnername(soup, winner_name, winner_side):
     winner_name = f'{winner_name} {winner_id}'
         
     return winner_name
+        
+#Check for players that change names  
+def rename_changednames(player_tally, tcodes):
+    
+    zero_id_player = []
+    player_index = []
+    
+    for player in player_tally.index:
+        if player_tally['id'][player] == 0:  #Name change detected
+            zero_id_player.append(player_tally['Player'][player])
+            player_index.append(player)
+    
+    #Open Finals Enterylist
+    if bool(zero_id_player) == True:
+        pd.set_option('mode.chained_assignment', None)
+        players_link_json = 'https://sv.j-cg.com/compe/view/entrylist/' + tcodes[1] + '/json'
+        response = requests.get(players_link_json)
+        data1 = response.json()
+        data2 = pd.DataFrame(list(data1['participants']))
+        final_tally = data2[['nm','id']]
+        
+        for player in range (0,len(zero_id_player)):       
+            #Link the 2 data frames 
+            final_player_name = zero_id_player[player]
+            final_player_id = str(int(final_tally[final_tally['nm']==final_player_name]['id']))
+            final_player_index = player_index[player]
+            
+            group_player_index = int(player_tally.index[player_tally['id'] == final_player_id].tolist()[0])
+            group_player_name = player_tally['Player'][group_player_index]
+            
+            #rename elements
+            player_tally['Player'][group_player_index] = f'{final_player_name} [{group_player_name}]'
+            player_tally['Player'][final_player_index] = f'{final_player_name} [{group_player_name}]'
+            player_tally['id'][final_player_index] = final_player_id       
+    
+        #Combine rows with same name and ID
+        player_tally = player_tally.fillna(0)
+        player_tally = player_tally.groupby(["Player","id"]).sum()
+        player_tally = player_tally.sort_values(by=['Total'], ascending=False).reset_index()
+        
+    return player_tally
+    
 
 #Run function for JCG T2
 def JCG_T2_scraper(tcodes):
@@ -216,4 +271,8 @@ def JCG_T2_scraper(tcodes):
     players, matches = JCG_2pick_scraper(tcodes, analysis='single')
     pw_index = JCG_2pick_pickwin_index(matches)
     player_tally = JCG_2pick_playerclass_win_count(players,matches)
-    JCG_2pick_writer(tcodes[0],pw_index,player_tally)
+    player_tally = rename_changednames(player_tally,tcodes)
+    player_tally = add_player_rank(player_tally)
+    JCG_2pick_writer(tcodes[0],pw_index,player_tally)   
+      
+    
