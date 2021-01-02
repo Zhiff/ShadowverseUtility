@@ -479,7 +479,7 @@ Darkness Evolved,Dragoncraft,Silver,2,Dragonewt Fist,66jtU
 Darkness Evolved,Dragoncraft,Gold,7,Neptune,66laY
 Darkness Evolved,Dragoncraft,Gold,9,Polyphonic Roar,66lqK
 Darkness Evolved,Dragoncraft,Gold,3,Dracomancer's Rites,66lqU
-Darkness Evolved,Dragoncraft,Legendary,3,Dragonsong Flute,66oGQ
+Darkness Evolved,Dragoncraft,Legendary,1,Dragonsong Flute,66oGQ
 Darkness Evolved,Shadowcraft,Bronze,2,Dark Conjurer,6736Y
 Darkness Evolved,Shadowcraft,Bronze,3,Deathchaser,6736i
 Darkness Evolved,Shadowcraft,Bronze,4,Malicious Ghost,6736s
@@ -2328,9 +2328,106 @@ Storm over Rivayle,Portalcraft,Silver,2,Scavenge,75HnA
 Storm over Rivayle,Portalcraft,Gold,4,"Carnelia, Servant of Darkness",75JUY
 Storm over Rivayle,Portalcraft,Gold,8,Committed Conductor,75JUi
 Storm over Rivayle,Portalcraft,Gold,0,Elemental Brink,75KDQ
-Storm over Rivayle,Portalcraft,Legendary,1,"Illganeau, Horror Astray",75Lwo
+Storm over Rivayle,Portalcraft,Legendary,2,"Illganeau, Horror Astray",75Lwo
 Storm over Rivayle,Portalcraft,Legendary,7,"Iceschillendrig, Gilded Autocrat",75Lwy
 Storm over Rivayle,Portalcraft,Legendary,4,"Sylvia, Grand Arbiter",75Lx6
+Eternal Awakening,Neutral,Bronze,3,Fluffy Angel,75_R2
+Eternal Awakening,Neutral,Bronze,2,Master Sleuth,75_RC
+Eternal Awakening,Neutral,Bronze,2,Angelic Melody,7609w
+Eternal Awakening,Neutral,Silver,4,"Eugen, Stalwart Skyfarer",761tI
+Eternal Awakening,Neutral,Silver,2,"Io, Journeymage",761tS
+Eternal Awakening,Neutral,Gold,2,"Vyrn, Li'l Red Dragon",764JY
+Eternal Awakening,Neutral,Gold,2,Archangel of Remembrance,764Ji
+Eternal Awakening,Neutral,Legendary,10,"Bahamut, Primeval Dragon",766lo
+Eternal Awakening,Neutral,Legendary,5,On Wings of Tomorrow,767Ug
+Eternal Awakening,Forestcraft,Bronze,2,Elf Sorcerer,76NrY
+Eternal Awakening,Forestcraft,Bronze,5,Greenwood Reindeer,76Nri
+Eternal Awakening,Forestcraft,Bronze,4,Blossom Treant,76Nrs
+Eternal Awakening,Forestcraft,Bronze,9,Wind Fairy,76Ns0
+Eternal Awakening,Forestcraft,Silver,1,"Walder, Forest Ranger",76QHo
+Eternal Awakening,Forestcraft,Silver,2,"Mimlemel, Freewheeling Lass",76QHy
+Eternal Awakening,Forestcraft,Silver,6,Nature Consumed,76R0g
+Eternal Awakening,Forestcraft,Gold,7,Primordial Colossus,76Sk2
+Eternal Awakening,Forestcraft,Gold,4,Astoreth,76SkC
+Eternal Awakening,Forestcraft,Legendary,4,"Tweyen, Dark Huntress",76VAI
+Eternal Awakening,Forestcraft,Legendary,6,Xeno Sagittarius,76VAS
+Eternal Awakening,Swordcraft,Bronze,5,Victorious Grappler,76mG2
+Eternal Awakening,Swordcraft,Bronze,3,Sword-Swinging Bandit,76mGC
+Eternal Awakening,Swordcraft,Bronze,8,Rampaging Rhino,76mGM
+Eternal Awakening,Swordcraft,Bronze,4,Stone Merchant,76mGW
+Eternal Awakening,Swordcraft,Silver,2,"Arthur, Slumbering Dragon",76oiI
+Eternal Awakening,Swordcraft,Silver,2,"Mordred, Slumbering Lion",76oiS
+Eternal Awakening,Swordcraft,Silver,2,Proven Methodology,76pRA
+Eternal Awakening,Swordcraft,Gold,2,"Mirin, Samurai Dreamer",76r8Y
+Eternal Awakening,Swordcraft,Gold,7,Average Axeman,76r8i
+Eternal Awakening,Swordcraft,Legendary,8,"Eahta, God of the Blade",76tao
+Eternal Awakening,Swordcraft,Legendary,4,"Seofon, Star Sword Sovereign",76tay
+Eternal Awakening,Runecraft,Bronze,3,Academic Archmage,778gY
+Eternal Awakening,Runecraft,Bronze,5,Crystal Witch,778gi
+Eternal Awakening,Runecraft,Bronze,8,Raging Golem,778gs
+Eternal Awakening,Runecraft,Bronze,1,Impalement Arts,779PQ
+Eternal Awakening,Runecraft,Silver,2,"Elmott, Pyrestarter",77B6o
+Eternal Awakening,Runecraft,Silver,1,"Alistair, Tiny Magus",77B6y
+Eternal Awakening,Runecraft,Silver,2,Elixir Mixer,77Brg
+Eternal Awakening,Runecraft,Gold,7,"Pholia, Retired Sovereign",77DZ2
+Eternal Awakening,Runecraft,Gold,2,Force Barrier,77EHw
+Eternal Awakening,Runecraft,Legendary,3,"Fif, Prodigious Sorcerer",77F_I
+Eternal Awakening,Runecraft,Legendary,6,Xeno Ifrit,77F_S
+Eternal Awakening,Dragoncraft,Bronze,4,Hypersonic Dragonewt,77X52
+Eternal Awakening,Dragoncraft,Bronze,4,Giant Basilisk,77X5C
+Eternal Awakening,Dragoncraft,Bronze,2,Shark Warrior,77X5M
+Eternal Awakening,Dragoncraft,Bronze,2,Mermaid Archer,77X5W
+Eternal Awakening,Dragoncraft,Silver,6,"Ladiva, Champion of Love",77ZXI
+Eternal Awakening,Dragoncraft,Silver,9,"Ghandagoza, Fist of Rage",77ZXS
+Eternal Awakening,Dragoncraft,Silver,1,Dragon Rearing,77aGA
+Eternal Awakening,Dragoncraft,Gold,4,"Razia, Vengeful Cannonlancer",77bzY
+Eternal Awakening,Dragoncraft,Gold,5,Tempest Dragon,77bzi
+Eternal Awakening,Dragoncraft,Legendary,4,"Threo, Divine Havoc",77ePo
+Eternal Awakening,Dragoncraft,Legendary,17,"Disrestan, Ocean Harbinger",77ePy
+Eternal Awakening,Shadowcraft,Bronze,6,Lonesome Necromancer,77vVY
+Eternal Awakening,Shadowcraft,Bronze,3,Skullfish,77vVi
+Eternal Awakening,Shadowcraft,Bronze,2,Winged Zombie,77vVs
+Eternal Awakening,Shadowcraft,Bronze,2,Psychopomp Tour Guide,77vW0
+Eternal Awakening,Shadowcraft,Silver,1,"Shao, Shady Apothecary",77xxo
+Eternal Awakening,Shadowcraft,Silver,4,"Zaja, Delirious Berserker",77xxy
+Eternal Awakening,Shadowcraft,Silver,1,Undead Parade,77ygg
+Eternal Awakening,Shadowcraft,Gold,7,"Vaseraga, Shadowed Scythe",77-O2
+Eternal Awakening,Shadowcraft,Gold,3,Tri-Head Hound,77-OC
+Eternal Awakening,Shadowcraft,Legendary,2,"Niyon, Mystic Musician",780qI
+Eternal Awakening,Shadowcraft,Legendary,10,Ruinblade Reaper,780qS
+Eternal Awakening,Bloodcraft,Bronze,1,Rouge Vampire,78Hw2
+Eternal Awakening,Bloodcraft,Bronze,5,Demonic Berserker,78HwC
+Eternal Awakening,Bloodcraft,Bronze,2,Wicked Wolf,78HwM
+Eternal Awakening,Bloodcraft,Bronze,4,Discerning Devil,78HwW
+Eternal Awakening,Bloodcraft,Silver,3,"Hallessena, Calamity's Saw",78KMI
+Eternal Awakening,Bloodcraft,Silver,2,"Skull, Freedom Raider",78KMS
+Eternal Awakening,Bloodcraft,Silver,3,Corrupting Bloodlust,78L5A
+Eternal Awakening,Bloodcraft,Gold,4,Gluttonous Demon,78MoY
+Eternal Awakening,Bloodcraft,Gold,4,Knight of Purgatory,78Moi
+Eternal Awakening,Bloodcraft,Legendary,6,"Seox, Heavenly Howl",78PEo
+Eternal Awakening,Bloodcraft,Legendary,7,Xeno Diablo,78PEy
+Eternal Awakening,Havencraft,Bronze,2,Belfry Sister,78gKY
+Eternal Awakening,Havencraft,Bronze,7,Sacred Tiger,78gKi
+Eternal Awakening,Havencraft,Bronze,5,Sword Al-mi'raj,78gKs
+Eternal Awakening,Havencraft,Bronze,1,Unicorn Altar,78gpo
+Eternal Awakening,Havencraft,Silver,1,"Will, Underworld Priest",78imo
+Eternal Awakening,Havencraft,Silver,7,"Noa, Primal Shipwright",78imy
+Eternal Awakening,Havencraft,Silver,4,Redeemer's Cudgel,78jVg
+Eternal Awakening,Havencraft,Gold,3,"Zahlhamelina, Sun Priestess",78lD2
+Eternal Awakening,Havencraft,Gold,1,Summit Temple,78lSg
+Eternal Awakening,Havencraft,Legendary,2,"Anre, the Enlightened One",78nfI
+Eternal Awakening,Havencraft,Legendary,5,Xeno Vohu Manah,78nfS
+Eternal Awakening,Portalcraft,Bronze,2,Mechanized Soldier,792l2
+Eternal Awakening,Portalcraft,Bronze,3,Surveillance System,792lC
+Eternal Awakening,Portalcraft,Bronze,6,Toy Mender,792lM
+Eternal Awakening,Portalcraft,Bronze,3,Courageous Puppeteer,792lW
+Eternal Awakening,Portalcraft,Silver,2,"Catherine, Nightsmoke",795BI
+Eternal Awakening,Portalcraft,Silver,2,"Spinnah, Spin Artist",795BS
+Eternal Awakening,Portalcraft,Silver,3,Kitty-Cat Arsenal,795wA
+Eternal Awakening,Portalcraft,Gold,2,"Lunalu, Fangirl A",797dY
+Eternal Awakening,Portalcraft,Gold,10,Mobilized Factory,797di
+Eternal Awakening,Portalcraft,Legendary,3,"Tien, Treacherous Trigger",79A3o
+Eternal Awakening,Portalcraft,Legendary,2,"Feower, Double Blade Flash",79A3y
 Promo,Forestcraft,Legendary,3,Ancient Elf,fof0I
 Promo,Swordcraft,Legendary,6,Sea Queen Otohime,fp1Qo
 Promo,Runecraft,Legendary,4,Merlin,fpPrI
@@ -2434,20 +2531,27 @@ Promo,Runecraft,Bronze,8,Fiery Embrace,gX4xQ
 Promo,Runecraft,Bronze,2,Conjure Golem,gX4xa
 Promo,Dragoncraft,Bronze,1,Flamewinged Might,gXTLw
 Promo,Dragoncraft,Bronze,2,Dragon Oracle,gXTM4
+Promo,Dragoncraft,Silver,2,Draconic Counsel,gXVoA
 Promo,Dragoncraft,Gold,2,Draconic Call,gXYEQ
 Promo,Shadowcraft,Bronze,2,Undying Resentment,gXrmQ
 Promo,Shadowcraft,Silver,4,Fatal Order,gXuCg
+Promo,Shadowcraft,Silver,4,Necroimpulse,gXuCq
+Promo,Shadowcraft,Gold,4,Greatpick Corpse,gXvw2
 Promo,Bloodcraft,Bronze,2,Blood Pact,gYEAw
 Promo,Bloodcraft,Silver,5,Burning Constriction,gYGdA
+Promo,Bloodcraft,Silver,1,Bloodfall,gYGdK
 Promo,Havencraft,Bronze,2,Blackened Scripture,gYcbQ
 Promo,Havencraft,Bronze,2,Blackened Scripture,gYcba
+Promo,Havencraft,Silver,1,Jeweled Brilliance,gYf1g
 Promo,Havencraft,Gold,1,Golden Bell,gYhEI
 Promo,Portalcraft,Bronze,0,Focus,gY-_w
 Promo,Portalcraft,Silver,1,Metadivision,gZ1SA
 Promo,Portalcraft,Silver,1,Artifact Scan,gZ1SK
 Verdant Conflict,Forestcraft,Legendary,5,"Ladica, the Stoneclaw",gaErI
 Verdant Conflict,Swordcraft,Legendary,3,Tsubaki of the Demon Blade,gadFo
+Ultimate Colosseum,Runecraft,Legendary,15,"Kuon, Founder of Onmyodo",ga_gI
 Verdant Conflict,Dragoncraft,Legendary,4,"Valdain, Cursed Shadow",gbO4o
+World Uprooted,Dragoncraft,Legendary,2,"Rola, Inferno Dragoon",gbO4y
 Token,Neutral,Bronze,5,Tin Soldier,rfHG2
 Token,Neutral,Bronze,3,Club Soldier,rfHGC
 Token,Neutral,Bronze,3,Heart Guardian,rfHGM
@@ -2481,6 +2585,7 @@ Token,Neutral,Legendary,2,Wrathful Icefiend,rfOcC
 Token,Neutral,Legendary,3,Vicious Commander,rfOcM
 Token,Neutral,Legendary,6,Demon of Purgatory,rfOcW
 Token,Neutral,Legendary,7,Gluttonous Behemoth,rfOcg
+Token,Neutral,Legendary,5,"Gran & Djeeta, Eternal Heroes",rfOcq
 Token,Neutral,Legendary,7,Dis's Damnation,rfPJg
 Token,Neutral,Legendary,10,Astaroth's Reckoning,rfPJq
 Token,Neutral,Legendary,3,Morrigna's Gospel,rfPJ-
@@ -2488,11 +2593,14 @@ Token,Neutral,Legendary,1,Infernal Gaze,rfPK8
 Token,Neutral,Legendary,1,Infernal Surge,rfPKI
 Token,Neutral,Legendary,2,Heavenfall,rfPKS
 Token,Neutral,Legendary,4,Earthfall,rfPKc
+Token,Neutral,Legendary,0,Gran's Resolve,rfPKm
+Token,Neutral,Legendary,0,Djeeta's Determination,rfPKw
 Token,Forestcraft,Bronze,1,Fairy,rffgY
 Token,Forestcraft,Bronze,0,Fairy Wisp,rffgi
 Token,Forestcraft,Bronze,1,Fairy's Yawn,rfg9o
 Token,Forestcraft,Bronze,1,Fairy's Awakening,rfg9y
 Token,Forestcraft,Silver,2,Hornet Warrior,rfi6o
+Token,Forestcraft,Silver,4,Stumpeye,rfi6y
 Token,Forestcraft,Silver,1,Angel's Dress,rfirg
 Token,Forestcraft,Silver,1,Demon's Dress,rfirq
 Token,Forestcraft,Silver,3,Hornet Sting,rfir-
@@ -2597,6 +2705,7 @@ Token,Runecraft,Gold,2,Onion Patch,rgVOM
 Token,Runecraft,Gold,2,Anne's Summoning,rgVOW
 Token,Runecraft,Gold,7,"Morra, Monika's Familiar",rgVOg
 Token,Runecraft,Gold,7,Alchemical Craftschief,rgVOq
+Token,Runecraft,Gold,7,Bai Ze,rgVO-
 Token,Runecraft,Gold,5,Emergency Summoning,rgVdg
 Token,Runecraft,Gold,5,Reactive Barrier,rgVdq
 Token,Runecraft,Gold,6,Second Curse,rgW6w
@@ -2632,6 +2741,7 @@ Token,Dragoncraft,Silver,3,Whirlwind,rgrri
 Token,Dragoncraft,Silver,2,White Breath,rgs5K
 Token,Dragoncraft,Silver,4,Black Breath,rgs5U
 Token,Dragoncraft,Silver,1,Draconic Counsel,rgs5e
+Token,Dragoncraft,Silver,1,Draconic Counsel,rgs5o
 Token,Dragoncraft,Gold,2,Poseidon's Guard,rgtoY
 Token,Dragoncraft,Gold,4,"Ian & Adelle, Newlyweds",rgtoi
 Token,Dragoncraft,Gold,4,"Adelle, Jealous Dragon",rgtos
@@ -2668,6 +2778,8 @@ Token,Shadowcraft,Silver,3,Deep Dream,rhEG2
 Token,Shadowcraft,Silver,0,Fran's Curse,rhEVg
 Token,Shadowcraft,Gold,4,Spellplate Cavalier,rhGD2
 Token,Shadowcraft,Gold,4,Bone Cavalier,rhGDC
+Token,Shadowcraft,Gold,5,Tri-Head Hound,rhGDM
+Token,Shadowcraft,Gold,7,Tri-Head Hound,rhGDW
 Token,Shadowcraft,Gold,6,Infernal Crown,rhGiI
 Token,Shadowcraft,Gold,1,Descent into Madness,rhGxw
 Token,Shadowcraft,Gold,5,Forbidden Art,rhGy4
@@ -2793,6 +2905,7 @@ Token,Portalcraft,Gold,7,Purgation's Blade,riQBk
 Token,Portalcraft,Gold,4,Chaos Awakens,riQBu
 Token,Portalcraft,Gold,0,Yuwan's Fury,riQC2
 Token,Portalcraft,Gold,0,Belphomet's Crackdown,riQCC
+Token,Portalcraft,Gold,1,Facsimile,riQCM
 Token,Portalcraft,Legendary,1,Spinaria's Artifact,riRuo
 Token,Portalcraft,Legendary,8,"Orchis, Resolute Puppet",riRuy
 Token,Portalcraft,Legendary,8,"Orchis, Vengeful Puppet",riRv6
@@ -2819,4 +2932,4 @@ Token,Portalcraft,Legendary,3,Wheel of Misfortune,riSO2
 Token,Portalcraft,Legendary,3,Gullian Aura,riSdg
 Token,Portalcraft,Legendary,0,Gullian Howl,riSdq
 Token,Portalcraft,Legendary,1,Dead to Rights,riSd-
-Token,Portalcraft,Legendary,4,Wretched Tryst,riSe8
+Token,Portalcraft,Legendary,5,Wretched Tryst,riSe8

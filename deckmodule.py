@@ -30,7 +30,7 @@ class Deck:
     
     def class_checker_svo(self):
         #This function is added to match battlefy class classification
-        leader = { 'Forestcraft':'arisa' , 'Swordcraft':'erika' , 'Runecraft':'isabelle' , 'Dragoncraft':'rowen' , 'Shadowcraft':'luna' , 'Bloodcraft':'urias' , 'Havencraft':'eris' , 'Portalcraft':'yuwan' }
+        leader = { 'Forest':'arisa' , 'Sword':'erika' , 'Rune':'isabelle' , 'Dragon':'rowen' , 'Shadow':'luna' , 'Blood':'urias' , 'Haven':'eris' , 'Portal':'yuwan' }
         craft_me = self.class_checker()
         svo_class = leader.get(craft_me)
         
@@ -48,7 +48,7 @@ class Deck:
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
         if self.formats == 'rotation':
-            df = pd.read_excel('Excel_and_CSV/StormOverRivayleMeta.xlsx')
+            df = pd.read_excel('Excel_and_CSV/EternalAwakeningMeta.xlsx')
         elif self.formats == 'unlimited':
             df = pd.read_excel('Excel_and_CSV/UnlimitedMeta.xlsx')
         
