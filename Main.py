@@ -15,8 +15,9 @@ import openpyxl as oxl
 import requests
 import numpy as np
 from bs4 import BeautifulSoup as bs
+import time
 
-
+start_time = time.time()
 # Excel Scraping, It will produce 3 excel files. FilteredDecks_View, FilteredDecks_Data, and Statistics and Breakdown
 # Input : Excel sheet from SVO
 # Requirements :    - all names and decklist must be inside 'Sheet1'
@@ -24,7 +25,7 @@ from bs4 import BeautifulSoup as bs
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/JCGOnline.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/TSOT4.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -45,8 +46,10 @@ from bs4 import BeautifulSoup as bs
 # Input : Json page from respective website
 # Requirements :    - JSON link must be valid
 
+
 tcode = ws.JCG_latest_tourney('rotation', 'group')
 ws.JCG_scraper(tcode)
+
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
 
@@ -85,3 +88,5 @@ ws.JCG_scraper(tcode)
 
 # jcgids = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436', '2440', '2466', '2468', '2471', '2472', '2474','2477','2480','2482', '2504', '2505', '2510','2513','2515'] #group
 # ws.generate_archetype_trends(jcgids)
+
+print("--- %s seconds ---" % (time.time() - start_time))

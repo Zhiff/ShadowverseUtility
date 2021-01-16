@@ -243,13 +243,17 @@ def add_conversion_rate(top16df):
     top16df['arc 1'] = top16df['arc 1'].apply(lambda x: Deck(x).archetype_checker())
     top16df['arc 2'] = top16df['arc 2'].apply(lambda x: Deck(x).archetype_checker())
     decks = sh.deck_quick_count(top16df)
-    decks['Top16 Rep%'] = (round((decks['Count']/(int(top16df.shape[0])))*100, 2))
+    decks['Top 16 Rep%'] = (round((decks['Count']/(int(top16df.shape[0])))*100, 2))
     decksdf = pd.read_excel(file1, sheet_name='Decks')
     decksdf = decksdf.rename(columns={'Count':'Total', 'Player %':'Group Rep%'})
     mergedeck = decks.merge(decksdf)
     mergedeck['Conversion Rate %'] = round(mergedeck['Count']/mergedeck['Total'], 4)*100 
     mergedeck = mergedeck.rename(columns={'Count':'Top 16', 'Total':'Group'})
-    mergedeck = mergedeck[['Deck Archetype','Top 16','Group','Conversion Rate %', 'Group Rep%', 'Top16 Rep%']]
+    mergedeck = mergedeck.astype(str)
+    mergedeck['Conversion Rate %'] = mergedeck['Conversion Rate %'].astype(float)
+    mergedeck['Top 16 (Player%)'] = mergedeck['Top 16'] + ' (' + mergedeck['Top 16 Rep%'] + '%)'
+    mergedeck['Group (Player%)'] = mergedeck['Group'] + ' (' + mergedeck['Group Rep%'] + '%)'
+    mergedeck = mergedeck[['Deck Archetype','Top 16 (Player%)','Group (Player%)','Conversion Rate %']]
     mergedeck.to_excel(writer, sheet_name='Top16 Conversion')
     writer.save()
     

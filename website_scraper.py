@@ -23,8 +23,8 @@ import numpy as np
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 3)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
+    em.excel_convert_dataset(svoexcel, 2)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -63,17 +63,19 @@ def JCG_latest_tourney(sv_format, tourney_stage):
             latest_tourney = True
             potential_id = tourney_code.get("competition_id")
             latest_tourney_code = str(potential_id)
+            tourney_name = tourney_code.find('td', class_="name").text
             tourney_date = tourney_code.find('td', class_="date").text + '(Still Ongoing)'
             break
         elif potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '終了':
             latest_tourney = True
             potential_id = tourney_code.get("competition_id")
             latest_tourney_code = str(potential_id)
+            tourney_name = tourney_code.find('td', class_="name").text
             tourney_date = tourney_code.find('td', class_="date").text + '(Finished)'
             break
     
     if latest_tourney:
-        print(f'Tournament Date: {tourney_date}')
+        print(f'{tourney_name}\nTournament Date: {tourney_date}')
     if latest_tourney == False:
         latest_tourney_code = None
     
