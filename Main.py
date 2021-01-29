@@ -25,7 +25,7 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/TSOT4.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/RageD2.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -62,7 +62,7 @@ ws.JCG_scraper(tcode)
 # name = ws.JCG_group_winner_check(tour)  
 # count = sh.deck_quick_count(name)
 
-# DSAL_scraper('http://www.littleworld.tokyo/RoundOfDarkness/openingPartySecond')
+# ws.DSAL_scraper('http://www.littleworld.tokyo/RoundOfDarkness/openingPartySecond')
 
 
 # Ban Analyzer
@@ -86,7 +86,29 @@ ws.JCG_scraper(tcode)
 #JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436', '2440', '2466', '2468', '2471', '2472', '2474','2477','2480','2482', '2504', '2505', '2510','2513','2515'] #group
+# jcgids = ['2535','2537','2540', '2541', '2544', '2546', '2547', '2549', '2552', '2553'] #group
 # ws.generate_archetype_trends(jcgids)
+
+# url = 'https://rage-esports.jp/shadowverse/2021spring/pre/deck'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+# filtered = soup.find('tbody')
+# deck1 = []
+# deck2 = []
+# alllink = filtered.find_all('a')
+# for link in alllink[::2]:
+#     store = link.get('href')
+#     deck1.append(store)
+# for link in alllink[1::2]:
+#     store = link.get('href')
+#     deck2.append(store)
+
+# db = np.column_stack((deck1,deck2))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'deck 1', 1:'deck 2'})
+
+# writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
 
 print("--- %s seconds ---" % (time.time() - start_time))

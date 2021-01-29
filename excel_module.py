@@ -67,7 +67,7 @@ def excel_statistics(filtered_data, maxdeck):
         df = sh.add_lineup_column_5decks(df)
     
     # Create a new dataframe that consists only lineup and their amount of occurrence
-    lineup = sh.get_lineup_df(df)
+    lineup = sh.get_lineup_df(df, maxdeck)
     lineup.to_excel(writer, "Lineups")
     
     #Create a new dataframe that consists only deck and their amount of occurrence
@@ -194,11 +194,15 @@ def add_class_color(mode):
         conditionalFormat(sheet)
         sheet = excel['Top16 Conversion']
         conditionalFormat(sheet)
+        sheet = excel['Lineups']
+        conditionalFormat(sheet)
     elif (mode == 2):
         sheet = excel.worksheets[1]
         conditionalFormat(sheet)
     elif (mode == 3):
         sheet = excel['Decks']
+        conditionalFormat(sheet)
+        sheet = excel['Lineups']
         conditionalFormat(sheet)
     
     

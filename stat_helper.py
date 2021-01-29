@@ -29,11 +29,21 @@ def add_lineup_column_5decks(df):
     return df_added_lineup
 
 
-def get_lineup_df(df):
+def get_lineup_df(df, maxdeck):
     # creating a new df that consists of lineup and the number of people that bringing that lineup in tourney
     lineup = df["Lineup"].value_counts(normalize = False, ascending = False)
     lineup = lineup.rename_axis("Lineup").reset_index(name = 'Count')
     lineup['Player %'] = (round((lineup['Count']/(int(df.shape[0])))*100, 2))
+    if maxdeck == 2:
+        lineup[['Deck 1','Deck 2']] = pd.DataFrame(lineup['Lineup'].tolist(), index= lineup.index)
+        lineup = lineup[['Deck 1', 'Deck 2', 'Count', 'Player %']]
+    elif maxdeck == 3:
+        lineup[['Deck 1','Deck 2','Deck 3']] = pd.DataFrame(lineup['Lineup'].tolist(), index= lineup.index)
+        lineup = lineup[['Deck 1', 'Deck 2', 'Deck 3', 'Count', 'Player %']]
+    elif maxdeck == 5:
+        lineup[['Deck 1','Deck 2','Deck 3','Deck 4','Deck 5']] = pd.DataFrame(lineup['Lineup'].tolist(), index= lineup.index)
+        lineup = lineup[['Deck 1', 'Deck 2', 'Deck 3', 'Deck 4', 'Deck 5', 'Count', 'Player %']]
+        
     return lineup
 
 def get_decks_df(df, maxdeck):

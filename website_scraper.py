@@ -181,7 +181,7 @@ def manasurge_bfy_scraper(jsonlink):
     em.excel_convert_dataset('Excel_and_CSV/MS_Raw.xlsx', 3)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
-    em.add_class_color(1)
+    em.add_class_color(3)
     
 # Scrap info from battlefy to see W/L/B stats and Archetype stats in Post_SVO file.
 # Prerequisite : SVO_initial_scraper must be run first. FilteredDecks_Data should contain all participants
@@ -517,5 +517,35 @@ def DSAL_scraper(link):
     em.excel_convert_dataset('Excel_and_CSV/DSAL_Raw.xlsx', 5)
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 5)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
-    em.add_class_color(1)
-    
+    em.add_class_color(3)
+
+#new BFY
+# tourneyhash = '5fe551f5726d0b11ab383a6e'
+# stagehash = '6002492e7c4ead11982f6c9a'
+
+# teamjson = 'https://dtmwra1jsgyb0.cloudfront.net/tournaments/'+ tourneyhash + '/teams'
+# response = requests.get(teamjson)        
+# data = response.json()
+# dfa = pd.DataFrame(data)
+
+# participantsjson = 'https://dtmwra1jsgyb0.cloudfront.net/tournaments/'+ tourneyhash + '/participants'
+# response = requests.get(participantsjson)        
+# data = response.json()
+# dfb = pd.DataFrame(data)
+
+# standingsjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/'+ stagehash + '/latest-round-standings'
+# response = requests.get(standingsjson)        
+# data = response.json()
+# dfc = pd.DataFrame(data)
+
+# statsjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/'+ stagehash + '/stats'
+# response = requests.get(statsjson)        
+# data = response.json()
+# dfd = pd.DataFrame(data)
+
+# matchjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/'+ stagehash + '/matches'
+# response = requests.get(matchjson)        
+# data = response.json()
+# dfe = pd.DataFrame(data)
+
+
