@@ -26,8 +26,8 @@ Features :
     
   - JCG
     - Main input is JSON data directly from JCG website
-    - Using JCG_scraper method, informations such as Archetypes, Lineups, and Deck Breakdowns will be generated into excel files
-    - JCG_group_winner is an additional method to check actual group stages result since JCG rules allowed deck to be changed after group stages. 
+    - Additionally for top 16 qualifier, decks were scrapped directly from tournament bracket
+    - Using JCG_scraper method, informations such as Archetypes, Lineups, and Deck Breakdowns will be generated into excel files 
     
   - Battlefy Tournaments
     - Main input is JSON data directly from battlefy
