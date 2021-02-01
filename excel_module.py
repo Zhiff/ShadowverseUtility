@@ -162,6 +162,7 @@ def statistics_freeze_highlight(excelfile):
         last_column = oxl.utils.cell.get_column_letter(sheet.max_column)
         sheet.freeze_panes = 'C1'
         sheet.conditional_formatting.add(f"A2:{last_column}80", rule)
+        sheet.column_dimensions['A'].width = 30
     
     excel.save(excelfile)
 
