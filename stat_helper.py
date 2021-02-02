@@ -195,45 +195,6 @@ def get_win_ban_archetype(alldf):
     
     return winbanstats
 
-def isTop16JCG(df, jsonlink):
-    top16JCG = False
-    if (len(df.index) <= 16):
-        compeID = jsonlink.split('/')[6]
-        homepage = 'https://sv.j-cg.com/compe/' + compeID
-        source = requests.get(homepage).text
-        soup = bs(source, 'lxml')
-        placement = soup.find('p', class_="rank rank-1")
-        if (placement != None):
-            top16JCG = True
-            
-    return top16JCG
-
-def retrieveTop16JCG(jsonlink):
-    compeID = jsonlink.split('/')[6]
-    tourpage = 'https://sv.j-cg.com/compe/view/tour/' + compeID
-    source = requests.get(tourpage).text
-    soup = bs(source, 'lxml')
-    
-    namelist = []
-    legend = soup.find_all('div', class_='name_abbr')
-    for entry in legend:
-        namelist.append(entry.text)
-    
-    namedf = pd.DataFrame(namelist).rename(columns={0:'name'})
-    namedf = namedf['name'].value_counts().rename_axis("name").reset_index(name = 'Count')
-    
-    mainpage = 'https://sv.j-cg.com/compe/' + compeID
-    source2 = requests.get(mainpage).text
-    soup2 = bs(source2, 'lxml')
-    
-    firstplace = soup2.find('p', class_='rank rank-1').findNext().text
-    secondplace = soup2.find('p', class_='rank rank-2').findNext().text
-    
-    namedf.at[0,'name'] = firstplace
-    namedf.at[1,'name'] = secondplace
-    
-    return namedf
-
 def deck_quick_count(df):
     decks = df.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
     decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
@@ -252,19 +213,6 @@ def handle_duplicate_row(df, columnname):
     df[columnname] = df[columnname].where(~df[columnname].duplicated(), df[columnname] + '_dp')
     df[columnname] = df[columnname] + df.groupby(by=columnname).cumcount().astype(str).replace('0','')
     return df
-
-def IsGroupStageOver(code):
-    state = False
-    tour = 'https://sv.j-cg.com/compe/' + code
-    source = requests.get(tour).text
-    soup = bs(source, 'lxml')
-    
-    lista = soup.findAll('ol', class_='teamlist')
-    ex = len(lista)
-    if ex == 16:
-        state = True
-    
-    return state
 
 
 

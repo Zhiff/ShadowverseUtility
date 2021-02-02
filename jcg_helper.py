@@ -1,0 +1,135 @@
+# -*- coding: utf-8 -*-
+"""
+This is JCG Helper module. All sub-scraper related to Jcg website will be performed in this module
+
+"""
+
+import pandas as pd
+import requests
+from deckmodule import Deck
+from bs4 import BeautifulSoup as bs
+import numpy as np
+import json
+import stat_helper as sh
+
+def grabjsonfromHTML(tcode):
+    entrieslink = 'https://sv.j-cg.com/competition/' + tcode + '/entries'
+    source = requests.get(entrieslink).text
+    soup = bs(source, 'lxml')
+    
+    # Find and extract JSON file in HTML
+    all_scripts = soup.find_all('script')
+    
+    #currently hardcasted, faster processing but will be screwed when website changes
+    dljson = all_scripts[7].string
+    
+    #cleaning string to comply with JSON format
+    cleanedjson = dljson[dljson.find('list'):dljson.find('listFiltered')]
+    finaljson = cleanedjson.replace('list:','').strip()[:-1]
+    
+    data = json.loads(finaljson)
+    df = pd.DataFrame(data)
+    return df
+
+def cleanjson(jsondf):
+    sv = 'https://shadowverse-portal.com/deck/'
+    lang_eng = '?lang=en'
+    jsondf['d1'] = jsondf['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
+    jsondf['d2'] = jsondf['sv_decks'].apply(lambda x: x[1]['hash'] if x else None)
+    data1 = jsondf.loc[jsondf['result']==1].copy()
+    data1['deck 1']= data1['d1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+    data1['deck 2']= data1['d2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+    data2 = data1[['name','deck 1','deck 2']].copy()
+    data3 = sh.handle_duplicate_row(data2, 'name').reset_index().drop(['index'], axis=1)
+    return data3
+
+def group_winner_check(tcode):
+
+    resultpage = 'https://sv.j-cg.com/competition/' + tcode + '/results'
+    source = requests.get(resultpage).text
+    soup = bs(source, 'lxml')
+        
+    names = []
+    deck1 = []
+    deck2 = []
+        
+    firstplace = soup.find_all('div', class_='result result-1')
+    
+    for user in firstplace:
+        # Add their name into array
+        name = user.find('div', class_='result-name').text
+        names.append(name)
+        
+        # Add their decks into array
+        links = user.find_all('a')
+        for link in links[1::3]:
+            decks = link.get('href')
+            deck1.append(decks)
+        for link in links[2::3]:
+            decks = link.get('href')
+            deck2.append(decks)
+    
+    df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'arc 1', 2:'arc 2'})    
+    return df
+
+def isTournamentOver(tcode, stage):
+    tstate = False
+    resultpage = 'https://sv.j-cg.com/competition/' + tcode + '/results'
+    source = requests.get(resultpage).text
+    soup = bs(source, 'lxml')
+    placement = soup.find_all('div', class_="result result-1")
+    if (placement != None):
+        if stage == 'group' and (len(placement)>2):
+            tstate = True
+        elif stage == 'top16' and (len(placement)<2):
+            tstate = True
+            
+    return tstate
+
+def bracketidfinder(tcode):
+    bracketpage = 'https://sv.j-cg.com/competition/' + tcode + '/bracket'
+    source = requests.get(bracketpage).text
+    soup = bs(source, 'lxml')
+    
+    allscr = soup.find_all('script')
+    
+    tjson = allscr[7].text
+    cleanedjson = tjson[tjson.find('"groups":['):tjson.find('],"myUsername"')]
+    finaljson = cleanedjson.replace('"groups":[','')
+    bracketid = json.loads(finaljson)['id']
+    bracketid = str(bracketid)
+    return bracketid
+
+def retrieveTop16JCG(bracketid, tcode):
+    bracketjson = 'https://sv.j-cg.com/api/competition/group/' + bracketid
+    response = requests.get(bracketjson)    
+    data = response.json()['rounds']
+    name = data[0]['matches'][0]['teams'][0]['name']
+    
+    namelist = []
+    # Add all name in the bracket into one list, the more occurence, the higher the ranking.
+    for i in range(len(data)):
+        matches = data[i]['matches']
+        for j in range(len(matches)):
+            teams = matches[j]['teams']
+            for k in range(len(teams)):
+                name = teams[k]['name']
+                namelist.append(name)
+    
+    namedf = pd.DataFrame(namelist).rename(columns={0:'name'})
+    namedf = namedf['name'].value_counts().rename_axis("name").reset_index(name = 'Count')
+    
+    
+    resultpage = 'https://sv.j-cg.com/competition/' + tcode + '/results'
+    source = requests.get(resultpage).text
+    soup = bs(source, 'lxml')
+    
+    user1 = soup.find('div', class_='result result-1')
+    firstplace = user1.find('div', class_='result-name').text
+    user2 = soup.find('div', class_='result result-2')
+    secondplace = user2.find('div', class_='result-name').text
+    
+    namedf.at[0,'name'] = firstplace
+    namedf.at[1,'name'] = secondplace
+    
+    return namedf

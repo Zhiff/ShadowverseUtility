@@ -125,6 +125,7 @@ def tournament_breakdown(df, excelwriter, maxdeck):
             #Reordering Columns, Mean column appears in front
             cols = list(arc_df.columns.values)
             arc_df = arc_df[[cols[-1]] + cols[0:-1]]
+            arc_df = arc_df.sort_values('Average', ascending=False)
             arc_df.to_excel(excelwriter, archetype)
 
 #This function will combine filtereddecks_view into stats and breakdown.xlsx for easier spreadsheets export

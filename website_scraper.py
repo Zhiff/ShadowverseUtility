@@ -9,10 +9,11 @@ import pandas as pd
 import requests
 import excel_module as em
 import stat_helper as sh
+import jcg_helper as jcg
 from deckmodule import Deck
 from bs4 import BeautifulSoup as bs
 import numpy as np
-
+import json
 
 #SVO scraper
 # This function will create FilteredDecks_View, FilteredDecks_Data, and Statistics for SVO
@@ -38,83 +39,50 @@ def SVO_initial_scraper(svoexcel):
 #3.) check if it's completed (終了)
 # Returns the 4 digit string code of the latest tourney for scraping
 def JCG_latest_tourney(sv_format, tourney_stage):
-
-    jcglink = 'https://sv.j-cg.com/compe/' + sv_format #1st page or 20 most recent tourney stages
+    
+    jcglink = 'https://sv.j-cg.com/past-schedule/' + sv_format #1st page or 20 most recent tourney stages
     formats = { 'rotation' : 'ローテーション大会' , 'unlimited' : 'アンリミテッド大会' , '2pick' : '2Pick大会' }
     stage = {'group' : 'グループ予選', 'top16' : '決勝トーナメント'}
-    
+        
     source = requests.get(jcglink).text
     soup = bs(source, 'lxml')
+    alltlink = soup.find_all('a', class_='schedule-link')
     
-    ongoing = soup.find_all('tr', class_="competition")
-    # finished = soup.find_all('tr', class_="competition commit") #tourney strted/finish while class_="competition" -> tourney has not started 
-    # tourney = ongoing + finished
-    latest_tourney = False
-     
-    #Find relevant data in 'tourney' need (dates are also found in 'tourney')
-    for tourney_code in ongoing:
-        name_text = tourney_code.find_all('span', class_="nobr")   
-        potential_format = name_text[-2].text
-        potential_stage = name_text[-1].text
-        potential_status = tourney_code.find('td', class_="status").text
+    for link in alltlink:
+        jcglink = link.get('href')
         
-        #Does it meet our conditions? (Note: First one is always the latest so no dates were used for now)
-        if potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '開催中':
-            latest_tourney = True
-            potential_id = tourney_code.get("competition_id")
-            latest_tourney_code = str(potential_id)
-            tourney_name = tourney_code.find('td', class_="name").text
-            tourney_date = tourney_code.find('td', class_="date").text + '(Still Ongoing)'
+        c_entrycount = link.find('span', class_='entry-count').text
+        c_title = link.find('div', class_='schedule-title').text
+        c_date = link.find('div', class_='schedule-date').text[:5]
+        c_hour = link.find('div', class_='schedule-date').text[56:61]
+        
+        if stage[tourney_stage] in c_title:
+            tcode = jcglink.split('/')[4]
+            message = c_title + '\nStarts: '+ c_hour +' JST (Finished)'
+            print(message)
             break
-        elif potential_format == formats[sv_format] and potential_stage == stage[tourney_stage] and potential_status == '終了':
-            latest_tourney = True
-            potential_id = tourney_code.get("competition_id")
-            latest_tourney_code = str(potential_id)
-            tourney_name = tourney_code.find('td', class_="name").text
-            tourney_date = tourney_code.find('td', class_="date").text + '(Finished)'
-            break
-    
-    if latest_tourney:
-        print(f'{tourney_name}\nTournament Date: {tourney_date}')
-    if latest_tourney == False:
-        latest_tourney_code = None
-    
-    return latest_tourney_code     
+        
+    return tcode
     
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
 # input example 'https://sv.j-cg.com/compe/view/entrylist/2341/json'
 def JCG_scraper(tcode, analysis='single'):
-    gameformat = 'rotation'
-    jsonlink = 'https://sv.j-cg.com/compe/view/entrylist/' + tcode + '/json'
-    jcglink = jsonlink
-    response = requests.get(jcglink)
-    data1 = response.json()
-    data2 = pd.DataFrame(list(data1['participants']))
-    data3 = data2.loc[data2['te'] == 1] # Only filter those who checked in
-    data4 = pd.DataFrame(list(data3['dk'])).rename(columns={0:'deck 1',1:'deck 2'}) #Grab df from column dk, then rename it properly
-    data5 = data3['nm'].reset_index().drop(['index'], axis=1) #create a series with name only
-    data6 = pd.concat([data5, data4], axis=1) #combine name and deck1,deck2
+    # Grab Json from inside HTML
+    jsondf = jcg.grabjsonfromHTML(tcode)
     
-    #JCG deck syntax Handling
-    sv = 'https://shadowverse-portal.com/deck/'
-    lang_eng = '?lang=en'
-    data6 = data6.rename(columns={'nm':'name'})
-    data6['deck 1'] = data6['deck 1'].apply(lambda x: x['hs'] if x else None)
-    data6['deck 1'] = data6['deck 1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
-    data6['deck 2'] = data6['deck 2'].apply(lambda x: x['hs'] if x else '')
-    data6['deck 2'] = data6['deck 2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
-    
-    data7 = sh.handle_duplicate_row(data6, 'name')
-    df = data7
+    #Filter unnecesarry info and simply create df with name, deck 1, deck 2
+    df = jcg.cleanjson(jsondf)
     
     # Additional handling for top16 JCG Data, it will retrieve the ranking and sort it accordingly instead of registration based.
-    if sh.isTop16JCG(data6, jsonlink):
-        namedf = sh.retrieveTop16JCG(jsonlink)
-        data8 = namedf.merge(data7)
+    # if jcg.isTop16JCG(df, tcode):
+    if(jcg.isTournamentOver(tcode,'top16')):
+        bracketid = jcg.bracketidfinder(tcode)
+        namedf = jcg.retrieveTop16JCG(bracketid, tcode)
+        data = namedf.merge(df)
         rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
-        df = pd.concat([rankings, data8],axis=1)
+        df = pd.concat([rankings, data],axis=1)
         df = df.dropna()
         df = df[['Rank', 'name', 'deck 1', 'deck 2']]
         
@@ -129,9 +97,8 @@ def JCG_scraper(tcode, analysis='single'):
         em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)        
         em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
         
-        if (sh.IsGroupStageOver(tcode) & (gameformat == 'rotation')):
-            tour = 'https://sv.j-cg.com/compe/view/tour/' + tcode
-            top16 = JCG_group_winner_check(tour)
+        if(jcg.isTournamentOver(tcode, 'group')):
+            top16 = jcg.group_winner_check(tcode)
             em.add_top16_names(top16)
             em.add_conversion_rate(top16)   
             em.add_class_color(1)
@@ -316,106 +283,6 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
     
     return search
 
-def JCG_group_winner_check(url):
-    source = requests.get(url).text
-    soup = bs(source, 'lxml')
-    
-    names = []
-    deck1 = []
-    deck2 = []
-    
-    allfinal = soup.find_all('div', class_='round round4')
-    
-    for finalround in allfinal:
-        
-        fin = finalround.select('li')[1]
-        right = fin.find('li', class_='tour_match right winner')
-        left = fin.find('li', class_='tour_match left winner')    
-        finalpage = str(fin).split("'")[1]
-        urllink = finalpage
-        
-        match = requests.get(urllink).text
-        soupm = bs(match, 'lxml') 
-        
-        if left: 
-            name = left.find('div').text
-            links = soupm.find('div', class_='team_wrap leftteam').find_all('a')
-        elif right:
-            name = right.find('div').text
-            links = soupm.find('div', class_='team_wrap rightteam').find_all('a')
-        else:
-            name = 'N/A'
-            links = 'N/A'
-            arc1 = 'N/A'
-            arc2 = 'N/A'
-        
-        if links != 'N/A':
-            decka = links[0].get('href')
-            arc1 =  Deck(decka).archetype_checker()
-            deckb = links[1].get('href')
-            arc2 =  Deck(deckb).archetype_checker()
-        
-        names.append(name)
-        # deck1.append(arc1)
-        # deck2.append(arc2) 
-        deck1.append(decka)
-        deck2.append(deckb) 
-    
-    df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'arc 1', 2:'arc 2'})
-    return df
-
-
-
-
-# Incomplete code for JCG archetype winrate calculator.
-
-# df = pd.read_excel('Excel_and_CSV/FilteredDecks_Data.xlsx')
-# df = df[['name','arc 1', 'arc 2']]
-
-# url = 'https://sv.j-cg.com/compe/view/tour/2334'
-# source = requests.get(url).text
-# soup = bs(source, 'lxml')
-
-# winnerlist = []
-# winleft = soup.find_all('li', class_="tour_match left winner")
-
-# for win in winleft:
-#     name = win.findNext().findNext().text
-#     winnerlist.append(name)
-
-# winright = soup.find_all('li', class_="tour_match right winner")
-# for win in winright:
-#     name = win.findNext().findNext().text
-#     winnerlist.append(name)
-
-# windf = pd.DataFrame(winnerlist).rename(columns={0:'name'})
-
-# loserlist = []
-# loseleft = soup.find_all('li', class_="tour_match left")
-# for lose in loseleft:
-#     name = lose.findNext().findNext().text
-#     loserlist.append(name)
-    
-# loseright = soup.find_all('li', class_="tour_match right")
-# for lose in loseright:
-#     name = lose.findNext().findNext().text
-#     loserlist.append(name)
-
-# lossdf = pd.DataFrame(loserlist).rename(columns={0:'name'})
-
-# win = df.merge(windf, how='inner', on='name')
-# wintotal = win.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
-# wintotal = wintotal.rename_axis("Deck Archetype").reset_index(name = 'WinTotal')
-
-
-# loss = df.merge(lossdf, how='inner', on='name')
-# losstotal = loss.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
-# losstotal = losstotal.rename_axis("Deck Archetype").reset_index(name = 'LossTotal')
-
-# summary = wintotal[['Deck Archetype','WinTotal']]
-# summary['LossTotal'] = losstotal['LossTotal']
-# summary['Winrate'] = summary['WinTotal']/(summary['WinTotal'] + summary['LossTotal'])
-    
 # standingsjson = 'https://dtmwra1jsgyb0.cloudfront.net/stages/5f8b0e98c7530d53c082744c/latest-round-standings'
 # response = requests.get(standingsjson)        
 # data = response.json()
@@ -547,5 +414,8 @@ def DSAL_scraper(link):
 # response = requests.get(matchjson)        
 # data = response.json()
 # dfe = pd.DataFrame(data)
+
+
+
 
 
