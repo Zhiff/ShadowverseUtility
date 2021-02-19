@@ -24,8 +24,8 @@ import json
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 2)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+    em.excel_convert_dataset(svoexcel, 3)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -39,28 +39,49 @@ def SVO_initial_scraper(svoexcel):
 #3.) check if it's completed (終了)
 # Returns the 4 digit string code of the latest tourney for scraping
 def JCG_latest_tourney(sv_format, tourney_stage):
-    
-    jcglink = 'https://sv.j-cg.com/past-schedule/' + sv_format #1st page or 20 most recent tourney stages
     formats = { 'rotation' : 'ローテーション大会' , 'unlimited' : 'アンリミテッド大会' , '2pick' : '2Pick大会' }
     stage = {'group' : 'グループ予選', 'top16' : '決勝トーナメント'}
-        
-    source = requests.get(jcglink).text
-    soup = bs(source, 'lxml')
-    alltlink = soup.find_all('a', class_='schedule-link')
     
-    for link in alltlink:
+    foundFlag = False
+    
+    linkschedule = 'https://sv.j-cg.com/schedule/' + sv_format
+    source = requests.get(linkschedule).text
+    soup = bs(source, 'lxml')
+    currentlink = soup.find_all('a', class_='schedule-link')
+    
+    for link in currentlink:
         jcglink = link.get('href')
         
-        c_entrycount = link.find('span', class_='entry-count').text
         c_title = link.find('div', class_='schedule-title').text
-        c_date = link.find('div', class_='schedule-date').text[:5]
         c_hour = link.find('div', class_='schedule-date').text[56:61]
+        c_status = link.find('div', class_='schedule-status schedule-status-').text
         
-        if stage[tourney_stage] in c_title:
+        if (c_status == '開催中') and (stage[tourney_stage] in c_title):
+            foundFlag = True
             tcode = jcglink.split('/')[4]
-            message = c_title + '\nStarts: '+ c_hour +' JST (Finished)'
+            message = c_title + '\nStatus: Ongoing'
             print(message)
             break
+    
+    if (foundFlag == False):
+        linkpast = 'https://sv.j-cg.com/past-schedule/' + sv_format #1st page or 20 most recent tourney stages
+    
+        
+        source = requests.get(linkpast).text
+        soup = bs(source, 'lxml')
+        alltlink = soup.find_all('a', class_='schedule-link')
+        
+        for link in alltlink:
+            jcglink = link.get('href')
+            
+            c_title = link.find('div', class_='schedule-title').text
+            c_hour = link.find('div', class_='schedule-date').text[56:61]
+            
+            if stage[tourney_stage] in c_title:
+                tcode = jcglink.split('/')[4]
+                message = c_title + '\nStarts: '+ c_hour +' JST (Finished)'
+                print(message)
+                break
         
     return tcode
     

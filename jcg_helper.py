@@ -34,9 +34,9 @@ def grabjsonfromHTML(tcode):
 def cleanjson(jsondf):
     sv = 'https://shadowverse-portal.com/deck/'
     lang_eng = '?lang=en'
-    jsondf['d1'] = jsondf['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
-    jsondf['d2'] = jsondf['sv_decks'].apply(lambda x: x[1]['hash'] if x else None)
     data1 = jsondf.loc[jsondf['result']==1].copy()
+    data1['d1'] = data1['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
+    data1['d2'] = data1['sv_decks'].apply(lambda x: x[1]['hash'] if x else None)
     data1['deck 1']= data1['d1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     data1['deck 2']= data1['d2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
     data2 = data1[['name','deck 1','deck 2']].copy()
@@ -81,7 +81,7 @@ def isTournamentOver(tcode, stage):
     if (placement != None):
         if stage == 'group' and (len(placement)>2):
             tstate = True
-        elif stage == 'top16' and (len(placement)<2):
+        elif stage == 'top16' and (len(placement)==1):
             tstate = True
             
     return tstate
