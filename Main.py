@@ -10,6 +10,7 @@ import excel_module as em
 import website_scraper as ws
 import stat_helper as sh
 import t2_stats as t2
+import jcg_helper as jcg
 from deckmodule import Deck
 import openpyxl as oxl
 import requests
@@ -25,7 +26,7 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 
-# ws.SVO_initial_scraper('Excel_and_CSV/RageD2.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/WEST.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -47,8 +48,9 @@ start_time = time.time()
 # Requirements :    - JSON link must be valid
 
 
-tcode = ws.JCG_latest_tourney('rotation', 'group')
-ws.JCG_scraper(tcode)
+# tcode = ws.JCG_latest_tourney('unlimited', 'group')
+# ws.JCG_scraper(tcode)
+
 
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
@@ -86,15 +88,37 @@ ws.JCG_scraper(tcode)
 #JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids = ['2535','2537','2540', '2541', '2544', '2546', '2547', '2549', '2552', '2553'] #group
-# ws.generate_archetype_trends(jcgids)
+jcgids, dates = jcg.scrapseasonIDs('rotation', '16th Season')
+ws.generate_archetype_trends(jcgids, dates)
 
-# url = 'https://rage-esports.jp/shadowverse/2021spring/pre/deck'
+# url = 'https://rage-esports.jp/shadowverse/2021spring/pre/deck2'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
-# filtered = soup.find('tbody')
+# filtered = soup.find_all('td', bgcolor='white')
+# name1 = []
 # deck1 = []
 # deck2 = []
+# for lit in filtered[::3]:
+#     name = lit.text
+#     name1.append(name)
+# for lit in filtered[1::3]:
+#     lits = lit.find('a')
+#     name = lits.get('href')
+#     deck1.append(name)
+# for lit in filtered[2::3]:
+#     lits = lit.find('a')
+#     name = lits.get('href')
+#     deck2.append(name)    
+
+# db = np.column_stack((name1,deck1,deck2))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+
+# writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+    
+    
 # alllink = filtered.find_all('a')
 # for link in alllink[::2]:
 #     store = link.get('href')
@@ -111,4 +135,5 @@ ws.JCG_scraper(tcode)
 # df.to_excel(writer, index=False)
 # writer.save()
 
+# print(filtered)
 print("--- %s seconds ---" % (time.time() - start_time))

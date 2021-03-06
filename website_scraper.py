@@ -324,16 +324,11 @@ def SVO_ban_peek(player, tourneyhash, stagehash):
 
 # jcgid = ['2399','2419','2422', '2425', '2426', '2428', '2431', '2433', '2436', '2440', '2466', '2468', '2471', '2472', '2474','2477','2480','2482', '2504', '2505'] #group
 
-def generate_archetype_trends(jcgIDs):
+def generate_archetype_trends(jcgIDs, dates):
     flag_first = True
-    for ids in jcgIDs:
-        # Find the Date
-        link = 'https://sv.j-cg.com/compe/' + ids
-        source = requests.get(link).text
-        soup = bs(source, 'lxml')
-        date = soup.find_all('span', class_='nobr')[6].text
-        # Find the Json
-        # json = 'https://sv.j-cg.com/compe/view/entrylist/'+ ids + '/json'
+    for i in range(len(jcgIDs)):
+        ids = jcgIDs[i]
+        date = dates[i]
         decks = JCG_scraper(ids, 'multiple')
         
         if decks is not None: #Validity Check

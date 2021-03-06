@@ -104,7 +104,7 @@ def retrieveTop16JCG(bracketid, tcode):
     bracketjson = 'https://sv.j-cg.com/api/competition/group/' + bracketid
     response = requests.get(bracketjson)    
     data = response.json()['rounds']
-    name = data[0]['matches'][0]['teams'][0]['name']
+    # name = data[0]['matches'][0]['teams'][0]['name']
     
     namelist = []
     # Add all name in the bracket into one list, the more occurence, the higher the ranking.
@@ -113,7 +113,11 @@ def retrieveTop16JCG(bracketid, tcode):
         for j in range(len(matches)):
             teams = matches[j]['teams']
             for k in range(len(teams)):
-                name = teams[k]['name']
+                try:
+                    name = teams[k]['name']
+                except TypeError:
+                    name = ''
+
                 namelist.append(name)
     
     namedf = pd.DataFrame(namelist).rename(columns={0:'name'})
@@ -133,3 +137,30 @@ def retrieveTop16JCG(bracketid, tcode):
     namedf.at[1,'name'] = secondplace
     
     return namedf
+
+def scrapseasonIDs(sv_format, season):
+    maxpage = 4
+    jcgids = []
+    dates = []
+    
+    for page in range(maxpage):
+        linkschedule = 'https://sv.j-cg.com/past-schedule/' + sv_format + '?page=' + str(page+1)
+        source = requests.get(linkschedule).text
+        soup = bs(source, 'lxml')
+        currentlink = soup.find_all('a', class_='schedule-link')
+        
+        for link in currentlink:
+            jcglink = link.get('href')
+            tcode = jcglink.split('/')[4]
+            title = link.find('div', class_='schedule-title').text
+            date = title[title.find('V'):(title.find('日'))+1]
+            if ('グループ予選' in title) and (season in title):
+                jcgids.append(tcode)
+                dates.append(date)
+                
+    
+    jcgids.reverse()
+    dates.reverse()
+    return jcgids, dates
+
+        
