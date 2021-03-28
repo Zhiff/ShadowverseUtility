@@ -222,8 +222,8 @@ def add_top16_names(top16df):
     file = 'Excel_and_CSV/JCGTop16_View.xlsx'
     
     group = pd.DataFrame({'Group':['Group 1','Group 2','Group 3','Group 4','Group 5','Group 6','Group 7','Group 8','Group 9','Group 10','Group 11','Group 12','Group 13','Group 14','Group 15','Group 16']})
-    top16df['arc 1'] = top16df['arc 1'].apply(lambda x: Deck(x).deckbuilder_converter())
-    top16df['arc 2'] = top16df['arc 2'].apply(lambda x: Deck(x).deckbuilder_converter())
+    # top16df['arc 1'] = top16df['arc 1'].apply(lambda x: Deck(x).deckbuilder_converter())
+    # top16df['arc 2'] = top16df['arc 2'].apply(lambda x: Deck(x).deckbuilder_converter())
     top16df = top16df.rename(columns={'arc 1':'deck 1', 'arc 2':'deck 2'})
     df = pd.concat([group, top16df],axis=1)
     
@@ -283,3 +283,48 @@ def neworder(shlist, tpos):
             lst.append(x)
 
     return lst
+
+def convertSVOformat(svoexcel):
+    carddb = "Excel_and_CSV/generatedURLcode.csv"
+    # Create dictionary for class and hash->card name
+    craftcode = { 'Forestcraft':'1' , 'Swordcraft':'2' , 'Runecraft':'3' , 'Dragoncraft':'4' , 'Shadowcraft':'5' , 'Bloodcraft':'6' , 'Havencraft':'7' , 'Portalcraft':'8' }
+    dbdf = pd.read_csv(carddb)
+    dbdf = dbdf.drop_duplicates(subset=['CardName'], keep='first')
+    dbdf = dbdf.set_index('CardName')
+    dbdf = dbdf['Code']
+    carddict = dbdf.to_dict()
+    # grab from SVO Excel. exact required fields : Player Name, Class, Card 1, Card 2, ... , Card 40 
+    df = pd.read_excel(svoexcel)   
+    df['Class'] = df['Class'].apply(lambda x: craftcode[x])
+    # Change card name  -> Hash
+    for i in range(2,42):
+        df.iloc[:,i] = df.iloc[:,i].apply(lambda x: carddict[x])
+    #Combine Hash
+    df['rawdeck'] = ''
+    for i in range(2,42):
+        if i < 41:
+            df['rawdeck'] = df['rawdeck'] + df.iloc[:,i] + '.'
+        else:
+            df['rawdeck'] = df['rawdeck'] + df.iloc[:,i]
+    
+    #Transform hash into hyperlink
+    df['deck'] = 'https://shadowverse-portal.com/deck/3.' + df['Class'] + '.' + df['rawdeck'] + '?lang=en'
+    df = df[['Player Name', 'deck']].rename(columns={'Player Name':'name'})
+    
+    #Combine decks that has same player name into one, then split them again so each player name has 3 decks column
+    filtered = df.groupby(['name'])['deck'].apply(','.join).reset_index()
+    filtered['deck 1'] = filtered['deck'].apply(lambda x: x.split(',')[0])
+    filtered['deck 2'] = filtered['deck'].apply(lambda x: x.split(',')[1])
+    filtered['deck 3'] = filtered['deck'].apply(lambda x: x.split(',')[2])
+    
+    #Previous method sorting name alphabetically, re-sort names according to SVO data
+    final = filtered[['name','deck 1','deck 2','deck 3']]
+    dfcopy = df['name'].drop_duplicates()
+    sorteddf = pd.merge(dfcopy, final)
+    
+    # Save file into SVO.xlsc
+    file = 'Excel_and_CSV/SVO.xlsx'
+    writer = pd.ExcelWriter(file, options={'strings_to_urls': False})
+    sorteddf.to_excel(writer, 'Qualified for Top16', index=False)
+    writer.save()
+

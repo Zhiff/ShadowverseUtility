@@ -25,8 +25,10 @@ start_time = time.time()
 #                   - columns name , deck 1, deck 2, deck 3 must exists
 #                   - decklists must end with ?lang=en or &lang=en
 
+# em.convertSVOformat('Excel_and_CSV/SVOMarchWEST.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SVO.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/WEST.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/svot8.xlsx')
 
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
@@ -48,8 +50,8 @@ start_time = time.time()
 # Requirements :    - JSON link must be valid
 
 
-# tcode = ws.JCG_latest_tourney('unlimited', 'group')
-# ws.JCG_scraper(tcode)
+tcode = ws.JCG_latest_tourney('rotation', 'top16')
+ws.JCG_scraper(tcode)
 
 
 
@@ -88,8 +90,8 @@ start_time = time.time()
 #JCG Trends
 # Input : lists of JCG IDs
 
-jcgids, dates = jcg.scrapseasonIDs('rotation', '16th Season')
-ws.generate_archetype_trends(jcgids, dates)
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '16th Season')
+# ws.generate_archetype_trends(jcgids, dates)
 
 # url = 'https://rage-esports.jp/shadowverse/2021spring/pre/deck2'
 # source = requests.get(url).text
