@@ -48,7 +48,7 @@ class Deck:
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
         if self.formats == 'rotation':
-            df = pd.read_excel('Excel_and_CSV/EternalAwakeningMeta.xlsx')
+            df = pd.read_excel('Excel_and_CSV/VellsarMeta.xlsx')
         elif self.formats == 'unlimited':
             df = pd.read_excel('Excel_and_CSV/UnlimitedMeta.xlsx')
         
