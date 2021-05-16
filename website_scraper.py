@@ -431,7 +431,57 @@ def DSAL_scraper(link):
 # data = response.json()
 # dfe = pd.DataFrame(data)
 
+tcode1 = 'Ny1fDVSBlfho'
+tcode2 = 'i2nJD0c4zoaA'
+
+jsondf = jcg.grabjsonfromHTML(tcode1)
+df = jcg.cleanjson(jsondf)
+jsondf = jcg.grabjsonfromHTML(tcode2)
+df2 = jcg.cleanjson(jsondf)
+
+df3 = pd.concat([df,df2])
+df4 = sh.handle_duplicate_row(df3, 'name').reset_index().drop(['index'], axis=1)
+
+# resultpage = 'https://sv.j-cg.com/competition/' + tcode1 + '/results'
+# source = requests.get(resultpage).text
+# soup = bs(source, 'lxml')
+
+# names1 = []
+
+# qualified = soup.find_all('div', class_='result-name')
+# for user in qualified:
+#         # Add their name into array
+#         name = user.text
+#         names1.append(name)
+        
+# resultpage = 'https://sv.j-cg.com/competition/' + tcode2 + '/results'
+# source = requests.get(resultpage).text
+# soup = bs(source, 'lxml')
+
+# names2 = []
+
+# qualified = soup.find_all('div', class_='result-name')
+# for user in qualified:
+#         # Add their name into array
+#         name = user.text
+#         names2.append(name)
+
+# allname = names1 + names2
+# qual = pd.DataFrame(allname).rename(columns={0:'name'})
+
+# data = qual.merge(df4)
+
+writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
+df4.to_excel(writer, index=False)
+writer.save()
+
+# top16 = data
+# em.add_conversion_rate(top16)   
 
 
 
-
+# data = namedf.merge(df)
+# rankings = pd.DataFrame({'Rank':['1st','2nd','3rd/4th','3rd/4th','5th-8th','5th-8th','5th-8th','5th-8th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th','9th-16th']})
+# df = pd.concat([rankings, data],axis=1)
+# df = df.dropna()
+# df = df[['Rank', 'name', 'deck 1', 'deck 2']]

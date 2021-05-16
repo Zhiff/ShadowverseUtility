@@ -25,11 +25,51 @@ start_time = time.time()
 #                   - columns name , deck 1, deck 2, deck 3 must exists
 #                   - decklists must end with ?lang=en or &lang=en
 
-# em.convertSVOformat('Excel_and_CSV/SVOMarchWEST.xlsx')
+# em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
 # ws.SVO_initial_scraper('Excel_and_CSV/SVO.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/svot8.xlsx')
+ws.SVO_initial_scraper('Excel_and_CSV/westt8.xlsx')
 
+# tcode1 = 'Ny1fDVSBlfho'
+# tcode2 = 'i2nJD0c4zoaA'
+
+# df = pd.read_excel('Excel_and_CSV/JCG_Raw.xlsx')
+
+
+# resultpage = 'https://sv.j-cg.com/competition/' + tcode1 + '/results'
+# source = requests.get(resultpage).text
+# soup = bs(source, 'lxml')
+
+# names1 = []
+
+# qualified = soup.find_all('div', class_='result-name')
+# for user in qualified:
+#         # Add their name into array
+#         name = user.text
+#         names1.append(name)
+        
+# resultpage = 'https://sv.j-cg.com/competition/' + tcode2 + '/results'
+# source = requests.get(resultpage).text
+# soup = bs(source, 'lxml')
+
+# names2 = []
+
+# qualified = soup.find_all('div', class_='result-name')
+# for user in qualified:
+#         # Add their name into array
+#         name = user.text
+#         names2.append(name)
+
+# allname = names1 + names2
+# qual = pd.DataFrame(allname).rename(columns={0:'name'})
+
+# data = qual.merge(df)
+
+# data = data.rename(columns={'deck 1':'arc 1', 'deck 2':'arc 2'})
+# top16 = data
+# em.add_conversion_rate(top16)  
+
+# em.add_class_color(1)
 
 # Post SVO scraping, It will produce 2 excel files. FilteredDecks_View, and Post_SVO_Data
 # Input : JSON hashes from battlefy
@@ -50,8 +90,8 @@ start_time = time.time()
 # Requirements :    - JSON link must be valid
 
 
-tcode = ws.JCG_latest_tourney('rotation', 'top16')
-ws.JCG_scraper(tcode)
+# tcode = ws.JCG_latest_tourney('rotation', 'top16')
+# ws.JCG_scraper(tcode)
 
 
 
@@ -92,6 +132,8 @@ ws.JCG_scraper(tcode)
 
 # jcgids, dates = jcg.scrapseasonIDs('rotation', '16th Season')
 # ws.generate_archetype_trends(jcgids, dates)
+
+# Post Playoff
 
 # url = 'https://rage-esports.jp/shadowverse/2021spring/pre/deck2'
 # source = requests.get(url).text
@@ -136,6 +178,38 @@ ws.JCG_scraper(tcode)
 # writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
 # df.to_excel(writer, index=False)
 # writer.save()
+
+# Pre Playoff
+
+# url = 'https://rage-esports.jp/shadowverse/2021summer/pre/deck'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+# filtered = soup.find_all('td', bgcolor='white')
+
+# print (filtered)
+# name1 = []
+# deck1 = []
+# deck2 = []
+# for lit in filtered[1::4]:
+#     name = lit.text
+#     name1.append(name)
+# for lit in filtered[2::4]:
+#     lits = lit.find('a')
+#     name = lits.get('href')
+#     deck1.append(name)
+# for lit in filtered[3::4]:
+#     lits = lit.find('a')
+#     name = lits.get('href')
+#     deck2.append(name)    
+
+# db = np.column_stack((name1,deck1,deck2))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+
+# writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+
 
 # print(filtered)
 print("--- %s seconds ---" % (time.time() - start_time))
