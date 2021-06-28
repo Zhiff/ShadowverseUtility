@@ -2451,6 +2451,7 @@ Darkness Over Vellsar,Neutral,Bronze,1,Retracing the Past,79qIw
 Darkness Over Vellsar,Neutral,Silver,4,Managrocer,79s0I
 Darkness Over Vellsar,Neutral,Silver,3,Dogged Detective,79s0S
 Darkness Over Vellsar,Neutral,Gold,4,"Grimnir, Voidwrought Wind",79uSY
+Darkness Over Vellsar,Neutral,Gold,10,Goddess of Rebirth,79uSi
 Darkness Over Vellsar,Neutral,Gold,4,Frostfire,79vBQ
 Darkness Over Vellsar,Neutral,Legendary,8,Sahaquiel & Israfil,79wuo
 Darkness Over Vellsar,Neutral,Legendary,2,Planetary Fracture,79xdg
@@ -2462,9 +2463,11 @@ Darkness Over Vellsar,Forestcraft,Silver,5,Sunbright Elf,7AEQo
 Darkness Over Vellsar,Forestcraft,Silver,2,Feybolt Archer,7AEQy
 Darkness Over Vellsar,Forestcraft,Silver,2,Tree of Wonders,7AEw2
 Darkness Over Vellsar,Forestcraft,Gold,3,"Nelcha, Fashion Hazard",7AGt2
+Darkness Over Vellsar,Forestcraft,Gold,6,Wildwood Warrior,7AGtC
 Darkness Over Vellsar,Forestcraft,Gold,2,Elemental Slash,7AHbw
 Darkness Over Vellsar,Forestcraft,Legendary,4,"Aria, Miasma Fairy",7AJJI
 Darkness Over Vellsar,Forestcraft,Legendary,1,"Sekka, Fatebound Fox",7AJJS
+Darkness Over Vellsar,Forestcraft,Legendary,6,Gigantic Blossom,7AJJc
 Darkness Over Vellsar,Swordcraft,Bronze,2,Ballroom Assassin,7AaP2
 Darkness Over Vellsar,Swordcraft,Bronze,4,Strikeprone Guardian,7AaPC
 Darkness Over Vellsar,Swordcraft,Bronze,5,War Boar,7AaPM
@@ -2473,9 +2476,11 @@ Darkness Over Vellsar,Swordcraft,Silver,2,Fortress Strategist,7AcrI
 Darkness Over Vellsar,Swordcraft,Silver,1,Homebound Infantryman,7AcrS
 Darkness Over Vellsar,Swordcraft,Silver,2,Auction the Spoils,7AdaA
 Darkness Over Vellsar,Swordcraft,Gold,4,"Jeno, Fanged Tyrant",7AfHY
+Darkness Over Vellsar,Swordcraft,Gold,2,Cat Admiral,7AfHi
 Darkness Over Vellsar,Swordcraft,Gold,5,Swordmaster's Sweep,7Ag0Q
 Darkness Over Vellsar,Swordcraft,Legendary,5,"Albert, Thunderous Doom",7Ahjo
 Darkness Over Vellsar,Swordcraft,Legendary,3,"Sera, Maiden of the Dawn",7Ahjy
+Darkness Over Vellsar,Swordcraft,Legendary,8,"Garven, Iron Dreadnought",7Ahk6
 Darkness Over Vellsar,Runecraft,Bronze,5,Cat Summoner,7AypY
 Darkness Over Vellsar,Runecraft,Bronze,4,Art Society Magus,7Aypi
 Darkness Over Vellsar,Runecraft,Bronze,2,Magical Squirrel,7Ayps
@@ -2484,9 +2489,11 @@ Darkness Over Vellsar,Runecraft,Silver,9,Grimoire Sorcerer,7A_Fo
 Darkness Over Vellsar,Runecraft,Silver,7,Hurricane Golem,7A_Fy
 Darkness Over Vellsar,Runecraft,Silver,1,Riven Earth,7A_-g
 Darkness Over Vellsar,Runecraft,Gold,3,"Grea, Scorching Fury",7B1i2
+Darkness Over Vellsar,Runecraft,Gold,3,Pyrotechnic Witch,7B1iC
 Darkness Over Vellsar,Runecraft,Gold,5,Whims of Chaos,7B2Qw
 Darkness Over Vellsar,Runecraft,Legendary,3,"Anne, Mysterian Imperatrix",7B48I
 Darkness Over Vellsar,Runecraft,Legendary,5,"Ghios, Sparkling Prism",7B48S
+Darkness Over Vellsar,Runecraft,Legendary,2,"Mileka, Celestial Seer",7B48c
 Darkness Over Vellsar,Dragoncraft,Bronze,2,Margarite Mermaid,7BLE2
 Darkness Over Vellsar,Dragoncraft,Bronze,3,Earthen Dragonewt,7BLEC
 Darkness Over Vellsar,Dragoncraft,Bronze,6,Draconic Healer,7BLEM
@@ -2496,8 +2503,10 @@ Darkness Over Vellsar,Dragoncraft,Silver,2,Coral Shark,7BNgS
 Darkness Over Vellsar,Dragoncraft,Silver,3,Firewyrm Volcano,7BO9Y
 Darkness Over Vellsar,Dragoncraft,Gold,5,"Roy, Dragonreaver",7BQ6Y
 Darkness Over Vellsar,Dragoncraft,Gold,6,Empyreal Dragon,7BQ6i
+Darkness Over Vellsar,Dragoncraft,Gold,1,Prime Conflagration,7BQrQ
 Darkness Over Vellsar,Dragoncraft,Legendary,9,"Forte, Sovereign Supreme",7BSYo
 Darkness Over Vellsar,Dragoncraft,Legendary,6,"Drache, Fiery Dragonlord",7BSYy
+Darkness Over Vellsar,Dragoncraft,Legendary,3,Godfire Phoenix,7BSZ6
 Darkness Over Vellsar,Shadowcraft,Bronze,2,Bubbly Reaper,7BjeY
 Darkness Over Vellsar,Shadowcraft,Bronze,6,Bandage Connoisseur,7Bjei
 Darkness Over Vellsar,Shadowcraft,Bronze,3,Four-Armed Corpseknight,7Bjes
@@ -2507,8 +2516,10 @@ Darkness Over Vellsar,Shadowcraft,Silver,2,Noble Phantom,7Bm4y
 Darkness Over Vellsar,Shadowcraft,Silver,5,Parting of the Flesh,7Bmpg
 Darkness Over Vellsar,Shadowcraft,Gold,4,"Chris, Beyond the Patch",7BoX2
 Darkness Over Vellsar,Shadowcraft,Gold,3,Otherworld Gatekeeper,7BoXC
+Darkness Over Vellsar,Shadowcraft,Gold,1,Wicked Rebirth,7BpFw
 Darkness Over Vellsar,Shadowcraft,Legendary,3,"Ceres, Bride of the Night",7BqzI
 Darkness Over Vellsar,Shadowcraft,Legendary,2,"Kagero, Swordbound Soul",7BqzS
+Darkness Over Vellsar,Shadowcraft,Legendary,6,Ominous Tyrant,7Bqzc
 Darkness Over Vellsar,Bloodcraft,Bronze,3,Silversteel Blader,7C632
 Darkness Over Vellsar,Bloodcraft,Bronze,7,Two-Headed Scorpion,7C63C
 Darkness Over Vellsar,Bloodcraft,Bronze,3,Netherworld Executioner,7C63M
@@ -2518,8 +2529,10 @@ Darkness Over Vellsar,Bloodcraft,Silver,5,Thunderbolt Fiend,7C8VS
 Darkness Over Vellsar,Bloodcraft,Silver,2,Demonic Assault,7C9EA
 Darkness Over Vellsar,Bloodcraft,Gold,2,"Liberté, Unchained Wolf",7CAxY
 Darkness Over Vellsar,Bloodcraft,Gold,7,Ark Daemon,7CAxi
+Darkness Over Vellsar,Bloodcraft,Gold,4,Fangborne Revelation,7CBgQ
 Darkness Over Vellsar,Bloodcraft,Legendary,4,"Laura, Crimson Strife",7CDNo
 Darkness Over Vellsar,Bloodcraft,Legendary,2,"Aluzard, Timeworn Vampire",7CDNy
+Darkness Over Vellsar,Bloodcraft,Legendary,2,"Lieselotte, Lady Scarlet",7CDO6
 Darkness Over Vellsar,Havencraft,Bronze,3,Prismawing Featherfolk,7CUTY
 Darkness Over Vellsar,Havencraft,Bronze,3,Priest of the Flail,7CUTi
 Darkness Over Vellsar,Havencraft,Bronze,5,Sacred Groundskeeper,7CUTs
@@ -2528,9 +2541,11 @@ Darkness Over Vellsar,Havencraft,Silver,3,Charitable Al-mi'raj,7CWvo
 Darkness Over Vellsar,Havencraft,Silver,4,Lunerian Paladin,7CWvy
 Darkness Over Vellsar,Havencraft,Silver,2,Gods' Loving Smite,7CXeg
 Darkness Over Vellsar,Havencraft,Gold,2,"Pyne, Twisted Justice",7CZM2
+Darkness Over Vellsar,Havencraft,Gold,4,Thornclad Arbiter,7CZMC
 Darkness Over Vellsar,Havencraft,Gold,5,Westmuenster Abbey,7CZrI
 Darkness Over Vellsar,Havencraft,Legendary,3,"Jeanne, Despair's Maiden",7CboI
 Darkness Over Vellsar,Havencraft,Legendary,7,"Jatelant, God of Prosperity",7CboS
+Darkness Over Vellsar,Havencraft,Legendary,3,Abdiel,7Cboc
 Darkness Over Vellsar,Portalcraft,Bronze,2,Energy Supplier,7Csu2
 Darkness Over Vellsar,Portalcraft,Bronze,5,Mecha Arm Mechanic,7CsuC
 Darkness Over Vellsar,Portalcraft,Bronze,1,Micro Assault Bot,7CsuM
@@ -2540,8 +2555,10 @@ Darkness Over Vellsar,Portalcraft,Silver,2,Gizmo Enthusiast,7CvKS
 Darkness Over Vellsar,Portalcraft,Silver,1,Planar Breach,7Cw3A
 Darkness Over Vellsar,Portalcraft,Gold,6,"Miriam, Mutinous Being",7CxmY
 Darkness Over Vellsar,Portalcraft,Gold,8,Artifact Carrier,7Cxmi
+Darkness Over Vellsar,Portalcraft,Gold,1,Quicksilver Aegis,7CyVQ
 Darkness Over Vellsar,Portalcraft,Legendary,6,"Spinaria, Keeper of the End",7C-Co
 Darkness Over Vellsar,Portalcraft,Legendary,7,Magna Zero,7C-Cy
+Darkness Over Vellsar,Portalcraft,Legendary,30,Absolute Tolerance,7C-D6
 Promo,Forestcraft,Legendary,3,Ancient Elf,fof0I
 Promo,Swordcraft,Legendary,6,Sea Queen Otohime,fp1Qo
 Promo,Runecraft,Legendary,4,Merlin,fpPrI
@@ -2669,9 +2686,13 @@ Verdant Conflict,Dragoncraft,Legendary,4,"Valdain, Cursed Shadow",gbO4o
 World Uprooted,Dragoncraft,Legendary,2,"Rola, Inferno Dragoon",gbO4y
 Ultimate Colosseum,Shadowcraft,Legendary,9,"Ginsetsu, Great Fox",gbmVI
 Verdant Conflict,Bloodcraft,Legendary,6,"Yuzuki, Righteous Demon",gc8vo
+World Uprooted,Portalcraft,Legendary,2,"Ralmia, Sonic Racer",gcvko
 Promo,Neutral,Bronze,2,Quixotic Adventurer,gdZF2
 Promo,Neutral,Bronze,1,Retracing the Past,gdZzw
+Promo,Forestcraft,Gold,2,Elemental Slash,ge1Gw
+Promo,Swordcraft,Bronze,3,Scrupulous Preparation,geKow
 Promo,Runecraft,Bronze,1,Impalement Arts,gejDQ
+Promo,Dragoncraft,Silver,1,Dragon Rearing,gf84A
 Token,Neutral,Bronze,5,Tin Soldier,rfHG2
 Token,Neutral,Bronze,3,Club Soldier,rfHGC
 Token,Neutral,Bronze,3,Heart Guardian,rfHGM

@@ -58,7 +58,8 @@ def excel_statistics(filtered_data, maxdeck):
     #Adding a new column in df called lineup. Lineup is basically a list of 3 decks that has been sorted ex : {sword, dragon, blood}
     df = pd.read_excel(filtered_data)        
     outputfile = "Excel_and_CSV/Statistics and Breakdown.xlsx"
-    writer = pd.ExcelWriter(outputfile, options={'strings_to_urls': False})
+    # writer = pd.ExcelWriter(outputfile, options={'strings_to_urls': False})
+    writer = pd.ExcelWriter(outputfile)
     if maxdeck == 3:
         df = sh.add_lineup_column_3decks(df)        
     elif maxdeck == 2:
@@ -242,8 +243,7 @@ def add_conversion_rate(top16df):
     #Initialization
     file1 = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
     book = oxl.load_workbook(file1)
-    writer = pd.ExcelWriter(file1, engine='openpyxl')
-    writer.book = book
+   
     
     #count deck and combine with data
     top16df['arc 1'] = top16df['arc 1'].apply(lambda x: Deck(x).archetype_checker())
@@ -260,6 +260,9 @@ def add_conversion_rate(top16df):
     mergedeck['Top 16 (Player%)'] = mergedeck['Top 16'] + ' (' + mergedeck['Top 16 Rep%'] + '%)'
     mergedeck['Group (Player%)'] = mergedeck['Group'] + ' (' + mergedeck['Group Rep%'] + '%)'
     mergedeck = mergedeck[['Deck Archetype','Top 16 (Player%)','Group (Player%)','Conversion Rate %']]
+    
+    writer = pd.ExcelWriter(file1, engine='openpyxl')
+    writer.book = book
     mergedeck.to_excel(writer, sheet_name='Top16 Conversion')
     writer.save()
     

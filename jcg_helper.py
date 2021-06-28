@@ -139,7 +139,7 @@ def retrieveTop16JCG(bracketid, tcode):
     return namedf
 
 def scrapseasonIDs(sv_format, season):
-    maxpage = 5
+    maxpage = 9
     jcgids = []
     dates = []
     
@@ -155,6 +155,7 @@ def scrapseasonIDs(sv_format, season):
             title = link.find('div', class_='schedule-title').text
             date = title[title.find('V'):(title.find('日'))+1]
             if ('グループ予選' in title) and (season in title):
+            # if ('決勝トーナメント' in title) and (season in title):
                 jcgids.append(tcode)
                 dates.append(date)
                 
@@ -162,5 +163,3 @@ def scrapseasonIDs(sv_format, season):
     jcgids.reverse()
     dates.reverse()
     return jcgids, dates
-
-        

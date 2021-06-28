@@ -75,7 +75,7 @@ def JCG_latest_tourney(sv_format, tourney_stage):
             jcglink = link.get('href')
             
             c_title = link.find('div', class_='schedule-title').text
-            c_hour = link.find('div', class_='schedule-date').text[56:61]
+            c_hour = link.find('div', class_='schedule-date').text[55:66]
             
             if stage[tourney_stage] in c_title:
                 tcode = jcglink.split('/')[4]
@@ -431,16 +431,16 @@ def DSAL_scraper(link):
 # data = response.json()
 # dfe = pd.DataFrame(data)
 
-tcode1 = 'Ny1fDVSBlfho'
-tcode2 = 'i2nJD0c4zoaA'
+# tcode1 = 'Ny1fDVSBlfho'
+# tcode2 = 'i2nJD0c4zoaA'
 
-jsondf = jcg.grabjsonfromHTML(tcode1)
-df = jcg.cleanjson(jsondf)
-jsondf = jcg.grabjsonfromHTML(tcode2)
-df2 = jcg.cleanjson(jsondf)
+# jsondf = jcg.grabjsonfromHTML(tcode1)
+# df = jcg.cleanjson(jsondf)
+# jsondf = jcg.grabjsonfromHTML(tcode2)
+# df2 = jcg.cleanjson(jsondf)
 
-df3 = pd.concat([df,df2])
-df4 = sh.handle_duplicate_row(df3, 'name').reset_index().drop(['index'], axis=1)
+# df3 = pd.concat([df,df2])
+# df4 = sh.handle_duplicate_row(df3, 'name').reset_index().drop(['index'], axis=1)
 
 # resultpage = 'https://sv.j-cg.com/competition/' + tcode1 + '/results'
 # source = requests.get(resultpage).text
@@ -471,9 +471,9 @@ df4 = sh.handle_duplicate_row(df3, 'name').reset_index().drop(['index'], axis=1)
 
 # data = qual.merge(df4)
 
-writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
-df4.to_excel(writer, index=False)
-writer.save()
+# writer = pd.ExcelWriter('Excel_and_CSV/JCG_Raw.xlsx')
+# df4.to_excel(writer, index=False)
+# writer.save()
 
 # top16 = data
 # em.add_conversion_rate(top16)   
@@ -485,3 +485,4 @@ writer.save()
 # df = pd.concat([rankings, data],axis=1)
 # df = df.dropna()
 # df = df[['Rank', 'name', 'deck 1', 'deck 2']]
+

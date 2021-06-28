@@ -28,7 +28,7 @@ start_time = time.time()
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
 # ws.SVO_initial_scraper('Excel_and_CSV/SVO.xlsx')
 
-ws.SVO_initial_scraper('Excel_and_CSV/westt8.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SEAOAll.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -86,12 +86,12 @@ ws.SVO_initial_scraper('Excel_and_CSV/westt8.xlsx')
 
 
 # Other Website Scraping : JCG, MSCUP, It will produce 3 excel files. FilteredDecks_View, FilteredDecks_Data, and Statistics and Breakdown
-# Input : Json page from respective website
-# Requirements :    - JSON link must be valid
+# Input : Format, Stage
+# Requirements :    - JSON must be valid
 
 
-# tcode = ws.JCG_latest_tourney('rotation', 'top16')
-# ws.JCG_scraper(tcode)
+tcode = ws.JCG_latest_tourney('rotation', 'top16')
+ws.JCG_scraper(tcode)
 
 
 
@@ -130,12 +130,43 @@ ws.SVO_initial_scraper('Excel_and_CSV/westt8.xlsx')
 #JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids, dates = jcg.scrapseasonIDs('rotation', '16th Season')
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '17th Season')
 # ws.generate_archetype_trends(jcgids, dates)
+
+# names = []
+# deck1 = []
+# deck2 = []
+# for i in range(len(jcgids)):
+#         ids = jcgids[i]
+#         date = dates[i]
+        
+#         resultpage = 'https://sv.j-cg.com/competition/' + ids + '/results'
+#         source = requests.get(resultpage).text
+#         soup = bs(source, 'lxml')
+
+            
+#         firstplace = soup.find('div', class_='result result-1')
+#         name = date
+#         names.append(name)
+#         # Add their decks into array
+#         links = firstplace.find_all('a')
+#         for link in links[1::3]:
+#             decks = link.get('href')
+#             deck1.append(decks)
+#         for link in links[2::3]:
+#             decks = link.get('href')
+#             deck2.append(decks)
+        
+# df = pd.DataFrame([names,deck1,deck2]).transpose().rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})    
+# writer = pd.ExcelWriter('Excel_and_CSV/temp.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+
+# ws.SVO_initial_scraper('Excel_and_CSV/temp.xlsx')
 
 # Post Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021spring/pre/deck2'
+# url = 'https://rage-esports.jp/shadowverse/2021summer/pre/deck2'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')
