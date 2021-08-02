@@ -171,6 +171,7 @@ def statistics_freeze_highlight(excelfile):
 #This function will handle conditional formatting for class coloring
 def conditionalFormat(sheet):
     classmap = ['Forest', 'Sword', 'Rune', 'Dragon', 'Shadow', 'Blood', 'Haven', 'Portal']
+    # classmap = ['엘프', '로얄', '위치', '드래곤', '네크로맨서', '뱀파이어', '비숍', '네메시스']
     colormap = ['E2EFDA', 'FFF2CC', 'CCCCFF', 'FCE4D6', 'FFCCFF', 'FFA39E', 'D0CECE', 'DDEBF7']
     # Repeat the conditional formatting assignment for each class
     for i in range(0,8):

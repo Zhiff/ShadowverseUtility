@@ -26,7 +26,7 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
-# ws.SVO_initial_scraper('Excel_and_CSV/SVO.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/Sekappy.xlsx')
 
 # ws.SVO_initial_scraper('Excel_and_CSV/SEAOAll.xlsx')
 
@@ -90,7 +90,7 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 
-tcode = ws.JCG_latest_tourney('rotation', 'top16')
+tcode = ws.JCG_latest_tourney('unlimited', 'group')
 ws.JCG_scraper(tcode)
 
 
@@ -212,7 +212,7 @@ ws.JCG_scraper(tcode)
 
 # Pre Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021summer/pre/deck'
+# url = 'https://rage-esports.jp/shadowverse/2021autumn/pre/deck'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')

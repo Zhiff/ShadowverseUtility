@@ -24,8 +24,8 @@ import json
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 3)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
+    em.excel_convert_dataset(svoexcel, 2)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -486,3 +486,45 @@ def DSAL_scraper(link):
 # df = df.dropna()
 # df = df[['Rank', 'name', 'deck 1', 'deck 2']]
 
+# with open('Excel_and_CSV/Sekappy.html', encoding="utf8") as f:
+#     soup = bs(f, 'lxml')
+
+#     deck1 = []
+#     deck2 = []
+#     qualified = soup.find('div', class_='deck-list mb-50px')
+#     decklist = qualified.find_all('a')
+#     for deck in decklist[::2]:
+#         arc1 = deck.get('href')
+#         deck1.append(arc1)
+#     for deck in decklist[1::2]:
+#         arc2 = deck.get('href')
+#         deck2.append(arc2)
+    
+    
+#     names = []
+#     name = qualified.text
+#     # Get this from Open Source, Used to split non coordinated text into a list.
+#     lines = (line.strip() for line in name.splitlines())
+#     chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+#     text = '\n'.join(chunk for chunk in chunks if chunk)
+#     textlist = text.split('\n')
+#     for name in textlist[::3]:
+#         names.append(name)
+    
+#     db = np.column_stack((names, deck1, deck2))
+#     df = pd.DataFrame(db)
+#     df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+#     df = sh.handle_duplicate_row(df, 'name')
+    
+    
+#     writer = pd.ExcelWriter('Excel_and_CSV/Sekappy.xlsx')
+#     df.to_excel(writer, index=False) 
+#     writer.save()
+    
+    
+# for user in qualified:
+#         # Add their name into array
+#         name = user.text
+#         names1.append(name)
+
+    
