@@ -24,8 +24,8 @@ import json
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 2)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+    em.excel_convert_dataset(svoexcel, 3)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -486,6 +486,8 @@ def DSAL_scraper(link):
 # df = df.dropna()
 # df = df[['Rank', 'name', 'deck 1', 'deck 2']]
 
+
+#SEKAPPY COLOSSEUM SCRAP ( Need to save html file )
 # with open('Excel_and_CSV/Sekappy.html', encoding="utf8") as f:
 #     soup = bs(f, 'lxml')
 
@@ -511,20 +513,67 @@ def DSAL_scraper(link):
 #     for name in textlist[::3]:
 #         names.append(name)
     
-#     db = np.column_stack((names, deck1, deck2))
-#     df = pd.DataFrame(db)
-#     df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
-#     df = sh.handle_duplicate_row(df, 'name')
+    # db = np.column_stack((names, deck1, deck2))
+    # df = pd.DataFrame(db)
+    # df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+    # df = sh.handle_duplicate_row(df, 'name')
     
     
-#     writer = pd.ExcelWriter('Excel_and_CSV/Sekappy.xlsx')
-#     df.to_excel(writer, index=False) 
-#     writer.save()
+    # writer = pd.ExcelWriter('Excel_and_CSV/Sekappy.xlsx')
+    # df.to_excel(writer, index=False) 
+    # writer.save()
     
-    
-# for user in qualified:
-#         # Add their name into array
-#         name = user.text
-#         names1.append(name)
 
+#ShadowverseKoreanOpen
+def retrieve_group(link, groupname):
+    source = requests.get(link).text
+    soup = bs(source, 'lxml')
+    table = soup.find('table')
+    content = table.find_all('td')
     
+    names = []
+    for name in content[5::4]:
+        names.append(name.text.strip())
+    
+    alllink = table.find_all('a')
+    deck1 = []
+    deck2 = []
+    for link in alllink[::2]:
+        decklink = link.get('href')
+        deck1.append(decklink)
+    for link in alllink[1::2]:
+        decklink = link.get('href')
+        deck2.append(decklink)
+    
+    group = [groupname]*(len(deck1))
+    
+    db = np.column_stack((names, group, deck1, deck2))
+    df = pd.DataFrame(db)
+    df = df.rename(columns={0:'name', 1:'group', 2:'deck 1', 3:'deck 2'})
+    df = sh.handle_duplicate_row(df, 'name')
+    
+    return df
+
+
+
+def SKO_Scraper(link):
+    dfa = retrieve_group(link + '/group/day1', 'A')
+    dfb = retrieve_group(link + '/group/day2', 'B')
+    
+    df = pd.concat([dfa, dfb], axis=0)
+    df = dfb
+    
+    writer = pd.ExcelWriter('Excel_and_CSV/SKO.xlsx')
+    df.to_excel(writer, index=False) 
+    writer.save()
+    
+    em.excel_convert_quick('Excel_and_CSV/SKO.xlsx', 'Sheet1')
+    em.excel_convert_dataset('Excel_and_CSV/SKO.xlsx', 2)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)        
+    em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
+    em.add_class_color(3)
+
+# link = 'https://shadowverse-portal.com/card/900431040?lang=ko'
+# source = requests.get(link).text
+# soup = bs(source, 'lxml')
+# cardma = soup.find('h1').text

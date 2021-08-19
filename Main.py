@@ -28,7 +28,7 @@ start_time = time.time()
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
 # ws.SVO_initial_scraper('Excel_and_CSV/Sekappy.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/SEAOAll.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SAOA.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -90,8 +90,8 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 
-tcode = ws.JCG_latest_tourney('unlimited', 'group')
-ws.JCG_scraper(tcode)
+# tcode = ws.JCG_latest_tourney('rotation', 'top16')
+# ws.JCG_scraper(tcode)
 
 
 
@@ -107,6 +107,9 @@ ws.JCG_scraper(tcode)
 # count = sh.deck_quick_count(name)
 
 # ws.DSAL_scraper('http://www.littleworld.tokyo/RoundOfDarkness/openingPartySecond')
+
+# ws.SKO_Scraper('http://sko.uniqxp.com')
+
 
 
 # Ban Analyzer
@@ -130,8 +133,8 @@ ws.JCG_scraper(tcode)
 #JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids, dates = jcg.scrapseasonIDs('rotation', '17th Season')
-# ws.generate_archetype_trends(jcgids, dates)
+jcgids, dates = jcg.scrapseasonIDs('rotation', '18th Season')
+ws.generate_archetype_trends(jcgids, dates)
 
 # names = []
 # deck1 = []
@@ -166,7 +169,7 @@ ws.JCG_scraper(tcode)
 
 # Post Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021summer/pre/deck2'
+# url = 'https://rage-esports.jp/shadowverse/2021autumn/pre/deck3'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')
@@ -240,6 +243,8 @@ ws.JCG_scraper(tcode)
 # writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
 # df.to_excel(writer, index=False)
 # writer.save()
+
+
 
 
 # print(filtered)

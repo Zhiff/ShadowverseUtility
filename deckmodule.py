@@ -12,7 +12,7 @@ import pykakasi
 
 class Deck:
     
-    def __init__(self, svlink, formats='unlimited'):
+    def __init__(self, svlink, formats='rotation'):
         self.svlink = svlink
         self.formats = formats
         
@@ -213,6 +213,14 @@ def convert_kanji(text):
     result = conv.do(text)
     return result
 
+def id_to_name(cardID, lang):
+    cardnum = str(cardID)
+    link = 'https://shadowverse-portal.com/card/' + cardnum + '?lang=' + lang
+    source = requests.get(link).text
+    soup = bs(source, 'lxml')
+    name = soup.find('h1').text
+    return name
+
 # # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 
 # json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
@@ -222,9 +230,9 @@ def convert_kanji(text):
 # dfb = dfa.transpose()
 # dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
 # dffinal = dfc.copy()
-# dffinal['id_'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+# dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
 # dffinal = dffinal.sort_index()
-# dffinal = dffinal.rename(columns={'name_':'CardName', 'id_':'Code'})
+# dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
 # dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
 
 # jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
@@ -237,6 +245,28 @@ def convert_kanji(text):
 # ae = ae.sort_index()
 # comp = pd.concat([dffinal,ae], axis=1)
 
+
 # writer = pd.ExcelWriter('Excel_and_CSV/Seiyuu.xlsx')
 # comp.to_excel(writer, index=False) 
 # writer.save()
+
+# Korean
+# json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
+# response = requests.get(json)        
+# data = response.json()
+# dfa = pd.DataFrame(data)
+# dfb = dfa.transpose()
+# dfc = dfb[['expansion_','craft_','rarity_','pp_','id_']]
+# dffinal = dfc.copy()
+# dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+    
+# df = pd.read_csv('Excel_and_CSV/generatedURLcode.csv')
+# df = df.drop(columns=['CardName'])
+# df['name_'] = df.loc[:,'id_'].apply(lambda x: id_to_name(x, 'ko'))
+# df = df.rename(columns={'name_':'CardName'})
+# df.to_csv('Excel_and_CSV/generatedURLcodeKorean.csv', index=False)
+
+# dffinal['name_'] = dfc.loc[:,'id_'].apply(lambda x: id_to_name(x, 'ko'))
+# dffinal = dffinal.sort_index()
+# dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
+# dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
