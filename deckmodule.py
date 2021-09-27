@@ -9,6 +9,7 @@ import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests
 import pykakasi
+import json
 
 class Deck:
     
@@ -222,33 +223,30 @@ def id_to_name(cardID, lang):
     return name
 
 # # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
-
-# json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
-# response = requests.get(json)        
-# data = response.json()
-# dfa = pd.DataFrame(data)
-# dfb = dfa.transpose()
-# dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
-# dffinal = dfc.copy()
-# dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
-# dffinal = dffinal.sort_index()
-# dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
-# dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
+# with open('Excel_and_CSV/cardjsonen.json') as json_file:
+#     jsondata = json.load(json_file)
+#     dfa = pd.DataFrame(jsondata)
+#     dfb = dfa.transpose()
+#     dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+#     dffinal = dfc.copy()
+#     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+#     dffinal = dffinal.sort_index()
+#     dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
+#     dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
 
 # jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
-# response2 = requests.get(jsonjp)
-# data2 = response2.json()
-# ad = pd.DataFrame(data2).transpose()
-# ae = ad.copy()
-# ae['cv_romaji'] = ae.loc[:,'cv_'].apply(lambda x: convert_kanji(x))
-# ae = ae[['cv_','cv_romaji']]
-# ae = ae.sort_index()
-# comp = pd.concat([dffinal,ae], axis=1)
 
-
-# writer = pd.ExcelWriter('Excel_and_CSV/Seiyuu.xlsx')
-# comp.to_excel(writer, index=False) 
-# writer.save()
+# with open('Excel_and_CSV/cardjsonjp.json') as json_file:
+#     jsondata2 = json.load(json_file)
+#     ad = pd.DataFrame(jsondata2).transpose()
+#     ae = ad.copy()
+#     ae['cv_romaji'] = ae.loc[:,'cv_'].apply(lambda x: convert_kanji(x))
+#     ae = ae[['cv_','cv_romaji']]
+#     ae = ae.sort_index()
+#     comp = pd.concat([dffinal,ae], axis=1)
+#     writer = pd.ExcelWriter('Excel_and_CSV/Seiyuu.xlsx')
+#     comp.to_excel(writer, index=False) 
+#     writer.save()
 
 # Korean
 # json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'

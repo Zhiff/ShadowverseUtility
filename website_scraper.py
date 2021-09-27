@@ -577,3 +577,38 @@ def SKO_Scraper(link):
 # source = requests.get(link).text
 # soup = bs(source, 'lxml')
 # cardma = soup.find('h1').text
+
+# link = 'https://sv-wgp.j-cg.com/2021/ja'
+# source = requests.get(link).text
+# soup = bs(source, 'lxml')
+# maintab = soup.find('ul', class_='players')
+
+
+# playername = []
+# players = maintab.find_all('div', class_='name')
+# for entry in players:
+#     name = entry.text
+#     playername.append(name)
+
+# deck1 = []
+# deck2 = []
+# deck3 = []
+# decks = maintab.find_all('div', class_='deck')
+# for entry in decks[::3]:
+#     decklink = entry.find('a').get('href')
+#     deck1.append(decklink)
+# for entry in decks[1::3]:
+#     decklink = entry.find('a').get('href')
+#     deck2.append(decklink)
+# for entry in decks[2::3]:
+#     decklink = entry.find('a').get('href')
+#     deck3.append(decklink)    
+
+# db = np.column_stack((playername, deck1, deck2, deck3))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2', 3:'deck 3'})
+# df = sh.handle_duplicate_row(df, 'name')
+    
+# writer = pd.ExcelWriter('Excel_and_CSV/JCGWGP.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
