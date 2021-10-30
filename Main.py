@@ -26,9 +26,9 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
-# ws.SVO_initial_scraper('Excel_and_CSV/Sekappy.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SAOOA.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/SAOA.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/rage.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -94,7 +94,6 @@ start_time = time.time()
 # ws.JCG_scraper(tcode)
 
 
-
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
 
 # Quick Groupstage check for JCG
@@ -133,8 +132,8 @@ start_time = time.time()
 #JCG Trends
 # Input : lists of JCG IDs
 
-jcgids, dates = jcg.scrapseasonIDs('rotation', '18th Season')
-ws.generate_archetype_trends(jcgids, dates)
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '18th Season')
+# ws.generate_archetype_trends(jcgids, dates)
 
 # names = []
 # deck1 = []
@@ -169,7 +168,7 @@ ws.generate_archetype_trends(jcgids, dates)
 
 # Post Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021autumn/pre/deck3'
+# url = 'https://rage-esports.jp/shadowverse/2021winter/pre/deck3'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')
@@ -215,7 +214,7 @@ ws.generate_archetype_trends(jcgids, dates)
 
 # Pre Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021autumn/pre/deck'
+# url = 'https://rage-esports.jp/shadowverse/2021winter/pre/deck'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')
