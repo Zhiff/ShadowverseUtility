@@ -2431,7 +2431,7 @@ Eternal Awakening,Havencraft,Gold,5,Smilecure Priest,119731020,78lDC
 Eternal Awakening,Havencraft,Gold,1,Summit Temple,119732010,78lSg
 Eternal Awakening,Havencraft,Legendary,2,"Anre, the Enlightened One",119741010,78nfI
 Eternal Awakening,Havencraft,Legendary,5,Xeno Vohu Manah,119741020,78nfS
-Eternal Awakening,Havencraft,Legendary,7,Frigg,119741030,78nfc
+Eternal Awakening,Havencraft,Legendary,6,Frigg,119741030,78nfc
 Eternal Awakening,Portalcraft,Bronze,2,Mechanized Soldier,119811010,792l2
 Eternal Awakening,Portalcraft,Bronze,3,Surveillance System,119811020,792lC
 Eternal Awakening,Portalcraft,Bronze,6,Toy Mender,119811030,792lM
@@ -2592,7 +2592,7 @@ Renascent Chronicles,Swordcraft,Silver,2,Shadowed Memories,121224010,7ERjA
 Renascent Chronicles,Swordcraft,Gold,7,Frenzied Corpsmaster,121231010,7ETQY
 Renascent Chronicles,Swordcraft,Gold,4,Tempest Slayer,121231020,7ETQi
 Renascent Chronicles,Swordcraft,Gold,1,Sunny Day Encounter,121234010,7EU9Q
-Renascent Chronicles,Swordcraft,Legendary,6,Mistolina & Bayleon,121241010,7EVso
+Renascent Chronicles,Swordcraft,Legendary,7,Mistolina & Bayleon,121241010,7EVso
 Renascent Chronicles,Swordcraft,Legendary,3,"Leod, Moonlit Executioner",121241020,7EVsy
 Renascent Chronicles,Swordcraft,Legendary,3,"Erika, Loyal Swordsavant",121241030,7EVt6
 Renascent Chronicles,Runecraft,Bronze,3,Panacea Alchemist,121311010,7EmyY
@@ -2679,6 +2679,7 @@ Dawn of Calamity,Neutral,Bronze,1,Angel's Grace,122014010,7HSaw
 Dawn of Calamity,Neutral,Silver,4,"Mavela, Budding Pyrotech",122021010,7HUII
 Dawn of Calamity,Neutral,Silver,1,Legendary Tome,122023010,7HUnY
 Dawn of Calamity,Neutral,Gold,5,"Fudoh, Seasoned Pyrotech",122031010,7HWkY
+Dawn of Calamity,Neutral,Gold,2,Guiding Bellringer Angel,122031020,7HWki
 Dawn of Calamity,Neutral,Gold,1,Brand of the Morning Star,122033010,7HXDo
 Dawn of Calamity,Neutral,Legendary,6,Jupiter,122041010,7HZAo
 Dawn of Calamity,Neutral,Legendary,3,Advent of Peace,122044010,7HZvg
@@ -2691,8 +2692,10 @@ Dawn of Calamity,Forestcraft,Silver,3,Breezy Elf,122121020,7Hsiy
 Dawn of Calamity,Forestcraft,Silver,2,Phantombloom Predator,122121030,7Hsj6
 Dawn of Calamity,Forestcraft,Gold,1,Flower Fox,122131010,7Hv92
 Dawn of Calamity,Forestcraft,Gold,1,Blast Fairy,122131020,7Hv9C
+Dawn of Calamity,Forestcraft,Gold,1,Miracle Harvest,122134010,7Hvtw
 Dawn of Calamity,Forestcraft,Legendary,4,Brilliant Fairy,122141010,7HxbI
 Dawn of Calamity,Forestcraft,Legendary,2,Noxious Elf,122141020,7HxbS
+Dawn of Calamity,Forestcraft,Legendary,8,King of Vines,122141030,7Hxbc
 Dawn of Calamity,Swordcraft,Bronze,4,Flowing Lancer,122211010,7ICh2
 Dawn of Calamity,Swordcraft,Bronze,2,Cavalry Trooper,122211020,7IChC
 Dawn of Calamity,Swordcraft,Bronze,6,Tactical Dog,122211030,7IChM
@@ -2701,8 +2704,10 @@ Dawn of Calamity,Swordcraft,Silver,4,Starfall Princess,122221010,7IF7I
 Dawn of Calamity,Swordcraft,Silver,3,Dandy Fencer,122221020,7IF7S
 Dawn of Calamity,Swordcraft,Silver,4,Dualblade Knight,122221030,7IF7c
 Dawn of Calamity,Swordcraft,Gold,2,Assault Knight,122231010,7IHZY
+Dawn of Calamity,Swordcraft,Gold,1,Axe Pirate,122231020,7IHZi
 Dawn of Calamity,Swordcraft,Gold,7,Coronation,122234010,7IIIQ
 Dawn of Calamity,Swordcraft,Legendary,7,Victorious Blader,122241010,7IJ_o
+Dawn of Calamity,Swordcraft,Legendary,3,Golden Warrior,122241020,7IJ_y
 Dawn of Calamity,Swordcraft,Legendary,3,Monochrome Endgame,122244010,7IKkg
 Dawn of Calamity,Runecraft,Bronze,4,Forbidden Archives Warden,122311010,7Ib5Y
 Dawn of Calamity,Runecraft,Bronze,2,Clay Sorceress,122311020,7Ib5i
@@ -2713,8 +2718,10 @@ Dawn of Calamity,Runecraft,Silver,10,Frost Golem,122321020,7IdXy
 Dawn of Calamity,Runecraft,Silver,2,Counter Magic,122324010,7IeGg
 Dawn of Calamity,Runecraft,Gold,4,Witching Moggy,122331010,7If-2
 Dawn of Calamity,Runecraft,Gold,6,Great Magician,122331020,7If-C
+Dawn of Calamity,Runecraft,Gold,7,Imagination Realized,122334010,7Igiw
 Dawn of Calamity,Runecraft,Legendary,13,Chrono Witch,122341010,7IiQI
 Dawn of Calamity,Runecraft,Legendary,9,Pursuer Golem,122341020,7IiQS
+Dawn of Calamity,Runecraft,Legendary,1,Superior Contractor,122341030,7IiQc
 Dawn of Calamity,Dragoncraft,Bronze,2,Blazing Dragonewt,122411010,7IzW2
 Dawn of Calamity,Dragoncraft,Bronze,2,Debonair Dragoon,122411020,7IzWC
 Dawn of Calamity,Dragoncraft,Bronze,10,Orbed Cancer,122411030,7IzWM
@@ -2723,9 +2730,11 @@ Dawn of Calamity,Dragoncraft,Silver,1,Ocean Spirit,122421010,7I_yI
 Dawn of Calamity,Dragoncraft,Silver,5,Frostsage Dragon,122421020,7I_yS
 Dawn of Calamity,Dragoncraft,Silver,7,Dragoon's Incitement,122424010,7J0hA
 Dawn of Calamity,Dragoncraft,Gold,1,Bejeweled Dragon,122431010,7J2OY
+Dawn of Calamity,Dragoncraft,Gold,7,Twinfang Dragonewt,122431020,7J2Oi
 Dawn of Calamity,Dragoncraft,Gold,2,Piercing Roar,122434010,7J37Q
 Dawn of Calamity,Dragoncraft,Legendary,7,Ignis Dragon,122441010,7J4qo
 Dawn of Calamity,Dragoncraft,Legendary,2,Celestial Dragoon,122441020,7J4qy
+Dawn of Calamity,Dragoncraft,Legendary,4,Brutal Dragonewt,122441030,7J4r6
 Dawn of Calamity,Shadowcraft,Bronze,3,Palespine Faithful,122511010,7JLwY
 Dawn of Calamity,Shadowcraft,Bronze,2,Haunted Swordsman,122511020,7JLwi
 Dawn of Calamity,Shadowcraft,Bronze,2,Skull Bandit,122511030,7JLws
@@ -2734,9 +2743,11 @@ Dawn of Calamity,Shadowcraft,Silver,6,Grudge Collector,122521010,7JOMo
 Dawn of Calamity,Shadowcraft,Silver,2,Solemn Gravekeeper,122521020,7JOMy
 Dawn of Calamity,Shadowcraft,Silver,5,Midnight Greeting,122524010,7JP5g
 Dawn of Calamity,Shadowcraft,Gold,2,Dog of the Dead,122531010,7JQp2
+Dawn of Calamity,Shadowcraft,Gold,4,"Suzy, Hexcaster",122531020,7JQpC
 Dawn of Calamity,Shadowcraft,Gold,5,Undead Outbreak,122534010,7JRXw
 Dawn of Calamity,Shadowcraft,Legendary,8,Skeleton Raider,122541010,7JTFI
 Dawn of Calamity,Shadowcraft,Legendary,3,Reaper of Madness,122541020,7JTFS
+Dawn of Calamity,Shadowcraft,Legendary,2,Cernunnos,122541030,7JTFc
 Dawn of Calamity,Bloodcraft,Bronze,3,Covetous Demon Tamer,122611010,7JkL2
 Dawn of Calamity,Bloodcraft,Bronze,2,Demonic Soldier,122611020,7JkLC
 Dawn of Calamity,Bloodcraft,Bronze,8,Ball-and-Chain Ogre,122611030,7JkLM
@@ -2745,9 +2756,11 @@ Dawn of Calamity,Bloodcraft,Silver,5,Noble Demoness,122621010,7JmnI
 Dawn of Calamity,Bloodcraft,Silver,7,Arcane Wolf,122621020,7JmnS
 Dawn of Calamity,Bloodcraft,Silver,3,Dancing Beast Girl,122621030,7Jmnc
 Dawn of Calamity,Bloodcraft,Gold,6,Scarlet Vampire,122631010,7JpDY
+Dawn of Calamity,Bloodcraft,Gold,4,Duskshade Bat,122631020,7JpDi
 Dawn of Calamity,Bloodcraft,Gold,2,Dark Contract,122634010,7JpyQ
 Dawn of Calamity,Bloodcraft,Legendary,7,Dark Emperor,122641010,7Jrfo
 Dawn of Calamity,Bloodcraft,Legendary,3,Bloodsucker of the Night,122641020,7Jrfy
+Dawn of Calamity,Bloodcraft,Legendary,7,Bloodlust Demon,122641030,7Jrg6
 Dawn of Calamity,Havencraft,Bronze,2,Shining Sister,122711010,7K6lY
 Dawn of Calamity,Havencraft,Bronze,7,Featherfolk Windcaller,122711020,7K6li
 Dawn of Calamity,Havencraft,Bronze,5,Saint Flamingo,122711030,7K6ls
@@ -2757,8 +2770,10 @@ Dawn of Calamity,Havencraft,Silver,2,Yurlung,122721020,7K9By
 Dawn of Calamity,Havencraft,Silver,2,Heavenly Help,122723010,7K9h2
 Dawn of Calamity,Havencraft,Gold,1,Cursed Maiden,122731010,7KBe2
 Dawn of Calamity,Havencraft,Gold,2,"Carmia, Miracle Optimist",122731020,7KBeC
+Dawn of Calamity,Havencraft,Gold,1,Holy Lion Sanctum,122733010,7KC7I
 Dawn of Calamity,Havencraft,Legendary,6,God of Curses,122741010,7KE4I
 Dawn of Calamity,Havencraft,Legendary,3,Holy Saber,122741020,7KE4S
+Dawn of Calamity,Havencraft,Legendary,6,Sacred Lion,122741030,7KE4c
 Dawn of Calamity,Portalcraft,Bronze,3,Insightful Homunculus,122811010,7KVA2
 Dawn of Calamity,Portalcraft,Bronze,1,Young Threadmaster,122811020,7KVAC
 Dawn of Calamity,Portalcraft,Bronze,9,Megastone Guardian,122811030,7KVAM
@@ -2767,9 +2782,11 @@ Dawn of Calamity,Portalcraft,Silver,2,False Puppeteer,122821010,7KXcI
 Dawn of Calamity,Portalcraft,Silver,2,Ironwing Explorer,122821020,7KXcS
 Dawn of Calamity,Portalcraft,Silver,2,Multiarmed Artifact,122821030,7KXcc
 Dawn of Calamity,Portalcraft,Gold,3,"Licht, the Gear Magus",122831010,7Ka2Y
+Dawn of Calamity,Portalcraft,Gold,2,"Kololu, Guide to Freedom",122831020,7Ka2i
 Dawn of Calamity,Portalcraft,Gold,2,Artifact Impulse,122834010,7KanQ
 Dawn of Calamity,Portalcraft,Legendary,4,Genesis Artifact,122841010,7KcUo
 Dawn of Calamity,Portalcraft,Legendary,5,Monolith Creator,122841020,7KcUy
+Dawn of Calamity,Portalcraft,Legendary,1,Calamity's Genesis,122844010,7KdDg
 Promo,Forestcraft,Legendary,3,Ancient Elf,701141010,fof0I
 Promo,Swordcraft,Legendary,6,Sea Queen Otohime,701241010,fp1Qo
 Promo,Runecraft,Legendary,4,Merlin,701341010,fpPrI
@@ -2778,7 +2795,7 @@ Promo,Shadowcraft,Legendary,5,Cerberus,701541010,fqAgI
 Promo,Bloodcraft,Legendary,6,Queen Vampire,701641010,fqZ4o
 Promo,Havencraft,Legendary,8,Jeanne d'Arc,701741010,fqxVI
 Promo,Forestcraft,Bronze,1,Airbound Barrage,702114010,fsMZQ
-Promo,Swordcraft,Bronze,1,"Quickblader",702211010,fskF2
+Promo,Swordcraft,Bronze,1,"Ta-G, Katana Unsheathed",702211010,fskF2
 Promo,Swordcraft,Silver,2,Lancer,702221010,fsmhI
 Promo,Runecraft,Silver,3,Concentration,702324010,ft9qg
 Promo,Dragoncraft,Gold,6,Chaos Dragonrider AGRS,702431010,ftZyY
@@ -2918,7 +2935,8 @@ Renascent Chronicles,Bloodcraft,Silver,2,Harvest Imp,715621010,gfuAI
 Dawn of Calamity,Bloodcraft,Legendary,7,Dark Emperor,715641010,gfz2o
 Promo,Havencraft,Silver,4,Lunerian Paladin,715721010,ggGao
 Darkness Over Vellsar,Forestcraft,Legendary,1,"Sekka, Fatebound Fox",716141010,ght7I
-Eternal Awakening,Shadowcraft,Bronze,2,"Psychopomp Tour Guide",716511010,gjHSY
+Eternal Awakening,Shadowcraft,Bronze,2,"Amy, Psychopomp Guide",716511010,gjHSY
+Fortune's Hand,Shadowcraft,Legendary,5,"VI. Milteo, The Lovers",716541010,gjOnI
 Token,Neutral,Bronze,5,Tin Soldier,900011010,rfHG2
 Token,Neutral,Bronze,3,Club Soldier,900011020,rfHGC
 Token,Neutral,Bronze,3,Heart Guardian,900011030,rfHGM
@@ -3111,8 +3129,8 @@ Token,Runecraft,Legendary,2,Scourge of the Omniscient,900344070,rgYa6
 Token,Runecraft,Legendary,1,Rapid Fire,900344080,rgYaG
 Token,Runecraft,Legendary,1,Words of Judgment,900344090,rgYaQ
 Token,Runecraft,Legendary,3,Rending Blast,900344100,rgYaa
-Token,Runecraft,Legendary,1,Quadra Magic,900344120,rgYau
-Token,Runecraft,Legendary,5,Elements of Creation,900344130,rgYb2
+Token,Runecraft,Legendary,2,Quadra Magic,900344120,rgYau
+Token,Runecraft,Legendary,6,Elements of Creation,900344130,rgYb2
 Token,Dragoncraft,Bronze,5,Dragon,900411010,rgow2
 Token,Dragoncraft,Bronze,6,Windblast Dragon,900411020,rgowC
 Token,Dragoncraft,Bronze,2,Megalorca,900411030,rgowM
@@ -3279,6 +3297,7 @@ Token,Havencraft,Legendary,2,Somnolent Strength,900743050,ri3-A
 Token,Havencraft,Legendary,0,Salvation Ex Limonia,900744010,ri4DA
 Token,Havencraft,Legendary,2,Haven Fire,900744020,ri4DK
 Token,Havencraft,Legendary,0,Her Holiness's Decree,900744030,ri4DU
+Token,Havencraft,Legendary,0,Holy Lion's Blessing,900744040,ri4De
 Token,Portalcraft,Bronze,1,Ancient Artifact,900811010,riKa2
 Token,Portalcraft,Bronze,3,Mystic Artifact,900811020,riKaC
 Token,Portalcraft,Bronze,1,Analyzing Artifact,900811030,riKaM
@@ -3340,6 +3359,9 @@ Token,Portalcraft,Legendary,9,"Megaera, Indignance Lives",900841230,riRyE
 Token,Portalcraft,Legendary,1,Cannon Artifact,900841240,riRyO
 Token,Portalcraft,Legendary,4,Guard Artifact,900841250,riRyY
 Token,Portalcraft,Legendary,4,Defense Artifact,900841260,riRyi
+Token,Portalcraft,Legendary,5,Magisterial Dreadnought,900841270,riRys
+Token,Portalcraft,Legendary,8,Ruiner of Eden,900841280,riRz0
+Token,Portalcraft,Legendary,5,World Eliminator,900841290,riRzA
 Token,Portalcraft,Legendary,10,Destruction in White,900842010,riS8Q
 Token,Portalcraft,Legendary,10,Destruction in Black,900842020,riS8a
 Token,Portalcraft,Legendary,3,Wheel of Misfortune,900843010,riSO2
@@ -3347,3 +3369,4 @@ Token,Portalcraft,Legendary,3,Gullian Aura,900844010,riSdg
 Token,Portalcraft,Legendary,0,Gullian Howl,900844020,riSdq
 Token,Portalcraft,Legendary,1,Dead to Rights,900844030,riSd-
 Token,Portalcraft,Legendary,5,Wretched Tryst,900844040,riSe8
+Token,Portalcraft,Legendary,0,Calamity's End,900844050,riSeI

@@ -28,7 +28,7 @@ start_time = time.time()
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
 # ws.SVO_initial_scraper('Excel_and_CSV/SAOOA.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/rage.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/day1.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -242,6 +242,68 @@ start_time = time.time()
 # writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
 # df.to_excel(writer, index=False)
 # writer.save()
+
+#SVWGP
+url = 'https://esports.shadowverse.com/news/detail/198?lang=ja'
+source = requests.get(url).text
+soup = bs(source, 'lxml')
+
+
+namelist = []
+deck1 = []
+deck2 = []
+deck3 = []
+#player name handling
+playerlist = soup.find_all('td', class_='player')
+for player in playerlist:
+    name = player.text.replace("\n","")
+    namelist.append(name)
+
+#decklist handling
+table = soup.find('div', class_='ranking')
+decklist = table.find_all('a')
+for deckid in decklist[0::3]:
+    deck = deckid.get('href')
+    deck1.append(deck)
+for deckid in decklist[1::3]:
+    deck = deckid.get('href')
+    deck2.append(deck)
+for deckid in decklist[2::3]:
+    deck = deckid.get('href')
+    deck3.append(deck)
+
+db = np.column_stack((namelist,deck1,deck2,deck3))
+df = pd.DataFrame(db)
+df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2', 3:'deck 3'})
+
+writer = pd.ExcelWriter('Excel_and_CSV/WGPDay.xlsx')
+df.to_excel(writer, index=False)
+writer.save()
+
+# for player in playerlist:
+#     links = player.find_all('li')
+#     for link in links:
+        
+#         deck = link.find('a').get('href')
+#         tempdeck.append(deck)
+        
+# decklist = soup.find_all('a')
+
+# link = []
+# for deck in decklist:
+#     lits = deck.get('href')
+#     link.append(lits)
+
+# df = pd.DataFrame(link)
+# writer = pd.ExcelWriter('Excel_and_CSV/aaa.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+
+
+# for a in namelist:
+#     name = a.text
+#     name1.append(name)
+
 
 
 
