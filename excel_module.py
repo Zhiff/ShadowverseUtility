@@ -181,7 +181,7 @@ def conditionalFormat(sheet):
         clmap = classmap[i]
         rule = oxl.formatting.Rule(type="containsText", operator="containsText", text=clmap, dxf=diffstyle)
         rule.formula = [f'NOT(ISERROR(SEARCH("{clmap}", A1)))']
-        sheet.conditional_formatting.add("A1:F400", rule)
+        sheet.conditional_formatting.add("A1:F520", rule)
 
 #This function will add color to View sheet and Decks sheet in Stats and Breakdown files
 def add_class_color(mode):

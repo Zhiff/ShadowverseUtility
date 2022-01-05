@@ -49,7 +49,7 @@ class Deck:
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
         if self.formats == 'rotation':
-            df = pd.read_excel('Excel_and_CSV/CalamityMeta.xlsx')
+            df = pd.read_excel('Excel_and_CSV/OmenMeta.xlsx')
             # df = pd.read_excel('Excel_and_CSV/CalamityMetakorean.xlsx')
         elif self.formats == 'unlimited':
             df = pd.read_excel('Excel_and_CSV/UnlimitedMeta.xlsx')
@@ -73,6 +73,7 @@ class Deck:
         else:
             craft = self.class_checker()
             archetype = f"Unknown {craft}"
+            # archetype = f"Non-Dingdong Deck"
         
         return archetype
     
@@ -223,16 +224,16 @@ def id_to_name(cardID, lang):
     return name
 
 # # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
-with open('Excel_and_CSV/cardjsonen.json') as json_file:
-    jsondata = json.load(json_file)
-    dfa = pd.DataFrame(jsondata)
-    dfb = dfa.transpose()
-    dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
-    dffinal = dfc.copy()
-    dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
-    dffinal = dffinal.sort_index()
-    dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
-    dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
+# with open('Excel_and_CSV/cardjsonen.json') as json_file:
+#     jsondata = json.load(json_file)
+#     dfa = pd.DataFrame(jsondata)
+#     dfb = dfa.transpose()
+#     dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+#     dffinal = dfc.copy()
+#     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+#     dffinal = dffinal.sort_index()
+#     dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
+#     dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
 
 # jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 

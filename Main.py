@@ -17,6 +17,7 @@ import requests
 import numpy as np
 from bs4 import BeautifulSoup as bs
 import time
+import json
 
 start_time = time.time()
 # Excel Scraping, It will produce 3 excel files. FilteredDecks_View, FilteredDecks_Data, and Statistics and Breakdown
@@ -90,8 +91,8 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 
-# tcode = ws.JCG_latest_tourney('rotation', 'top16')
-# ws.JCG_scraper(tcode)
+tcode = ws.JCG_latest_tourney('rotation', 'group')
+ws.JCG_scraper(tcode)
 
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
@@ -132,7 +133,7 @@ start_time = time.time()
 #JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids, dates = jcg.scrapseasonIDs('rotation', '18th Season')
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '19th Season')
 # ws.generate_archetype_trends(jcgids, dates)
 
 # names = []
@@ -244,41 +245,41 @@ start_time = time.time()
 # writer.save()
 
 #SVWGP
-url = 'https://esports.shadowverse.com/news/detail/198?lang=ja'
-source = requests.get(url).text
-soup = bs(source, 'lxml')
+# url = 'https://esports.shadowverse.com/news/detail/198?lang=ja'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
 
 
-namelist = []
-deck1 = []
-deck2 = []
-deck3 = []
-#player name handling
-playerlist = soup.find_all('td', class_='player')
-for player in playerlist:
-    name = player.text.replace("\n","")
-    namelist.append(name)
+# namelist = []
+# deck1 = []
+# deck2 = []
+# deck3 = []
+# #player name handling
+# playerlist = soup.find_all('td', class_='player')
+# for player in playerlist:
+#     name = player.text.replace("\n","")
+#     namelist.append(name)
 
 #decklist handling
-table = soup.find('div', class_='ranking')
-decklist = table.find_all('a')
-for deckid in decklist[0::3]:
-    deck = deckid.get('href')
-    deck1.append(deck)
-for deckid in decklist[1::3]:
-    deck = deckid.get('href')
-    deck2.append(deck)
-for deckid in decklist[2::3]:
-    deck = deckid.get('href')
-    deck3.append(deck)
+# table = soup.find('div', class_='ranking')
+# decklist = table.find_all('a')
+# for deckid in decklist[0::3]:
+#     deck = deckid.get('href')
+#     deck1.append(deck)
+# for deckid in decklist[1::3]:
+#     deck = deckid.get('href')
+#     deck2.append(deck)
+# for deckid in decklist[2::3]:
+#     deck = deckid.get('href')
+#     deck3.append(deck)
 
-db = np.column_stack((namelist,deck1,deck2,deck3))
-df = pd.DataFrame(db)
-df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2', 3:'deck 3'})
+# db = np.column_stack((namelist,deck1,deck2,deck3))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2', 3:'deck 3'})
 
-writer = pd.ExcelWriter('Excel_and_CSV/WGPDay.xlsx')
-df.to_excel(writer, index=False)
-writer.save()
+# writer = pd.ExcelWriter('Excel_and_CSV/WGPDay.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
 
 # for player in playerlist:
 #     links = player.find_all('li')
@@ -304,7 +305,48 @@ writer.save()
 #     name = a.text
 #     name1.append(name)
 
+# tcode = 'Z5sQN9tYjwKn'
+# entrieslink = 'https://sv.j-cg.com/competition/' + tcode + '/entries'
+# source = requests.get(entrieslink).text
+# soup = bs(source, 'lxml')
+    
+# # Find and extract JSON file in HTML
+# all_scripts = soup.find_all('script')
+    
+# #currently hardcasted, faster processing but will be screwed when website changes
+# dljson = all_scripts[7].string
+    
+# #cleaning string to comply with JSON format
+# cleanedjson = dljson[dljson.find('list'):dljson.find('listFiltered')]
+# finaljson = cleanedjson.replace('list:','').strip()[:-1]
+    
+# data = json.loads(finaljson)
+# jsondf = pd.DataFrame(data)
 
+# sv = 'https://shadowverse-portal.com/deck/'
+# lang_eng = '?lang=en'
+# data1 = jsondf.loc[jsondf['result']==1].reset_index().copy()
+# team = pd.DataFrame(list(data1['users'])) 
+# user1data = pd.DataFrame(list(team[0]))
+# user2data = pd.DataFrame(list(team[1]))
+
+# user1data['d1'] = user1data['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
+# user2data['d2'] = user2data['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
+# user1data['deck 1']= user1data['d1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+# user2data['deck 2']= user2data['d2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+# user1dataf = user1data[['name','deck 1']].copy().rename(columns={'name':'player 1'})
+# user2dataf = user2data[['name','deck 2']].copy().rename(columns={'name':'player 2'})
+
+# df3 = pd.concat([data1,user1dataf,user2dataf], axis=1)
+# df = df3[['name','player 1','player 2','deck 1','deck 2']].copy()
+
+# writer = pd.ExcelWriter('Excel_and_CSV/JCG_DoublesRaw.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+
+# ws.SVO_initial_scraper('Excel_and_CSV/JCG_DoublesRaw.xlsx')
+
+# data3 = sh.handle_duplicate_row(data2, 'name').reset_index().drop(['index'], axis=1)
 
 
 
