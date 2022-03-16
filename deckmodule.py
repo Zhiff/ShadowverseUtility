@@ -19,6 +19,7 @@ class Deck:
         
     def class_checker(self):
         crafts = { 1 : 'Forest' , 2 : 'Sword' , 3 : 'Rune' , 4 : 'Dragon' ,5 : 'Shadow' , 6 : 'Blood' , 7 : 'Haven' , 8 : 'Portal' }
+        # crafts = { 1 : 'エルフ' , 2 : 'ロイヤル' , 3 : 'ウィッチ' , 4 : 'ドラゴン' ,5 : 'ネクロマンサー' , 6 : 'ヴァンパイア' , 7 : 'ビショップ' , 8 : 'ネメシス' }
         url = self.svlink
         if ('https://shadowverse-portal.com/deck' in url):
             # Svportal syntax, class identity is the second number after the dot inside list
@@ -50,6 +51,7 @@ class Deck:
         # then store it into 2D array so we can process the data
         if self.formats == 'rotation':
             df = pd.read_excel('Excel_and_CSV/OmenMeta.xlsx')
+            # df = pd.read_excel('Excel_and_CSV/OmenJPMeta.xlsx')
             # df = pd.read_excel('Excel_and_CSV/CalamityMetakorean.xlsx')
         elif self.formats == 'unlimited':
             df = pd.read_excel('Excel_and_CSV/UnlimitedMeta.xlsx')
@@ -72,14 +74,16 @@ class Deck:
             archetype = archetype_name
         else:
             craft = self.class_checker()
-            archetype = f"Unknown {craft}"
+            archetype = f"Other {craft}"
             # archetype = f"Non-Dingdong Deck"
+            # archetype = f"その他{craft}"
         
         return archetype
     
     
     def deck_details(self):
-        cardhash = pd.read_csv('Excel_and_CSV/generatedURLcode.csv')
+        cardhash = pd.read_csv('Excel_and_CSV/generatedURLcodeEN.csv')
+        # cardhash = pd.read_csv('Excel_and_CSV/generatedURLcodeJP.csv')
         url = self.svlink
         if ('https://shadowverse-portal.com' in url):
             # Svportal syntax processing
@@ -233,7 +237,19 @@ def id_to_name(cardID, lang):
 #     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
 #     dffinal = dffinal.sort_index()
 #     dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
-#     dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
+#     dffinal.to_csv('Excel_and_CSV/generatedURLcodeEN.csv', index=False)
+
+# # JP VERSION
+# with open('Excel_and_CSV/cardjsonjp.json') as json_file:
+#     jsondata = json.load(json_file)
+#     dfa = pd.DataFrame(jsondata)
+#     dfb = dfa.transpose()
+#     dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+#     dffinal = dfc.copy()
+#     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+#     dffinal = dffinal.sort_index()
+#     dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
+#     dffinal.to_csv('Excel_and_CSV/generatedURLcodeJP.csv', index=False)
 
 # jsonjp ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 

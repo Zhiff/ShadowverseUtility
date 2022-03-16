@@ -28,6 +28,12 @@ def add_lineup_column_5decks(df):
     df_added_lineup['Lineup'] = df_added_lineup['Lineup'].apply(set)
     return df_added_lineup
 
+def add_lineup_column_2decks_class(df):
+    # add new column which contains all 2 decks, then make them as Set to take care the uniformity
+    df_added_lineup = df.assign(Class = list(zip(df['class 1'],df['class 2'])) )
+    df_added_lineup['Class'] = df_added_lineup['Class'].apply(set)
+    return df_added_lineup
+
 
 def get_lineup_df(df, maxdeck):
     # creating a new df that consists of lineup and the number of people that bringing that lineup in tourney

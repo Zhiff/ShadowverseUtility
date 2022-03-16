@@ -27,9 +27,9 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
-# ws.SVO_initial_scraper('Excel_and_CSV/SAOOA.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/rage.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/day1.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SAO.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -91,8 +91,8 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 
-tcode = ws.JCG_latest_tourney('rotation', 'group')
-ws.JCG_scraper(tcode)
+# tcode = ws.JCG_latest_tourney('rotation', 'top16')
+# ws.JCG_scraper(tcode)
 
 
 # ws.manasurge_bfy_scraper('https://dtmwra1jsgyb0.cloudfront.net/tournaments/5f7b4e720ee5b43873159b96/teams')
@@ -169,7 +169,7 @@ ws.JCG_scraper(tcode)
 
 # Post Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021winter/pre/deck3'
+# url = 'https://rage-esports.jp/shadowverse/2022spring/pre/deck3'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')
@@ -215,10 +215,10 @@ ws.JCG_scraper(tcode)
 
 # Pre Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2021winter/pre/deck'
+# url = 'https://rage-esports.jp/shadowverse/2022spring/pre/deck'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
-# filtered = soup.find_all('td', bgcolor='white')
+# filtered = soup.find_all('td', bgcolor='black')
 
 # print (filtered)
 # name1 = []
@@ -348,7 +348,310 @@ ws.JCG_scraper(tcode)
 
 # data3 = sh.handle_duplicate_row(data2, 'name').reset_index().drop(['index'], axis=1)
 
+# url = 'https://rage-esports.jp/shadowverse/2022spring/pre/deck'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+# filtered = soup.find_all('td')
+
+# print (filtered)
+# name1 = []
+# deck1 = []
+# deck2 = []
+
+# for lit in filtered[5::4]:
+#     name = lit.text
+#     name1.append(name)
+# for lit in filtered[6::4]:
+#     lits = lit.find('a')
+#     name = lits.get('href')
+#     deck1.append(name)
+# for lit in filtered[7::4]:
+#     lits = lit.find('a')
+#     name = lits.get('href')
+#     deck2.append(name)    
+
+# db = np.column_stack((name1,deck1,deck2))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+
+# writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
 
 
-# print(filtered)
+print('Start')
+# tcode = 'EfKBukcCf4Lp' #Full Top16
+# tcode = '87sQDLai1JUy' #Missing entry top16
+tcode = 'gVjDGKNATejd' # Full Group Stage
+# tcode = 'ndFBjj5bpUbt'
+
+top16view_df = jcg.group_winner_check_2(tcode)
+
+#Entry Gathering and Preparation
+
+entrieslink = 'https://sv.j-cg.com/competition/' + tcode + '/entries'
+source = requests.get(entrieslink).text
+soup = bs(source, 'lxml')
+# Find and extract JSON file in HTML
+all_scripts = soup.find_all('script')
+#currently hardcasted, faster processing but will be screwed when website changes
+dljson = all_scripts[7].string
+#cleaning string to comply with JSON format
+cleanedjson = dljson[dljson.find('list'):dljson.find('listFiltered')]
+finaljson = cleanedjson.replace('list:','').strip()[:-1]
+data = json.loads(finaljson)
+jsondf = pd.DataFrame(data)
+
 print("--- %s seconds ---" % (time.time() - start_time))
+
+sv = 'https://shadowverse-portal.com/deck/'
+jcg = 'https://sv.j-cg.com/user/'
+lang_eng = '?lang=en'
+data1 = jsondf.loc[jsondf['result']==1].copy()
+data1['d1'] = data1['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
+data1['d2'] = data1['sv_decks'].apply(lambda x: x[1]['hash'] if x else None)
+data1['deck 1']= data1['d1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+data1['deck 2']= data1['d2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+data1['profile']=data1['nicename'].apply(lambda x: jcg + x)
+data2 = data1[['profile','name','deck 1','deck 2']].copy()
+data3 = sh.handle_duplicate_row(data2, 'name').reset_index().drop(['index'], axis=1)
+df = data3
+
+for i in range(1, 3):
+    df[f'arc {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).archetype_checker())
+for i in range(1, 3):
+    df[f'class {i}'] = df[f'deck {i}'].apply(lambda x: Deck(x).class_checker())     
+df = sh.add_lineup_column_2decks_class(df)
+df = sh.add_lineup_column_2decks(df) # Base Entries : Filtered-Deck-Data
+
+print("--- %s seconds ---" % (time.time() - start_time))
+print("end of entry initialization")
+
+
+# preparation for Lineup
+dfc = df[['profile', 'Lineup']]
+dfc = dfc.set_index('profile')
+lineupdict = dfc.to_dict() 
+
+#Collecting MatchIDs for Result pages
+matchids = []
+
+istop16 = False
+#get info from the whole bracket
+bracketpage = 'https://sv.j-cg.com/competition/' + tcode + '/bracket'
+source = requests.get(bracketpage).text
+soup = bs(source, 'lxml')
+allscr = soup.find_all('script')
+
+title = soup.find('div', class_='competition-title').text
+if '決勝トーナメント' in title:
+    istop16 = True
+
+if (istop16):
+    #Specify the exact JSON inside the bracket and cleaning up
+    tjson = allscr[7].text
+    cleanedjson = tjson[tjson.find('"groups":['):tjson.find('],"myUsername"')]
+    finaljson = cleanedjson.replace('"groups":[','')
+    bracketid = json.loads(finaljson)['id']
+    bracketid = str(bracketid)
+
+    bracketjson = 'https://sv.j-cg.com/api/competition/group/' + bracketid
+    bracketresponse = requests.get(bracketjson)    
+    bracketdata = bracketresponse.json()['rounds']
+    for j in range(len(bracketdata)):
+        groupdata = bracketdata[j]['matches']
+        for k in range(len(groupdata)):
+            matchid = groupdata[k]['id']
+            matchids.append(str(matchid))
+    
+else:
+    #Specify the exact JSON inside the bracket and cleaning up
+    tjson = allscr[7].text
+    cleanedjson = tjson[tjson.find('"groups":['):tjson.find('],"myUsername"')]
+    finaljson = '{' + cleanedjson + ']}'
+    bracket = json.loads(finaljson)
+    # traverse the JSON to find each bracket ID , and furthermore match ID
+    for i in range(16): #Groupstage has 16 group
+        bracketid = bracket['groups'][i]['id']
+        bracketid = str(bracketid)
+
+        bracketjson = 'https://sv.j-cg.com/api/competition/group/' + bracketid
+        bracketresponse = requests.get(bracketjson)    
+        bracketdata = bracketresponse.json()['rounds']
+        for j in range(len(bracketdata)):
+            groupdata = bracketdata[j]['matches']
+            for k in range(len(groupdata)):
+                matchid = groupdata[k]['id']
+                matchids.append(str(matchid))
+
+print("--- %s seconds ---" % (time.time() - start_time))
+print("end of MatchID gatherings")
+
+#Collecting Matches Record
+validmatch = []
+P1 = []
+P2 = []
+ResultP1 = []
+ResultP2 = []
+
+for match in matchids:
+    matchjson = 'https://sv.j-cg.com/api/competition/match/' + match
+    matchresponse = requests.get(matchjson)
+    matchdata = matchresponse.json()
+    if len(matchdata['teams']) > 1: #Check if it is not a bye round
+        validmatch.append(match)
+        Player1 = 'https://sv.j-cg.com/user/' + matchdata['teams'][0]['nicename']
+        P1.append(Player1)
+        Player2 = 'https://sv.j-cg.com/user/' + matchdata['teams'][1]['nicename']
+        P2.append(Player2)
+        PR1 = matchdata['teams'][0]['won']
+        ResultP1.append(PR1)
+        PR2 = matchdata['teams'][1]['won']
+        ResultP2.append(PR2)
+        print("--- %s seconds ---" % (time.time() - start_time))
+    else:
+        Player1 = 'https://sv.j-cg.com/user/' + matchdata['teams'][0]['nicename']
+        P1.append(Player1)
+        P2.append(np.nan)
+        PR1 = matchdata['teams'][0]['won']
+        ResultP1.append(PR1)
+        ResultP2.append(0)
+
+print("Matches Dataset has been completed")
+
+#View Creation
+        
+# 1. Qualified Top 16 and Overall Players View
+
+# A. Wins Dataset Creation
+Players = P1 + P2
+Wins = ResultP1 + ResultP2
+WinDS1 = pd.DataFrame([Players,Wins]).transpose().rename(columns={0:'profile', 1:'win'})
+WinDS = WinDS1.groupby('profile')['win'].sum().reset_index().sort_values('win', ascending=False)
+
+# Overall Players View
+
+OverallP1 = pd.merge(df, WinDS, how='left').sort_values('win', ascending=False, ignore_index=True)
+OverallP1['name'] = '=HYPERLINK("' + OverallP1['profile'] + '", "' + OverallP1['name'] + '")' 
+OverallView_df = OverallP1[['name','deck 1','deck 2','win']]
+
+print("Overall View Dataset is ready")
+
+# Qualified Top16 View
+
+# 2. Decks View
+
+# Sum up Decks based on archetypes
+decks = df.loc[:,'arc 1':'arc 2'].stack().value_counts(normalize = False, ascending = False)
+decks = decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
+decks['Player %'] = (round((decks['Count']/(int(df.shape[0])))*100, 2))
+decks_df = decks.copy()
+
+# Sum up Decks based on class
+classes = df.loc[:,'class 1':'class 2'].stack().value_counts(normalize = False, ascending = False)
+classes = classes.rename_axis("Class").reset_index(name = 'Count')
+classes['Player %'] = (round((classes['Count']/(int(df.shape[0])))*100, 2))
+classes_df = classes.copy()
+
+print("Deck and Class View Dataset is ready")
+
+# 2. Lineup View
+
+lds = pd.DataFrame(lineupdict)
+lineup = lds["Lineup"].value_counts(normalize = False, ascending = False)
+lineup = lineup.rename_axis("Lineup").reset_index(name = 'Count')
+lineup['Player %'] = (round((lineup['Count']/(int(df.shape[0])))*100, 2))
+lineup['Lineup'] = lineup.loc[:,'Lineup'].apply(lambda x: ' - '.join(x))
+
+LineDS1 = WinDS.copy()
+LineDS1['profile'] = LineDS1.loc[:,'profile'].apply(lambda x: lineupdict['Lineup'][x])
+LineDS1['profile'] = LineDS1.loc[:,'profile'].apply(lambda x: ' - '.join(x))
+LineDS1 = LineDS1.rename(columns={'profile':'Lineup'})
+LineDS = LineDS1.groupby('Lineup')['win'].sum().reset_index().sort_values('win', ascending=False)
+
+total1 = pd.DataFrame(Players).rename(columns={0:'profile'}).dropna()
+total1['profile'] = total1.loc[:,'profile'].apply(lambda x: lineupdict['Lineup'][x])
+total1['profile'] = total1.loc[:,'profile'].apply(lambda x: ' - '.join(x))
+total1 = total1.rename(columns={'profile':'Lineup'})
+total = total1['Lineup'].value_counts(ascending = False).reset_index().rename(columns={'index':'Lineup', 'Lineup':'total'})
+
+LineupDS = pd.merge(LineDS, total, how='left')
+LineupDS['lose'] = LineupDS['total']-LineupDS['win']
+LineupDS['Winrate %'] = round(100 * LineupDS['win']/LineupDS['total'], 2)
+
+LineupFinal = pd.merge(lineup, LineupDS, how='left')
+LineupFinal['Lineup'] = LineupFinal.loc[:,'Lineup'].apply(lambda x: x.split(" - "))
+LineupFinal[['Deck 1','Deck 2']] = pd.DataFrame(LineupFinal['Lineup'].to_list(), index=LineupFinal.index)
+LineupFinal_df = LineupFinal[['Deck 1', 'Deck 2', 'Count', 'Player %','win','lose','Winrate %']]
+
+print("Lineup View Dataset is ready")
+print("--- %s seconds ---" % (time.time() - start_time))
+
+# 3. Conversion Rate Page
+
+#count deck and combine with data
+
+conv_top16 = top16view_df.copy()
+conv_top16['deck 1'] = conv_top16['deck 1'].apply(lambda x: Deck(x).archetype_checker())
+conv_top16['deck 2'] = conv_top16['deck 2'].apply(lambda x: Deck(x).archetype_checker())
+conv_decks = conv_top16.loc[:,'deck 1':'deck 2'].stack().value_counts(normalize = False, ascending = False)
+conv_decks = conv_decks.rename_axis("Deck Archetype").reset_index(name = 'Count')
+conv_decks['Top 16 Rep%'] = (round((conv_decks['Count']/(int(conv_top16.shape[0])))*100, 2))
+whole_decksdf = decks_df.copy()
+whole_decksdf = whole_decksdf.rename(columns={'Count':'Total', 'Player %':'Group Rep%'})
+mergedeck = conv_decks.merge(whole_decksdf)
+mergedeck['Conversion Rate %'] = round(mergedeck['Count']/mergedeck['Total'], 4)*100 
+mergedeck = mergedeck.rename(columns={'Count':'Top 16', 'Total':'Group'})
+mergedeck = mergedeck.astype(str)
+mergedeck['Conversion Rate %'] = mergedeck['Conversion Rate %'].astype(float)
+mergedeck['Top 16 (Player%)'] = mergedeck['Top 16'] + ' (' + mergedeck['Top 16 Rep%'] + '%)'
+mergedeck['Group (Player%)'] = mergedeck['Group'] + ' (' + mergedeck['Group Rep%'] + '%)'
+conv_page_df = mergedeck[['Deck Archetype','Top 16 (Player%)','Group (Player%)','Conversion Rate %']]
+    
+
+#Excel Things
+
+outputfile = "Excel_and_CSV/Statistics and Breakdown.xlsx"
+writer = pd.ExcelWriter(outputfile)
+
+top16view_df.to_excel(writer, sheet_name='Qualified for Top 16', index=False, startrow = 0, startcol = 0)
+OverallView_df.to_excel(writer, sheet_name='Names and Links', index=False, startrow = 0, startcol = 0)
+decks_df.to_excel(writer, sheet_name='Decks', index=True, startrow = 0, startcol = 0)
+classes_df.to_excel(writer, sheet_name='Decks', index=True, startrow = 0, startcol = 5)
+LineupFinal_df.to_excel(writer, sheet_name='Lineup', index=True, startrow = 0, startcol = 0)
+conv_page_df.to_excel(writer, sheet_name='Top 16 Conversion', index=True, startrow = 0, startcol = 0)
+
+
+print("Start Working on Excel")
+print("--- %s seconds ---" % (time.time() - start_time))
+
+maxdeck = 2
+em.tournament_breakdown(df, writer, maxdeck)  
+
+writer.save()
+
+print("Initial page Completed")
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
+em.excel_convert_custom('Excel_and_CSV/Statistics and Breakdown.xlsx', 3, True)
+
+print("Completed")
+print("--- %s seconds ---" % (time.time() - start_time))
+# # # 2. Matchup Dataset
+# # Matchdf1 = pd.DataFrame([P1,ResultP1]).transpose().rename(columns={0:'profile', 1:'ResultP1'})
+# # Matchdf2 = pd.DataFrame([P2,ResultP2]).transpose().rename(columns={0:'profile', 1:'ResultP2'})
+
+# print("--- %s seconds ---" % (time.time() - start_time))
+
+
+
+# Matchdf1 = Matchdf1.merge(df[['profile','Lineup']], on='profile')
+# Matchdf1 = Matchdf1.rename(columns={'Lineup':'Lineup 1'})
+# Matchdf1t = Matchdf1[['Lineup 1','ResultP1']].copy()
+# Matchdf2 = Matchdf2.merge(df[['profile','Lineup']], on='profile')
+# Matchdf2 = Matchdf2.rename(columns={'Lineup':'Lineup 2'})
+# Matchdf2t = Matchdf2[['Lineup 2','ResultP2']].copy()
+# Matchdfall = pd.concat([Matchdf1t, Matchdf2t],axis=1)
+
+# print("--- %s seconds ---" % (time.time() - start_time))

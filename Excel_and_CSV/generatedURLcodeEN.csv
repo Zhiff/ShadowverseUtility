@@ -2450,7 +2450,7 @@ Darkness Over Vellsar,Neutral,Bronze,2,Armored Goblin,120011020,79paC
 Darkness Over Vellsar,Neutral,Bronze,1,Retracing the Past,120014010,79qIw
 Darkness Over Vellsar,Neutral,Silver,4,Managrocer,120021010,79s0I
 Darkness Over Vellsar,Neutral,Silver,3,Dogged Detective,120021020,79s0S
-Darkness Over Vellsar,Neutral,Gold,4,"Grimnir, Voidwrought Wind",120031010,79uSY
+Darkness Over Vellsar,Neutral,Gold,6,"Grimnir, Voidwrought Wind",120031010,79uSY
 Darkness Over Vellsar,Neutral,Gold,10,Goddess of Rebirth,120031020,79uSi
 Darkness Over Vellsar,Neutral,Gold,4,Frostfire,120034010,79vBQ
 Darkness Over Vellsar,Neutral,Legendary,8,Sahaquiel & Israfil,120041010,79wuo
@@ -2516,7 +2516,7 @@ Darkness Over Vellsar,Shadowcraft,Silver,2,Noble Phantom,120521020,7Bm4y
 Darkness Over Vellsar,Shadowcraft,Silver,5,Parting of the Flesh,120524010,7Bmpg
 Darkness Over Vellsar,Shadowcraft,Gold,4,"Chris, Beyond the Patch",120531010,7BoX2
 Darkness Over Vellsar,Shadowcraft,Gold,3,Otherworld Gatekeeper,120531020,7BoXC
-Darkness Over Vellsar,Shadowcraft,Gold,1,Wicked Rebirth,120534010,7BpFw
+Darkness Over Vellsar,Shadowcraft,Gold,2,Wicked Rebirth,120534010,7BpFw
 Darkness Over Vellsar,Shadowcraft,Legendary,3,"Ceres, Bride of the Night",120541010,7BqzI
 Darkness Over Vellsar,Shadowcraft,Legendary,2,"Kagero, Swordbound Soul",120541020,7BqzS
 Darkness Over Vellsar,Shadowcraft,Legendary,6,Ominous Tyrant,120541030,7Bqzc
@@ -2589,7 +2589,7 @@ Renascent Chronicles,Swordcraft,Bronze,1,Brothers United,121214010,7EPGw
 Renascent Chronicles,Swordcraft,Silver,3,Valhorean Dealer,121221010,7EQ-I
 Renascent Chronicles,Swordcraft,Silver,2,Bladerights Lieutenant,121221020,7EQ-S
 Renascent Chronicles,Swordcraft,Silver,2,Shadowed Memories,121224010,7ERjA
-Renascent Chronicles,Swordcraft,Gold,7,Frenzied Corpsmaster,121231010,7ETQY
+Renascent Chronicles,Swordcraft,Gold,6,Frenzied Corpsmaster,121231010,7ETQY
 Renascent Chronicles,Swordcraft,Gold,4,Tempest Slayer,121231020,7ETQi
 Renascent Chronicles,Swordcraft,Gold,1,Sunny Day Encounter,121234010,7EU9Q
 Renascent Chronicles,Swordcraft,Legendary,7,Mistolina & Bayleon,121241010,7EVso
@@ -2794,27 +2794,37 @@ Omen of Storms,Neutral,Silver,5,Messenger of the Skies,123021010,7LIRI
 Omen of Storms,Neutral,Silver,4,Goblin Assault,123024010,7LJAA
 Omen of Storms,Neutral,Gold,2,Arael,123031010,7LKtY
 Omen of Storms,Neutral,Gold,7,Thunder God of the Tempest,123031020,7LKti
+Omen of Storms,Neutral,Gold,2,Second Advent of the Omens,123034010,7LLcQ
+Omen of Storms,Neutral,Gold,2,Birth of the Ravenous,123034020,7LLca
+Omen of Storms,Neutral,Legendary,6,"Mjerrabaine, Great One",123041010,7LNJo
+Omen of Storms,Neutral,Legendary,2,"Gilnelise, Ravenous Craving",123041020,7LNJy
 Omen of Storms,Forestcraft,Bronze,5,Hermit of Unkilling,123111010,7LePY
 Omen of Storms,Forestcraft,Bronze,2,Bouquet Fairy,123111020,7LePi
 Omen of Storms,Forestcraft,Bronze,3,Horned Beastie,123111030,7LePs
 Omen of Storms,Forestcraft,Bronze,2,Seed Barrage,123114010,7Lf8Q
 Omen of Storms,Forestcraft,Silver,5,Emerald Wildfox,123121010,7Lgro
 Omen of Storms,Forestcraft,Silver,4,Banesbow Elf,123121020,7Lgry
+Omen of Storms,Forestcraft,Silver,2,Adherent of Annihilation,123121030,7Lgs6
 Omen of Storms,Forestcraft,Silver,1,Rejuvenating Resurrection,123124010,7Lhag
 Omen of Storms,Forestcraft,Gold,2,Blossoming Lunerian,123131010,7LjI2
 Omen of Storms,Forestcraft,Gold,9,Whorltusk Mammoth,123131020,7LjIC
+Omen of Storms,Forestcraft,Gold,1,Erosive Annihilation,123134010,7Lk0w
 Omen of Storms,Forestcraft,Legendary,2,"Amataz, Reverse Blader",123141010,7LlkI
 Omen of Storms,Forestcraft,Legendary,4,"Piercye, Queen of Frost",123141020,7LlkS
+Omen of Storms,Forestcraft,Legendary,3,"Izudia, Unkilling Annihilation",123141030,7Llkc
 Omen of Storms,Swordcraft,Bronze,3,Hermit of Usurpation,123211010,7M0q2
 Omen of Storms,Swordcraft,Bronze,2,Chivalrous Bandit,123211020,7M0qC
 Omen of Storms,Swordcraft,Bronze,1,Penguin Guardian,123211030,7M0qM
 Omen of Storms,Swordcraft,Bronze,4,Cannon Volley,123214010,7M1Yw
 Omen of Storms,Swordcraft,Silver,5,Sword General,123221010,7M3GI
 Omen of Storms,Swordcraft,Silver,6,War Hero,123221020,7M3GS
+Omen of Storms,Swordcraft,Silver,1,Adherent of Hollowness,123221030,7M3Gc
 Omen of Storms,Swordcraft,Silver,1,Serration Wave,123224010,7M3_A
 Omen of Storms,Swordcraft,Gold,7,Claymore Master,123231010,7M5iY
 Omen of Storms,Swordcraft,Gold,2,Arsène Lupin,123231020,7M5ii
+Omen of Storms,Swordcraft,Gold,1,Ultimate Hollow,123234010,7M6RQ
 Omen of Storms,Swordcraft,Legendary,3,"Kagemitsu, Lost Samurai",123241010,7M88o
+Omen of Storms,Swordcraft,Legendary,3,"Octrice, Hollow Usurpation",123241020,7M88y
 Omen of Storms,Swordcraft,Legendary,5,Musketeers' Vow,123244010,7M8tg
 Omen of Storms,Runecraft,Bronze,5,Hermit of Truth,123311010,7MPEY
 Omen of Storms,Runecraft,Bronze,5,Iceshard Beast,123311020,7MPEi
@@ -2822,66 +2832,84 @@ Omen of Storms,Runecraft,Bronze,3,Meandering Bolt,123314010,7MPzQ
 Omen of Storms,Runecraft,Bronze,8,Ice Storm,123314020,7MPza
 Omen of Storms,Runecraft,Silver,2,Broom Witch,123321010,7MRgo
 Omen of Storms,Runecraft,Silver,4,Scroll Wizard,123321020,7MRgy
+Omen of Storms,Runecraft,Silver,3,Adherent of Elimination,123321030,7MRh6
 Omen of Storms,Runecraft,Silver,1,Secrets of Onmyodo,123324010,7MSPg
 Omen of Storms,Runecraft,Gold,2,Covetous Witch,123331010,7MU72
 Omen of Storms,Runecraft,Gold,3,Acid Golem,123331020,7MU7C
+Omen of Storms,Runecraft,Gold,6,Elimination Unleashed,123334010,7MUrw
 Omen of Storms,Runecraft,Legendary,5,"Kuon, Wuxing Master",123341010,7MWZI
 Omen of Storms,Runecraft,Legendary,2,Sacred Bird of Wisdom,123341020,7MWZS
+Omen of Storms,Runecraft,Legendary,9,"Raio, Truthful Elimination",123341030,7MWZc
 Omen of Storms,Dragoncraft,Bronze,2,Hermit of Disdain,123411010,7Mnf2
 Omen of Storms,Dragoncraft,Bronze,3,Beginner Dragoon,123411020,7MnfC
 Omen of Storms,Dragoncraft,Bronze,4,Tentacled Seadevil,123411030,7MnfM
 Omen of Storms,Dragoncraft,Bronze,1,Dragon Hunt,123414010,7MoNw
 Omen of Storms,Dragoncraft,Silver,2,Windswept Dragonewt,123421010,7Mq5I
 Omen of Storms,Dragoncraft,Silver,2,Tiniest Dragon,123421020,7Mq5S
+Omen of Storms,Dragoncraft,Silver,1,Adherent of Ardor,123421030,7Mq5c
 Omen of Storms,Dragoncraft,Silver,3,Whitefrost Blizzard,123424010,7MqqA
 Omen of Storms,Dragoncraft,Gold,7,Mermaid of Punishment,123431010,7MsXY
 Omen of Storms,Dragoncraft,Gold,9,Draconic Mercenary,123431020,7MsXi
+Omen of Storms,Dragoncraft,Gold,1,Ardent Torch,123434010,7MtGQ
 Omen of Storms,Dragoncraft,Legendary,2,"Filene, Blizzardous Heart",123441010,7Muzo
 Omen of Storms,Dragoncraft,Legendary,6,Prosperous Treasure Dragon,123441020,7Muzy
+Omen of Storms,Dragoncraft,Legendary,5,"Galmieux, Ardent Disdain",123441030,7Mu-6
 Omen of Storms,Shadowcraft,Bronze,3,Hermit of Silence,123511010,7NA3Y
 Omen of Storms,Shadowcraft,Bronze,5,Hell's Summoner,123511020,7NA3i
 Omen of Storms,Shadowcraft,Bronze,8,Krampus,123511030,7NA3s
 Omen of Storms,Shadowcraft,Bronze,1,Spirit Invasion,123514010,7NAoQ
 Omen of Storms,Shadowcraft,Silver,4,Ghost Ship,123521010,7NCVo
 Omen of Storms,Shadowcraft,Silver,1,Skull Fanatic,123521020,7NCVy
+Omen of Storms,Shadowcraft,Silver,6,Adherent of Screams,123521030,7NCW6
 Omen of Storms,Shadowcraft,Silver,3,A Hellish Banquet,123524010,7NDEg
 Omen of Storms,Shadowcraft,Gold,2,Deathcat Reaper,123531010,7NEy2
 Omen of Storms,Shadowcraft,Gold,9,Spirit Eater,123531020,7NEyC
+Omen of Storms,Shadowcraft,Gold,1,Spiteful Screams,123534010,7NFgw
 Omen of Storms,Shadowcraft,Legendary,5,"Ginsetsu, Terror Banquet",123541010,7NHOI
 Omen of Storms,Shadowcraft,Legendary,6,Chaotic Doom,123541020,7NHOS
+Omen of Storms,Shadowcraft,Legendary,3,"Rulenye, Screaming Silence",123541030,7NHOc
 Omen of Storms,Bloodcraft,Bronze,2,Hermit of Lust,123611010,7NYU2
 Omen of Storms,Bloodcraft,Bronze,6,Devilarmed Bladesman,123611020,7NYUC
 Omen of Storms,Bloodcraft,Bronze,5,Paranoia Devil,123611030,7NYUM
 Omen of Storms,Bloodcraft,Bronze,2,Corrupt Conveyance,123614010,7NZCw
 Omen of Storms,Bloodcraft,Silver,1,Briared Vampire,123621010,7NawI
 Omen of Storms,Bloodcraft,Silver,4,Leomalum,123621020,7NawS
+Omen of Storms,Bloodcraft,Silver,1,Adherent of Desire,123621030,7Nawc
 Omen of Storms,Bloodcraft,Silver,2,Crimson Virtue,123624010,7NbfA
 Omen of Storms,Bloodcraft,Gold,2,Kali,123631010,7NdMY
 Omen of Storms,Bloodcraft,Gold,10,Eccentric Archdemon,123631020,7NdMi
+Omen of Storms,Bloodcraft,Gold,1,Loathing Desire,123634010,7Ne5Q
 Omen of Storms,Bloodcraft,Legendary,3,"Yuzuki, Bloodlord",123641010,7Nfoo
 Omen of Storms,Bloodcraft,Legendary,6,Pain Immortal,123641020,7Nfoy
+Omen of Storms,Bloodcraft,Legendary,3,"Valnareik, Lustful Desire",123641030,7Nfp6
 Omen of Storms,Havencraft,Bronze,2,Hermit of Repose,123711010,7NwuY
 Omen of Storms,Havencraft,Bronze,2,Temple Healer,123711020,7Nwui
 Omen of Storms,Havencraft,Bronze,4,Caladrius,123711030,7Nwus
 Omen of Storms,Havencraft,Bronze,3,Sacred Gavel,123713010,7NxNo
 Omen of Storms,Havencraft,Silver,3,Hardplume Warrior,123721010,7NzKo
 Omen of Storms,Havencraft,Silver,8,Sacred Ice-Crusher,123721020,7NzKy
+Omen of Storms,Havencraft,Silver,2,Adherent of Despair,123721030,7NzL6
 Omen of Storms,Havencraft,Silver,2,"Zeno, Paradoxical Shield",123723010,7Nzq2
 Omen of Storms,Havencraft,Gold,8,"Shiro, Cursed Wings",123731010,7N_n2
 Omen of Storms,Havencraft,Gold,5,Unicorn Warrior,123731020,7N_nC
+Omen of Storms,Havencraft,Gold,3,Perpetual Despair,123733010,7O0GI
 Omen of Storms,Havencraft,Legendary,2,"Wilbert, Luminous Paladin",123741010,7O2DI
 Omen of Storms,Havencraft,Legendary,4,Bellerophon,123741020,7O2DS
+Omen of Storms,Havencraft,Legendary,4,"Marwynn, Repose of Despair",123741030,7O2Dc
 Omen of Storms,Portalcraft,Bronze,5,Hermit of Destruction,123811010,7OJJ2
 Omen of Storms,Portalcraft,Bronze,2,Doll Lady,123811020,7OJJC
 Omen of Storms,Portalcraft,Bronze,4,Mechanical Analyzer,123811030,7OJJM
 Omen of Storms,Portalcraft,Bronze,2,Inner Discovery,123814010,7OK1w
 Omen of Storms,Portalcraft,Silver,2,Dwarf Engineer,123821010,7OLlI
 Omen of Storms,Portalcraft,Silver,4,Laser Hawk,123821020,7OLlS
+Omen of Storms,Portalcraft,Silver,2,Adherent of Melody,123821030,7OLlc
 Omen of Storms,Portalcraft,Silver,0,Supersonic Breakthrough,123824010,7OMUA
 Omen of Storms,Portalcraft,Gold,2,Inauspicious Puppeteer,123831010,7OOBY
 Omen of Storms,Portalcraft,Gold,4,Jetpack Gunner,123831020,7OOBi
+Omen of Storms,Portalcraft,Gold,1,Melody's Return,123834010,7OOwQ
 Omen of Storms,Portalcraft,Legendary,2,"Ralmia, Astrowing",123841010,7OQdo
 Omen of Storms,Portalcraft,Legendary,1,Wielder of the Cosmos,123841020,7OQdy
+Omen of Storms,Portalcraft,Legendary,4,"Lishenna, Melodious Destruction",123841030,7OQe6
 Promo,Forestcraft,Legendary,3,Ancient Elf,701141010,fof0I
 Promo,Swordcraft,Legendary,6,Sea Queen Otohime,701241010,fp1Qo
 Promo,Runecraft,Legendary,4,Merlin,701341010,fpPrI
@@ -3025,6 +3053,7 @@ Dawn of Calamity,Forestcraft,Legendary,4,Brilliant Fairy,715141010,ge2-I
 Promo,Swordcraft,Bronze,3,Scrupulous Preparation,715214010,geKow
 Promo,Swordcraft,Silver,1,Homebound Infantryman,715221010,geMWI
 Promo,Swordcraft,Silver,3,Valhorean Dealer,715221020,geMWS
+Storm Over Rivayle,Swordcraft,Legendary,4,"Nahtnaught, Cursed Queen",715241010,geROo
 Promo,Runecraft,Bronze,1,Impalement Arts,715314010,gejDQ
 Promo,Runecraft,Bronze,3,Meandering Bolt,715314020,gejDa
 Omen of Storms,Runecraft,Silver,1,Secrets of Onmyodo,715324010,gelfg
@@ -3032,7 +3061,9 @@ Renascent Chronicles,Runecraft,Legendary,2,"Eleanor, Glorious Flower",715341010,
 Promo,Dragoncraft,Bronze,1,Dragon Hunt,715414010,gf5dw
 Promo,Dragoncraft,Silver,1,Dragon Rearing,715424010,gf84A
 Dawn of Calamity,Dragoncraft,Legendary,7,Ignis Dragon,715441010,gfCDo
+Omen of Storms,Dragoncraft,Legendary,5,"Galmieux, Ardent Disdain",715441020,gfCDy
 Promo,Shadowcraft,Bronze,3,Undead Stampede,715514010,gfU2Q
+Omen of Storms,Shadowcraft,Gold,1,Spiteful Screams,715534010,gfYww
 Promo,Bloodcraft,Bronze,3,Silversteel Blader,715611010,gfrk2
 Promo,Bloodcraft,Bronze,2,Corrupt Conveyance,715614010,gfsSw
 Renascent Chronicles,Bloodcraft,Silver,2,Harvest Imp,715621010,gfuAI
@@ -3094,6 +3125,8 @@ Token,Neutral,Legendary,2,Heavenfall,900044060,rfPKS
 Token,Neutral,Legendary,4,Earthfall,900044070,rfPKc
 Token,Neutral,Legendary,0,Gran's Resolve,900044080,rfPKm
 Token,Neutral,Legendary,0,Djeeta's Determination,900044090,rfPKw
+Token,Neutral,Legendary,0,Great Testimony,900044100,rfPL4
+Token,Neutral,Legendary,0,Ravenous Sweetness,900044110,rfPLE
 Token,Forestcraft,Bronze,1,Fairy,900111010,rffgY
 Token,Forestcraft,Bronze,0,Fairy Wisp,900111020,rffgi
 Token,Forestcraft,Bronze,1,Fairy's Yawn,900113010,rfg9o
@@ -3127,6 +3160,7 @@ Token,Forestcraft,Legendary,0,Treacherous Reversal,900144070,rfnl6
 Token,Forestcraft,Legendary,1,Resolve of the Nine-Tailed Fox,900144080,rfnlG
 Token,Forestcraft,Legendary,0,Gale Arrow,900144090,rfnlQ
 Token,Forestcraft,Legendary,2,Storm Arrow,900144100,rfnla
+Token,Forestcraft,Legendary,1,Annihilating Onslaught,900144110,rfnlk
 Token,Swordcraft,Bronze,1,Knight,900211010,rg252
 Token,Swordcraft,Bronze,1,Heavy Knight,900211020,rg25C
 Token,Swordcraft,Bronze,2,Steelclad Knight,900211030,rg25M
@@ -3188,6 +3222,7 @@ Token,Swordcraft,Legendary,5,Twilight Blade,900244010,rgA8g
 Token,Swordcraft,Legendary,1,King's Might,900244020,rgA8q
 Token,Swordcraft,Legendary,0,Tyrant's Order,900244030,rgA8-
 Token,Swordcraft,Legendary,2,Desperados' Shot,900244040,rgA98
+Token,Swordcraft,Legendary,2,Remnant of Hollowness,900244050,rgA9I
 Token,Runecraft,Bronze,1,Snowman,900311010,rgQVY
 Token,Runecraft,Bronze,2,Clay Golem,900311020,rgQVi
 Token,Runecraft,Bronze,4,Guardian Golem,900311030,rgQVs
@@ -3245,6 +3280,7 @@ Token,Runecraft,Legendary,1,Words of Judgment,900344090,rgYaQ
 Token,Runecraft,Legendary,3,Rending Blast,900344100,rgYaa
 Token,Runecraft,Legendary,2,Quadra Magic,900344120,rgYau
 Token,Runecraft,Legendary,6,Elements of Creation,900344130,rgYb2
+Token,Runecraft,Legendary,3,Ersatz Elimination,900344140,rgYbC
 Token,Dragoncraft,Bronze,5,Dragon,900411010,rgow2
 Token,Dragoncraft,Bronze,6,Windblast Dragon,900411020,rgowC
 Token,Dragoncraft,Bronze,2,Megalorca,900411030,rgowM
@@ -3286,6 +3322,7 @@ Token,Dragoncraft,Legendary,2,Whitefrost Whisper,900444010,rgwzg
 Token,Dragoncraft,Legendary,4,Shadow's Corrosion,900444020,rgwzq
 Token,Dragoncraft,Legendary,1,Howling Conflagration,900444030,rgwz-
 Token,Dragoncraft,Legendary,1,Curse of the Black Dragon,900444040,rgw-8
+Token,Dragoncraft,Legendary,0,Fangs of Ardent Destruction,900444050,rgw-I
 Token,Shadowcraft,Bronze,1,Skeleton,900511010,rhBKY
 Token,Shadowcraft,Bronze,1,Ghost,900511020,rhBKi
 Token,Shadowcraft,Bronze,2,Zombie,900511030,rhBKs
@@ -3321,6 +3358,7 @@ Token,Shadowcraft,Legendary,3,Necrofauna,900541110,rhIgs
 Token,Shadowcraft,Legendary,2,One-Tailed Fox,900541120,rhIh0
 Token,Shadowcraft,Legendary,2,Skullfather,900541130,rhIhA
 Token,Shadowcraft,Legendary,9,He Who Once Rocked,900541140,rhIhK
+Token,Shadowcraft,Legendary,1,"Rulenye, Screaming Silence",900541150,rhIhU
 Token,Shadowcraft,Legendary,1,Luna's Doll,900543010,rhJ8Y
 Token,Shadowcraft,Legendary,1,Mimi,900544010,rhJOA
 Token,Shadowcraft,Legendary,1,Coco,900544020,rhJOK
@@ -3331,6 +3369,7 @@ Token,Shadowcraft,Legendary,1,Fleeting Joy,900544060,rhJOy
 Token,Shadowcraft,Legendary,1,Darkest Desire,900544070,rhJP6
 Token,Shadowcraft,Legendary,2,Soulstrike,900544080,rhJPG
 Token,Shadowcraft,Legendary,2,Allure of Shadows,900544090,rhJPQ
+Token,Shadowcraft,Legendary,1,Scream Diffusion,900544100,rhJPa
 Token,Bloodcraft,Bronze,1,Forest Bat,900611010,rhZl2
 Token,Bloodcraft,Bronze,1,Serpent,900611020,rhZlC
 Token,Bloodcraft,Bronze,2,Demon,900611030,rhZlM
@@ -3354,6 +3393,7 @@ Token,Bloodcraft,Legendary,6,Blood Queen Vania,900641030,rhh46
 Token,Bloodcraft,Legendary,2,Voice of the Abyss,900641040,rhh4G
 Token,Bloodcraft,Legendary,3,Kudlak,900641050,rhh4Q
 Token,Bloodcraft,Legendary,4,"XIV. Luzen, Temperance",900641060,rhh4a
+Token,Bloodcraft,Legendary,3,"Valnareik, Lustful Desire",900641070,rhh4k
 Token,Bloodcraft,Legendary,3,Unselfish Grace,900643010,rhhZ2
 Token,Bloodcraft,Legendary,2,Crimson Burst,900644010,rhhog
 Token,Bloodcraft,Legendary,5,Alpha Drive,900644020,rhhoq
@@ -3363,6 +3403,7 @@ Token,Bloodcraft,Legendary,0,A Horrible Night,900644050,rhhpI
 Token,Bloodcraft,Legendary,1,The Nightmare Begins,900644060,rhhpS
 Token,Bloodcraft,Legendary,1,Bloody Claw,900644070,rhhpc
 Token,Bloodcraft,Legendary,1,Cursed Aura,900644080,rhhpm
+Token,Bloodcraft,Legendary,0,Wings of Desire,900644090,rhhpw
 Token,Havencraft,Bronze,3,Holy Falcon,900711010,rhy9Y
 Token,Havencraft,Bronze,4,Holyflame Tiger,900711020,rhy9i
 Token,Havencraft,Bronze,5,Pegasus,900711030,rhy9s
@@ -3412,6 +3453,7 @@ Token,Havencraft,Legendary,0,Salvation Ex Limonia,900744010,ri4DA
 Token,Havencraft,Legendary,2,Haven Fire,900744020,ri4DK
 Token,Havencraft,Legendary,0,Her Holiness's Decree,900744030,ri4DU
 Token,Havencraft,Legendary,0,Holy Lion's Blessing,900744040,ri4De
+Token,Havencraft,Legendary,1,Torrent of Despair,900744050,ri4Do
 Token,Portalcraft,Bronze,1,Ancient Artifact,900811010,riKa2
 Token,Portalcraft,Bronze,3,Mystic Artifact,900811020,riKaC
 Token,Portalcraft,Bronze,1,Analyzing Artifact,900811030,riKaM
@@ -3478,9 +3520,12 @@ Token,Portalcraft,Legendary,8,Ruiner of Eden,900841280,riRz0
 Token,Portalcraft,Legendary,5,World Eliminator,900841290,riRzA
 Token,Portalcraft,Legendary,10,Destruction in White,900842010,riS8Q
 Token,Portalcraft,Legendary,10,Destruction in Black,900842020,riS8a
+Token,Portalcraft,Legendary,8,New Prayer,900842030,riS8k
+Token,Portalcraft,Legendary,8,New Destruction,900842040,riS8u
 Token,Portalcraft,Legendary,3,Wheel of Misfortune,900843010,riSO2
 Token,Portalcraft,Legendary,3,Gullian Aura,900844010,riSdg
 Token,Portalcraft,Legendary,0,Gullian Howl,900844020,riSdq
 Token,Portalcraft,Legendary,1,Dead to Rights,900844030,riSd-
 Token,Portalcraft,Legendary,5,Wretched Tryst,900844040,riSe8
 Token,Portalcraft,Legendary,0,Calamity's End,900844050,riSeI
+Token,Portalcraft,Legendary,0,Melodious Monody,900844060,riSeS

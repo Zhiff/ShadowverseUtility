@@ -172,6 +172,7 @@ def statistics_freeze_highlight(excelfile):
 def conditionalFormat(sheet):
     classmap = ['Forest', 'Sword', 'Rune', 'Dragon', 'Shadow', 'Blood', 'Haven', 'Portal']
     # classmap = ['엘프', '로얄', '위치', '드래곤', '네크로맨서', '뱀파이어', '비숍', '네메시스']
+    # classmap = ['エルフ', 'ロイヤル', 'ウィッチ', 'ドラゴン', 'ネクロマンサー', 'ヴァンパイア', 'ビショップ', 'ネメシス']
     colormap = ['E2EFDA', 'FFF2CC', 'CCCCFF', 'FCE4D6', 'FFCCFF', 'FFA39E', 'D0CECE', 'DDEBF7']
     # Repeat the conditional formatting assignment for each class
     for i in range(0,8):
@@ -332,3 +333,25 @@ def convertSVOformat(svoexcel):
     sorteddf.to_excel(writer, 'Qualified for Top16', index=False)
     writer.save()
 
+def excel_convert_custom(excelfile, lastCustomSheet, custom=False):
+    excel = oxl.load_workbook(excelfile)
+    allsheets = excel.sheetnames
+    selected_sheets = allsheets[0:lastCustomSheet]
+    # Iterate all cells in excel sheet
+    for sheet_title in selected_sheets:
+        sheet = excel[sheet_title]
+        for column in range(1, sheet.max_column + 1):
+            for row in range(1, sheet.max_row + 1):
+                cell = sheet.cell(row, column)
+                #We only care about svportal, so it must be a string
+                if type(cell.value) == str:
+                    if 'shadowverse-portal.com' in cell.value:
+                        #determine archetype by calling checker function, save old value into pure hyperlink, save archetype as the string description
+                        deck = Deck(cell.value)
+                        archetype = deck.archetype_checker()
+                        cell.hyperlink = cell.value
+                        cell.value = archetype
+    if (custom):
+        excel.save(excelfile)
+    else:
+        excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')

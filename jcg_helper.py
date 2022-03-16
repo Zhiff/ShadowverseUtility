@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup as bs
 import numpy as np
 import json
 import stat_helper as sh
+import excel_module as em
 
 def grabjsonfromHTML(tcode):
     entrieslink = 'https://sv.j-cg.com/competition/' + tcode + '/entries'
@@ -163,3 +164,56 @@ def scrapseasonIDs(sv_format, season):
     jcgids.reverse()
     dates.reverse()
     return jcgids, dates
+
+def group_winner_check_2(tcode):
+
+    resultpage = 'https://sv.j-cg.com/competition/' + tcode + '/results'
+    source = requests.get(resultpage).text
+    soup = bs(source, 'lxml')
+    
+    profile = []
+    names = []
+    deck1 = []
+    deck2 = []
+        
+    firstplace = soup.find_all('div', class_='result result-1')
+    
+    for user in firstplace:
+        # Add their name into array
+        name = user.find('div', class_='result-name')
+        names.append(name.text)
+        
+        prof = name.find('a').get('href')
+        profile.append(prof)
+        
+        # Add their decks into array
+        links = user.find_all('a')
+        for link in links[1::3]:
+            decks = link.get('href')
+            deck1.append(decks)
+        for link in links[2::3]:
+            decks = link.get('href')
+            deck2.append(decks)
+    
+    df = pd.DataFrame([profile,names,deck1,deck2]).transpose().rename(columns={0:'profile', 1:'name', 2:'deck 1', 3:'deck 2'}) 
+    df['name'] = '=HYPERLINK("' + df['profile'] + '", "' + df['name'] + '")' 
+    df = df[['name','deck 1','deck 2']]
+    group = pd.DataFrame({'Group':['Group 1','Group 2','Group 3','Group 4','Group 5','Group 6','Group 7','Group 8','Group 9','Group 10','Group 11','Group 12','Group 13','Group 14','Group 15','Group 16']})
+    df = pd.concat([group, df],axis=1)
+    return df
+
+
+
+
+tcode = 'E75bqtw8FqSS'
+Top16 = group_winner_check_2(tcode)
+
+# DeckA = ['a','a','c','b','a','c','a']
+# DeckB = ['b','b','a','a','c','a','a']
+# WinA = [1,1,0,1,1,0,1]
+# WinB = [0,0,1,0,0,1,0]
+
+# tab = {'DeckA': DeckA, 'DeckB': DeckB, 'WinA': WinA, 'WinB': WinB}
+# df = pd.DataFrame(tab)
+# df1 = df.groupby(['DeckA','DeckB'])['WinA'].sum().reset_index()
+# df2 = df.groupby(['DeckA','DeckB'])['WinB'].sum().reset_index()

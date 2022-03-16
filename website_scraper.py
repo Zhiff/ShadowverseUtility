@@ -24,8 +24,8 @@ import json
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 2)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+    em.excel_convert_dataset(svoexcel, 3)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -611,3 +611,7 @@ def SKO_Scraper(link):
 # writer = pd.ExcelWriter('Excel_and_CSV/JCGWGP.xlsx')
 # df.to_excel(writer, index=False)
 # writer.save()
+
+
+
+
