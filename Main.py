@@ -633,8 +633,14 @@ writer.save()
 print("Initial page Completed")
 print("--- %s seconds ---" % (time.time() - start_time))
 
+statistics_file = 'Excel_and_CSV/Statistics and Breakdown.xlsx'
+lastSVPortalSheet = 3
+firstArcBreakdownSheet = 5
 
-em.excel_convert_custom('Excel_and_CSV/Statistics and Breakdown.xlsx', 3, True)
+em.excel_convert_custom(statistics_file, lastSVPortalSheet, True)
+em.statistics_freeze_highlight(statistics_file, firstArcBreakdownSheet)
+em.add_class_color_custom(statistics_file, 0, 6)
+
 
 print("Completed")
 print("--- %s seconds ---" % (time.time() - start_time))

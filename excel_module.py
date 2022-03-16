@@ -148,10 +148,10 @@ def combine_view_and_stats(viewfile, sheetname):
     excel2.save(file)
 
 #This function will freeze first 2 column in statistics and highlight the important cards
-def statistics_freeze_highlight(excelfile):
+def statistics_freeze_highlight(excelfile, startsheet= 2):
     excel = oxl.load_workbook(excelfile)
     breakdown = excel.sheetnames
-    breakdown = breakdown[2:len(breakdown)]
+    breakdown = breakdown[startsheet:len(breakdown)]
     
     # Conditional Formatting, Highlight entire row if mean >= 2
     colorfill = oxl.styles.PatternFill(bgColor="A9A9A9")
@@ -182,7 +182,7 @@ def conditionalFormat(sheet):
         clmap = classmap[i]
         rule = oxl.formatting.Rule(type="containsText", operator="containsText", text=clmap, dxf=diffstyle)
         rule.formula = [f'NOT(ISERROR(SEARCH("{clmap}", A1)))']
-        sheet.conditional_formatting.add("A1:F520", rule)
+        sheet.conditional_formatting.add("A1:K520", rule)
 
 #This function will add color to View sheet and Decks sheet in Stats and Breakdown files
 def add_class_color(mode):
@@ -355,3 +355,13 @@ def excel_convert_custom(excelfile, lastCustomSheet, custom=False):
         excel.save(excelfile)
     else:
         excel.save('Excel_and_CSV/FilteredDecks_View.xlsx')
+
+def add_class_color_custom(excelfile, firstSheet, lastSheet):
+# mode 1 : For Statistics and Breakdown sheet
+# mode 2 : For Post SVO
+    excel = oxl.load_workbook(excelfile)
+    for i in range(firstSheet, lastSheet):
+        sheet = excel.worksheets[i]
+        conditionalFormat(sheet)
+    
+    excel.save(excelfile)
