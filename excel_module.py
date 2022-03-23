@@ -360,8 +360,10 @@ def add_class_color_custom(excelfile, firstSheet, lastSheet):
 # mode 1 : For Statistics and Breakdown sheet
 # mode 2 : For Post SVO
     excel = oxl.load_workbook(excelfile)
-    for i in range(firstSheet, lastSheet):
-        sheet = excel.worksheets[i]
+    allsheets = excel.sheetnames
+    selected_sheets = allsheets[firstSheet:lastSheet]
+    for sheet_title in selected_sheets:
+        sheet = excel[sheet_title]
         conditionalFormat(sheet)
     
     excel.save(excelfile)
