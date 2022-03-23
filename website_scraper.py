@@ -24,8 +24,8 @@ import json
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 3)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
+    em.excel_convert_dataset(svoexcel, 2)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -84,7 +84,58 @@ def JCG_latest_tourney(sv_format, tourney_stage):
                 break
         
     return tcode
+
+def JCG_latest_tourney_with_status(sv_format, tourney_stage):
+    formats = { 'rotation' : 'ローテーション大会' , 'unlimited' : 'アンリミテッド大会' , '2pick' : '2Pick大会' }
+    stage = {'group' : 'グループ予選', 'top16' : '決勝トーナメント'}
     
+    foundFlag = False
+    
+    linkschedule = 'https://sv.j-cg.com/schedule/' + sv_format
+    source = requests.get(linkschedule).text
+    soup = bs(source, 'lxml')
+    currentlink = soup.find_all('a', class_='schedule-link')
+    
+    for link in currentlink:
+        jcglink = link.get('href')
+        
+        c_title = link.find('div', class_='schedule-title').text
+        c_hour = link.find('div', class_='schedule-date').text[56:61]
+        c_status = link.find('div', class_='schedule-status schedule-status-').text
+        
+        if (c_status == '開催中') and (stage[tourney_stage] in c_title):
+            foundFlag = True
+            en_status = 'Ongoing'
+            tcode = jcglink.split('/')[4]
+            message = c_title + '\nStatus: Ongoing'
+            print(message)
+            break
+    
+    if (foundFlag == False):
+        linkpast = 'https://sv.j-cg.com/past-schedule/' + sv_format #1st page or 20 most recent tourney stages
+    
+        
+        source = requests.get(linkpast).text
+        soup = bs(source, 'lxml')
+        alltlink = soup.find_all('a', class_='schedule-link')
+        
+        for link in alltlink:
+            jcglink = link.get('href')
+            
+            c_title = link.find('div', class_='schedule-title').text
+            c_hour = link.find('div', class_='schedule-date').text[55:66]
+            
+            if stage[tourney_stage] in c_title:
+                en_status = 'Finished'
+                tcode = jcglink.split('/')[4]
+                message = c_title + '\nStarts: '+ c_hour +' JST (Finished)'
+                print(message)
+                break
+        
+    return tcode, en_status
+
+
+
 #JCG scraper
 # 1. Retrieve jsonlink and create excel sheet that contains Name, Deck1, and Deck2 (JCG_Raw.xlsx)
 # 2. Based on that, it will create FilteredDecks_View, FilteredDecks_Data, and Statistics
@@ -401,6 +452,43 @@ def DSAL_scraper(link):
     em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 5)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
+
+
+def jcg_excel_finishing(master_df, top16view_df, OverallView_df, decks_df, classes_df, LineupFinal_df, conv_page_df, matchup_df):
+    #Excel Things
+
+    outputfile = "Excel_and_CSV/Statistics and Breakdown.xlsx"
+    writer = pd.ExcelWriter(outputfile)
+    
+    print("Start Working on Excel")
+
+    top16view_df.to_excel(writer, sheet_name='Qualified for Top 16', index=False, startrow = 0, startcol = 0)
+    OverallView_df.to_excel(writer, sheet_name='Names and Links', index=False, startrow = 0, startcol = 0)
+    decks_df.to_excel(writer, sheet_name='Decks', index=True, startrow = 0, startcol = 0)
+    classes_df.to_excel(writer, sheet_name='Decks', index=True, startrow = 0, startcol = 5)
+    LineupFinal_df.to_excel(writer, sheet_name='Lineup', index=True, startrow = 0, startcol = 0)
+    conv_page_df.to_excel(writer, sheet_name='Top 16 Conversion', index=True, startrow = 0, startcol = 0)
+    matchup_df.to_excel(writer, sheet_name='Lineup Matchup', index=True, startrow = 0, startcol = 0)
+
+    maxdeck = 2
+    em.tournament_breakdown(master_df, writer, maxdeck)  
+
+    writer.save()
+
+    print("Initial page Completed, Proceed to formatting")
+
+    lastSVPortalSheet = 3
+    firstArcBreakdownSheet = 6
+
+    em.excel_convert_custom(outputfile, lastSVPortalSheet, True)
+    em.statistics_freeze_highlight(outputfile, firstArcBreakdownSheet)
+    em.add_class_color_custom(outputfile, 0, 5)
+
+
+
+
+
+
 
 #new BFY
 # tourneyhash = '5fe551f5726d0b11ab383a6e'
