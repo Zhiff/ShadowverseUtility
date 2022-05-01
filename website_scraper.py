@@ -576,7 +576,7 @@ def jcg_excel_finishing(master_df, top16view_df, OverallView_df, decks_df, class
 
 
 #SEKAPPY COLOSSEUM SCRAP ( Need to save html file )
-# with open('Excel_and_CSV/Sekappy.html', encoding="utf8") as f:
+# with open('Excel_and_CSV/Sekappy2.html', encoding="utf8") as f:
 #     soup = bs(f, 'lxml')
 
 #     deck1 = []
@@ -601,15 +601,15 @@ def jcg_excel_finishing(master_df, top16view_df, OverallView_df, decks_df, class
 #     for name in textlist[::3]:
 #         names.append(name)
     
-    # db = np.column_stack((names, deck1, deck2))
-    # df = pd.DataFrame(db)
-    # df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
-    # df = sh.handle_duplicate_row(df, 'name')
+#     db = np.column_stack((names, deck1, deck2))
+#     df = pd.DataFrame(db)
+#     df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+#     df = sh.handle_duplicate_row(df, 'name')
     
     
-    # writer = pd.ExcelWriter('Excel_and_CSV/Sekappy.xlsx')
-    # df.to_excel(writer, index=False) 
-    # writer.save()
+#     writer = pd.ExcelWriter('Excel_and_CSV/Sekappy.xlsx')
+#     df.to_excel(writer, index=False) 
+#     writer.save()
     
 
 #ShadowverseKoreanOpen
