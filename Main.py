@@ -27,9 +27,9 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
-# ws.SVO_initial_scraper('Excel_and_CSV/Weekend.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/rage.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/SAO.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/proleague.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -92,38 +92,37 @@ start_time = time.time()
 
 comp_format = 'rotation'
 stage = 'top16'
-# tcode = ws.JCG_latest_tourney(comp_format, stage)
-# ws.JCG_scraper(tcode)
+tcode = ws.JCG_latest_tourney(comp_format, stage)
+ws.JCG_scraper(tcode)
 
-tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
-
-if status == 'Finished':
-    if stage is 'top16':
-        entry_df = jcg.get_deck_profile(tcode)
-        matchids = jcg.gather_match_id(tcode, 'top16')
-        P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
-        jcg.publish_final_standings(entry_df, P1, P2, resultP1, resultP2)
-    elif stage is 'group':
-        entry_df = jcg.get_deck_profile(tcode)
-        master_df, lineupdict = jcg.create_master_df(entry_df)
-        matchids = jcg.gather_match_id(tcode, 'group')
+# tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
+# if status == 'Finished':
+#     if stage is 'top16':
+#         entry_df = jcg.get_deck_profile(tcode)
+#         matchids = jcg.gather_match_id(tcode, 'top16')
+#         P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
+#         jcg.publish_final_standings(entry_df, P1, P2, resultP1, resultP2)
+#     elif stage is 'group':
+#         entry_df = jcg.get_deck_profile(tcode)
+#         master_df, lineupdict = jcg.create_master_df(entry_df)
+#         matchids = jcg.gather_match_id(tcode, 'group')
         
-        print("--- %s seconds ---" % (time.time() - start_time))
+#         print("--- %s seconds ---" % (time.time() - start_time))
         
-        P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
+#         P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
         
-        print("--- %s seconds ---" % (time.time() - start_time))
+#         print("--- %s seconds ---" % (time.time() - start_time))
         
-        overall_view_df = jcg.get_overall_view(master_df, P1, P2, resultP1, resultP2)
-        top16_df = jcg.get_top16_view(tcode)
-        decks_df, class_df = jcg.get_deck_and_class_view(master_df)
-        lineup_df = jcg.get_lineup_view(lineupdict, P1, P2, resultP1, resultP2)
-        conv_df = jcg.get_top16_conversion_view(top16_df, decks_df)
-        matchup_df = jcg.get_matchup_view(lineupdict, P1, P2, resultP1, resultP2)
+#         overall_view_df = jcg.get_overall_view(master_df, P1, P2, resultP1, resultP2)
+#         top16_df = jcg.get_top16_view(tcode)
+#         decks_df, class_df = jcg.get_deck_and_class_view(master_df)
+#         lineup_df = jcg.get_lineup_view(lineupdict, P1, P2, resultP1, resultP2)
+#         conv_df = jcg.get_top16_conversion_view(top16_df, decks_df)
+#         matchup_df = jcg.get_matchup_view(lineupdict, P1, P2, resultP1, resultP2)
         
-        print("--- %s seconds ---" % (time.time() - start_time))
+#         print("--- %s seconds ---" % (time.time() - start_time))
         
-        ws.jcg_excel_finishing(master_df, top16_df, overall_view_df, decks_df, class_df, lineup_df, conv_df, matchup_df)
+#         ws.jcg_excel_finishing(master_df, top16_df, overall_view_df, decks_df, class_df, lineup_df, conv_df, matchup_df)
 
     
 
@@ -166,10 +165,10 @@ if status == 'Finished':
 # t2.JCG_T2_scraper(tcodes)
 
 
-#JCG Trends
+# JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids, dates = jcg.scrapseasonIDs('rotation', '20th Season')
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '21st Season')
 # ws.generate_archetype_trends(jcgids, dates)
 
 # names = []
@@ -205,7 +204,7 @@ if status == 'Finished':
 
 # Post Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2022spring/pre/deck3'
+# url = 'https://rage-esports.jp/shadowverse/2022autumn/pre/deck'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td', bgcolor='white')
@@ -414,8 +413,117 @@ if status == 'Finished':
 # df.to_excel(writer, index=False)
 # writer.save()
 
+# #Pro League Prelim
 
-print("--- %s seconds ---" % (time.time() - start_time))
+# url = 'https://rage-esports.jp/protour/sv/'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+# members = soup.find_all('div', class_='c-memberCaption is-small')
 
+# pronames = []
+# count = 0
+# for name in members:
+#     if count > 15:
+#         break
+#     else:
+#         member_name = name.text.strip()
+#         pronames.append(member_name)
+#         count += 1
+
+# decklist = soup.find_all('div', class_='c-game__code')
+
+# deck1list = []
+# deck2list = []
+
+# for deck in decklist[0::2]:
+#     deckp = deck.find('a')
+#     deckpa = deckp.get('href')
+#     deck1list.append(deckpa)
+# for deck in decklist[1::2]:
+#     deckp = deck.find('a')
+#     deckpa = deckp.get('href')
+#     deck2list.append(deckpa)
+
+# logos = []
+# logo = soup.find_all('figure', class_='p-preliminary-group-item__team-logo')
+# count = 0
+# for log in logo:
+#     if count > 15:
+#         break
+#     else:
+#         log_img = log.find('img').get('src')
+#         log_link = '=IMAGE("' + log_img + '")' 
+#         logos.append(log_link)
+#         count += 1
+    
+# db = np.column_stack((logos, pronames,deck1list,deck2list))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'team', 1:'name', 2:'deck 1', 3:'deck 2'})
+
+# writer = pd.ExcelWriter('Excel_and_CSV/proleague.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+
+#Pro League FINALS
+        
+# url = 'https://rage-esports.jp/protour/sv/'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+# members = soup.find_all('div', class_='c-memberCaption is-small')
+
+# pronames = []
+# count = 0
+# for name in members:
+#     if count > 5:
+#         break
+#     else:
+#         member_name = name.text.strip()
+#         pronames.append(member_name)
+#         count += 1
 
 # print("--- %s seconds ---" % (time.time() - start_time))
+
+# decklist = soup.find_all('div', class_='p-tournament-item-player__deck-image')
+
+# deck1list = []
+# deck2list = []
+# deck3list = []
+
+# for deck in decklist[0::3]:
+#     deckp = deck.find('a')
+#     deckpa = deckp.get('href')
+#     deck1list.append(deckpa)
+# for deck in decklist[1::3]:
+#     deckp = deck.find('a')
+#     deckpa = deckp.get('href')
+#     deck2list.append(deckpa)
+# for deck in decklist[2::3]:
+#     deckp = deck.find('a')
+#     deckpa = deckp.get('href')
+#     deck3list.append(deckpa)
+
+# deck1 = list(filter(None, deck1list))
+# deck2 = list(filter(None, deck2list))
+# deck3 = list(filter(None, deck3list))
+
+# logos = []
+# logo = soup.find_all('figure', class_='p-tournament-item-player__team-logo')
+# count = 0
+# for log in logo:
+#     if count > 5:
+#         break
+#     else:
+#         log_img = log.find('img').get('src')
+#         log_link = '=IMAGE("' + log_img + '")' 
+#         logos.append(log_link)
+#         count += 1
+
+# db = np.column_stack((logos, pronames,deck1,deck2,deck3))
+# df = pd.DataFrame(db)
+# df = df.rename(columns={0:'team', 1:'name', 2:'deck 1', 3:'deck 2', 4:'deck 3'})
+
+# writer = pd.ExcelWriter('Excel_and_CSV/proleague.xlsx')
+# df.to_excel(writer, index=False)
+# writer.save()
+
+print("--- %s seconds ---" % (time.time() - start_time))

@@ -2916,6 +2916,7 @@ Edge of Paradise,Neutral,Bronze,2,Burst Tackle,124014010,7P4sw
 Edge of Paradise,Neutral,Silver,1,Brave Goblin,124021010,7P6aI
 Edge of Paradise,Neutral,Silver,3,Angel's Blessing,124024010,7P7JA
 Edge of Paradise,Neutral,Gold,5,Ogre Weaponmaster,124031010,7P90Y
+Edge of Paradise,Neutral,Gold,2,Glistering Angel,124031020,7P90i
 Edge of Paradise,Neutral,Gold,2,Stay in Paradise,124034010,7P9lQ
 Edge of Paradise,Neutral,Legendary,7,"Flame and Glass, Duality",124041010,7PBSo
 Edge of Paradise,Neutral,Legendary,6,Satanael,124041020,7PBSy
@@ -2927,9 +2928,11 @@ Edge of Paradise,Forestcraft,Silver,2,Elven Waitress,124121010,7PU-o
 Edge of Paradise,Forestcraft,Silver,6,Woodland Pest Control,124121020,7PU-y
 Edge of Paradise,Forestcraft,Silver,1,Verdant Protection,124124010,7PVjg
 Edge of Paradise,Forestcraft,Gold,3,Spirit of the Spring,124131010,7PXR2
+Edge of Paradise,Forestcraft,Gold,2,Fairytale Prince,124131020,7PXRC
 Edge of Paradise,Forestcraft,Gold,3,Illusions of Comfort,124134010,7PY9w
 Edge of Paradise,Forestcraft,Legendary,3,"Hozumi, Enchanting Hostess",124141010,7PZtI
 Edge of Paradise,Forestcraft,Legendary,4,Bastion of Seasons,124141020,7PZtS
+Edge of Paradise,Forestcraft,Legendary,2,"Yggdrasil, Root of Life",124141030,7PZtc
 Edge of Paradise,Swordcraft,Bronze,2,Front Desk Frog,124211010,7Pqz2
 Edge of Paradise,Swordcraft,Bronze,9,Violent Soldier,124211020,7PqzC
 Edge of Paradise,Swordcraft,Bronze,7,Hasty Axeman,124211030,7PqzM
@@ -2938,9 +2941,11 @@ Edge of Paradise,Swordcraft,Silver,3,Masterful Musician,124221010,7PtPI
 Edge of Paradise,Swordcraft,Silver,1,Bumpkin Recruit,124221020,7PtPS
 Edge of Paradise,Swordcraft,Silver,1,Return from the Brink,124224010,7Pu8A
 Edge of Paradise,Swordcraft,Gold,4,Leopard Grappler,124231010,7PvrY
+Edge of Paradise,Swordcraft,Gold,7,Noble Shieldmaiden,124231020,7Pvri
 Edge of Paradise,Swordcraft,Gold,1,Night on the Town,124234010,7PwaQ
 Edge of Paradise,Swordcraft,Legendary,2,"Taketsumi, Aconite Paladin",124241010,7PyHo
 Edge of Paradise,Swordcraft,Legendary,5,"Jiemon, Thief Lord",124241020,7PyHy
+Edge of Paradise,Swordcraft,Legendary,3,"Mars, Belligerent Flame",124241030,7PyI6
 Edge of Paradise,Runecraft,Bronze,2,Owl Receptionist,124311010,7QDNY
 Edge of Paradise,Runecraft,Bronze,5,Chakram Wizard,124311020,7QDNi
 Edge of Paradise,Runecraft,Bronze,3,Magical Reserves,124314010,7QE6Q
@@ -2949,9 +2954,11 @@ Edge of Paradise,Runecraft,Silver,3,Orchestral Mage,124321010,7QFpo
 Edge of Paradise,Runecraft,Silver,7,Ruler of Rubble,124321020,7QFpy
 Edge of Paradise,Runecraft,Silver,9,Dream Come True,124324010,7QGYg
 Edge of Paradise,Runecraft,Gold,5,Tempestuous Alchemist,124331010,7QIG2
+Edge of Paradise,Runecraft,Gold,3,"Bergent, Layered Sorceress",124331020,7QIGC
 Edge of Paradise,Runecraft,Gold,2,Story of a Lifetime,124334010,7QI-w
 Edge of Paradise,Runecraft,Legendary,4,"Yukishima, Master Biographer",124341010,7QKiI
 Edge of Paradise,Runecraft,Legendary,6,Arctic Chimera,124341020,7QKiS
+Edge of Paradise,Runecraft,Legendary,2,"Riley, Astral Shaman",124341030,7QKic
 Edge of Paradise,Dragoncraft,Bronze,3,Dragon-Drawn Carriage,124411010,7Qbo2
 Edge of Paradise,Dragoncraft,Bronze,2,Loyal Sea Serpent,124411020,7QboC
 Edge of Paradise,Dragoncraft,Bronze,1,Dragon Breeder,124411030,7QboM
@@ -2960,9 +2967,11 @@ Edge of Paradise,Dragoncraft,Silver,2,Dragonfolk Stoker,124421010,7QeEI
 Edge of Paradise,Dragoncraft,Silver,2,Tropical Mermaid,124421020,7QeES
 Edge of Paradise,Dragoncraft,Silver,5,Aquatic Authority,124424010,7QezA
 Edge of Paradise,Dragoncraft,Gold,8,Frostbite Dragon,124431010,7QggY
+Edge of Paradise,Dragoncraft,Gold,3,Dragonskull Bludgeoner,124431020,7Qggi
 Edge of Paradise,Dragoncraft,Gold,4,March of the Dragonspring,124434010,7QhPQ
 Edge of Paradise,Dragoncraft,Legendary,4,"Si Long, Draconic God-Queen",124441010,7Qj6o
 Edge of Paradise,Dragoncraft,Legendary,6,Sacred Springs Dragon,124441020,7Qj6y
+Edge of Paradise,Dragoncraft,Legendary,5,"Noir & Blanc, Brothers",124441030,7Qj76
 Edge of Paradise,Shadowcraft,Bronze,1,Inn Ghosthound,124511010,7Q-CY
 Edge of Paradise,Shadowcraft,Bronze,4,Flogging Necromancer,124511020,7Q-Ci
 Edge of Paradise,Shadowcraft,Bronze,2,Headless Warfiend,124511030,7Q-Cs
@@ -2971,9 +2980,11 @@ Edge of Paradise,Shadowcraft,Silver,3,Underworld Harvester,124521010,7R0eo
 Edge of Paradise,Shadowcraft,Silver,6,Skull Centaur,124521020,7R0ey
 Edge of Paradise,Shadowcraft,Silver,2,Astral Projection,124524010,7R1Ng
 Edge of Paradise,Shadowcraft,Gold,6,Frigid Necromancer,124531010,7R352
+Edge of Paradise,Shadowcraft,Gold,10,Ghost Town Apparition,124531020,7R35C
 Edge of Paradise,Shadowcraft,Gold,1,Call of the Great Arm,124534010,7R3pw
 Edge of Paradise,Shadowcraft,Legendary,3,"Anisage, Lost Forsaken",124541010,7R5XI
 Edge of Paradise,Shadowcraft,Legendary,7,"Lakandula, Purgatory Inn",124541020,7R5XS
+Edge of Paradise,Shadowcraft,Legendary,2,Sin Hunter,124541030,7R5Xc
 Edge of Paradise,Bloodcraft,Bronze,1,Bat Usher,124611010,7RMd2
 Edge of Paradise,Bloodcraft,Bronze,2,Silvernail Blaster,124611020,7RMdC
 Edge of Paradise,Bloodcraft,Bronze,3,Parkour Werewolf,124611030,7RMdM
@@ -2982,9 +2993,11 @@ Edge of Paradise,Bloodcraft,Silver,6,Room Service Demon,124621010,7RP3I
 Edge of Paradise,Bloodcraft,Silver,1,Scorpion of the Depths,124621020,7RP3S
 Edge of Paradise,Bloodcraft,Silver,2,Full Moon Leap,124624010,7RPoA
 Edge of Paradise,Bloodcraft,Gold,3,Deceptive Shapeshifter,124631010,7RRVY
+Edge of Paradise,Bloodcraft,Gold,6,Demon Bodyguard,124631020,7RRVi
 Edge of Paradise,Bloodcraft,Gold,1,Eternal Contract,124634010,7RSEQ
 Edge of Paradise,Bloodcraft,Legendary,2,"Itsurugi, Eager Admirer",124641010,7RTxo
 Edge of Paradise,Bloodcraft,Legendary,4,"Paracelise, Demon of Greed",124641020,7RTxy
+Edge of Paradise,Bloodcraft,Legendary,10,Lord of Devastation,124641030,7RTy6
 Edge of Paradise,Havencraft,Bronze,1,Fox of Fortune,124711010,7Rl1Y
 Edge of Paradise,Havencraft,Bronze,6,Al-mi'raj Defender,124711020,7Rl1i
 Edge of Paradise,Havencraft,Bronze,2,Twinblade Featherfolk,124711030,7Rl1s
@@ -2993,9 +3006,11 @@ Edge of Paradise,Havencraft,Silver,2,Winged Gatekeeper,124721010,7RnTo
 Edge of Paradise,Havencraft,Silver,4,Pegasus Knight,124721020,7RnTy
 Edge of Paradise,Havencraft,Silver,1,Spiritual Blow,124724010,7RoCg
 Edge of Paradise,Havencraft,Gold,5,Boomerang Sister,124731010,7Rpw2
+Edge of Paradise,Havencraft,Gold,6,Impious Bishop,124731020,7RpwC
 Edge of Paradise,Havencraft,Gold,2,Chamber of Cleansing,124733010,7RqPI
 Edge of Paradise,Havencraft,Legendary,6,All-Feeling Divine,124741010,7RsMI
 Edge of Paradise,Havencraft,Legendary,2,Nekhbet,124741020,7RsMS
+Edge of Paradise,Havencraft,Legendary,7,Vajra Champion,124741030,7RsMc
 Edge of Paradise,Portalcraft,Bronze,2,Karakuri Servant,124811010,7S7S2
 Edge of Paradise,Portalcraft,Bronze,2,Mobile Researcher,124811020,7S7SC
 Edge of Paradise,Portalcraft,Bronze,7,Clown Doll,124811030,7S7SM
@@ -3004,9 +3019,108 @@ Edge of Paradise,Portalcraft,Silver,1,Tinkering Shopkeeper,124821010,7S9uI
 Edge of Paradise,Portalcraft,Silver,2,Gunslinger Automaton,124821020,7S9uS
 Edge of Paradise,Portalcraft,Silver,3,Merciless Voiding,124824010,7SAdA
 Edge of Paradise,Portalcraft,Gold,3,Trigger-Happy Puppeteer,124831010,7SCKY
+Edge of Paradise,Portalcraft,Gold,8,Celestial Artifact,124831020,7SCKi
 Edge of Paradise,Portalcraft,Gold,6,Magna Transformation,124834010,7SD3Q
 Edge of Paradise,Portalcraft,Legendary,5,Magna Saber,124841010,7SEmo
 Edge of Paradise,Portalcraft,Legendary,3,Full Blast Gunner,124841020,7SEmy
+Edge of Paradise,Portalcraft,Legendary,6,"Shion, Immortal Aegis",124841030,7SEn6
+Roar of the Godwyrm,Neutral,Bronze,1,Wayfaring Goblin,125011010,7SuH2
+Roar of the Godwyrm,Neutral,Bronze,2,Angel of Boons,125011020,7SuHC
+Roar of the Godwyrm,Neutral,Bronze,2,Dreams of Adventure,125014010,7Su_w
+Roar of the Godwyrm,Neutral,Silver,2,Ambitious Goblin Mage,125021010,7SwjI
+Roar of the Godwyrm,Neutral,Silver,3,Archangel of the Word,125021020,7SwjS
+Roar of the Godwyrm,Neutral,Gold,6,Giant Happy Pig,125031010,7Sz9Y
+Roar of the Godwyrm,Neutral,Gold,7,Terra Finis,125032010,7SzPA
+Roar of the Godwyrm,Neutral,Legendary,9,Ultimate Bahamut,125041010,7S_bo
+Roar of the Godwyrm,Neutral,Legendary,2,Metatron,125041020,7S_by
+Roar of the Godwyrm,Forestcraft,Bronze,1,Autumn Leaf Man,125111010,7TGhY
+Roar of the Godwyrm,Forestcraft,Bronze,2,Machete Elf,125111020,7TGhi
+Roar of the Godwyrm,Forestcraft,Bronze,3,Hornet Whisperer,125111030,7TGhs
+Roar of the Godwyrm,Forestcraft,Bronze,3,Forest Remedies,125114010,7THQQ
+Roar of the Godwyrm,Forestcraft,Silver,1,Precocious Felpurr Kitten,125121010,7TJ7o
+Roar of the Godwyrm,Forestcraft,Silver,3,Brightplume Owl Man,125121020,7TJ7y
+Roar of the Godwyrm,Forestcraft,Silver,5,"Alba, Dark Elf Conductor",125121030,7TJ86
+Roar of the Godwyrm,Forestcraft,Gold,1,Aqua Fairy,125131010,7TLa2
+Roar of the Godwyrm,Forestcraft,Gold,1,Whirlwind Assault,125134010,7TMIw
+Roar of the Godwyrm,Forestcraft,Legendary,5,Shining Valkyrie,125141010,7TO0I
+Roar of the Godwyrm,Forestcraft,Legendary,2,"Rayne, Divine Smith",125141020,7TO0S
+Roar of the Godwyrm,Swordcraft,Bronze,2,Illustrious Thief,125211010,7Tf62
+Roar of the Godwyrm,Swordcraft,Bronze,2,"Lyrala, Luminous Cleric",125211020,7Tf6C
+Roar of the Godwyrm,Swordcraft,Bronze,1,Kitty Sergeant,125211030,7Tf6M
+Roar of the Godwyrm,Swordcraft,Bronze,2,Shuriken Jutsu,125214010,7Tfqw
+Roar of the Godwyrm,Swordcraft,Silver,1,Brave Vanguard,125221010,7ThYI
+Roar of the Godwyrm,Swordcraft,Silver,3,Radiant Luminous Mage,125221020,7ThYS
+Roar of the Godwyrm,Swordcraft,Silver,2,Luminous Lancer,125221030,7ThYc
+Roar of the Godwyrm,Swordcraft,Gold,2,Swiftspeed Quickblader,125231010,7Tj-Y
+Roar of the Godwyrm,Swordcraft,Gold,2,Steeled Luminous Knight,125231020,7Tj-i
+Roar of the Godwyrm,Swordcraft,Legendary,8,Legendary Sword Commander,125241010,7TmQo
+Roar of the Godwyrm,Swordcraft,Legendary,5,"Aurelia, Glorious Saber",125241020,7TmQy
+Roar of the Godwyrm,Runecraft,Bronze,2,Wise Owl,125311010,7U1WY
+Roar of the Godwyrm,Runecraft,Bronze,5,Elegant Witch,125311020,7U1Wi
+Roar of the Godwyrm,Runecraft,Bronze,5,Blazing Bomb,125314010,7U2FQ
+Roar of the Godwyrm,Runecraft,Bronze,1,Enchanting Spell,125314020,7U2Fa
+Roar of the Godwyrm,Runecraft,Silver,2,"Levi, Sapience Supreme",125321010,7U3yo
+Roar of the Godwyrm,Runecraft,Silver,2,"Hanna, Mysterian Maid",125321020,7U3yy
+Roar of the Godwyrm,Runecraft,Silver,5,Sorcerer's Standoff,125324010,7U4hg
+Roar of the Godwyrm,Runecraft,Gold,4,"Juno, Atelier Alchemist",125331010,7U6P2
+Roar of the Godwyrm,Runecraft,Gold,10,"Craig, Mysterian Chanter",125331020,7U6PC
+Roar of the Godwyrm,Runecraft,Legendary,8,Sorcerer of Seven Forces,125341010,7U8rI
+Roar of the Godwyrm,Runecraft,Legendary,3,"Mysteria, Magic Originator",125341020,7U8rS
+Roar of the Godwyrm,Dragoncraft,Bronze,4,Lethal Dragoon Scyther,125411010,7UPx2
+Roar of the Godwyrm,Dragoncraft,Bronze,2,Dragonewt Martial Artist,125411020,7UPxC
+Roar of the Godwyrm,Dragoncraft,Bronze,7,Hailwyrm,125411030,7UPxM
+Roar of the Godwyrm,Dragoncraft,Bronze,1,Mermaid Song,125414010,7UQfw
+Roar of the Godwyrm,Dragoncraft,Silver,3,Twindrake Guide,125421010,7USNI
+Roar of the Godwyrm,Dragoncraft,Silver,3,Ironscale Serpent Drake,125421020,7USNS
+Roar of the Godwyrm,Dragoncraft,Silver,2,Katakura Kojuro,125421030,7USNc
+Roar of the Godwyrm,Dragoncraft,Gold,4,"Leviathan, the Furious",125431010,7UUpY
+Roar of the Godwyrm,Dragoncraft,Gold,2,Flame Lizard's Breath,125434010,7UVYQ
+Roar of the Godwyrm,Dragoncraft,Legendary,10,Infiniflame Dragon,125441010,7UXFo
+Roar of the Godwyrm,Dragoncraft,Legendary,6,"Forte, Darkwing Ruler",125441020,7UXFy
+Roar of the Godwyrm,Shadowcraft,Bronze,4,Attendant of the Abyss,125511010,7UoLY
+Roar of the Godwyrm,Shadowcraft,Bronze,2,Beguiling Specter,125511020,7UoLi
+Roar of the Godwyrm,Shadowcraft,Bronze,3,Corpse Peddler,125511030,7UoLs
+Roar of the Godwyrm,Shadowcraft,Bronze,2,Lifespan Calculation,125514010,7Up4Q
+Roar of the Godwyrm,Shadowcraft,Silver,1,"Mino, Daydreaming Reaper",125521010,7Uqno
+Roar of the Godwyrm,Shadowcraft,Silver,3,Wandering Plaguebearer,125521020,7Uqny
+Roar of the Godwyrm,Shadowcraft,Silver,2,Corral Souls,125524010,7UrWg
+Roar of the Godwyrm,Shadowcraft,Gold,6,"Charon, Stygian Demise",125531010,7UtE2
+Roar of the Godwyrm,Shadowcraft,Gold,3,"Orthrus, Infernal Fang",125531020,7UtEC
+Roar of the Godwyrm,Shadowcraft,Legendary,9,Departed Soultaker,125541010,7UvgI
+Roar of the Godwyrm,Shadowcraft,Legendary,2,"Cerberus, Infernal Hound",125541020,7UvgS
+Roar of the Godwyrm,Bloodcraft,Bronze,2,Devious Spiderweb Imp,125611010,7VAm2
+Roar of the Godwyrm,Bloodcraft,Bronze,3,Seasoned Devil Hunter,125611020,7VAmC
+Roar of the Godwyrm,Bloodcraft,Bronze,6,Frenzied Demon,125611030,7VAmM
+Roar of the Godwyrm,Bloodcraft,Bronze,1,Creeping Malice,125614010,7VBUw
+Roar of the Godwyrm,Bloodcraft,Silver,2,Dancing Mini Soul Devil,125621010,7VDCI
+Roar of the Godwyrm,Bloodcraft,Silver,3,Baleful Venomous Cobra,125621020,7VDCS
+Roar of the Godwyrm,Bloodcraft,Silver,4,Sanguine Slash,125624010,7VDxA
+Roar of the Godwyrm,Bloodcraft,Gold,4,"Veight, Twilit Highborn",125631010,7VFeY
+Roar of the Godwyrm,Bloodcraft,Gold,2,Vampire Queen's Castle,125633010,7VG7o
+Roar of the Godwyrm,Bloodcraft,Legendary,9,Doomlord of the Abyss,125641010,7VI4o
+Roar of the Godwyrm,Bloodcraft,Legendary,2,"Vania, Crimson Majesty",125641020,7VI4y
+Roar of the Godwyrm,Havencraft,Bronze,1,Reverend Punishment,125711010,7VZAY
+Roar of the Godwyrm,Havencraft,Bronze,2,Masked Abbess,125711020,7VZAi
+Roar of the Godwyrm,Havencraft,Bronze,3,Zlatorog,125711030,7VZAs
+Roar of the Godwyrm,Havencraft,Bronze,1,Sublime Talisman,125713010,7VZfo
+Roar of the Godwyrm,Havencraft,Silver,2,"Teena, Sacred Sister",125721010,7Vbco
+Roar of the Godwyrm,Havencraft,Silver,4,"Lucius, Holy Knight",125721020,7Vbcy
+Roar of the Godwyrm,Havencraft,Silver,1,Hierophant's Implements,125723010,7Vc62
+Roar of the Godwyrm,Havencraft,Gold,2,Ascended Prism Priestess,125731010,7Ve32
+Roar of the Godwyrm,Havencraft,Gold,2,Crusader's Rallying Cry,125733010,7VeYI
+Roar of the Godwyrm,Havencraft,Legendary,4,Imperial Saint,125741010,7VgVI
+Roar of the Godwyrm,Havencraft,Legendary,3,"Jeanne, Salvation's Maiden",125741020,7VgVS
+Roar of the Godwyrm,Portalcraft,Bronze,2,Blossoming Flower Doll,125811010,7Vxb2
+Roar of the Godwyrm,Portalcraft,Bronze,3,Hydrogunner,125811020,7VxbC
+Roar of the Godwyrm,Portalcraft,Bronze,1,Robopup,125811030,7VxbM
+Roar of the Godwyrm,Portalcraft,Bronze,1,Cultivate Life,125814010,7VyJw
+Roar of the Godwyrm,Portalcraft,Silver,2,"Rosa, Unfettered Maiden",125821010,7V-1I
+Roar of the Godwyrm,Portalcraft,Silver,2,"Cassim, the Courageous",125821020,7V-1S
+Roar of the Godwyrm,Portalcraft,Silver,4,Eccentric Engineer,125821030,7V-1c
+Roar of the Godwyrm,Portalcraft,Gold,2,"Tylle, Dimension Observer",125831010,7W0TY
+Roar of the Godwyrm,Portalcraft,Gold,5,"Norn, Arbiter of Worlds",125831020,7W0Ti
+Roar of the Godwyrm,Portalcraft,Legendary,6,"Orchis, the Limitless",125841010,7W2vo
+Roar of the Godwyrm,Portalcraft,Legendary,3,Summon Divine Treasure,125844010,7W3eg
 Promo,Forestcraft,Legendary,3,Ancient Elf,701141010,fof0I
 Promo,Swordcraft,Legendary,6,Sea Queen Otohime,701241010,fp1Qo
 Promo,Runecraft,Legendary,4,Merlin,701341010,fpPrI
@@ -3167,29 +3281,36 @@ Renascent Chronicles,Bloodcraft,Silver,2,Harvest Imp,715621010,gfuAI
 Dawn of Calamity,Bloodcraft,Legendary,7,Dark Emperor,715641010,gfz2o
 Promo,Havencraft,Bronze,2,Indomitable Prayer,715714010,ggEtQ
 Promo,Havencraft,Silver,4,Lunerian Paladin,715721010,ggGao
-Promo,Portalcraft,Silver,2,Gizmo Enthusiast,715821010,gge_I
+Promo,Portalcraft,Silver,2,Hao,715821010,gge_I
 Omen of Storms,Portalcraft,Silver,0,Supersonic Breakthrough,715824010,ggfkA
 Darkness Over Vellsar,Forestcraft,Legendary,1,"Sekka, Fatebound Fox",716141010,ght7I
+Fortune's Hand,Forestcraft,Legendary,3,"XII. Wolfraud, Hanged Man",716141020,ght7S
+Fortune's Hand,Runecraft,Legendary,2,"Runie, Resolute Diviner",716341010,gidyI
 Storm Over Rivayle,Dragoncraft,Gold,2,Resplendent Phoenix,716431010,gizwY
 Eternal Awakening,Shadowcraft,Bronze,2,"Amy, Psychopomp Guide",716511010,gjHSY
 Fortune's Hand,Shadowcraft,Legendary,5,"VI. Milteo, The Lovers",716541010,gjOnI
 Darkness Over Vellsar,Bloodcraft,Legendary,4,"Laura, Crimson Strife",716641010,gjnBo
+Roar of the Godwyrm,Havencraft,Legendary,3,"Jeanne, Salvation's Maiden",716741010,gk9cI
 Storm Over Rivayle,Portalcraft,Legendary,7,"Iceschillendrig, Gilded Autocrat",716841010,gkY0o
 Darkness Over Vellsar,Portalcraft,Legendary,7,Magna Zero,716841020,gkY0y
 Promo,Forestcraft,Silver,6,Woodland Pest Control,717121010,glcNo
+Promo,Forestcraft,Gold,3,Spirit of the Spring,717131010,gleq2
 Edge of Paradise,Forestcraft,Legendary,3,"Hozumi, Enchanting Hostess",717141010,glhGI
+Roar of the Godwyrm,Forestcraft,Legendary,2,"Rayne, Divine Smith",717141020,glhGS
 Edge of Paradise,Swordcraft,Silver,3,Masterful Musician,717221010,gl-oI
+Promo,Swordcraft,Silver,1,Bumpkin Recruit,717221020,gl-oS
 Promo,Swordcraft,Gold,7,Claymore Master,717231010,gm1EY
 Promo,Runecraft,Gold,3,Acid Golem,717331010,gmPf2
 Promo,Runecraft,Gold,7,Imagination Realized,717334010,gmQNw
 Promo,Dragoncraft,Silver,2,Tropical Mermaid,717421010,gmldI
 Promo,Shadowcraft,Bronze,1,Spirit Invasion,717514010,gn6KQ
+Roar of the Godwyrm,Shadowcraft,Gold,6,"Charon, Stygian Demise",717531010,gnAU2
 Promo,Bloodcraft,Silver,2,Full Moon Leap,717624010,gnXBA
 Edge of Paradise,Bloodcraft,Gold,1,Eternal Contract,717634010,gnZdQ
 Promo,Havencraft,Silver,4,Pegasus Knight,717721010,gnuso
+Promo,Havencraft,Gold,5,Boomerang Sister,717731010,gnxJ2
 Promo,Portalcraft,Bronze,1,Young Threadmaster,717811010,goEr2
 Promo,Portalcraft,Bronze,2,Inner Discovery,717814010,goFZw
-Promo,Havencraft,Gold,5,Boomerang Sister,717731010,gnxJ2
 Token,Neutral,Bronze,5,Tin Soldier,900011010,rfHG2
 Token,Neutral,Bronze,3,Club Soldier,900011020,rfHGC
 Token,Neutral,Bronze,3,Heart Guardian,900011030,rfHGM
@@ -3274,6 +3395,7 @@ Token,Forestcraft,Legendary,1,Resolve of the Nine-Tailed Fox,900144080,rfnlG
 Token,Forestcraft,Legendary,0,Gale Arrow,900144090,rfnlQ
 Token,Forestcraft,Legendary,2,Storm Arrow,900144100,rfnla
 Token,Forestcraft,Legendary,1,Annihilating Onslaught,900144110,rfnlk
+Token,Forestcraft,Legendary,0,Nature's Blessing,900144120,rfnlu
 Token,Swordcraft,Bronze,1,Knight,900211010,rg252
 Token,Swordcraft,Bronze,1,Heavy Knight,900211020,rg25C
 Token,Swordcraft,Bronze,2,Steelclad Knight,900211030,rg25M
@@ -3332,6 +3454,8 @@ Token,Swordcraft,Legendary,3,Athos,900241130,rg9Rg
 Token,Swordcraft,Legendary,3,D'Artagnan,900241140,rg9Rq
 Token,Swordcraft,Legendary,7,Durandal the Incorruptible,900242010,rg9fQ
 Token,Swordcraft,Legendary,0,Killer Instincts,900242020,rg9fa
+Token,Swordcraft,Legendary,3,Flame General's Regalia,900242030,rg9fk
+Token,Swordcraft,Legendary,8,Legendary Sword,900242040,rg9fu
 Token,Swordcraft,Legendary,5,Twilight Blade,900244010,rgA8g
 Token,Swordcraft,Legendary,1,King's Might,900244020,rgA8q
 Token,Swordcraft,Legendary,0,Tyrant's Order,900244030,rgA8-
@@ -3431,6 +3555,7 @@ Token,Dragoncraft,Legendary,5,Supreme Golden Dragon,900441070,rgwFk
 Token,Dragoncraft,Legendary,5,Supreme Silver Dragon,900441080,rgwFu
 Token,Dragoncraft,Legendary,7,Azure Dragon's Rage,900441090,rgwG2
 Token,Dragoncraft,Legendary,5,Crimson Dragon's Sorrow,900441100,rgwGC
+Token,Dragoncraft,Legendary,5,"Noir & Blanc, Brothers",900441110,rgwGM
 Token,Dragoncraft,Legendary,4,Aftershock,900443010,rgwk2
 Token,Dragoncraft,Legendary,5,Dragonslayer Spear,900443020,rgwkC
 Token,Dragoncraft,Legendary,5,Soothing Dragonspring,900443030,rgwkM
@@ -3637,14 +3762,22 @@ Token,Portalcraft,Legendary,4,Defense Artifact,900841260,riRyi
 Token,Portalcraft,Legendary,5,Magisterial Dreadnought,900841270,riRys
 Token,Portalcraft,Legendary,8,Ruiner of Eden,900841280,riRz0
 Token,Portalcraft,Legendary,5,World Eliminator,900841290,riRzA
+Token,Portalcraft,Legendary,5,Divine Treasure Herald,900841300,riRzK
+Token,Portalcraft,Legendary,7,Divine Treasure Guardian,900841310,riRzU
+Token,Portalcraft,Legendary,6,"Lloyd, Orchis's Puppet",900841320,riRze
 Token,Portalcraft,Legendary,10,Destruction in White,900842010,riS8Q
 Token,Portalcraft,Legendary,10,Destruction in Black,900842020,riS8a
 Token,Portalcraft,Legendary,8,New Prayer,900842030,riS8k
 Token,Portalcraft,Legendary,8,New Destruction,900842040,riS8u
 Token,Portalcraft,Legendary,3,Wheel of Misfortune,900843010,riSO2
+Token,Portalcraft,Legendary,3,Spear of Judgment,900843020,riSOC
+Token,Portalcraft,Legendary,3,Shield of Transgression,900843030,riSOM
+Token,Portalcraft,Legendary,3,Eternal Dogma,900843040,riSOW
 Token,Portalcraft,Legendary,3,Gullian Aura,900844010,riSdg
 Token,Portalcraft,Legendary,0,Gullian Howl,900844020,riSdq
 Token,Portalcraft,Legendary,1,Dead to Rights,900844030,riSd-
 Token,Portalcraft,Legendary,5,Wretched Tryst,900844040,riSe8
 Token,Portalcraft,Legendary,0,Calamity's End,900844050,riSeI
 Token,Portalcraft,Legendary,0,Melodious Monody,900844060,riSeS
+Token,Portalcraft,Legendary,1,Mercurial Might,900844070,riSec
+Token,Portalcraft,Legendary,3,Summon Divine Treasure,900844080,riSem

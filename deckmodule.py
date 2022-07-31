@@ -50,11 +50,11 @@ class Deck:
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
         if self.formats == 'rotation':
-            df = pd.read_excel('Excel_and_CSV/EdgeofParadiseMeta.xlsx')
+            df = pd.read_excel('Excel_and_CSV/GodwyrmMeta.xlsx')
             # df = pd.read_excel('Excel_and_CSV/OmenJPMeta.xlsx')
             # df = pd.read_excel('Excel_and_CSV/CalamityMetakorean.xlsx')
         elif self.formats == 'unlimited':
-            df = pd.read_excel('Excel_and_CSV/UnlimitedMeta.xlsx')
+            df = pd.read_excel('Excel_and_CSV/UnlimitedMeta_RGW.xlsx')
         
         cleaned_values = df[['Archetype Name', 'Hash Code 1', 'Hash Code 2','Hash Code 3']].values
         
@@ -227,9 +227,9 @@ def id_to_name(cardID, lang):
     name = soup.find('h1').text
     return name
 
-hasha = id_to_hash(717731010)
 
-# # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+
+# json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 # with open('Excel_and_CSV/cardjsonen.json') as json_file:
 #     jsondata = json.load(json_file)
 #     dfa = pd.DataFrame(jsondata)

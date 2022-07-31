@@ -23,7 +23,9 @@ def excel_convert_quick(excelfile, sheetname, custom=False):
             #We only care about svportal, so it must be a string
             if type(cell.value) == str:
                 if 'shadowverse-portal.com' in cell.value:
-                    #determine archetype by calling checker function, save old value into pure hyperlink, save archetype as the string description
+                    #determine archetype by calling checker function, 
+                    #save old value into pure hyperlink, 
+                    #save archetype as the string description
                     deck = Deck(cell.value)
                     archetype = deck.archetype_checker()
                     cell.hyperlink = cell.value
