@@ -67,6 +67,7 @@ def add_statistics_tool(df):
     # if there is more than 3 players, add card copies details as info
     if (len(df.columns)>3):
         count = df.apply(lambda x:x.value_counts(normalize=True), axis=1).fillna(0)
+        count = count.rename(columns={0:'0x',1:'1x',2:'2x',3:'3x'})
         df = pd.concat([df,count], axis=1)
     df['Median'] = median
     df['Std Deviation'] = std

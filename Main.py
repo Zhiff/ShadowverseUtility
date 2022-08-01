@@ -91,38 +91,38 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 comp_format = 'rotation'
-stage = 'top16'
+stage = 'group'
 tcode = ws.JCG_latest_tourney(comp_format, stage)
-ws.JCG_scraper(tcode)
+# ws.JCG_scraper(tcode)
 
-# tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
-# if status == 'Finished':
-#     if stage is 'top16':
-#         entry_df = jcg.get_deck_profile(tcode)
-#         matchids = jcg.gather_match_id(tcode, 'top16')
-#         P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
-#         jcg.publish_final_standings(entry_df, P1, P2, resultP1, resultP2)
-#     elif stage is 'group':
-#         entry_df = jcg.get_deck_profile(tcode)
-#         master_df, lineupdict = jcg.create_master_df(entry_df)
-#         matchids = jcg.gather_match_id(tcode, 'group')
+tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
+if status == 'Finished':
+    if stage is 'top16':
+        entry_df = jcg.get_deck_profile(tcode)
+        matchids = jcg.gather_match_id(tcode, 'top16')
+        P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
+        jcg.publish_final_standings(entry_df, P1, P2, resultP1, resultP2)
+    elif stage is 'group':
+        entry_df = jcg.get_deck_profile(tcode)
+        master_df, lineupdict = jcg.create_master_df(entry_df)
+        matchids = jcg.gather_match_id(tcode, 'group')
         
-#         print("--- %s seconds ---" % (time.time() - start_time))
+        print("--- %s seconds ---" % (time.time() - start_time))
         
-#         P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
+        P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
         
-#         print("--- %s seconds ---" % (time.time() - start_time))
+        print("--- %s seconds ---" % (time.time() - start_time))
         
-#         overall_view_df = jcg.get_overall_view(master_df, P1, P2, resultP1, resultP2)
-#         top16_df = jcg.get_top16_view(tcode)
-#         decks_df, class_df = jcg.get_deck_and_class_view(master_df)
-#         lineup_df = jcg.get_lineup_view(lineupdict, P1, P2, resultP1, resultP2)
-#         conv_df = jcg.get_top16_conversion_view(top16_df, decks_df)
-#         matchup_df = jcg.get_matchup_view(lineupdict, P1, P2, resultP1, resultP2)
+        overall_view_df = jcg.get_overall_view(master_df, P1, P2, resultP1, resultP2)
+        top16_df = jcg.get_top16_view(tcode)
+        decks_df, class_df = jcg.get_deck_and_class_view(master_df)
+        lineup_df = jcg.get_lineup_view(lineupdict, P1, P2, resultP1, resultP2)
+        conv_df = jcg.get_top16_conversion_view(top16_df, decks_df)
+        matchup_df = jcg.get_matchup_view(lineupdict, P1, P2, resultP1, resultP2)
         
-#         print("--- %s seconds ---" % (time.time() - start_time))
+        print("--- %s seconds ---" % (time.time() - start_time))
         
-#         ws.jcg_excel_finishing(master_df, top16_df, overall_view_df, decks_df, class_df, lineup_df, conv_df, matchup_df)
+        ws.jcg_excel_finishing(master_df, top16_df, overall_view_df, decks_df, class_df, lineup_df, conv_df, matchup_df)
 
     
 

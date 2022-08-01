@@ -8,6 +8,7 @@ import pandas as pd
 import openpyxl as oxl
 import stat_helper as sh
 from deckmodule import Deck
+from openpyxl.styles.numbers import FORMAT_PERCENTAGE_00
 
 
 # This function will quickly convert all raw svportal links that found in excel document into deck archetype link. regardless of format
@@ -126,9 +127,23 @@ def tournament_breakdown(df, excelwriter, maxdeck):
             arc_df = sh.add_statistics_tool(arc_df)
             
             #Reordering Columns, Mean column appears in front
-            cols = list(arc_df.columns.values)
-            arc_df = arc_df[[cols[-1]] + cols[0:-1]]
+            cols = list(arc_df.columns.values)            
+            if (len(arc_df.columns)>11):
+                arc_df = arc_df[[cols[-1]] + [cols[-7]] + [cols[-6]] + [cols[-5]] + [cols[-4]] + [cols[-3]] + [cols[-2]] + cols[0:-7]]
+            else:
+                arc_df = arc_df[[cols[-1]] + cols[0:-1]]
+            
             arc_df = arc_df.sort_values('Average', ascending=False)
+            
+            #add Pictures in front
+            dictID = importNametoIDdictionary()
+            arc_df['Icon']= arc_df.index
+            arc_df['Icon']=arc_df['Icon'].apply(lambda x: dictID[x])
+            arc_df['Icon']=arc_df['Icon'].apply(lambda x: '=IMAGE("https://shadowverse-portal.com/image/card/phase2/common/L/L_' + str(x) +'.jpg",1)')
+            cols = list(arc_df.columns)
+            arc_df = arc_df[[cols[-1]] + cols[:-1]]
+            
+            #Save as excel
             arc_df.to_excel(excelwriter, archetype)
 
 #This function will combine filtereddecks_view into stats and breakdown.xlsx for easier spreadsheets export
@@ -159,14 +174,20 @@ def statistics_freeze_highlight(excelfile, startsheet= 2):
     colorfill = oxl.styles.PatternFill(bgColor="A9A9A9")
     diffstyle = oxl.styles.differential.DifferentialStyle(fill=colorfill)
     rule = oxl.formatting.Rule(type='expression', dxf=diffstyle)
-    rule.formula = ["$B2>=2"]
+    rule.formula = ["$C2>=2"]
 
     for archetype in breakdown:
         sheet = excel[archetype]
         last_column = oxl.utils.cell.get_column_letter(sheet.max_column)
-        sheet.freeze_panes = 'C1'
+        sheet.freeze_panes = 'D2'
         sheet.conditional_formatting.add(f"A2:{last_column}80", rule)
         sheet.column_dimensions['A'].width = 30
+        sheet.column_dimensions['B'].width = 26
+        for i in range(2,80):
+            sheet.row_dimensions[i].height = 25
+        for row in sheet.iter_rows(min_row=2, min_col=4, max_col=7, max_row=80): 
+            for cell in row:
+                cell.number_format = FORMAT_PERCENTAGE_00
     
     excel.save(excelfile)
 
@@ -290,6 +311,17 @@ def neworder(shlist, tpos):
             lst.append(x)
 
     return lst
+
+def importNametoIDdictionary():
+    carddb = "Excel_and_CSV/generatedURLcodeEN.csv"
+    # Create dictionary for class and hash->card name
+    dbdf = pd.read_csv(carddb)
+    dbdf = dbdf.drop_duplicates(subset=['CardName'], keep='first')
+    dbdf = dbdf.set_index('CardName')
+    dbdf = dbdf['id_']
+    carddict = dbdf.to_dict()
+    return carddict
+
 
 def convertSVOformat(svoexcel):
     carddb = "Excel_and_CSV/generatedURLcode.csv"
