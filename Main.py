@@ -27,7 +27,7 @@ start_time = time.time()
 #                   - decklists must end with ?lang=en or &lang=en
 
 # em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
-# ws.SVO_initial_scraper('Excel_and_CSV/rage.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/svo.xlsx')
 
 # ws.SVO_initial_scraper('Excel_and_CSV/proleague.xlsx')
 
@@ -91,7 +91,7 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 comp_format = 'rotation'
-stage = 'group'
+stage = 'top16'
 tcode = ws.JCG_latest_tourney(comp_format, stage)
 # ws.JCG_scraper(tcode)
 
