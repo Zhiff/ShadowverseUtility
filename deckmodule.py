@@ -50,7 +50,7 @@ class Deck:
         # retrieve data frame from excel file that contains meta defining cards and its hash.
         # then store it into 2D array so we can process the data
         if self.formats == 'rotation':
-            df = pd.read_excel('Excel_and_CSV/GodwyrmMeta.xlsx')
+            df = pd.read_excel('Excel_and_CSV/CDBMeta.xlsx')
             # df = pd.read_excel('Excel_and_CSV/OmenJPMeta.xlsx')
             # df = pd.read_excel('Excel_and_CSV/CalamityMetakorean.xlsx')
         elif self.formats == 'unlimited':
@@ -229,7 +229,7 @@ def id_to_name(cardID, lang):
 
 
 
-# json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+# # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
 # with open('Excel_and_CSV/cardjsonen.json') as json_file:
 #     jsondata = json.load(json_file)
 #     dfa = pd.DataFrame(jsondata)
@@ -240,6 +240,12 @@ def id_to_name(cardID, lang):
 #     dffinal = dffinal.sort_index()
 #     dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
 #     dffinal.to_csv('Excel_and_CSV/generatedURLcodeEN.csv', index=False)
+    
+# target_url = f'https://shadowverse-portal.com/api/v1/cards'
+# ## Make a GET request to access API URL. Returns a JSON. Then convert the JSON into a DataFrame. Then generate a DataFrame.
+# result = requests.get(target_url, params = {"format": "json", "lang": "en"})
+# src = result.json()
+# df = pd.DataFrame(src['data']['cards'])
 
 # # JP VERSION
 # with open('Excel_and_CSV/cardjsonjp.json') as json_file:
