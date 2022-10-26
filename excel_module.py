@@ -326,13 +326,13 @@ def importNametoIDdictionary():
     dbdf = pd.read_csv(carddb)
     dbdf = dbdf.drop_duplicates(subset=['CardName'], keep='first')
     dbdf = dbdf.set_index('CardName')
-    dbdf = dbdf['id_']
+    dbdf = dbdf['card_id']
     carddict = dbdf.to_dict()
     return carddict
 
 
 def convertSVOformat(svoexcel):
-    carddb = "Excel_and_CSV/generatedURLcode.csv"
+    carddb = "Excel_and_CSV/generatedURLcodeEN.csv"
     # Create dictionary for class and hash->card name
     craftcode = { 'Forestcraft':'1' , 'Swordcraft':'2' , 'Runecraft':'3' , 'Dragoncraft':'4' , 'Shadowcraft':'5' , 'Bloodcraft':'6' , 'Havencraft':'7' , 'Portalcraft':'8' }
     dbdf = pd.read_csv(carddb)

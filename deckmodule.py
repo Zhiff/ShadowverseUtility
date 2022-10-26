@@ -229,12 +229,12 @@ def id_to_name(cardID, lang):
 
 
 
-# # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
-# with open('Excel_and_CSV/cardjsonen.json') as json_file:
-#     jsondata = json.load(json_file)
-#     dfa = pd.DataFrame(jsondata)
-#     dfb = dfa.transpose()
-#     dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+# json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+with open('Excel_and_CSV/cardjsonen.json') as json_file:
+    jsondata = json.load(json_file)
+    dfa = pd.DataFrame(jsondata)
+    dfb = dfa.transpose()
+    dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
 #     dffinal = dfc.copy()
 #     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
 #     dffinal = dffinal.sort_index()
@@ -273,23 +273,60 @@ def id_to_name(cardID, lang):
 #     comp.to_excel(writer, index=False) 
 #     writer.save()
 
-# Korean
-# json = 'https://raw.githubusercontent.com/user6174/shadowverse-json/master/en/all.json'
-# response = requests.get(json)        
-# data = response.json()
-# dfa = pd.DataFrame(data)
-# dfb = dfa.transpose()
-# dfc = dfb[['expansion_','craft_','rarity_','pp_','id_']]
-# dffinal = dfc.copy()
-# dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
-    
-# df = pd.read_csv('Excel_and_CSV/generatedURLcode.csv')
-# df = df.drop(columns=['CardName'])
-# df['name_'] = df.loc[:,'id_'].apply(lambda x: id_to_name(x, 'ko'))
-# df = df.rename(columns={'name_':'CardName'})
-# df.to_csv('Excel_and_CSV/generatedURLcodeKorean.csv', index=False)
 
-# dffinal['name_'] = dfc.loc[:,'id_'].apply(lambda x: id_to_name(x, 'ko'))
+# # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
+# with open('Excel_and_CSV/cardjsonen.json') as json_file:
+#     jsondata = json.load(json_file)
+#     dfa = pd.DataFrame(jsondata)
+#     dfb = dfa.transpose()
+#     dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+#     dffinal = dfc.copy()
+#     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
+#     dffinal = dffinal.sort_index()
+#     dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
+#     dffinal.to_csv('Excel_and_CSV/generatedURLcodeEN.csv', index=False)
+    
+    
+    
+### DIRECT API - no longer thru user6174   
+    
+# apiurl = 'https://shadowverse-portal.com/api/v1/cards'
+# ## Make a GET request to access API URL. Returns a JSON. Then convert the JSON into a DataFrame. Then generate a DataFrame.
+# result = requests.get(apiurl, params = {"format": "json", "lang": "en"})
+# src = result.json()
+# df = pd.DataFrame(src['data']['cards'])
+
+# ## Clean the data and extract what we need.
+# df2 = df.loc[df['card_name'].notna() == True].reset_index(drop = True).copy()
+# df2 = df2.loc[df2['card_set_id'] < 90000].reset_index(drop = True).copy()
+
+
+# # ## Clean trailing white spaces in some card_name
+# df2["card_name"] = df2["card_name"].apply(lambda x: x.rstrip())
+
+# ## Create a dictionary of base cards with their ids (cards with alternate arts)
+# df_dict = df2.loc[df2["card_id"] == df2["base_card_id"]].copy()
+# df_dict = df_dict[["base_card_id", "card_name"]].set_index("base_card_id")
+# basecardsdict = df_dict.to_dict()['card_name']
+
+# ## Create column base_card_name to standardise cards with alternate arts 
+# df2['base_card_name'] = df2['base_card_id']
+# df2['base_card_name'] = df2['base_card_name'].apply(lambda x: str(x).replace(str(x), basecardsdict[x]))
+# df2 = df2[['card_set_id', 'clan', 'rarity', 'cost', 'card_name', 'card_id', 'base_card_id', 'base_card_name']]
+
+# # ## Nested sort
+# df_base = df2.sort_values(by = ['card_set_id', 'clan', 'card_id'], ascending = [True, True, True]).reset_index(drop = True)
+
+# classdict = {0: "Neutral", 1: "Forestcraft", 2: "Swordcraft", 3: "Runecraft", 4: "Dragoncraft", 5: "Shadowcraft", 6: "Bloodcraft", 7: "Havencraft", 8: "Portalcraft"}
+# raritydict = {1: "Bronze", 2: "Silver", 3: "Gold", 4: "Legendary"}
+
+# df_base["clan"] = df_base["clan"].apply(lambda x: str(x).replace(str(x), classdict[x]))
+# df_base["rarity"] = df_base["rarity"].apply(lambda x: str(x).replace(str(x), raritydict[x]))
+
+# dffinal = df_base.copy()
+# dffinal['code'] =  df_base.loc[:,'card_id'].apply(lambda x: id_to_hash(x))
 # dffinal = dffinal.sort_index()
-# dffinal = dffinal.rename(columns={'name_':'CardName', 'code':'Code'})
-# dffinal.to_csv('Excel_and_CSV/generatedURLcode.csv', index=False)
+# dffinal = dffinal.rename(columns={'base_card_name':'CardName', 'code':'Code'})
+
+# dffinal = dffinal[['card_set_id','clan','rarity', 'cost','CardName','card_id','Code']]
+# dffinal.to_csv('Excel_and_CSV/generatedURLcodeEN.csv', index=False)

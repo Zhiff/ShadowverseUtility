@@ -91,8 +91,9 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 comp_format = 'rotation'
-stage = 'top16'
+stage = 'group'
 tcode = ws.JCG_latest_tourney(comp_format, stage)
+
 # ws.JCG_scraper(tcode)
 
 tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
@@ -124,8 +125,35 @@ if status == 'Finished':
         
         ws.jcg_excel_finishing(master_df, top16_df, overall_view_df, decks_df, class_df, lineup_df, conv_df, matchup_df)
 
-    
 
+# ## Store API URL. 
+# target_url = f'https://shadowverse-portal.com/api/v1/cards'
+# ## Make a GET request to access API URL. Returns a JSON. Then convert the JSON into a DataFrame. Then generate a DataFrame.
+# result = requests.get(target_url, params = {"format": "json", "lang": "en"})
+# src = result.json()
+# df = pd.DataFrame(src['data']['cards'])
+
+# ## Clean the data and extract what we need.
+# ## Remove rows without card_name
+# df2 = df.loc[df['card_name'].notna() == True].reset_index(drop = True).copy()
+# ## Remove rows where cards are tokens (starting with 90). card_set_id starting with 10 are released sets; 70 are collabs/tie-in/alternates.
+# df2 = df2.loc[df2['card_set_id'] < 90000].reset_index(drop = True).copy()
+# df2 = df2[['card_set_id', 'clan', 'rarity', 'char_type', 'cost', 'card_name', 'card_id', 'base_card_id']]
+
+# ## Clean trailing white spaces in some card_name
+# df2["card_name"] = df2["card_name"].apply(lambda x: x.rstrip())
+
+# ## Create a dictionary of base cards with their ids (cards with alternate arts)
+# df3 = df2.loc[df2["card_id"] == df2["base_card_id"]].copy()
+# df3 = df3[["base_card_id", "card_name"]].set_index("base_card_id")
+# basecardsdict = df3.to_dict()['card_name']
+
+# ## Create column base_card_name to standardise cards with alternate arts 
+# df2['base_card_name'] = df2['base_card_id']
+# df2['base_card_name'] = df2['base_card_name'].apply(lambda x: str(x).replace(str(x), basecardsdict[x]))
+
+# ## Nested sort
+# df2 = df2.sort_values(by = ['card_set_id', 'clan', 'card_id'], ascending = [False, True, True]).reset_index(drop = True)
 
 
 
@@ -168,7 +196,7 @@ if status == 'Finished':
 # JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids, dates = jcg.scrapseasonIDs('rotation', '21st Season')
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '22nd Season')
 # ws.generate_archetype_trends(jcgids, dates)
 
 # names = []
@@ -463,6 +491,8 @@ if status == 'Finished':
 # writer = pd.ExcelWriter('Excel_and_CSV/proleague.xlsx')
 # df.to_excel(writer, index=False)
 # writer.save()
+
+# ws.SVO_initial_scraper('Excel_and_CSV/proleague.xlsx')
 
 #Pro League FINALS
         

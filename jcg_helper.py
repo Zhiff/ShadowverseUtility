@@ -140,7 +140,7 @@ def retrieveTop16JCG(bracketid, tcode):
     return namedf
 
 def scrapseasonIDs(sv_format, season):
-    maxpage = 7
+    maxpage = 10
     jcgids = []
     dates = []
     
