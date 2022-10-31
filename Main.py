@@ -18,6 +18,10 @@ import numpy as np
 from bs4 import BeautifulSoup as bs
 import time
 import json
+import warnings
+
+warnings.simplefilter(action='ignore', category=UserWarning)
+
 
 start_time = time.time()
 # Excel Scraping, It will produce 3 excel files. FilteredDecks_View, FilteredDecks_Data, and Statistics and Breakdown
@@ -91,19 +95,19 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 comp_format = 'rotation'
-stage = 'group'
+stage = 'top16'
 tcode = ws.JCG_latest_tourney(comp_format, stage)
 
 # ws.JCG_scraper(tcode)
 
 tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
 if status == 'Finished':
-    if stage is 'top16':
+    if stage == 'top16':
         entry_df = jcg.get_deck_profile(tcode)
         matchids = jcg.gather_match_id(tcode, 'top16')
         P1, P2, resultP1, resultP2 = jcg.create_matches_dataset(matchids)
         jcg.publish_final_standings(entry_df, P1, P2, resultP1, resultP2)
-    elif stage is 'group':
+    elif stage == 'group':
         entry_df = jcg.get_deck_profile(tcode)
         master_df, lineupdict = jcg.create_master_df(entry_df)
         matchids = jcg.gather_match_id(tcode, 'group')
@@ -124,37 +128,6 @@ if status == 'Finished':
         print("--- %s seconds ---" % (time.time() - start_time))
         
         ws.jcg_excel_finishing(master_df, top16_df, overall_view_df, decks_df, class_df, lineup_df, conv_df, matchup_df)
-
-
-# ## Store API URL. 
-# target_url = f'https://shadowverse-portal.com/api/v1/cards'
-# ## Make a GET request to access API URL. Returns a JSON. Then convert the JSON into a DataFrame. Then generate a DataFrame.
-# result = requests.get(target_url, params = {"format": "json", "lang": "en"})
-# src = result.json()
-# df = pd.DataFrame(src['data']['cards'])
-
-# ## Clean the data and extract what we need.
-# ## Remove rows without card_name
-# df2 = df.loc[df['card_name'].notna() == True].reset_index(drop = True).copy()
-# ## Remove rows where cards are tokens (starting with 90). card_set_id starting with 10 are released sets; 70 are collabs/tie-in/alternates.
-# df2 = df2.loc[df2['card_set_id'] < 90000].reset_index(drop = True).copy()
-# df2 = df2[['card_set_id', 'clan', 'rarity', 'char_type', 'cost', 'card_name', 'card_id', 'base_card_id']]
-
-# ## Clean trailing white spaces in some card_name
-# df2["card_name"] = df2["card_name"].apply(lambda x: x.rstrip())
-
-# ## Create a dictionary of base cards with their ids (cards with alternate arts)
-# df3 = df2.loc[df2["card_id"] == df2["base_card_id"]].copy()
-# df3 = df3[["base_card_id", "card_name"]].set_index("base_card_id")
-# basecardsdict = df3.to_dict()['card_name']
-
-# ## Create column base_card_name to standardise cards with alternate arts 
-# df2['base_card_name'] = df2['base_card_id']
-# df2['base_card_name'] = df2['base_card_name'].apply(lambda x: str(x).replace(str(x), basecardsdict[x]))
-
-# ## Nested sort
-# df2 = df2.sort_values(by = ['card_set_id', 'clan', 'card_id'], ascending = [False, True, True]).reset_index(drop = True)
-
 
 
 

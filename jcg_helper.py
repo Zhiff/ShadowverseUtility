@@ -459,7 +459,8 @@ def get_lineup_view(lineupdict, P1, P2, ResultP1, ResultP2):
 
     LineupDS = pd.merge(LineDS, total, how='left')
     LineupDS['lose'] = LineupDS['total']-LineupDS['win']
-    LineupDS['Winrate %'] = round(100 * LineupDS['win']/LineupDS['total'], 2)
+    LineupDS['Winrate %'] = 100 * LineupDS['win']/LineupDS['total']
+    LineupDS['Winrate %'] = LineupDS.loc[:,'Winrate %'].apply(lambda x:round(x, 2))
 
     LineupFinal = pd.merge(lineup, LineupDS, how='left')
     LineupFinal['Lineup'] = LineupFinal.loc[:,'Lineup'].apply(lambda x: x.split(" - "))

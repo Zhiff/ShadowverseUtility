@@ -8,7 +8,7 @@ This is Deck Module. This module contains Deck Class which store all info about 
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests
-import pykakasi
+# import pykakasi
 import json
 
 class Deck:
@@ -230,11 +230,11 @@ def id_to_name(cardID, lang):
 
 
 # json ='https://raw.githubusercontent.com/user6174/shadowverse-json/master/ja/all.json'
-with open('Excel_and_CSV/cardjsonen.json') as json_file:
-    jsondata = json.load(json_file)
-    dfa = pd.DataFrame(jsondata)
-    dfb = dfa.transpose()
-    dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
+# with open('Excel_and_CSV/cardjsonen.json') as json_file:
+#     jsondata = json.load(json_file)
+#     dfa = pd.DataFrame(jsondata)
+#     dfb = dfa.transpose()
+#     dfc = dfb[['expansion_','craft_','rarity_','pp_','name_','id_']]
 #     dffinal = dfc.copy()
 #     dffinal['code'] =  dfc.loc[:,'id_'].apply(lambda x: id_to_hash(x))
 #     dffinal = dffinal.sort_index()
