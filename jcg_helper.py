@@ -492,3 +492,34 @@ def get_top16_conversion_view(top16view_df, decks_df):
     
     print("Top 16 Conversion View Dataset is ready")
     return conv_page_df
+
+### CrossCraft Deck Scraper
+# tcode = 'el7lz6ffvNDk'
+# entrieslink = 'https://sv.j-cg.com/competition/' + tcode + '/entries'
+# source = requests.get(entrieslink).text
+# soup = bs(source, 'lxml')
+#     # Find and extract JSON file in HTML
+# all_scripts = soup.find_all('script')
+#     #currently hardcasted, faster processing but will be screwed when website changes
+# dljson = all_scripts[7].string
+#     #cleaning string to comply with JSON format
+# cleanedjson = dljson[dljson.find('list'):dljson.find('listFiltered')]
+# finaljson = cleanedjson.replace('list:','').strip()[:-1]
+# data = json.loads(finaljson)
+# jsondf = pd.DataFrame(data)
+
+# sv = 'https://shadowverse-portal.com/deck_co/'
+# jcg = 'https://sv.j-cg.com/user/'
+# lang_eng = '?lang=en'
+# data1 = jsondf.loc[jsondf['result']==1].copy()
+# data1['d1'] = data1['sv_decks'].apply(lambda x: x[0]['hash'] if x else None)
+# data1['d2'] = data1['sv_decks'].apply(lambda x: x[1]['hash'] if x else None)
+# data1['deck 1']= data1['d1'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+# data1['deck 2']= data1['d2'].apply(lambda x: sv + x + lang_eng if x else 'Invalid Deck')
+# data1['profile']=data1['nicename'].apply(lambda x: jcg + x)
+# data2 = data1[['profile','name','deck 1','deck 2']].copy()
+# df = data2
+
+# writer = pd.ExcelWriter("Excel_and_CSV/CrossCraft.xlsx", options={'strings_to_urls': True})
+# df.to_excel(writer, 'MainData')
+# writer.save()
