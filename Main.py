@@ -30,10 +30,11 @@ start_time = time.time()
 #                   - columns name , deck 1, deck 2, deck 3 must exists
 #                   - decklists must end with ?lang=en or &lang=en
 
-# em.convertSVOformat('Excel_and_CSV/MaySEAO.xlsx')
-# ws.SVO_initial_scraper('Excel_and_CSV/svo.xlsx')
+# em.convertSVOformat('Excel_and_CSV/.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/CrossCraft.xlsx')
 
-# ws.SVO_initial_scraper('Excel_and_CSV/proleague.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/SVO.xlsx')
+# ws.SVO_initial_scraper('Excel_and_CSV/rage.xlsx')
 
 # tcode1 = 'Ny1fDVSBlfho'
 # tcode2 = 'i2nJD0c4zoaA'
@@ -95,12 +96,16 @@ start_time = time.time()
 # Requirements :    - JSON must be valid
 
 comp_format = 'rotation'
-stage = 'top16'
-tcode = ws.JCG_latest_tourney(comp_format, stage)
+stage = 'group'
+# tcode = ws.JCG_latest_tourney(comp_format, stage)
 
-# ws.JCG_scraper(tcode)
+# # tcode = 'APFKDniWhVrq'
+# # ws.JCG_scraper(tcode)
 
-tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
+# tcode, status = ws.JCG_latest_tourney_with_status(comp_format, stage)
+
+tcode = 'rcphkPzxSzxs'
+status = 'Finished'
 if status == 'Finished':
     if stage == 'top16':
         entry_df = jcg.get_deck_profile(tcode)
@@ -169,7 +174,7 @@ if status == 'Finished':
 # JCG Trends
 # Input : lists of JCG IDs
 
-# jcgids, dates = jcg.scrapseasonIDs('rotation', '22nd Season')
+# jcgids, dates = jcg.scrapseasonIDs('rotation', '24th Season')
 # ws.generate_archetype_trends(jcgids, dates)
 
 # names = []
@@ -205,32 +210,32 @@ if status == 'Finished':
 
 # Post Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2022autumn/pre/deck'
-# source = requests.get(url).text
-# soup = bs(source, 'lxml')
-# filtered = soup.find_all('td', bgcolor='white')
-# name1 = []
-# deck1 = []
-# deck2 = []
-# for lit in filtered[::3]:
-#     name = lit.text
-#     name1.append(name)
-# for lit in filtered[1::3]:
-#     lits = lit.find('a')
-#     name = lits.get('href')
-#     deck1.append(name)
-# for lit in filtered[2::3]:
-#     lits = lit.find('a')
-#     name = lits.get('href')
-#     deck2.append(name)    
+url = 'https://rage-esports.jp/shadowverse/2023Summer/pre/deck'
+source = requests.get(url).text
+soup = bs(source, 'lxml')
+filtered = soup.find_all('td', bgcolor='white')
+name1 = []
+deck1 = []
+deck2 = []
+for lit in filtered[::3]:
+    name = lit.text
+    name1.append(name)
+for lit in filtered[1::3]:
+    lits = lit.find('a')
+    name = lits.get('href')
+    deck1.append(name)
+for lit in filtered[2::3]:
+    lits = lit.find('a')
+    name = lits.get('href')
+    deck2.append(name)    
 
-# db = np.column_stack((name1,deck1,deck2))
-# df = pd.DataFrame(db)
-# df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
+db = np.column_stack((name1,deck1,deck2))
+df = pd.DataFrame(db)
+df = df.rename(columns={0:'name', 1:'deck 1', 2:'deck 2'})
 
-# writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
-# df.to_excel(writer, index=False)
-# writer.save()
+writer = pd.ExcelWriter('Excel_and_CSV/rage.xlsx')
+df.to_excel(writer, index=False)
+writer.save()
     
     
 # alllink = filtered.find_all('a')
@@ -251,23 +256,24 @@ if status == 'Finished':
 
 # Pre Playoff
 
-# url = 'https://rage-esports.jp/shadowverse/2022spring/pre/deck'
+# url = 'https://rage-esports.jp/shadowverse/2022winter/pre/deck'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
-# filtered = soup.find_all('td', bgcolor='black')
+# tablefilter = soup.find('table')
+# filtered = tablefilter.find_all('td')
 
 # print (filtered)
 # name1 = []
 # deck1 = []
 # deck2 = []
-# for lit in filtered[1::4]:
+# for lit in filtered[5::4]:
 #     name = lit.text
 #     name1.append(name)
-# for lit in filtered[2::4]:
+# for lit in filtered[6::4]:
 #     lits = lit.find('a')
 #     name = lits.get('href')
 #     deck1.append(name)
-# for lit in filtered[3::4]:
+# for lit in filtered[7::4]:
 #     lits = lit.find('a')
 #     name = lits.get('href')
 #     deck2.append(name)    
@@ -384,7 +390,7 @@ if status == 'Finished':
 
 # data3 = sh.handle_duplicate_row(data2, 'name').reset_index().drop(['index'], axis=1)
 
-# url = 'https://rage-esports.jp/shadowverse/2022spring/pre/deck'
+# url = 'https://rage-esports.jp/shadowverse/2023Summer/pre/deck'
 # source = requests.get(url).text
 # soup = bs(source, 'lxml')
 # filtered = soup.find_all('td')
@@ -528,5 +534,15 @@ if status == 'Finished':
 # writer = pd.ExcelWriter('Excel_and_CSV/proleague.xlsx')
 # df.to_excel(writer, index=False)
 # writer.save()
+
+# url = 'https://rage-esports.jp/shadowverse/2022winter/pre/deck'
+# source = requests.get(url).text
+# soup = bs(source, 'lxml')
+# filtered = soup.find('table')
+# name1 = []
+# deck1 = []
+# deck2 = []
+# print()
+
 
 print("--- %s seconds ---" % (time.time() - start_time))

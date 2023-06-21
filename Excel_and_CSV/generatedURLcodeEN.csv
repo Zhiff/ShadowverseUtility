@@ -148,7 +148,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10001,Forestcraft,Silver,4,Mana Elk,101121090,61ln2
 10001,Forestcraft,Silver,8,Forest Giant,101121100,61lnC
 10001,Forestcraft,Silver,7,Forest Archelon,101121110,61lnM
-10001,Forestcraft,Silver,4,Harvest Festival,101122010,61l_Q
+10001,Forestcraft,Silver,2,Harvest Festival,101122010,61l_Q
 10001,Forestcraft,Silver,1,Woodland Refuge,101122020,61l_a
 10001,Forestcraft,Gold,4,Petal Fencer,101131010,61oC2
 10001,Forestcraft,Gold,2,Rhinoceroach,101131020,61oCC
@@ -158,7 +158,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10001,Forestcraft,Gold,5,Titania's Sanctuary,101132010,61oRg
 10001,Forestcraft,Gold,5,Will of the Forest,101134010,61oww
 10001,Forestcraft,Gold,9,Silver Bolt,101134020,61ox4
-10001,Forestcraft,Gold,7,Homecoming,101134030,61oxE
+10001,Forestcraft,Gold,5,Homecoming,101134030,61oxE
 10001,Forestcraft,Legendary,6,Fairy Princess,101141010,61qeI
 10001,Forestcraft,Legendary,3,Ancient Elf,101141020,61qeS
 10001,Forestcraft,Legendary,8,Rose Queen,101141030,61qec
@@ -661,7 +661,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10004,Forestcraft,Legendary,8,Deepwood Anomaly,104141020,6DH3S
 10004,Swordcraft,Bronze,2,Naval Guard Simone,104211020,6DY9C
 10004,Swordcraft,Bronze,5,Tristan of the Round Table,104211030,6DY9M
-10004,Swordcraft,Bronze,4,Vagabond Frog,104211040,6DY9W
+10004,Swordcraft,Bronze,3,Vagabond Frog,104211040,6DY9W
 10004,Swordcraft,Bronze,1,Spring Cleaning,104213010,6DYeI
 10004,Swordcraft,Silver,5,Luminous Mage,104221020,6DabS
 10004,Swordcraft,Silver,6,Jolly Rogers,104221030,6Dabc
@@ -690,7 +690,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10004,Dragoncraft,Bronze,5,Hippocampus,104411040,6EI-W
 10004,Dragoncraft,Bronze,1,Dragon's Nest,104412010,6EJDg
 10004,Dragoncraft,Silver,5,Venomous Pucewyrm,104421020,6ELQS
-10004,Dragoncraft,Silver,4,Wind Reader Zell,104421030,6ELQc
+10004,Dragoncraft,Silver,2,Wind Reader Zell,104421030,6ELQc
 10004,Dragoncraft,Silver,5,Wrath Drake,104421040,6ELQm
 10004,Dragoncraft,Silver,6,Lightning Blast,104424010,6EM9A
 10004,Dragoncraft,Gold,6,Phoenix Rider Aina,104431020,6ENsi
@@ -703,11 +703,11 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10004,Shadowcraft,Bronze,3,Goblin Zombie,104511040,6EhP0
 10004,Shadowcraft,Bronze,2,Zombie Party,104514010,6Ei7Q
 10004,Shadowcraft,Silver,4,Orthrus,104521020,6Ejqy
-10004,Shadowcraft,Silver,4,Prince Catacomb,104521030,6Ejr6
+10004,Shadowcraft,Silver,3,Prince Catacomb,104521030,6Ejr6
 10004,Shadowcraft,Silver,5,Dolorblade Warrior,104521040,6EjrG
 10004,Shadowcraft,Silver,2,Grave Desecration,104522010,6Ek4Q
 10004,Shadowcraft,Gold,2,Little Soulsquasher,104531020,6EmHC
-10004,Shadowcraft,Gold,8,Immortal Thane,104531030,6EmHM
+10004,Shadowcraft,Gold,7,Immortal Thane,104531030,6EmHM
 10004,Shadowcraft,Gold,4,Death's Ledger,104533010,6EmmI
 10004,Shadowcraft,Legendary,3,Minthe of the Underworld,104541010,6EojI
 10004,Shadowcraft,Legendary,7,Demonlord Eachtar,104541020,6EojS
@@ -737,9 +737,9 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10004,Havencraft,Gold,8,Tarnished Grail,104733010,6FXbI
 10004,Havencraft,Legendary,6,Dark Jeanne,104741010,6FZYI
 10004,Havencraft,Legendary,9,Heavenly Aegis,104741020,6FZYS
-10005,Neutral,Bronze,5,"Ephemera, Angelic Slacker",105011010,6GbT2
+10005,Neutral,Bronze,4,"Ephemera, Angelic Slacker",105011010,6GbT2
 10005,Neutral,Bronze,3,Angelic Knight,105011020,6GbTC
-10005,Neutral,Bronze,4,Goblin Leader,105011030,6GbTM
+10005,Neutral,Bronze,3,Goblin Leader,105011030,6GbTM
 10005,Neutral,Bronze,7,Eggsplosion,105014010,6GcBw
 10005,Neutral,Silver,2,Actress Feria,105021010,6GdvI
 10005,Neutral,Silver,5,Gruff Mountaineer Captain,105021020,6GdvS
@@ -794,7 +794,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10005,Dragoncraft,Bronze,4,Elder Tortoise,105411020,6I77C
 10005,Dragoncraft,Bronze,7,Ebon Beast Warrior,105411030,6I77M
 10005,Dragoncraft,Bronze,4,Dragon Sculpture,105412010,6I7Mg
-10005,Dragoncraft,Silver,6,Hippogryph Rider,105421010,6I9ZI
+10005,Dragoncraft,Silver,5,Hippogryph Rider,105421010,6I9ZI
 10005,Dragoncraft,Silver,3,Master of Draconic Arts,105421020,6I9ZS
 10005,Dragoncraft,Silver,9,Fortress Crab,105421030,6I9Zc
 10005,Dragoncraft,Silver,6,Draconic Lance,105424010,6IAIA
@@ -817,7 +817,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10005,Shadowcraft,Legendary,7,Dark Alice,105541010,6IcsI
 10005,Shadowcraft,Legendary,4,Corpselord of Woe,105541020,6IcsS
 10005,Bloodcraft,Bronze,3,Disagreeable Demon,105611010,6Ity2
-10005,Bloodcraft,Bronze,5,Big Knuckle Bodyguard,105611020,6ItyC
+10005,Bloodcraft,Bronze,4,Big Knuckle Bodyguard,105611020,6ItyC
 10005,Bloodcraft,Bronze,2,Tove,105611030,6ItyM
 10005,Bloodcraft,Bronze,3,Demon Key,105613010,6IuRI
 10005,Bloodcraft,Silver,5,Scarlet Sabreur,105621010,6IwOI
@@ -852,12 +852,12 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10006,Neutral,Silver,1,Mystic Ring,106024010,6KSnA
 10006,Neutral,Gold,5,Helblindi,106031020,6KUUi
 10006,Neutral,Gold,5,Qilin,106031030,6KUUs
-10006,Neutral,Gold,2,Staircase to Paradise,106033010,6KUzo
+10006,Neutral,Gold,1,Staircase to Paradise,106033010,6KUzo
 10006,Neutral,Legendary,5,Loki,106041010,6KWwo
 10006,Neutral,Legendary,7,Zodiac Demon,106041020,6KWwy
 10006,Forestcraft,Bronze,2,Fita the Gentle Elf,106111010,6Ko0Y
 10006,Forestcraft,Bronze,3,Starry Elf,106111020,6Ko0i
-10006,Forestcraft,Bronze,6,Ipiria,106111030,6Ko0s
+10006,Forestcraft,Bronze,5,Ipiria,106111030,6Ko0s
 10006,Forestcraft,Bronze,1,Airbound Barrage,106114010,6KolQ
 10006,Forestcraft,Silver,2,Elf Singer Harmony,106121010,6KqSo
 10006,Forestcraft,Silver,4,"Ariana, Natural Tutor",106121020,6KqSy
@@ -1013,7 +1013,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10007,Shadowcraft,Bronze,2,Gloomy Necromancer,107511010,6Q7pY
 10007,Shadowcraft,Bronze,4,Mummy,107511020,6Q7pi
 10007,Shadowcraft,Bronze,2,Bone Bug,107511030,6Q7ps
-10007,Shadowcraft,Bronze,4,Skull Ring,107513010,6Q8Io
+10007,Shadowcraft,Bronze,3,Skull Ring,107513010,6Q8Io
 10007,Shadowcraft,Silver,3,Soulcaller,107521010,6QAFo
 10007,Shadowcraft,Silver,7,Anubis,107521020,6QAFy
 10007,Shadowcraft,Silver,1,Grave Invitation,107524010,6QA-g
@@ -1186,7 +1186,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10008,Havencraft,Silver,2,Temple of the Holy Lion,108722010,6UlTQ
 10008,Havencraft,Silver,4,Opposing Statues,108723010,6Ulj2
 10008,Havencraft,Gold,2,Jeweled Priestess,108731010,6Ung2
-10008,Havencraft,Gold,5,Tenko's Shrine,108732010,6Unvg
+10008,Havencraft,Gold,4,Tenko's Shrine,108732010,6Unvg
 10008,Havencraft,Gold,3,Whitefang Temple,108733010,6Uo9I
 10008,Havencraft,Legendary,7,Godsworn Alexiel,108741010,6Uq6I
 10008,Havencraft,Legendary,5,Ceryneian Hind,108741020,6Uq6S
@@ -1246,10 +1246,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10009,Runecraft,Bronze,5,Peacemancer,109311020,6W_Gi
 10009,Runecraft,Bronze,2,Grand Spire,109314010,6W__Q
 10009,Runecraft,Bronze,5,Fate's Hand,109314020,6W__a
-10009,Runecraft,Silver,8,Abyss Summoner,109321010,6X1io
+10009,Runecraft,Silver,7,Abyss Summoner,109321010,6X1io
 10009,Runecraft,Silver,3,"Clarisse, Unpolished Mage",109321020,6X1iy
 10009,Runecraft,Silver,4,Burgeoning Genius,109324010,6X2Rg
-10009,Runecraft,Gold,7,"Ms. Miranda, Light Mage",109331010,6X492
+10009,Runecraft,Gold,6,"Ms. Miranda, Light Mage",109331010,6X492
 10009,Runecraft,Gold,4,"Cagliostro, Adorable Genius",109331020,6X49C
 10009,Runecraft,Gold,1,Mystic Rune,109332010,6X4Og
 10009,Runecraft,Legendary,6,"Arulumaya, Mystic Seer",109341010,6X6bI
@@ -1312,7 +1312,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10009,Portalcraft,Bronze,5,Enkidu,109811030,6YvLM
 10009,Portalcraft,Bronze,1,Ancient Apparatus,109813010,6YvqI
 10009,Portalcraft,Silver,6,"Basileus, Outworld Invader",109821010,6YxnI
-10009,Portalcraft,Silver,5,"Nicholas, Stalwart Inventor",109821020,6YxnS
+10009,Portalcraft,Silver,4,"Nicholas, Stalwart Inventor",109821020,6YxnS
 10009,Portalcraft,Silver,5,Captivating Conductor,109824010,6YyWA
 10009,Portalcraft,Gold,2,Paracelsus,109831010,6Y-DY
 10009,Portalcraft,Gold,3,"Cucouroux, Green Gunsmith",109831020,6Y-Di
@@ -2148,7 +2148,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10017,Neutral,Gold,5,Starbright Deity,117031010,6-S1Y
 10017,Neutral,Gold,5,Archangel of Evocation,117031020,6-S1i
 10017,Neutral,Gold,4,Resolve of the Fallen,117034010,6-SmQ
-10017,Neutral,Legendary,6,"XXI. Zelgenea, The World",117041010,6-UTo
+10017,Neutral,Legendary,5,"XXI. Zelgenea, The World",117041010,6-UTo
 10017,Neutral,Legendary,4,"Fieran, Havensent Wind God",117041020,6-UTy
 10017,Forestcraft,Bronze,4,Reclusive Ponderer,117111010,6-lZY
 10017,Forestcraft,Bronze,2,Blossoming Archer,117111020,6-lZi
@@ -2349,7 +2349,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10018,Bloodcraft,Legendary,3,"Vuella, Unblemished Wings",118641020,74b5y
 10018,Bloodcraft,Legendary,11,Bloodsoaked Archdemon,118641030,74b66
 10018,Havencraft,Bronze,1,Sacred Stone Apostle,118711010,74sBY
-10018,Havencraft,Bronze,3,Enchanted Knight,118711020,74sBi
+10018,Havencraft,Bronze,2,Enchanted Knight,118711020,74sBi
 10018,Havencraft,Bronze,9,Revolver Eagle,118711030,74sBs
 10018,Havencraft,Bronze,5,Benevolent Blight,118714010,74swQ
 10018,Havencraft,Silver,5,Shady Priest,118721010,74udo
@@ -2371,7 +2371,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10018,Portalcraft,Gold,4,"Carnelia, Servant of Darkness",118831010,75JUY
 10018,Portalcraft,Gold,8,Committed Conductor,118831020,75JUi
 10018,Portalcraft,Gold,0,Elemental Brink,118834010,75KDQ
-10018,Portalcraft,Legendary,2,"Illganeau, Horror Astray",118841010,75Lwo
+10018,Portalcraft,Legendary,1,"Illganeau, Horror Astray",118841010,75Lwo
 10018,Portalcraft,Legendary,7,"Iceschillendrig, Gilded Autocrat",118841020,75Lwy
 10018,Portalcraft,Legendary,4,"Sylvia, Grand Arbiter",118841030,75Lx6
 10018,Portalcraft,Legendary,7,"Iceschillendrig, Gilded Autocrat",716841010,gkY0o
@@ -2495,7 +2495,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10020,Neutral,Bronze,1,Retracing the Past,120014010,79qIw
 10020,Neutral,Silver,4,Managrocer,120021010,79s0I
 10020,Neutral,Silver,3,Dogged Detective,120021020,79s0S
-10020,Neutral,Gold,6,"Grimnir, Voidwrought Wind",120031010,79uSY
+10020,Neutral,Gold,4,"Grimnir, Voidwrought Wind",120031010,79uSY
 10020,Neutral,Gold,10,Goddess of Rebirth,120031020,79uSi
 10020,Neutral,Gold,4,Frostfire,120034010,79vBQ
 10020,Neutral,Legendary,8,Sahaquiel & Israfil,120041010,79wuo
@@ -2726,6 +2726,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10021,Portalcraft,Legendary,9,"Belphomet, Ultimate Creator",121841020,7GoLy
 10021,Portalcraft,Legendary,2,"Yuwan, Dimensional Avenger",121841030,7GoM6
 10021,Portalcraft,Legendary,9,"Belphomet, Ultimate Creator",714841020,gcvky
+10021,Portalcraft,Legendary,2,"Maisha, Purgation's Vessel",718841010,gsAIo
 10022,Neutral,Bronze,4,Angel of Cleansing Fire,122011010,7HRs2
 10022,Neutral,Bronze,2,Froggy Maestro,122011020,7HRsC
 10022,Neutral,Bronze,1,Angel's Grace,122014010,7HSaw
@@ -2833,6 +2834,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10022,Havencraft,Legendary,6,God of Curses,122741010,7KE4I
 10022,Havencraft,Legendary,3,Holy Saber,122741020,7KE4S
 10022,Havencraft,Legendary,6,Sacred Lion,122741030,7KE4c
+10022,Havencraft,Legendary,3,Holy Saber,718741020,grnuS
 10022,Portalcraft,Bronze,3,Insightful Homunculus,122811010,7KVA2
 10022,Portalcraft,Bronze,1,Young Threadmaster,122811020,7KVAC
 10022,Portalcraft,Bronze,9,Megastone Guardian,122811030,7KVAM
@@ -2871,6 +2873,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10023,Forestcraft,Legendary,2,"Amataz, Reverse Blader",123141010,7LlkI
 10023,Forestcraft,Legendary,4,"Piercye, Queen of Frost",123141020,7LlkS
 10023,Forestcraft,Legendary,3,"Izudia, Unkilling Annihilation",123141030,7Llkc
+10023,Forestcraft,Legendary,4,"Piercye, Queen of Frost",718141010,gpVPI
 10023,Swordcraft,Bronze,3,Hermit of Usurpation,123211010,7M0q2
 10023,Swordcraft,Bronze,2,Chivalrous Bandit,123211020,7M0qC
 10023,Swordcraft,Bronze,1,Penguin Guardian,123211030,7M0qM
@@ -2943,7 +2946,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10023,Bloodcraft,Gold,1,Loathing Desire,123634010,7Ne5Q
 10023,Bloodcraft,Legendary,3,"Yuzuki, Bloodlord",123641010,7Nfoo
 10023,Bloodcraft,Legendary,6,Pain Immortal,123641020,7Nfoy
-10023,Bloodcraft,Legendary,3,"Valnareik, Lustful Desire",123641030,7Nfp6
+10023,Bloodcraft,Legendary,2,"Valnareik, Lustful Desire",123641030,7Nfp6
 10023,Havencraft,Bronze,2,Hermit of Repose,123711010,7NwuY
 10023,Havencraft,Bronze,2,Temple Healer,123711020,7Nwui
 10023,Havencraft,Bronze,4,Caladrius,123711030,7Nwus
@@ -3012,6 +3015,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10024,Swordcraft,Legendary,4,"Jiemon, Thief Lord",124241020,7PyHy
 10024,Swordcraft,Legendary,3,"Mars, Belligerent Flame",124241030,7PyI6
 10024,Swordcraft,Silver,3,Masterful Musician,717221010,gl-oI
+10024,Swordcraft,Legendary,3,"Mars, Belligerent Flame",718241010,gptpo
 10024,Runecraft,Bronze,2,Owl Receptionist,124311010,7QDNY
 10024,Runecraft,Bronze,5,Chakram Wizard,124311020,7QDNi
 10024,Runecraft,Bronze,3,Magical Reserves,124314010,7QE6Q
@@ -3112,7 +3116,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10025,Forestcraft,Gold,1,Aqua Fairy,125131010,7TLa2
 10025,Forestcraft,Gold,3,"Tam Lin, Fey Knight",125131020,7TLaC
 10025,Forestcraft,Gold,1,Whirlwind Assault,125134010,7TMIw
-10025,Forestcraft,Legendary,5,Shining Valkyrie,125141010,7TO0I
+10025,Forestcraft,Legendary,4,Shining Valkyrie,125141010,7TO0I
 10025,Forestcraft,Legendary,2,"Rayne, Divine Smith",125141020,7TO0S
 10025,Forestcraft,Legendary,7,"Carbuncle, Sacred Emerald",125141030,7TO0c
 10025,Forestcraft,Legendary,2,"Rayne, Divine Smith",717141020,glhGS
@@ -3148,7 +3152,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10025,Dragoncraft,Bronze,7,Hailwyrm,125411030,7UPxM
 10025,Dragoncraft,Bronze,1,Mermaid Song,125414010,7UQfw
 10025,Dragoncraft,Silver,3,Twindrake Guide,125421010,7USNI
-10025,Dragoncraft,Silver,3,Ironscale Serpent Drake,125421020,7USNS
+10025,Dragoncraft,Silver,4,Ironscale Serpent Drake,125421020,7USNS
 10025,Dragoncraft,Silver,2,Katakura Kojuro,125421030,7USNc
 10025,Dragoncraft,Gold,4,"Leviathan, the Furious",125431010,7UUpY
 10025,Dragoncraft,Gold,3,"Ethica, Firebrand Claw",125431020,7UUpi
@@ -3167,7 +3171,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10025,Shadowcraft,Gold,6,"Charon, Stygian Demise",125531010,7UtE2
 10025,Shadowcraft,Gold,3,"Orthrus, Infernal Fang",125531020,7UtEC
 10025,Shadowcraft,Gold,4,Deathly Tyrant's Feast,125534010,7Utyw
-10025,Shadowcraft,Legendary,9,Departed Soultaker,125541010,7UvgI
+10025,Shadowcraft,Legendary,8,Departed Soultaker,125541010,7UvgI
 10025,Shadowcraft,Legendary,2,"Cerberus, Infernal Hound",125541020,7UvgS
 10025,Shadowcraft,Legendary,10,"Mordecai, Unending Duelist",125541030,7Uvgc
 10025,Shadowcraft,Gold,6,"Charon, Stygian Demise",717531010,gnAU2
@@ -3219,7 +3223,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10026,Neutral,Gold,1,"Garuel, Seraphic Leo",126031010,7WnIY
 10026,Neutral,Gold,2,Freyja,126031020,7WnIi
 10026,Neutral,Gold,2,Greater Will,126034010,7Wo1Q
-10026,Neutral,Legendary,3,Uranus,126041010,7Wpko
+10026,Neutral,Legendary,4,Uranus,126041010,7Wpko
 10026,Neutral,Legendary,5,"Olivia & Sylvia, Wardens",126041020,7Wpky
 10026,Forestcraft,Bronze,2,Free-Spirited Elf,126111010,7X4qY
 10026,Forestcraft,Bronze,5,Spiritelementalist,126111020,7X4qi
@@ -3334,7 +3338,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Neutral,Silver,1,Owlcat Girl,127021020,7aY_S
 10027,Neutral,Gold,8,Warden of Recurrence,127031010,7abRY
 10027,Neutral,Gold,2,Azvaldt,127033010,7abwo
+10027,Neutral,Gold,2,Winged Inversion,127034010,7acAQ
 10027,Neutral,Legendary,8,"Zerael, Regent of Rebirth",127041010,7adto
+10027,Neutral,Legendary,6,Angel of Chaos,127041020,7adty
+10027,Neutral,Legendary,4,"Alice, Wandering Dreamer",127041030,7adu6
 10027,Forestcraft,Bronze,1,Budding Initiate,127111010,7auzY
 10027,Forestcraft,Bronze,5,Beast Lancer,127111020,7auzi
 10027,Forestcraft,Bronze,3,Merchant of the Wood,127111030,7auzs
@@ -3344,8 +3351,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Forestcraft,Silver,1,Feral Awakening,127124010,7ay8g
 10027,Forestcraft,Gold,2,Verdant Lieutenant,127131010,7azs2
 10027,Forestcraft,Gold,7,Warden of Balms,127131020,7azsC
+10027,Forestcraft,Gold,1,Guidance of the Wise,127134010,7a-aw
 10027,Forestcraft,Legendary,2,"Magachiyo, Barbed Convict",127141010,7b0II
 10027,Forestcraft,Legendary,8,"Wimael, Redolent Enforcer",127141020,7b0IS
+10027,Forestcraft,Legendary,2,"Plumeria, Serene Goddess",127141030,7b0Ic
 10027,Forestcraft,Bronze,1,Budding Initiate,717111010,glZxY
 10027,Swordcraft,Bronze,1,Deep-Sea Scout,127211010,7bHO2
 10027,Swordcraft,Bronze,2,Wandering Knight,127211020,7bHOC
@@ -3356,8 +3365,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Swordcraft,Silver,5,Windslasher,127221030,7bJqc
 10027,Swordcraft,Gold,3,Storm-Wracked First Mate,127231010,7bMGY
 10027,Swordcraft,Gold,6,Warden of Honor,127231020,7bMGi
+10027,Swordcraft,Gold,3,Avant Lord,127231030,7bMGs
 10027,Swordcraft,Legendary,4,"Barbaros, Briny Convict",127241010,7bOio
 10027,Swordcraft,Legendary,7,"Radiel, Valorous Enforcer",127241020,7bOiy
+10027,Swordcraft,Legendary,1,Princess Merveille,127241030,7bOj6
 10027,Runecraft,Bronze,2,Volunteer Test Subject,127311010,7bfoY
 10027,Runecraft,Bronze,5,Ultramarine Witch,127311020,7bfoi
 10027,Runecraft,Bronze,6,Crushing Rain,127314010,7bgXQ
@@ -3367,8 +3378,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Runecraft,Silver,3,Check,127324010,7bizg
 10027,Runecraft,Gold,3,Obsessive Scholar,127331010,7bkh2
 10027,Runecraft,Gold,7,Warden of the Arcane,127331020,7bkhC
+10027,Runecraft,Gold,4,Colossal Summoning,127334010,7blPw
 10027,Runecraft,Legendary,5,"Sephie, Depraved Convict",127341010,7bn7I
 10027,Runecraft,Legendary,12,"Simael, Cleansing Enforcer",127341020,7bn7S
+10027,Runecraft,Legendary,5,Bipartite Elemental,127341030,7bn7c
 10027,Dragoncraft,Bronze,1,Razor-Clawed Thief,127411010,7c2D2
 10027,Dragoncraft,Bronze,4,Dark Mermaid,127411020,7c2DC
 10027,Dragoncraft,Bronze,3,Dancing Crab,127411030,7c2DM
@@ -3378,8 +3391,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Dragoncraft,Silver,2,Swiftblade Dragonewt,127421030,7c4fc
 10027,Dragoncraft,Gold,5,Scorched-Earth Tyrant,127431010,7c75Y
 10027,Dragoncraft,Gold,0,Warden of the Adamant Claw,127431020,7c75i
+10027,Dragoncraft,Gold,7,Dragon Queen's Castle,127432010,7c7LA
 10027,Dragoncraft,Legendary,7,"Antemaria, Huntress Convict",127441010,7c9Xo
 10027,Dragoncraft,Legendary,7,"Drazael, Ravening Enforcer",127441020,7c9Xy
+10027,Dragoncraft,Legendary,6,"Giselle, Ocean Star",127441030,7c9Y6
 10027,Shadowcraft,Bronze,2,Fallen Sergeant,127511010,7cQdY
 10027,Shadowcraft,Bronze,2,Sweetsoul Necromancer,127511020,7cQdi
 10027,Shadowcraft,Bronze,1,Loyal Ghost Pup,127511030,7cQds
@@ -3389,8 +3404,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Shadowcraft,Silver,2,Ghastly Banishment,127524010,7cTog
 10027,Shadowcraft,Gold,9,Abyssal Colonel,127531010,7cVW2
 10027,Shadowcraft,Gold,4,Warden of Corpses,127531020,7cVWC
+10027,Shadowcraft,Gold,3,Soul Sniper,127531030,7cVWM
 10027,Shadowcraft,Legendary,2,"Istyndet, Soul Convict",127541010,7cXyI
 10027,Shadowcraft,Legendary,6,"Myroel, Death Enforcer",127541020,7cXyS
+10027,Shadowcraft,Legendary,7,"Ceridwen, Eternal Duality",127541030,7cXyc
 10027,Bloodcraft,Bronze,1,Steamrolling Tank,127611010,7cp22
 10027,Bloodcraft,Bronze,3,Whirligig Wolf,127611020,7cp2C
 10027,Bloodcraft,Bronze,6,Frost Ogre,127611030,7cp2M
@@ -3400,8 +3417,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Bloodcraft,Silver,1,Devilish Flautist,127621030,7crUc
 10027,Bloodcraft,Gold,3,Raging Commander,127631010,7ctwY
 10027,Bloodcraft,Gold,5,Warden of Decay,127631020,7ctwi
+10027,Bloodcraft,Gold,2,Scorching Grandiosity,127634010,7cufQ
 10027,Bloodcraft,Legendary,4,"Garodeth, Insurgent Convict",127641010,7cwMo
 10027,Bloodcraft,Legendary,6,"Genomuel, Wyrm Enforcer",127641020,7cwMy
+10027,Bloodcraft,Legendary,1,"Signa, Sealed Madwolf",127641030,7cwN6
 10027,Havencraft,Bronze,2,Follower of the Precepts,127711010,7dBSY
 10027,Havencraft,Bronze,2,Amethyst Lion,127711020,7dBSi
 10027,Havencraft,Bronze,1,Luminescent Gem,127713010,7dBxo
@@ -3411,8 +3430,10 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Havencraft,Silver,2,Sacrosanct Temple,127723010,7dEO2
 10027,Havencraft,Gold,7,Executor of the Oath,127731010,7dGL2
 10027,Havencraft,Gold,3,Warden of the Wings,127731020,7dGLC
+10027,Havencraft,Gold,4,Feathery Tempest,127734010,7dH3w
 10027,Havencraft,Legendary,6,"Erralde, Troth Convict",127741010,7dInI
 10027,Havencraft,Legendary,7,"Uneriel, Winged Enforcer",127741020,7dInS
+10027,Havencraft,Legendary,2,Sacred Sheep,127741030,7dInc
 10027,Portalcraft,Bronze,3,Blackrust Underling,127811010,7dZt2
 10027,Portalcraft,Bronze,3,Rogue Puppeteer,127811020,7dZtC
 10027,Portalcraft,Bronze,5,Ruins Defense Unit,127811030,7dZtM
@@ -3422,9 +3443,128 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 10027,Portalcraft,Silver,4,Modcraft Engineer,127821030,7dcJc
 10027,Portalcraft,Gold,2,Ironforged Right Hand,127831010,7delY
 10027,Portalcraft,Gold,3,Warden of the Trigger,127831020,7deli
+10027,Portalcraft,Gold,2,Mechanical Amalgamation,127834010,7dfUQ
 10027,Portalcraft,Legendary,1,"Cutthroat, Discord Convict",127841010,7dhBo
 10027,Portalcraft,Legendary,7,"Kyrzael, Killshot Enforcer",127841020,7dhBy
+10027,Portalcraft,Legendary,2,"Judith, Cosmic Observer",127841030,7dhC6
 10027,Portalcraft,Legendary,1,"Cutthroat, Discord Convict",717841010,goM9o
+10028,Neutral,Bronze,1,Goblin Genius,128011010,7eKi2
+10028,Neutral,Bronze,7,Hiker Gigas,128011020,7eKiC
+10028,Neutral,Bronze,3,Fallen Shot,128014010,7eLQw
+10028,Neutral,Silver,3,"Fighter & Skeleton, School Days",128021010,7eN8I
+10028,Neutral,Silver,3,Goblin's Gratitude,128024010,7eNtA
+10028,Neutral,Gold,2,"Arriet, Luxvoice Learner",128031010,7ePaY
+10028,Neutral,Gold,2,Blooming Dancer,128031020,7ePai
+10028,Neutral,Gold,2,Lainecrest Academy,128032010,7ePqA
+10028,Neutral,Legendary,3,"Lucius, Travelled Trainer",128041010,7eS0o
+10028,Neutral,Legendary,2,Mikael,128041020,7eS0y
+10028,Forestcraft,Bronze,2,Salvia Panther,128111010,7ej6Y
+10028,Forestcraft,Bronze,2,Windflower Tiger,128111020,7ej6i
+10028,Forestcraft,Bronze,1,Bladebunny,128111030,7ej6s
+10028,Forestcraft,Bronze,1,Fairy Funfact,128114010,7ejrQ
+10028,Forestcraft,Silver,1,Fauna Handler,128121010,7elYo
+10028,Forestcraft,Silver,5,Elven Farmhand,128121020,7elYy
+10028,Forestcraft,Silver,2,Willow Whip,128124010,7emHg
+10028,Forestcraft,Gold,2,Cleaver Cat,128131010,7en_2
+10028,Forestcraft,Gold,6,Dwarven Lumberjack,128131020,7en_C
+10028,Forestcraft,Gold,5,Call of the Alpha,128134010,7eojw
+10028,Forestcraft,Legendary,1,"Castelle, Budding Mage",128141010,7eqRI
+10028,Forestcraft,Legendary,5,"Filly, Mythmaster",128141020,7eqRS
+10028,Forestcraft,Legendary,10,Thicket of Gnarled Hands,128141030,7eqRc
+10028,Swordcraft,Bronze,4,Fervent Fist-Fighter,128211010,7f5X2
+10028,Swordcraft,Bronze,2,"Tony, Plucky Polliwog",128211020,7f5XC
+10028,Swordcraft,Bronze,2,Penguin Punisher,128211030,7f5XM
+10028,Swordcraft,Bronze,1,Lieutenant's Report,128214010,7f6Fw
+10028,Swordcraft,Silver,3,Deadeye Trainee,128221010,7f7zI
+10028,Swordcraft,Silver,6,Sharp Strategist,128221020,7f7zS
+10028,Swordcraft,Silver,3,Aggressive Advance,128224010,7f8iA
+10028,Swordcraft,Gold,4,Agile Twinblader,128231010,7fAPY
+10028,Swordcraft,Gold,4,"Weiss, Discerning Professor",128231020,7fAPi
+10028,Swordcraft,Gold,0,Fighter's Fortitude,128234010,7fB8Q
+10028,Swordcraft,Legendary,3,"Lecia & Nano, Twilight Trainees",128241010,7fCro
+10028,Swordcraft,Legendary,7,"Galdr, Heroic Headmaster",128241020,7fCry
+10028,Swordcraft,Legendary,2,"Gawain, Oath to Glory",128241030,7fCs6
+10028,Runecraft,Bronze,2,Little Sage,128311010,7fTxY
+10028,Runecraft,Bronze,6,Wolf Whisperer,128311020,7fTxi
+10028,Runecraft,Bronze,1,Arcane Instruction,128314010,7fUgQ
+10028,Runecraft,Bronze,1,Blitz,128314020,7fUga
+10028,Runecraft,Silver,3,Bell Witch,128321010,7fWNo
+10028,Runecraft,Silver,2,"Gruinne, Leonardian Provost",128321020,7fWNy
+10028,Runecraft,Silver,3,Trickshot,128324010,7fX6g
+10028,Runecraft,Gold,2,"Grea, Crimson Promise",128331010,7fYq2
+10028,Runecraft,Gold,4,Magical Bishop,128331020,7fYqC
+10028,Runecraft,Gold,1,Mysterian Exchange Party,128334010,7fZYw
+10028,Runecraft,Legendary,1,"Amaryllis, the Princess",128341010,7fbGI
+10028,Runecraft,Legendary,3,"Anne, Brilliant Mage",128341020,7fbGS
+10028,Runecraft,Legendary,7,Golem Lord,128341030,7fbGc
+10028,Runecraft,Gold,2,"Grea, Crimson Promise",720331010,gxs42
+10028,Dragoncraft,Bronze,1,Dragonborn Striker,128411010,7fsM2
+10028,Dragoncraft,Bronze,3,Ipupiara,128411020,7fsMC
+10028,Dragoncraft,Bronze,7,Stormscale,128411030,7fsMM
+10028,Dragoncraft,Bronze,1,Sandstorm,128414010,7ft4w
+10028,Dragoncraft,Silver,2,Megalorca Rider,128421010,7fuoI
+10028,Dragoncraft,Silver,6,"Gunbein, Lofty Dragonewt",128421020,7fuoS
+10028,Dragoncraft,Silver,3,Waterwyrm's Blessing,128424010,7fvXA
+10028,Dragoncraft,Gold,3,Grand Slam Tamer,128431010,7fxEY
+10028,Dragoncraft,Gold,2,"Dion, Scarlet Scion",128431020,7fxEi
+10028,Dragoncraft,Gold,2,Armor Burst,128434010,7fxzQ
+10028,Dragoncraft,Legendary,2,"Lilium, the Wyrmwitch",128441010,7fzgo
+10028,Dragoncraft,Legendary,5,"Coach Joe, Fiery Counselor",128441020,7fzgy
+10028,Dragoncraft,Legendary,8,Tarasque,128441030,7fzh6
+10028,Shadowcraft,Bronze,2,Ghost Hunter,128511010,7gEmY
+10028,Shadowcraft,Bronze,6,Greedy Sexton,128511020,7gEmi
+10028,Shadowcraft,Bronze,1,Patchwork Pup,128511030,7gEms
+10028,Shadowcraft,Bronze,1,Night Terrors,128514010,7gFVQ
+10028,Shadowcraft,Silver,2,"Leeds, Pining Witch",128521010,7gHCo
+10028,Shadowcraft,Silver,3,Mirror Ghost,128521020,7gHCy
+10028,Shadowcraft,Silver,3,Bonesmithing,128524010,7gHxg
+10028,Shadowcraft,Gold,7,Phantom Pianist,128531010,7gJf2
+10028,Shadowcraft,Gold,4,Septic Shrink,128531020,7gJfC
+10028,Shadowcraft,Gold,1,Spectral Stomp,128534010,7gKNw
+10028,Shadowcraft,Legendary,7,"Cornelius, the Corpse King",128541010,7gM5I
+10028,Shadowcraft,Legendary,2,"Memento, the Grim Teacher",128541020,7gM5S
+10028,Shadowcraft,Legendary,6,Lord of Resurrection,128541030,7gM5c
+10028,Shadowcraft,Silver,2,"Leeds, Pining Witch",720521010,gyaSo
+10028,Bloodcraft,Bronze,3,"Denan, Big Bad Boss",128611010,7gdB2
+10028,Bloodcraft,Bronze,1,Harmonic Wolf,128611020,7gdBC
+10028,Bloodcraft,Bronze,4,Serenading Succubus,128611030,7gdBM
+10028,Bloodcraft,Bronze,1,Fell Transformation,128614010,7gdvw
+10028,Bloodcraft,Silver,1,Mach-Speed Maron,128621010,7gfdI
+10028,Bloodcraft,Silver,2,Demon-Eyed Gangster,128621020,7gfdS
+10028,Bloodcraft,Silver,5,Enchanting Rhapsody,128624010,7ggMA
+10028,Bloodcraft,Gold,2,"Arka, Sin Spinner",128631010,7gi3Y
+10028,Bloodcraft,Gold,8,Devilish Matador,128631020,7gi3i
+10028,Bloodcraft,Gold,1,Bad-Girl Life,128634010,7gioQ
+10028,Bloodcraft,Legendary,4,"Galom, Empress Fist",128641010,7gkVo
+10028,Bloodcraft,Legendary,2,"Vulgus, Infernal Headmistress",128641020,7gkVy
+10028,Bloodcraft,Legendary,6,Damnation Portal,128641030,7gkW6
+10028,Havencraft,Bronze,2,Pureflower Maiden,128711010,7g_bY
+10028,Havencraft,Bronze,3,Aqua Priestess,128711020,7g_bi
+10028,Havencraft,Bronze,4,Bright Sanctuary,128712010,7g_rA
+10028,Havencraft,Bronze,2,Wishing Chalice,128713010,7h04o
+10028,Havencraft,Silver,2,"Kira, Resilient Maiden",128721010,7h21o
+10028,Havencraft,Silver,3,Pureflame Lady,128721020,7h21y
+10028,Havencraft,Silver,5,Hymn of Innocence,128723010,7h2X2
+10028,Havencraft,Gold,1,"Lou, Lady-in-Training",128731010,7h4U2
+10028,Havencraft,Gold,1,Azurite Maiden,128731020,7h4UC
+10028,Havencraft,Gold,1,Orchid's Examination Hall,128733010,7h4zI
+10028,Havencraft,Legendary,2,"Verdilia, Rogue Professor",128741010,7h6wI
+10028,Havencraft,Legendary,4,"Elluvia, Graceful Lady",128741020,7h6wS
+10028,Havencraft,Legendary,6,"Garuda, Winged Radiance",128741030,7h6wc
+10028,Portalcraft,Bronze,2,Sumo Mechanic,128811010,7hO02
+10028,Portalcraft,Bronze,1,Gun Collector,128811020,7hO0C
+10028,Portalcraft,Bronze,6,Ancient Relic,128811030,7hO0M
+10028,Portalcraft,Bronze,4,Focused Beam,128814010,7hOkw
+10028,Portalcraft,Silver,2,Hoverbiker,128821010,7hQSI
+10028,Portalcraft,Silver,2,"Gioffre, Diligent Engineer",128821020,7hQSS
+10028,Portalcraft,Silver,2,Puppet Waltz,128824010,7hRBA
+10028,Portalcraft,Gold,4,Robotics Reporter,128831010,7hSuY
+10028,Portalcraft,Gold,5,Robotic-Arm Rescuer,128831020,7hSui
+10028,Portalcraft,Gold,0,Dimension Crack,128834010,7hTdQ
+10028,Portalcraft,Legendary,2,"Lyelth, Immaculate Idol",128841010,7hVKo
+10028,Portalcraft,Legendary,6,"Gretina, Champion Fighter",128841020,7hVKy
+10028,Portalcraft,Legendary,8,"Pandora, Plague Giver",128841030,7hVL6
+20001,Forestcraft,Legendary,2,"Plumeria, Serene Goddess",719141010,gtJYI
 70001,Forestcraft,Legendary,3,Ancient Elf,701141010,fof0I
 70001,Swordcraft,Legendary,6,Sea Queen Otohime,701241010,fp1Qo
 70001,Runecraft,Legendary,4,Merlin,701341010,fpPrI
@@ -3524,7 +3664,9 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 70021,Swordcraft,Silver,1,Bumpkin Recruit,717221020,gl-oS
 70021,Runecraft,Bronze,1,Impalement Arts,715314010,gejDQ
 70021,Runecraft,Gold,3,Acid Golem,717331010,gmPf2
+70021,Runecraft,Bronze,6,Crushing Rain,720314010,gxnwQ
 70021,Dragoncraft,Silver,2,Draconic Counsel,713424010,gXVoA
+70021,Dragoncraft,Bronze,9,Augite Wyrm,720411010,gy9c2
 70021,Shadowcraft,Gold,4,Greatpick Corpse,713531010,gXvw2
 70021,Shadowcraft,Silver,3,Huginn & Muninn,717521010,gn81o
 70021,Bloodcraft,Bronze,3,Silversteel Blader,715611010,gfrk2
@@ -3570,3 +3712,7 @@ card_set_id,clan,rarity,cost,CardName,card_id,Code
 70027,Shadowcraft,Bronze,2,Necrocarnival,717514020,gn6Ka
 70027,Bloodcraft,Bronze,1,Infernal Orchestration,717614020,gnUl4
 70027,Havencraft,Gold,1,Bejeweled Shrine,717732010,gnxYg
+70028,Forestcraft,Gold,1,Guidance of the Wise,717134020,glfZ4
+70028,Swordcraft,Silver,3,Aggressive Advance,717224010,gl_XA
+70028,Bloodcraft,Bronze,1,Howling Scream,717614030,gnUlE
+70028,Havencraft,Bronze,1,Luminescent Gem,717713010,gnsvo

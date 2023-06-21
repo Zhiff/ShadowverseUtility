@@ -24,8 +24,8 @@ import json
 def SVO_initial_scraper(svoexcel):
     # Since svo decklist comes in form of excel sheet, no webscraping is required. Simply calls function from excel module
     em.excel_convert_quick(svoexcel, 'Sheet1')
-    em.excel_convert_dataset(svoexcel, 2)
-    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 2)
+    em.excel_convert_dataset(svoexcel, 3)
+    em.excel_statistics('Excel_and_CSV/FilteredDecks_Data.xlsx', 3)
     em.combine_view_and_stats('Excel_and_CSV/FilteredDecks_View.xlsx', 'Names and Links')
     em.add_class_color(3)
 
@@ -610,20 +610,46 @@ def jcg_excel_finishing(master_df, top16view_df, OverallView_df, decks_df, class
 #     writer = pd.ExcelWriter('Excel_and_CSV/Sekappy.xlsx')
 #     df.to_excel(writer, index=False) 
 #     writer.save()
+
+# Invitational
+with open('Excel_and_CSV/Invitational23.html', encoding="utf8") as f:
+    soup = bs(f, 'lxml')
     
+    deck1 = []
+    deck2 = []
+    deck3 = []
+    maintext = soup.find('div', class_='main_text')
+    decklist = maintext.find_all('a')
+    for deck in decklist[::3]:
+        arc1 = deck.get('href')
+        deck1.append(arc1)
+    for deck in decklist[1::3]:
+        arc2 = deck.get('href')
+        deck2.append(arc2)
+    for deck in decklist[2::3]:
+        arc3 = deck.get('href')
+        deck3.append(arc3)
+
+db = np.column_stack((deck1, deck2, deck3))
+df = pd.DataFrame(db)
+df = df.rename(columns={0:'deck 1', 1:'deck 2', 2:'deck 3'})
+    
+writer = pd.ExcelWriter('Excel_and_CSV/Invitational.xlsx')
+df.to_excel(writer, index=False) 
+writer.save()
 
 #ShadowverseKoreanOpen
 def retrieve_group(link, groupname):
     source = requests.get(link).text
     soup = bs(source, 'lxml')
-    table = soup.find('table')
-    content = table.find_all('td')
+    # table = soup.find('table')
+    content = soup.find_all('td')
     
     names = []
     for name in content[5::4]:
         names.append(name.text.strip())
     
-    alllink = table.find_all('a')
+    alllink = soup.find_all('a')
     deck1 = []
     deck2 = []
     for link in alllink[::2]:
@@ -638,17 +664,18 @@ def retrieve_group(link, groupname):
     db = np.column_stack((names, group, deck1, deck2))
     df = pd.DataFrame(db)
     df = df.rename(columns={0:'name', 1:'group', 2:'deck 1', 3:'deck 2'})
-    df = sh.handle_duplicate_row(df, 'name')
+    # df = sh.handle_duplicate_row(df, 'name')
     
     return df
 
 
 
 def SKO_Scraper(link):
-    dfa = retrieve_group(link + '/group/day1', 'A')
-    dfb = retrieve_group(link + '/group/day2', 'B')
+    # dfa = retrieve_group(link + '/group/day1', 'A')
+    # dfb = retrieve_group(link + '/group/day2', 'B')
     
-    df = pd.concat([dfa, dfb], axis=0)
+    # df = pd.concat([dfa, dfb], axis=0)
+    df = retrieve_group(link + 'group', 'A')
     
     writer = pd.ExcelWriter('Excel_and_CSV/SKO.xlsx')
     df.to_excel(writer, index=False) 
